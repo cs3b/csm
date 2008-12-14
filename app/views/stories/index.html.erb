@@ -11,21 +11,23 @@
   </p>
 </div>
 <div class="clear">&nbsp;</div>
-<% for story in @stories %>
-  <div class="grid_2 prefix_2">
-    <p>
-      <%= story.title %>
-    </p>rake
-  </div>
-  <div class="grid_5">
-    <p>
-      <%= story.description %>
-    </p>
-  </div>
-  <div class="grid_2">
-    <%= link_to "Show", story_path(story) %>
-    <%= link_to "Edit", edit_story_path(story) %>
-    <%= link_to "Destroy", story_path(story), :method => 'delete', :confirm => 'Are you sure?' %>
+<% @stories.each_with_index do |story,index| %>
+  <div id="story_line_<%=  index -%>">
+    <div class="grid_2 prefix_2">
+      <p>
+        <%= story.title %>
+      </p>
+    </div>
+    <div class="grid_5">
+      <p>
+        <%= story.description %>
+      </p>
+    </div>
+    <div class="grid_2">
+      <%= link_to "Show", story_path(story) %>
+      <%= link_to "Edit", edit_story_path(story) %>
+      <%= link_to "Destroy", story_path(story), :method => 'delete', :confirm => 'Are you sure?' %>
+    </div>
   </div>
   <div class="clear">&nbsp;</div>
 <% end %>
