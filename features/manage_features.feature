@@ -25,7 +25,7 @@ Feature: Manage features
       |title 2|in_order_to 2|
       |title 4|in_order_to 4|
 
-  Scenario: Add new story to feature
+  Scenario: Be able to add new story to feature
     Given the following features:
       |title|in_order_to|
       |title 1|in_order_to 1|

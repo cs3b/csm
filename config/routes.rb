@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :features
-
-  map.resources :stories
+  
+  map.resources :features do |features|
+    features.resources :stories
+  end
 
   map.root :controller => 'stories'
 

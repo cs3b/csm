@@ -4,7 +4,10 @@ Feature: Manage stories
   wants to write stories
   
   Scenario: Register new story
-    Given I am on the new story page
+    Given the following features:
+      |title|in_order_to|
+      |title 1|in_order_to 1|
+    And I am on the new story page
     When I fill in "Title" with "title 1"
     And I fill in "Description" with "description 1"
     And I press "Create"
@@ -12,7 +15,10 @@ Feature: Manage stories
     And I should see "description 1"
 
   Scenario: Delete story
-    Given the following stories:
+    Given the following features:
+      |title|in_order_to|
+      |title 1|in_order_to 1|
+    And the following stories:
       |title|description|
       |title 1|description 1|
       |title 2|description 2|

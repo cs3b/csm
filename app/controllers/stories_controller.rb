@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
 
+  before_filter :get_feature
   before_filter :get_stories, :only => [:index]
   before_filter :get_story, :only => [:show, :edit, :update, :destroy]
   
@@ -17,7 +18,7 @@ class StoriesController < ApplicationController
     @story = Story.new(params[:story])
     if @story.save
       flash[:notice] = 'Story was successfully created.'
-      redirect_to story_path(@story)
+      redirect_to feature_story_path(@feature, @story)
     else
       flash[:notice] = 'Story was not successfully created.'
       render :action => :edit
@@ -34,10 +35,14 @@ class StoriesController < ApplicationController
 
   def destroy
     @story.destroy
-    redirect_to stories_path
+    redirect_to feature_stories_path
   end
 
   private
+
+  def get_feature
+    @feature = Feature.find(params[:feature_id])
+  end
 
   def get_story
     @story = Story.find(params[:id])

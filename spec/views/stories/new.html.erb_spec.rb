@@ -14,7 +14,7 @@ describe "/stories/new.html.erb" do
   it "should render new form" do
     render "/stories/new.html.erb"
     
-    response.should have_tag("form[action=?][method=post]", stories_path) do
+    response.should have_tag("form[action=?][method=post]", feature_stories_path) do
       with_tag("input#story_title[name=?]", "story[title]")
       with_tag("textarea#story_description[name=?]", "story[description]")
     end

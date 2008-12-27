@@ -24,13 +24,13 @@
       </p>
     </div>
     <div class="grid_2">
-      <%= link_to "Show", story_path(story) %>
-      <%= link_to "Edit", edit_story_path(story) %>
-      <%= link_to "Destroy", story_path(story), :method => 'delete', :confirm => 'Are you sure?' %>
+      <%= link_to "Show", feature_story_path(@feature, story) %>
+      <%= link_to "Edit", edit_feature_story_path(@feature, story) %>
+      <%= link_to "Destroy", feature_story_path(@feature, story), :method => 'delete', :confirm => 'Are you sure?' %>
     </div>
   </div>
   <div class="clear">&nbsp;</div>
 <% end %>
 
 
-<%= link_to 'New story', new_story_path %>
+<%= link_to 'New story', new_feature_story_path(@feature) %>
