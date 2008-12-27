@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :features
+
   map.resources :stories
 
   map.root :controller => 'stories'

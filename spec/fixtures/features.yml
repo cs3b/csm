@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  in_order_to: MyText
+
+two:
+  title: MyString
+  in_order_to: MyText

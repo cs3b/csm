@@ -1,0 +1,36 @@
+<h1>Listing Features</h1>
+
+<div class="grid_2 prefix_2">
+  <p>
+    Title
+  </p>
+</div>
+<div class="grid_5">
+  <p>
+    In Order To
+  </p>
+</div>
+<div class="clear">&nbsp;</div>
+<% @features.each_with_index do |feature,index| %>
+  <div id="feature_line_<%=  index -%>">
+    <div class="grid_2 prefix_2">
+      <p>
+        <%= feature.title %>
+      </p>
+    </div>
+    <div class="grid_5">
+      <p>
+        <%= feature.in_order_to %>
+      </p>
+    </div>
+    <div class="grid_2">
+      <%= link_to "Show", feature_path(feature) %>
+      <%= link_to "Edit", edit_feature_path(feature) %>
+      <%= link_to "Destroy", feature_path(feature), :method => 'delete', :confirm => 'Are you sure?' %>
+    </div>
+  </div>
+  <div class="clear">&nbsp;</div>
+<% end %>
+
+
+<%= link_to 'New Feature', new_feature_path %>
