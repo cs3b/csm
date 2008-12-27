@@ -20,7 +20,7 @@ class StoriesController < ApplicationController
       redirect_to story_path(@story)
     else
       flash[:notice] = 'Story was not successfully created.'
-      redirect_to new_story_path
+      render :action => :edit
     end
   end
 
