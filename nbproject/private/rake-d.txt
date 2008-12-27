@@ -3,8 +3,11 @@ db\:charset=Retrieves the charset for the current environment's database
 db\:collation=Retrieves the collation for the current environment's database
 db\:create=Create the database defined in config/database.yml for the current RAILS_ENV
 db\:create\:all=Create all the local databases defined in config/database.yml
+db\:data\:dump=Dump data to the db/ directory. Use MODEL=ModelName and LIMIT (optional)
+db\:data\:load=Load data from the db/ directory. Use MODEL=ModelName
 db\:drop=Drops the database for the current RAILS_ENV
 db\:drop\:all=Drops all the local databases defined in config/database.yml
+db\:fixtures\:dump=Dump data to the test/fixtures/ directory. Use MODEL=ModelName and LIMIT (optional)
 db\:fixtures\:identify=Search for a fixture given a LABEL or ID. Specify an alternative path (eg. spec/fixtures) using FIXTURES_PATH=spec/fixtures.
 db\:fixtures\:load=Load fixtures into the current environment's database.  Load specific fixtures using FIXTURES=x,y. Load from subdirectory in test/fixtures using FIXTURES_DIR=z. Specify an alternative path (eg. spec/fixtures) using FIXTURES_PATH=spec/fixtures.
 db\:load_config=
@@ -39,6 +42,7 @@ doc\:clobber_plugins=Remove plugin documentation
 doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
+doc\:plugins\:ar_fixtures=Generate documentation for the ar_fixtures plugin
 doc\:plugins\:cucumber=Generate documentation for the cucumber plugin
 doc\:plugins\:rspec=Generate documentation for the rspec plugin
 doc\:plugins\:rspec-rails=Generate documentation for the rspec-rails plugin

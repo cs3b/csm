@@ -1,0 +1,19 @@
+--- 
+feature_00002: 
+  created_at: 2008-12-27 12:25:32 Z
+  title: Manage features
+  updated_at: 2008-12-27 12:25:32 Z
+  id: 2
+  in_order_to: |-
+    group stories in case of features
+      developer and client
+      wants to create features
+feature_00001: 
+  created_at: 2008-12-27 09:27:56 Z
+  title: Manage stories
+  updated_at: 2008-12-27 12:24:53 Z
+  id: 1
+  in_order_to: |-
+    have possibility of manage requirments
+      developer and client
+      wants to write stories

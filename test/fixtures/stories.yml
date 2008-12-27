@@ -1,0 +1,69 @@
+--- 
+story_00003: 
+  created_at: 2008-12-27 10:55:30 Z
+  title: Register new feature
+  updated_at: 2008-12-27 10:55:30 Z
+  id: 3
+  feature_id: 
+  description: |-
+    Given I am on the new feature page
+        When I fill in "Title" with "title 1"
+        And I fill in "In order to" with "in_order_to 1"
+        And I press "Create"
+        Then I should see "title 1"
+        And I should see "in_order_to 1"
+story_00004: 
+  created_at: 2008-12-27 12:14:42 Z
+  title: Register new feature
+  updated_at: 2008-12-27 12:14:42 Z
+  id: 4
+  feature_id: 1
+  description: "  Given the following features:\r\n      |title|in_order_to|\r\n      |title 1|in_order_to 1|\r\n    And I am on the new story page\r\n    When I fill in \"Title\" with \"title 1\"\r\n    And I fill in \"Description\" with \"description 1\"\r\n    And I press \"Create\"\r\n    Then I should see \"title 1\"\r\n    And I should see \"description 1\""
+story_00005: 
+  created_at: 2008-12-27 12:23:23 Z
+  title: Delete story
+  updated_at: 2008-12-27 12:23:23 Z
+  id: 5
+  feature_id: 1
+  description: "    Given the following features:\r\n      |title|in_order_to|\r\n      |title 1|in_order_to 1|\r\n    And the following stories:\r\n      |title|description|\r\n      |title 1|description 1|\r\n      |title 2|description 2|\r\n      |title 3|description 3|\r\n      |title 4|description 4|\r\n    When I delete the 3rd story\r\n    Then I should see the following stories:\r\n      |title|description|\r\n      |title 1|description 1|\r\n      |title 2|description 2|\r\n      |title 4|description 4|"
+story_00006: 
+  created_at: 2008-12-27 12:25:49 Z
+  title: Register new feature
+  updated_at: 2008-12-27 12:25:49 Z
+  id: 6
+  feature_id: 2
+  description: " Given I am on the new feature page\r\n    When I fill in \"Title\" with \"title 1\"\r\n    And I fill in \"In order to\" with \"in_order_to 1\"\r\n    And I press \"Create\"\r\n    Then I should see \"title 1\"\r\n    And I should see \"in_order_to 1\""
+story_00007: 
+  created_at: 2008-12-27 12:26:09 Z
+  title: Delete feature
+  updated_at: 2008-12-27 12:26:09 Z
+  id: 7
+  feature_id: 2
+  description: |-
+    Given the following features:
+          |title|in_order_to|
+          |title 1|in_order_to 1|
+          |title 2|in_order_to 2|
+          |title 3|in_order_to 3|
+          |title 4|in_order_to 4|
+        When I delete the 3rd feature
+        Then I should see the following features:
+          |title|in_order_to|
+          |title 1|in_order_to 1|
+          |title 2|in_order_to 2|
+          |title 4|in_order_to 4|
+story_00008: 
+  created_at: 2008-12-27 12:26:29 Z
+  title: Be able to add new story to feature
+  updated_at: 2008-12-27 12:26:29 Z
+  id: 8
+  feature_id: 2
+  description: |
+    Given the following features:
+          |title|in_order_to|
+          |title 1|in_order_to 1|
+          |title 2|in_order_to 2|
+        And I am on the show feature 2nd page
+        When I click 'Add Story'
+        Then I should see new story form
+
