@@ -1,3 +1,5 @@
+<%= render :partial => '/features/show' %>
+
 <h1>Listing stories</h1>
 
 <div class="grid_2 prefix_2">
@@ -33,4 +35,5 @@
 <% end %>
 
 
-<%= link_to 'New story', new_feature_story_path(@feature) %>
+<%= link_to 'New story', new_feature_story_path(@feature) %> |
+<%= link_to "Back To Features", features_path %>
