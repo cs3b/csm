@@ -1,3 +1,8 @@
+== 0.0.2
+* now we can make features (title, and in_order_to)
+* stories are nested resources to features
+* small improvements to views
+
 == 0.0.1
 * one feature, creating, editing, destroying stories, that have title, and main body
 * cucumber test(creating new and deleting one)
