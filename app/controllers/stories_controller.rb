@@ -16,6 +16,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(params[:story])
+    @story.feature_id = @feature.id
     if @story.save
       flash[:notice] = 'Story was successfully created.'
       redirect_to feature_story_path(@feature, @story)
@@ -45,10 +46,10 @@ class StoriesController < ApplicationController
   end
 
   def get_story
-    @story = Story.find(params[:id])
+    @story = @feature.stories.find(params[:id])
   end
 
   def get_stories
-    @stories = Story.all
+    @stories = @feature.stories.all
   end
 end

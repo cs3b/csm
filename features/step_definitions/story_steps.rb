@@ -3,7 +3,9 @@ Given /I am on the new story page/ do
 end
 
 Given /^the following stories:$/ do |stories|
-  Story.create!(stories.hashes)
+  stories_hash = stories.hashes
+  stories_hash.each { |story| story[:feature_id] = Feature.first.id}
+  Story.create!(stories_hash)
 end
 
 When /^I delete the (\d+)(?:st|nd|rd|th) story$/ do |pos|
