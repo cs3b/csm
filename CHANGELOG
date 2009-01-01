@@ -1,3 +1,11 @@
+== 0.0.2.2
+* moved views to haml
+* layout moved to haml
+
+== 0.0.2.1
+* added ar_fixture plugin
+* dumped fixtures for example data
+
 == 0.0.2
 * now we can make features (title, and in_order_to)
 * stories are nested resources to features
