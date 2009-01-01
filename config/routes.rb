@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :scenarios
+
   
   map.resources :features do |features|
     features.resources :stories
