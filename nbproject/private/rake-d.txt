@@ -44,6 +44,7 @@ doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
 doc\:plugins\:ar_fixtures=Generate documentation for the ar_fixtures plugin
 doc\:plugins\:cucumber=Generate documentation for the cucumber plugin
+doc\:plugins\:haml=Generate documentation for the haml plugin
 doc\:plugins\:rspec=Generate documentation for the rspec plugin
 doc\:plugins\:rspec-rails=Generate documentation for the rspec-rails plugin
 doc\:plugins\:webrat=Generate documentation for the webrat plugin

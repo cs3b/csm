@@ -1,0 +1,8 @@
+%p
+  %b Title:
+  = @story.title
+%p
+  %b Description
+  = @story.description
+= link_to 'Edit', edit_feature_story_path(@feature,@story)
+= link_to 'Back', feature_stories_path

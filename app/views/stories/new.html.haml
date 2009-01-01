@@ -1,0 +1,15 @@
+%h New story
+
+- form_for(@story, :url => feature_stories_path(@feature)) do |f|
+  = f.error_messages
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  = f.submit "Create"
+
+= link_to 'Back', feature_stories_path
