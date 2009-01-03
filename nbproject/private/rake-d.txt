@@ -42,6 +42,7 @@ doc\:clobber_plugins=Remove plugin documentation
 doc\:clobber_rails=Remove rdoc products
 doc\:guides=Generate Rails guides
 doc\:plugins=Generate documentation for all installed plugins
+doc\:plugins\:acts_as_ordered_tree=Generate documentation for the acts_as_ordered_tree plugin
 doc\:plugins\:ar_fixtures=Generate documentation for the ar_fixtures plugin
 doc\:plugins\:cucumber=Generate documentation for the cucumber plugin
 doc\:plugins\:haml=Generate documentation for the haml plugin

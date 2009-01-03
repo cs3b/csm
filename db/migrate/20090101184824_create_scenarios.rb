@@ -2,7 +2,7 @@ class CreateScenarios < ActiveRecord::Migration
   def self.up
     create_table :scenarios do |t|
       t.string :content
-      t.belongs_to :parent_id
+      t.belongs_to :parent
       t.integer :position
       t.integer :type
 
