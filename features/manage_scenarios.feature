@@ -33,6 +33,6 @@ Feature: Manage scenarios
       |I should see 'new scenario is created'|Scenario3|3|4|
     When I delete the 2rd scenario
     Then I should see the following scenarios:
-      |content|
+      |Scenarios|
       |Scenario|
       |Scenario3|
