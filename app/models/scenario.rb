@@ -28,7 +28,7 @@ class Scenario < ActiveRecord::Base
   named_scope :then, :conditions => {:type_id => THEN}
 
 
-  # get content from root (scenario type)
+  # get content from root (SCENARIO type)
   def title
     root.content
   end
