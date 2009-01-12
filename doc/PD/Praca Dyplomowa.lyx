@@ -1,8 +1,9 @@
-#LyX 1.5.6 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass article
+\use_default_options false
 \language polish
 \inputencoding auto
 \font_roman default
@@ -13,9 +14,11 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize 12
 \spacing onehalf
+\use_hyperref false
 \papersize a4paper
 \use_geometry true
 \use_amsmath 1
@@ -48,10 +51,14 @@
 
 \series bold
 Bielska Wyższa Szkoła
-\newline
+\begin_inset Newline newline
+\end_inset
+
 im.
  Józefa Tyszkiewicza 
-\newline
+\begin_inset Newline newline
+\end_inset
+
 w Bielsku-Białej
 \end_layout
 
@@ -65,7 +72,7 @@ w Bielsku-Białej
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename /home/mczyz/bwsb.png
+	filename C:/home/mczyz/bwsb.png
 
 \end_inset
 
@@ -119,7 +126,10 @@ Temat Pracy: Zwinne zarządzanie wymaganiami w procesie produkcji oprogramowania
 
 \begin_layout Description
 \paragraph_spacing single
-Opiekun\InsetSpace ~
+Opiekun
+\begin_inset space ~
+\end_inset
+
 pracy: dr.
  M.
  Smołka
@@ -127,20 +137,32 @@ pracy: dr.
 
 \begin_layout Description
 \paragraph_spacing single
-Ocena\InsetSpace ~
+Ocena
+\begin_inset space ~
+\end_inset
+
 pracy:
 \end_layout
 
 \begin_layout Description
 \paragraph_spacing single
-Numer\InsetSpace ~
+Numer
+\begin_inset space ~
+\end_inset
+
 albumu: 2288
 \end_layout
 
 \begin_layout Description
 \paragraph_spacing single
-Numer\InsetSpace ~
-ewidencyjny\InsetSpace ~
+Numer
+\begin_inset space ~
+\end_inset
+
+ewidencyjny
+\begin_inset space ~
+\end_inset
+
 pracy:
 \end_layout
 
@@ -164,7 +186,7 @@ Bielsko-Biała, 2009
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -177,8 +199,9 @@ thispagestyle{empty}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
 
-\cleardoublepage
 
 \end_layout
 
@@ -197,14 +220,23 @@ Bielsko-Biała dn.
 
 \begin_layout Description
 \paragraph_spacing single
-Imię\InsetSpace ~
-i\InsetSpace ~
+Imię
+\begin_inset space ~
+\end_inset
+
+i
+\begin_inset space ~
+\end_inset
+
 nazwisko: Michał Czyż
 \end_layout
 
 \begin_layout Description
 \paragraph_spacing single
-Nr\InsetSpace ~
+Nr
+\begin_inset space ~
+\end_inset
+
 albumu: 2288 
 \end_layout
 
@@ -256,13 +288,15 @@ Ponadto praca nie zawiera informacji i danych uzyskanych w sposób nielegalny
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
 
-\newpage
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand tableofcontents
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
 
 \end_inset
 
@@ -270,8 +304,9 @@ Ponadto praca nie zawiera informacji i danych uzyskanych w sposób nielegalny
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
 
-\cleardoublepage
 
 \end_layout
 
@@ -280,31 +315,33 @@ Wstęp
 \end_layout
 
 \begin_layout Standard
-Właściwe zarzadzanie wymaganiami ktore ma spełniać oprogramowanie a ktorym
- źrodłem jest osoba zamawiajac ma strategiczne znaczenie aby produkt spełniał
+Właściwe zarządzanie wymaganiami które ma spełniać oprogramowanie a którym
+ źródłem jest osoba zamawiając ma strategiczne znaczenie aby produkt spełniał
  oczekiwania użytkownika końcowego.
- Biorąc pod uwagę doświadczenia innych <#TODO znalesc referencje do ksiazki,
- artykulu>, oraz wlasne mozna powiedziec ze jest to zadanie nie łatwe.
+ Biorąc pod uwagę doświadczenia innych <#TODO znaleźć referencje do książki,
+ artykule>, oraz własne można powiedzieć ze jest to zadanie nie łatwe.
 \end_layout
 
 \begin_layout Standard
-Przez okres ostanich 40 lat promowane byly najrożniejsze metody zarzadzaniem
+Przez okres ostatnich 40 lat promowane były najróżniejsze metody zarządzaniem
  projektem, według Alan Cooper średnio co 7 lat
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AlanCooper.every.7.years"
 
 \end_inset
 
- zmienia sie metedologia tworzenia oprogramowania.
- Począwszy na schematach blokowych a kończać na zwinnym procesie tworzenia
+ zmienia się metodologia tworzenia oprogramowania.
+ Począwszy na schematach blokowych a kończąc na zwinnym procesie tworzenia
  oprogramowania.
- Oczywiście nie ma srebrnej kuli, nie ma dotychczas rozwiazan ktore zapewnialy
- by idealne rozwiązanie dla każdej sytuacjii.
- Na co warto zwrocić uwage w przypadku metodologi zwinnych to że rożnią
- sie znacznie od swych poprzedników, jest to pierwsza metodologia ktorej
- zasady nie skupiają się na narzedziach i sztywnych regułach.
+ Oczywiście nie ma srebrnej kuli, nie ma dotychczas rozwiązań które zapewniały
+ by idealne rozwiązanie dla każdej sytuacji.
+ Na co warto zwrócić uwagę w przypadku metodologi zwinnych to że różnią
+ się znacznie od swych poprzedników, jest to pierwsza metodologia której
+ zasady nie skupiają się na narzędziach i sztywnych regułach.
  Pomiędzy 11 a 14 Lutego 2001 przedstawiciele
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AgileManifesto.Authors"
 
 \end_inset
@@ -312,15 +349,16 @@ key "AgileManifesto.Authors"
  wielu idei jak extreme programming - Kent Beck, pragmatic programing -
  Dave Thomas, Andrew Hunt, SCRUM - Jeff Sutterland, crystal clear - Alistair
  Cockburn, adaptive software development - Jim Highsmith, oraz 11 innych
- doswiadczonych programistow ktorzy podpisali sie pod 'Agile Manifesto'
-\begin_inset LatexCommand cite
+ doświadczonych programistów którzy podpisali się pod 'Agile Manifesto'
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AgileManifesto"
 
 \end_inset
 
 .
- Własnie od jego nazwy wzieła sie nazwa - metodologia zwinna (agile development).
- Manifest ten brzmi następujaco.
+ Właśnie od jego nazwy wzięła się nazwa - metodologia zwinna (agile development).
+ Manifest ten brzmi następująco.
 \end_layout
 
 \begin_layout Quote
@@ -367,7 +405,8 @@ Reagowanie na zmiany
 \begin_layout Quote
 Oznacza to, że wprawdzie doceniamy to co wymieniono po prawej stornie to
  jednak bardziej cenimy to co wymieniono po lewej.
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AgileManifesto.Tlumaczenie"
 
 \end_inset
@@ -376,19 +415,19 @@ key "AgileManifesto.Tlumaczenie"
 \end_layout
 
 \begin_layout Standard
-Ja również podpisuje sie pod tym dokumentem, w dalszym ciagu widze zastosowanie
- dla wczesniejszych metodologi, aczkolwiek skłonny jestem w większym stopniu
- skupiać sie na współdziałaniu z klientem oraz reagowanie na zmiany (od
- strony klienta badź zespolu), traktować decyzje jako tymczasowe.
+Ja również podpisuje się pod tym dokumentem, w dalszym ciągu widze zastosowanie
+ dla wcześniejszych metodologi, aczkolwiek skłonny jestem w większym stopniu
+ skupiać się na współdziałaniu z klientem oraz reagowanie na zmiany (od
+ strony klienta bądź zespołu), traktować decyzje jako tymczasowe.
  Przekładania zaimplementowanie malej funkcjonalności ponad bardzo szczegółową
  dokumentacje (BDUF
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Big Design Up Front - metodologia zakładajaca stworzenie kompletnej dokumentacji
- przed rozpoczeciem prac implementacyjnych, zakłada ona że bez developerzy
- sa wstanie przewidziec rozwiazanie bez potrzeby budowania prototypów, bez
+\begin_layout Plain Layout
+Big Design Up Front - metodologia zakładająca stworzenie kompletnej dokumentacji
+ przed rozpoczęciem prac implementacyjnych, zakłada ona że bez developerzy
+  wstanie przewidziec rozwiązanie bez potrzeby budowania prototypów, bez
  napisania fragmentu kodu
 \end_layout
 
@@ -396,26 +435,27 @@ Big Design Up Front - metodologia zakładajaca stworzenie kompletnej dokumentacj
 
 ).
  Zasady Agile Development
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "AgileManifesto.Principles"
 
 \end_inset
 
- zwracja największą uwagę że najważniejsza jest użytecznośc produkowanego
- oprogramowania, nawet jeśli wymusza to zmiany w poźnym stadium produkcji.
+ zwracają największą uwagę że najważniejsza jest użyteczność produkowanego
+ oprogramowania, nawet jeśli wymusza to zmiany w późnym stadium produkcji.
  Kładą one nacisk na minimalizm, oraz na ciągłe usprawnianie procesu - częste
- retrospekcje połaczone z wprowadzaniem zmian w sposobie tworzenia oprogramowani
+ retrospekcje połączone z wprowadzaniem zmian w sposobie tworzenia oprogramowani
 a.
 \end_layout
 
 \begin_layout Standard
-Największym problemem we wdrożeniu jest namowienie klienta na tą forme wpółpracy
-, pamiętajmy że klient musi być intergralną częscią zespołu, bierze czynny
+Największym problemem we wdrożeniu jest namówienie klienta na tą formę współprac
+y, pamiętajmy że klient musi być integralną częścią zespołu, bierze czynny
  udział w procesie wytwarzania.
  Powodów takiej sytuacji jest wiele.
  Począwszy o prozaicznego, ludzie z założenia nie lubią zmian.
  Drugą sprawą jest kwestia rozliczenia kosztu systemu.
- Manadżerowie chą wiedzieć ile projekt bedzie kosztować, niestety w metodologi
+ Menadżerowie chcą wiedzieć ile projekt będzie kosztować, niestety w metodologi
  agile nie jest możliwe określenie ceny końcowego produktu.
  Argumentami które mogą przekonać jest podkreślenie jakości produktu, oraz
  efektu końcowego który można uzyskać przy określonym budżecie.
@@ -423,25 +463,26 @@ Największym problemem we wdrożeniu jest namowienie klienta na tą forme wpół
 \end_layout
 
 \begin_layout Standard
-Jedną z ważniejszych kwestii jest możliwość wykazanie klientowi ile kwesti
- uległo zmianie w ciągu procesu, dzieki temu dużo łatwiej bedzie wiedział
- jak lepszy stał sie produkt (dana funkcjonalność) wzgledem jego pierwodnych
- założeń i wyobrażeń, oraz dla nas developerów bedzie możliwe usadanienie
+Jedną z ważniejszych kwestii jest możliwość wykazanie klientowi ile kwestii
+ uległo zmianie w ciągu procesu, dzięki temu dużo łatwiej będzie wiedział
+ jak lepszy stał się produkt (dana funkcjonalność) względem jego pierwotnych
+ założeń i wyobrażeń, oraz dla nas developerów będzie możliwe uzasadnienie
  kosztu uzyskanie danej funkcjonalności.
- I oto tutaj pojawia sie moja idea, bardzo prostego narzedzia ktore bedzie
+ I oto tutaj pojawia się moja idea, bardzo prostego narzędzia które będzie
  wspierało ten proces.
 \end_layout
 
 \begin_layout Standard
 Założeniem tej pracy jest przedstawienie procesu zbierania zapotrzebowań
  oraz zmian które pojawiają się w trakcie z użyciem prostych historyjek,
- wraz opisaniem narzędzia i technologi pomocniczych ktore znacznie usprawniają
- i zwiększają jakość tworzenego oprogramowania.
+ wraz opisaniem narzędzia i technologi pomocniczych które znacznie usprawniają
+ i zwiększają jakość tworzonego oprogramowania.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
@@ -450,11 +491,11 @@ Streszczenie
 \end_layout
 
 \begin_layout Standard
-W pierwszej częsci zwrocę wiekszą uwagą na istniejące metodologie jake metoda
- wodospadów oraz spiralny model.
- Sprobuje przestawic idea tych modeli gdzie znajdowały one swe zastosowanie,
- i jaką zbierają krytyke, szczegolnie z środowisk Agile.
- Następnie bardzo dokładnie przyjżymy sie podejściu agile, oraz zwiazanych
+W pierwszej części zwrócę większą uwagą na istniejące metodologie jakie
+ metoda wodospadów oraz spiralny model.
+ Sprobuje przedstawić idea tych modeli gdzie znajdowały one swe zastosowanie,
+ i jaką zbierają krytykę, szczególnie z środowisk Agile.
+ Następnie bardzo dokładnie przyjrzymy się podejściu agile, oraz związanych
  z nią bardziej szczegółowych metodologi.
  Poruszona będzie również że nie każda faza procesu tworzenia aplikacji
  może być agile, gdyż są fazy które nie mogą być agile, bądź nie wolno pozwolić
@@ -463,18 +504,20 @@ W pierwszej częsci zwrocę wiekszą uwagą na istniejące metodologie jake meto
 
 \begin_layout Standard
 W Procesie wytwarzania oprogramowania w ten sposób - częste zmiany, wyrzucanie
- fragmentów kodu - krytyczne znaczenie mają technologie których sie używa
+ fragmentów kodu - krytyczne znaczenie mają technologie których się używa
  jak również koncepcje działania.
- Omówiony bedzie w tym bardzo elastyczny obiektowy język funkcyjny jakim
+ Omówiony będzie w tym bardzo elastyczny obiektowy język funkcyjny jakim
  jest Ruby
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Ruby.homepage"
 
 \end_inset
 
 .
  Framework do budowania aplikacji webowych Ruby on Rails
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "RoR.homepage"
 
 \end_inset
@@ -482,36 +525,40 @@ key "RoR.homepage"
 .
  Zostaną też dosyć dokładnie omówione frameworki wspomagające pisanie testów
  takie jak Rspec
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Rspec.homepage"
 
 \end_inset
 
  i Cucumber
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Cucumber.wiki"
 
 \end_inset
 
 , Remarkable
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Remarkable.wiki"
 
 \end_inset
 
 .
- Z tymi narzędziamy wiążą się takie pojęcia jak MVC
+ Z tymi narzędziami wiążą się takie pojęcia jak MVC
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Model-view-controller
 \end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "MVC.smalltalk.beginning,MVC.pattern.describe"
 
 \end_inset
@@ -520,14 +567,15 @@ key "MVC.smalltalk.beginning,MVC.pattern.describe"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Representational State Transfer 
 \end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "REST.author.explenation"
 
 \end_inset
@@ -536,14 +584,15 @@ key "REST.author.explenation"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Don't Repeat Yourself
 \end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
@@ -552,33 +601,33 @@ key "DRY.Interview.With.Dave.Thomas"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Behavior Driven Development
 \end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "BDD.info"
 
 \end_inset
 
- - ktore postaram się jak najlepiej przedstawić.
- Jedną z ciekawszych części bedą narzędzia do generowania 'fałszywych' danych,
+ - które postaram się jak najlepiej przedstawić.
+ Jedną z ciekawszych części będą narzędzia do generowania 'fałszywych' danych,
  dzięki którym testowanie jest efektywniejsze.
  <#Todo odnosnik do sekcji>
 \end_layout
 
 \begin_layout Standard
-Kolejna część bedzie próba uargumentowaniem perspektyw które uważan za niezbędne
+Kolejna część będzie próba uargumentowaniem perspektyw które uważam za niezbędne
  aby z tego narzędzia mogli efektywnie skorzystać osoby zamawiające oprogramowan
-ie, nadzorujący prace a zwlaszcza projektanci interfejsów i developerzy.
- Następnie przedstawie techniczne rozwiązania zawarte w projekcie, zwrocana
- bedzie uwaga na sposób zaprojektowania bazy danych, wplywu na wydajnośc
- systemu.
- Ciekawym elementem będzą również przykłady napisanych testów które postram
- sie przedstawić w sposób aby jeszcze lepiej można było zrozumieć zasadę
+ie, nadzorujący prace a zwłaszcza projektanci interfejsów i developerzy.
+ Następnie przedstawię techniczne rozwiązania zawarte w projekcie, zwrócę
+ uwagę na sposób zaprojektowania bazy danych, wpływu na wydajność systemu.
+ Ciekawym elementem będą również przykłady napisanych testów które postaram
+ się przedstawić w sposób aby jeszcze lepiej można było zrozumieć zasadę
  BDD
 \end_layout
 
@@ -588,8 +637,9 @@ Ostatnim etapem tej pracy jest prezentacja możliwości aplikacji, krok po
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
@@ -598,8 +648,9 @@ Historia zarządzania wymagań
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
@@ -608,8 +659,9 @@ Użyte technologie
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
@@ -618,18 +670,20 @@ Zwinne zarządzanie
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
 \begin_layout Section
-Applikacja
+Aplikacja
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
 
-\clearpage
 
 \end_layout
 
@@ -642,7 +696,8 @@ Podsumowanie
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "AlanCooper.every.7.years"
 
 \end_inset
@@ -651,7 +706,8 @@ http://www.cooper.com/journal/agile2008/ [slajd 19] - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "AgileManifesto"
 
 \end_inset
@@ -660,7 +716,8 @@ http://agilemanifesto.org/ - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "AgileManifesto.Authors"
 
 \end_inset
@@ -669,7 +726,8 @@ http://agilemanifesto.org/authors.html - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "AgileManifesto.Principles"
 
 \end_inset
@@ -678,7 +736,8 @@ http://agilemanifesto.org/principles.html- 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "AgileManifesto.Tlumaczenie"
 
 \end_inset
@@ -687,7 +746,8 @@ http://pl.wikipedia.org/wiki/Manifest_Agile - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "Ruby.homepage"
 
 \end_inset
@@ -696,7 +756,8 @@ http://www.ruby-lang.org/pl/
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "RoR.homepage"
 
 \end_inset
@@ -705,7 +766,8 @@ http://www.rubyonrails.pl/
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "Rspec.homepage"
 
 \end_inset
@@ -714,7 +776,8 @@ http://rspec.info
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "Cucumber.wiki"
 
 \end_inset
@@ -723,7 +786,8 @@ http://wiki.github.com/aslakhellesoy/cucumber
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "Remarkable.wiki"
 
 \end_inset
@@ -732,7 +796,8 @@ http://wiki.github.com/carlosbrando/remarkable
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "REST.author.explenation"
 
 \end_inset
@@ -741,7 +806,8 @@ http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "BDD.info"
 
 \end_inset
@@ -750,7 +816,8 @@ http://behaviour-driven.org/
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
@@ -759,7 +826,8 @@ http://www.artima.com/intv/dry.html
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "MVC.smalltalk.beginning"
 
 \end_inset
@@ -768,7 +836,8 @@ http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html
 \end_layout
 
 \begin_layout Bibliography
-\begin_inset LatexCommand bibitem
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "MVC.pattern.describe"
 
 \end_inset
