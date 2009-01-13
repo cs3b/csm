@@ -692,7 +692,7 @@ key "Ruby.homepage"
 
 \end_inset
 
-http://www.ruby-lang.org/pl/
+http://www.ruby-lang.org/pl/ - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -701,7 +701,7 @@ key "RoR.homepage"
 
 \end_inset
 
-http://www.rubyonrails.pl/
+http://www.rubyonrails.pl/ - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -710,7 +710,7 @@ key "Rspec.homepage"
 
 \end_inset
 
-http://rspec.info
+http://rspec.info - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -719,7 +719,7 @@ key "Cucumber.wiki"
 
 \end_inset
 
-http://wiki.github.com/aslakhellesoy/cucumber
+http://wiki.github.com/aslakhellesoy/cucumber - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -728,7 +728,7 @@ key "Remarkable.wiki"
 
 \end_inset
 
-http://wiki.github.com/carlosbrando/remarkable
+http://wiki.github.com/carlosbrando/remarkable - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -737,7 +737,7 @@ key "REST.author.explenation"
 
 \end_inset
 
-http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -746,7 +746,7 @@ key "BDD.info"
 
 \end_inset
 
-http://behaviour-driven.org/
+http://behaviour-driven.org/ - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -755,7 +755,7 @@ key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
 
-http://www.artima.com/intv/dry.html
+http://www.artima.com/intv/dry.html - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -764,7 +764,7 @@ key "MVC.smalltalk.beginning"
 
 \end_inset
 
-http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html
+http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -774,6 +774,7 @@ key "MVC.pattern.describe"
 \end_inset
 
 http://ctrl-shift-b.blogspot.com/2007/08/interactive-application-architecture.html
+ - 10.01.2009
 \end_layout
 
 \end_body
