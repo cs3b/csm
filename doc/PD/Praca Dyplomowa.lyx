@@ -72,7 +72,7 @@ w Bielsku-Białej
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename C:/home/mczyz/bwsb.png
+	filename /home/mczyz/bwsb.png
 
 \end_inset
 
@@ -559,7 +559,7 @@ Model-view-controller
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "MVC.smalltalk.beginning,MVC.pattern.describe"
+key "MVC.Author.Report,MVC.smalltalk.beginning,MVC.pattern.describe"
 
 \end_inset
 
@@ -594,6 +594,16 @@ Don't Repeat Yourself
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DRY.Interview.With.Dave.Thomas"
+
+\end_inset
+
+, <#TODO ?del>KISS
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Keep it Small & Simple
+\end_layout
 
 \end_inset
 
@@ -667,7 +677,162 @@ agile
 \end_layout
 
 \begin_layout Section
-Użyte technologie
+Technologie i wzorce projektowe
+\end_layout
+
+\begin_layout Standard
+Przy motodologi agile bardza istone jest jakie narzędzia wybierzemy, oraz
+ jakich wzorców musimy się bezwzglednie trzymać aby produkcja była efektywna.
+ Wynika go z charakteru pracy, musimy być ciągle otwarci na zmieny zgłaszane
+ przez klienta, oraz developerów.
+ Zmiany ze strony klienta są nieuniknione, a mowiac bardziej precyzyjnie
+ są niezbędne aby produkt był wartościowy.
+ Zmiany które wychodzą od strony developerów czy to programistyczne, czy
+ to związane z interfejsem użytkownika, są równie częste gdyż projekt na
+ osi czasu ewoluje, znajdujemy lepsze, efektywniejsze rozwiązania.
+ Wymaga to aby kod był dobrze utrzymany, bez redundantności, przejżysty
+ i jednoznaczny.
+ Poniżej zwrócę uwagę na sprawdzone wzorce które umożliwiają osiągnąć ten
+ cel.
+\end_layout
+
+\begin_layout Subsection
+MODEL-VIEW-CONTROLLER
+\end_layout
+
+\begin_layout Standard
+Wzorzec MVC ma już za sobą prawie 30 lat, został opracowany przez norwega
+ Trygve Renskaug na Uniwersytecie w Oslo na przełomie lat 1978-79.
+ Pierwotna nazwa brzmiała THING-MODEL-VIEW-EDITOR, końcową nazwę zawdzięczamy
+ dyskusji autora z Adele Goldberg, dzięki której 10 grudnia 1979 przyjęto
+ ostateczną nazwę.
+ O samej przyczynie zainstnienia tego wzorca sam autor mówi 'MVC powstało
+ jako naturalne rozwiazanie dla powszechnego problemu dostarczenia użytkonikom
+ kontroli nad ich własnymi danymi z wielu perspektyw'
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MVC.Author.Report"
+
+\end_inset
+
+.
+ Wskazuje to na idee odzielenia samych danych i sposobu ich prezentacji
+ oraz modyfikacji, co jest w założeniu proste oraz logiczne.
+ Zwróćmy uwagę dokładniej na poszczególne elementy oraz interakcje między
+ nimi.
+ Szczególnie zwróce uwagę na wariację MVP
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Model-View-Presenter
+\end_layout
+
+\end_inset
+
+ - The Passive View Patern
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MVC.pattern.describe"
+
+\end_inset
+
+, gdyż najlepiej wpisuje się on gdy patrzymy przez pryzmat apliakcji webowych
+\end_layout
+
+\begin_layout Paragraph
+MODEL
+\end_layout
+
+\begin_layout Standard
+Model jako abstrakcyjna forma reprezentacja encji jest ważnym aspektem izolacji.
+ Cześć systemu kwalifikowana jako model można przedstawic jako zestaw atrybutów,
+ informacje które przechowuje oraz logike biznesową która jednoznacznie
+ okręśla zachowanie.
+ Zgodnie z definicja wzorca model nie ma bezpośredniego dostępu do kontrolera
+ czy widoku.
+ Jeśli próby przechowywanie informacji poza modelem wydają sie dziwne i
+ rzadko spotykane, to umieszczanie logiki w kontrolerach czy też widokach
+ jest dosyc powszechną patologią która powoduje duże problemy w momencie
+ prób optymalizacji czy też w okresie pięlegnacji kodu.
+ Doświadczenie pokazuje że trzymanie się ściśle prostych dwóch reguł daje
+ znaczne korzyści dla procesu produkcji oprogramowania.
+ Łatwiej jest uniknąc redundancji kodu, oraz optymalizacja kodu jest możliwa
+ efektywniej.
+ Ma to duże znaczenie zwłaszcza w aplikacjach webowych gdzie mnogość form
+ prezentacji danych wymaga jednoznacznie określonej logiki na poziomie modelu.
+\end_layout
+
+\begin_layout Paragraph
+VIEW
+\end_layout
+
+\begin_layout Standard
+Widok jest jednoznacznie odpowiedzialny za reprezentacje wizualna danych,
+ oraz interfejsów edycyjnych.
+ Pierwotana dofinicja
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MVC.Author.Report"
+
+\end_inset
+
+ zakładała że widok jest bezpośrednio powiązany z modelem.
+ The Passive View Pattern zakłada że widok ma dostęp do modelu tylko za
+ pomocą kontrolera - nie występuje bezpośrednie odwołanie do modelu.
+ Celem jest aby widok prezentował dane, bez znajomości co znajduje sie w
+ modelu - jego celem jest prezentacja danych które dostarcza mu kontroler.
+ Jedyna logika jaka może tutaj występować to ta związana z kontrolkami których
+ zachowanie nie jest bezpośrednio związane z logiką biznesową.
+\end_layout
+
+\begin_layout Paragraph
+CONTROLLER
+\end_layout
+
+\begin_layout Standard
+Kontroler ma spełniać dwa proste zadania, przyjąc komunikat od użytkownika
+ i przygotowac dane zwrotne.
+ W kwesti pierwszej funkcjonalności rolą kontrolera jest aby przyjąc informacje
+ od użytkownika, przekazac komunikat razem z danymi do odpowiedniego modelu
+ przyjac wynik ktory model zwrocił, przygotowane dane przeslac do odpowiedniego
+ widoku.
+ Dla aplikacji webowych dochodzą kwestie jak autentykacja, oraz kwestie
+ własnościowe obiektów.
+\end_layout
+
+\begin_layout Standard
+#TODO wykres zależności
+\end_layout
+
+\begin_layout Standard
+Pilnowanie aby nie wychodzic poza kompetencje owocuje duża niezależnosci
+ poszczególnych kompomentów, oraz duże możliwości rozwoju aplikacji bez
+ naruszania wcześniejszych elementów
+\end_layout
+
+\begin_layout Subsection
+DRY
+\end_layout
+
+\begin_layout Subsection
+BDD
+\end_layout
+
+\begin_layout Subsection
+REST
+\end_layout
+
+\begin_layout Subsection
+Ruby
+\end_layout
+
+\begin_layout Subsection
+Ruby on Rails
+\end_layout
+
+\begin_layout Subsubsection
+Active Record
 \end_layout
 
 \begin_layout Standard
@@ -678,7 +843,7 @@ Użyte technologie
 \end_layout
 
 \begin_layout Section
-Zwinne zarządzanie 
+Zwinne zarządzanie projektem
 \end_layout
 
 \begin_layout Standard
@@ -840,6 +1005,21 @@ http://www.artima.com/intv/dry.html - 10.01.2009
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
+key "MVC.Author.Report"
+
+\end_inset
+
+The original MVC reports Trygve Reenskaug Dept.
+ of Informatics University of Oslo
+\begin_inset Newline newline
+\end_inset
+
+http://heim.ifi.uio.no/~trygver/2007/MVC_Originals.pdf - 13.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
 key "MVC.smalltalk.beginning"
 
 \end_inset
@@ -852,6 +1032,10 @@ http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html - 10.01.2009
 LatexCommand bibitem
 key "MVC.pattern.describe"
 
+\end_inset
+
+Interactive Application Architecture Patterns 
+\begin_inset Newline newline
 \end_inset
 
 http://ctrl-shift-b.blogspot.com/2007/08/interactive-application-architecture.html
