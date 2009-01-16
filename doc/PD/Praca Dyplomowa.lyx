@@ -720,24 +720,7 @@ key "MVC.Author.Report"
  oraz modyfikacji, co jest w założeniu proste oraz logiczne.
  Zwróćmy uwagę dokładniej na poszczególne elementy oraz interakcje między
  nimi.
- Szczególnie zwróce uwagę na wariację MVP
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Model-View-Presenter
-\end_layout
-
-\end_inset
-
- - The Passive View Patern
-\begin_inset CommandInset citation
-LatexCommand cite
-key "MVC.pattern.describe"
-
-\end_inset
-
-, gdyż najlepiej wpisuje się on gdy patrzymy przez pryzmat apliakcji webowych
+ 
 \end_layout
 
 \begin_layout Paragraph
@@ -811,8 +794,93 @@ Pilnowanie aby nie wychodzic poza kompetencje owocuje duża niezależnosci
  naruszania wcześniejszych elementów
 \end_layout
 
+\begin_layout Standard
+<#TODO, wiecej info, - Szczególnie zwróce uwagę na wariację MVP
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Model-View-Presenter
+\end_layout
+
+\end_inset
+
+ - The Passive View Patern
+\begin_inset CommandInset citation
+LatexCommand cite
+key "MVC.pattern.describe"
+
+\end_inset
+
+, gdyż najlepiej wpisuje się on gdy patrzymy przez pryzmat aplikacji webowych>
+\end_layout
+
 \begin_layout Subsection
 DRY
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+Welcome changing requirements, even late in development.
+ Agile processes harness change for the customer's competitive advantage.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AgileManifesto.Principles"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Druga reguła Agile zacytowana powyżej stwierdza, że zmiany są mile widziane
+ na każdym etapie pracy, nawet na tym bardzo zaawansowanym.
+ Jedną z zasad która ułatwia taki cykl obróbki kodu - czasem wręcz tylko
+ dzięki stosowaniu się do niej jest to możliwe - jest unikanie duplikacji
+ kodu.
+ Pomocna przy tym jest reguła DRY
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Don't Repeat Yourself, znana również jako Single Point of Truth
+\end_layout
+
+\end_inset
+
+ zwraca ona uwagę na coś więcej niż tylko niepowtarzaniu kodu.
+ Jak zwrócił Dave Thomas
+\begin_inset CommandInset citation
+LatexCommand cite
+key "DRY.Interview.With.Dave.Thomas"
+
+\end_inset
+
+ to nie jest prawdziwa jej idea, sednem sprawy tej reguły jest aby każda
+ cześc wiedzy systemu miała jedną autoratywną i jednoznaczną reprezentacje.
+ Wiedza na temat systemu jak zwrócił w wywiadzie wychodzi ponad sam kod
+ aplikacji, dotyczy ona schamatu baz danych, kwesti testów a nawet dokumentacji.
+ Czasem aby móc osiągnać taki stan potrzebne są generatory kodu wiążace
+ się z zawansowanymi technikami meteprogramowania lecz własnie dzieki stosowaniu
+ się to tej reguły jesteśmy wstanie uzystkać elastyczny i dający się pięlegnować
+ system.
 \end_layout
 
 \begin_layout Subsection
@@ -909,6 +977,10 @@ key "AgileManifesto.Principles"
 
 \end_inset
 
+Principles behind the Agile Manifesto
+\begin_inset Newline newline
+\end_inset
+
 http://agilemanifesto.org/principles.html- 10.01.2009
 \end_layout
 
@@ -997,6 +1069,10 @@ http://behaviour-driven.org/ - 10.01.2009
 LatexCommand bibitem
 key "DRY.Interview.With.Dave.Thomas"
 
+\end_inset
+
+Orthogonality and the DRY Principle
+\begin_inset Newline newline
 \end_inset
 
 http://www.artima.com/intv/dry.html - 10.01.2009
