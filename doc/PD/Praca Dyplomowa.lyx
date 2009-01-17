@@ -657,12 +657,28 @@ Ostatnim etapem tej pracy jest prezentacja możliwości aplikacji, krok po
 Historia zarządzania wymagań
 \end_layout
 
-\begin_layout Standard
-metody cieżkie
+\begin_layout Subsection
+metody 'cieżkie'
 \end_layout
 
-\begin_layout Standard
-agile
+\begin_layout Subsubsection
+metoda wodospadów
+\end_layout
+
+\begin_layout Subsection
+Filozofia Agile
+\end_layout
+
+\begin_layout Subparagraph
+Iteracyjny proces wytwarzania
+\end_layout
+
+\begin_layout Subparagraph
+YAGNI
+\end_layout
+
+\begin_layout Subparagraph
+Najprostrza rzecz która działa
 \end_layout
 
 \begin_layout Standard
@@ -816,7 +832,7 @@ key "MVC.pattern.describe"
 \end_layout
 
 \begin_layout Subsection
-DRY
+Don't Repeat Yourself
 \end_layout
 
 \begin_layout Standard
@@ -830,9 +846,9 @@ width "100col%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
-\begin_layout Plain Layout
+\begin_layout Quote
 Welcome changing requirements, even late in development.
  Agile processes harness change for the customer's competitive advantage.
 \begin_inset CommandInset citation
@@ -884,7 +900,179 @@ key "DRY.Interview.With.Dave.Thomas"
 \end_layout
 
 \begin_layout Subsection
-BDD
+Behavior Driven Development
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Shadowbox
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status collapsed
+
+\begin_layout Quote
+Business people and developers must work together daily throughout the project.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AgileManifesto.Principles"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+BDD to technika produkcji oprogramowania która kładzie duży nacisk na współpracę
+ pomiędzy programistami a ludźmi związanymi z biznesem - tymi którzy zamawiają
+ system jak również z tymi którzy będą go używać, jest to zgodne z regułą
+ agile manifest zacytowanej powyżej.
+ Dan North
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://dannorth.net/ - oficjalny blog
+\end_layout
+
+\end_inset
+
+ zaprezentował poraz pierwszy tą koncepcje w 2003 roku
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.Author.Introduction"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+http://www.flickr.com/photos/obie/421149993/
+\end_layout
+
+\end_inset
+
+.
+ Jak sama nazwa wskazuje zachowanie systemu jest najważniejszą kwestią w
+ trakcie produkcji.
+ Autor zwrócił szczęgólną uwagę na kwestię, wartości biznesowej którą wniesie
+ implementacja konkretnego zachowanie w systemie - gdyż to jest najważniejsze
+ z punktu widzenie użytkowników systemu.
+ Ciekawe jest też jego podejście jak determinować którą rzecz powinniśmy
+ implementować, sugeruje że powinniśmy sobie zadać pytanie 'Jaka jest kolejną
+ najważniejsza cecha której system nie posiada?', wydaje sie banalne aczkolwiek
+ daje najlepsze rezultaty dla investorow, a zwłaszcza końcowych użytkowników.
+\end_layout
+
+\begin_layout Standard
+Zgodnie z tym Dan North przestawił
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.info"
+
+\end_inset
+
+ trzy główne założenia BDD którym przyjżymy się teraz każdej z osobna i
+ dokładniej.
+\end_layout
+
+\begin_layout Paragraph
+Najważniejszy jest opis zachowania systemu
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.AllAboutBehaviour"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ta reguła zwraca uwagę że najważniejsze jest aby wiedzieć jak system ma
+ sie zachować, jakie funkcjonalności ma udostępniać dla użytkownika.
+ Zapis funkcjonalności w ten sposób - opis zachowanie - jest uwarunkowany
+ potrzebą jednoznacznego rozumienia słów - efektu jaki mają mieć na system
+ - tak aby programiści jak i ludzi związani z biznesem wzajemnie się rozumieli.
+ Wykorzystuje się do tego celu historyjki użytkownika, które są narracją
+ interakcji użytkownika z systemem, dokładniej zostaną omówione później.
+\end_layout
+
+\begin_layout Paragraph
+System udostepnia pewne zachowanie ponieważ wnosi ono wartość dla biznesu
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.BusinessValue"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jest dosyć częstym błedem gdy w systemie pojawiają się nowe funkcjonalści
+ badź zostają użyte technologie, tylko dlatego że sprawiają wrażenie interesując
+ych, jest to pewnego rodzaju patologia występująca w produkcji oprogramowania.
+ Zwrócenie uwagi na wartość biznesową ma ogromny wpływ na efektywność oraz
+ koszt związany z systemem, choć zazwyczaj nie jest to sprawa oczywista
+ ani nie jest to postrzegane jako rzecz niezbędna, na co zwraca uwagę Dan.
+\end_layout
+
+\begin_layout Paragraph
+Opierać się na wiedzy, a nie przewidywaniach
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.EnoughIsEnough"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Domena metodologi BDUF zakłada że jesteśmy wstanie zapisać wszystkie informajce
+ na temat systemu przed rozpoczęciem jego realizacji, innymi słowy jesteśmy
+ wstanie przewidzieć wszystko na temat systemu - jednak bardzo często tak
+ nie jest.
+ Warto zwrócić uwagę na fakt im dłuższy okres chcemy przewidzieć oraz im
+ bardziej złożony jest problem tym wiekszę prawdopodobieństwo że nasze założenia
+ będą błądne.
+ Taka postawa - posiadania wiedzy na początku - wynika również z obawy przed
+ potencjalnym kosztem zmiany, menadżerowie są w tym najlepszym przykładem.
+ BDUF się nie sprawdziło gdyż zmiany zawsze się pojawiają.
+ BDD z założenie zabrania modelowania systemu przez zgadywania, a minimalizacja
+ kosztu zmian jest uzyskiwana poprzez utrzymanie technicznie systemu w taki
+ sposób aby łatwo można było w nim zmiany wprowadzać.
+ W sekcji 'Filozofia Agile' zwrócona uwagę na metologie która to umożliwiają,
+ takie jak iteracyjny proces produkcji, najprostsza rzecz która działa oraz
+ nie implementowanie funkcjonalności które nie są wymagane.
+\end_layout
+
+\begin_layout Subsubsection
+Historyjki użytkonika
+\end_layout
+
+\begin_layout Subsubsection
+Automatyczne testowanie zachowania systemu
+\end_layout
+
+\begin_layout Subsection
+RSPEC
+\end_layout
+
+\begin_layout Subsubsection
+Cucumber
 \end_layout
 
 \begin_layout Subsection
@@ -911,7 +1099,7 @@ Active Record
 \end_layout
 
 \begin_layout Section
-Zwinne zarządzanie projektem
+Wspomaganie procesu produkcji oprogramowania
 \end_layout
 
 \begin_layout Standard
@@ -922,7 +1110,7 @@ Zwinne zarządzanie projektem
 \end_layout
 
 \begin_layout Section
-Aplikacja
+Prezentacja aplikacji
 \end_layout
 
 \begin_layout Standard
@@ -932,12 +1120,26 @@ Aplikacja
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Dalsze plany rozwoju
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Podsumowanie
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
 \end_layout
 
 \begin_layout Bibliography
@@ -945,6 +1147,10 @@ Podsumowanie
 LatexCommand bibitem
 key "AlanCooper.every.7.years"
 
+\end_inset
+
+ Alan Cooper - The Wisdom of Experience
+\begin_inset Newline newline
 \end_inset
 
 http://www.cooper.com/journal/agile2008/ [slajd 19] - 10.01.2009
@@ -957,6 +1163,10 @@ key "AgileManifesto"
 
 \end_inset
 
+Agile Manifesto - official webpage
+\begin_inset Newline newline
+\end_inset
+
 http://agilemanifesto.org/ - 10.01.2009
 \end_layout
 
@@ -965,6 +1175,10 @@ http://agilemanifesto.org/ - 10.01.2009
 LatexCommand bibitem
 key "AgileManifesto.Authors"
 
+\end_inset
+
+Agile Manifesto - Authors
+\begin_inset Newline newline
 \end_inset
 
 http://agilemanifesto.org/authors.html - 10.01.2009
@@ -991,6 +1205,10 @@ key "AgileManifesto.Tlumaczenie"
 
 \end_inset
 
+Tłumaczenie Agile Manifest
+\begin_inset Newline newline
+\end_inset
+
 http://pl.wikipedia.org/wiki/Manifest_Agile - 10.01.2009
 \end_layout
 
@@ -999,6 +1217,10 @@ http://pl.wikipedia.org/wiki/Manifest_Agile - 10.01.2009
 LatexCommand bibitem
 key "Ruby.homepage"
 
+\end_inset
+
+Oficjalna strona języka Ruby
+\begin_inset Newline newline
 \end_inset
 
 http://www.ruby-lang.org/pl/ - 10.01.2009
@@ -1011,6 +1233,10 @@ key "RoR.homepage"
 
 \end_inset
 
+Oficjalna strona frameworku Ruby on Rails
+\begin_inset Newline newline
+\end_inset
+
 http://www.rubyonrails.pl/ - 10.01.2009
 \end_layout
 
@@ -1019,6 +1245,10 @@ http://www.rubyonrails.pl/ - 10.01.2009
 LatexCommand bibitem
 key "Rspec.homepage"
 
+\end_inset
+
+Oficjalna strona fremeworku Rspec
+\begin_inset Newline newline
 \end_inset
 
 http://rspec.info - 10.01.2009
@@ -1031,6 +1261,10 @@ key "Cucumber.wiki"
 
 \end_inset
 
+Wiki biblioteki Cucumber
+\begin_inset Newline newline
+\end_inset
+
 http://wiki.github.com/aslakhellesoy/cucumber - 10.01.2009
 \end_layout
 
@@ -1039,6 +1273,10 @@ http://wiki.github.com/aslakhellesoy/cucumber - 10.01.2009
 LatexCommand bibitem
 key "Remarkable.wiki"
 
+\end_inset
+
+Wiki biblioteki Remarkable
+\begin_inset Newline newline
 \end_inset
 
 http://wiki.github.com/carlosbrando/remarkable - 10.01.2009
@@ -1051,17 +1289,16 @@ key "REST.author.explenation"
 
 \end_inset
 
-http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm - 10.01.2009
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "BDD.info"
-
+Architectural Styles and the Design of Network-based Software Architectures
+ - Roy Thomas Fielding
+\begin_inset Newline newline
 \end_inset
 
-http://behaviour-driven.org/ - 10.01.2009
+CHAPTER 5 Representational State Transfer (REST)
+\begin_inset Newline newline
+\end_inset
+
+http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm - 10.01.2009
 \end_layout
 
 \begin_layout Bibliography
@@ -1116,6 +1353,104 @@ Interactive Application Architecture Patterns
 
 http://ctrl-shift-b.blogspot.com/2007/08/interactive-application-architecture.html
  - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.Author.Introduction"
+
+\end_inset
+
+Introducing BDD
+\begin_inset Newline newline
+\end_inset
+
+http://dannorth.net/introducing-bdd - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.info"
+
+\end_inset
+
+Oficjlna strona o BDD
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.AllAboutBehaviour"
+
+\end_inset
+
+BDD - It's All Behaviour
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/ItsAllBehaviour - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.BusinessValue"
+
+\end_inset
+
+BDD - Where's The Business Value
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/WheresTheBusinessValue - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.EnoughIsEnough"
+
+\end_inset
+
+BDD - Enough Is Enough
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/EnoughIsEnough - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.GettingTheWordsRight"
+
+\end_inset
+
+BDD - Getting The Words Right
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/GettingTheWordsRight - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.CostOfChange"
+
+\end_inset
+
+BDD - Cost Of Change
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/CostOfChange - 17.01.2009
 \end_layout
 
 \end_body
