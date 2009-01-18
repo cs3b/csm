@@ -1369,6 +1369,75 @@ Plany rozwoju Frameworka
 Wspomaganie procesu produkcji oprogramowania
 \end_layout
 
+\begin_layout Subsection
+Ogólne zachowanie systemu
+\end_layout
+
+\begin_layout Paragraph
+dokładny zapis kto, kiedy, co wprowadzil do systemu
+\end_layout
+
+\begin_layout Subsection
+Zachowanie systemu ze względu na charakter użytkownika
+\end_layout
+
+\begin_layout Subsubsection
+Z punktu widzenia klienta biznesowego
+\end_layout
+
+\begin_layout Paragraph
+możliwość dodawania nowych funkcjonalności
+\end_layout
+
+\begin_layout Paragraph
+przegladanie historyjek w systemie
+\end_layout
+
+\begin_layout Paragraph
+widzenie statusów historyjek, ich postępu
+\end_layout
+
+\begin_layout Paragraph
+przeglądanie histori zmian
+\end_layout
+
+\begin_layout Paragraph
+akceptowanie poszczególnych scenariuszy, calych funkcjonalności
+\end_layout
+
+\begin_layout Subsubsection
+Dla menadżera projektu
+\end_layout
+
+\begin_layout Paragraph
+śledzenie statusu, postępu w pracach
+\end_layout
+
+\begin_layout Paragraph
+przeglądaniem zmian które nastąpiły w czasie rozwoju
+\end_layout
+
+\begin_layout Paragraph
+wgląd w estymacje funkcjonalności, oraz rzeczywistego spędzonego czasu
+\end_layout
+
+\begin_layout Subsubsection
+Dla programistów oraz projektantów interfejsów
+\end_layout
+
+\begin_layout Paragraph
+przeglądanie, modyfikowanie, dodawanie nowych scenariuszy
+\end_layout
+
+\begin_layout Paragraph
+wsparcie dla pisanie testów (generatory kodu, export do formatu historyjek
+ cucumber)
+\end_layout
+
+\begin_layout Paragraph
+export do systemu zarzadzania zadań
+\end_layout
+
 \begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
@@ -1389,6 +1458,10 @@ Prezentacja aplikacji
 
 \begin_layout Section
 Dalsze plany rozwoju
+\end_layout
+
+\begin_layout Subsection
+modul zwiazany z modelowaniem rozwiazan
 \end_layout
 
 \begin_layout Standard
