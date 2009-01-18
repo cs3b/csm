@@ -658,18 +658,38 @@ Historia zarządzania wymagań
 \end_layout
 
 \begin_layout Subsection
-metody 'cieżkie'
+Metody 'cieżkie'
 \end_layout
 
 \begin_layout Subsubsection
-metoda wodospadów
+BDUF
+\end_layout
+
+\begin_layout Subsubsection
+Model Kaskadowy
+\end_layout
+
+\begin_layout Subsubsection
+Model Spiralny
 \end_layout
 
 \begin_layout Subsection
 Filozofia Agile
 \end_layout
 
-\begin_layout Subparagraph
+\begin_layout Subsubsection
+manifest 12 zasad
+\end_layout
+
+\begin_layout Subsubsection
+Nie każdy etap prac 'zwinny'
+\end_layout
+
+\begin_layout Subsubsection
+ui prototypes
+\end_layout
+
+\begin_layout Subsubsection
 Iteracyjny proces wytwarzania
 \end_layout
 
@@ -679,6 +699,10 @@ YAGNI
 
 \begin_layout Subparagraph
 Najprostrza rzecz która działa
+\end_layout
+
+\begin_layout Subsubsection
+scrum
 \end_layout
 
 \begin_layout Standard
@@ -1060,18 +1084,245 @@ Domena metodologi BDUF zakłada że jesteśmy wstanie zapisać wszystkie informa
 \end_layout
 
 \begin_layout Subsubsection
-Historyjki użytkonika
+Historyjki użytkownika
+\end_layout
+
+\begin_layout Standard
+Dan North zwraca uwagę na trzy części które występują w historyjce
+\end_layout
+
+\begin_layout Itemize
+tytuł, który jednoznacznie determinuje zakres serwowanych funkcjonalności
+ w systemie
+\end_layout
+
+\begin_layout Itemize
+krótki opis co jest celem danej funkcjonalności i dlaczego ją wprowadzamy
+\end_layout
+
+\begin_layout Itemize
+warunki akceptacji, które definiuje kiedy funkcjonalność w systemie jest
+ w pełni zaimplementowana, są one w formie scenariuszy
+\end_layout
+
+\begin_layout Standard
+<#TODO przykład>
 \end_layout
 
 \begin_layout Subsubsection
 Automatyczne testowanie zachowania systemu
 \end_layout
 
+\begin_layout Standard
+Celem BDD jest wymuszenie współpracy z klientem oraz polepszenie z nim komunikac
+ji poprzez stosowanie języka które obie strony rozumieją.
+ Efektem takiej pracy jest specyfikacja w postaci historyjek użytkownika,
+ które to umożliwiają pisanie testów które dokładniej, i w krótszym czasie
+ są w stanie zweryfikować czy poszczególne części systemu zachowują się
+ tak jak powinny.
+ Dużym błędem
+\begin_inset CommandInset citation
+LatexCommand cite
+key "BDD.BehaviourDrivenPrograming"
+
+\end_inset
+
+ które popełniano podczas TDD
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Test-Driven-Development
+\end_layout
+
+\end_inset
+
+ było zbyt dokładne testowanie kodu a nie zachowania systemu, które utrudniały
+ zmiany, zamiast je stymulować.
+ Dlatego tak ważne jest aby pisać testy które weryfikują zachowanie systemu,
+ badź poszczególnych komponentów.
+ Tak też narodził się pomysł aby przygotować narzedzia wspierające ten proces.
+ Tak oto również w 2003 roku Dan postanowił zastąpić JUnit własną biblioteką
+ które ułatwiała by pisanie testów zachowania, nazwał ją JBahave.
+ Na przełomie ostatnich pięciu lat powstało wiele odpowiednich, badź też
+ rozszerzeń dla poszczególnych języków takich jak:
+\end_layout
+
+\begin_layout Description
+.NET NBehave
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://code.google.com/p/nbehave/
+\end_layout
+
+\end_inset
+
+, NSpec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://nspec.tigris.org/
+\end_layout
+
+\end_inset
+
+, NSpecify
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://nspecify.sourceforge.net/
+\end_layout
+
+\end_inset
+
+, NUnit
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.nunit.org
+\end_layout
+
+\end_inset
+
+, Cucumber
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cucumber.wiki"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Java Instinct
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://code.google.com/p/instinct/
+\end_layout
+
+\end_inset
+
+, JBehave
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://jbehave.org/
+\end_layout
+
+\end_inset
+
+, JDave
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.jdave.org/
+\end_layout
+
+\end_inset
+
+, Cucumber
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cucumber.wiki"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+JavaScript JSSpec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://jania.pe.kr/aw/moin.cgi/JSSpec
+\end_layout
+
+\end_inset
+
+, JSpec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://wiki.github.com/visionmedia/jspec
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+C CSpec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://wiki.github.com/arnaudbrejeon/cspec/home
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Scala Spec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://code.google.com/p/specs/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ruby Rspec
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rspec.homepage"
+
+\end_inset
+
+, Cucumber
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cucumber.wiki"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+W dalszej części pracy skupina będzie uwaga bibliotece RSpec ze względu
+ na użycie języka ruby w projekcie oraz biblioteki Cucumber która daje możliwośc
+ uruchamiania historyjek użytkownika jako wykonywalny kod, przez co jest
+ niezwykle użyteczna.
+ Zostaną one omówione w kolejnych dwóch sekcjach.
+\end_layout
+
 \begin_layout Subsection
 RSPEC
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Cucumber
 \end_layout
 
@@ -1088,7 +1339,23 @@ Ruby on Rails
 \end_layout
 
 \begin_layout Subsubsection
+Wsparcie dla REST
+\end_layout
+
+\begin_layout Subsubsection
+Rspec-rails
+\end_layout
+
+\begin_layout Paragraph
+Remarkable
+\end_layout
+
+\begin_layout Subsubsection
 Active Record
+\end_layout
+
+\begin_layout Subsubsection
+Plany rozwoju Frameworka
 \end_layout
 
 \begin_layout Standard
@@ -1423,6 +1690,34 @@ BDD - Enough Is Enough
 \end_inset
 
 http://behaviour-driven.org/EnoughIsEnough - 17.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.Stories"
+
+\end_inset
+
+BDD - Stories
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/Story - 18.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "BDD.BehaviourDrivenPrograming"
+
+\end_inset
+
+BDD - Behaviour Driven Programming
+\begin_inset Newline newline
+\end_inset
+
+http://behaviour-driven.org/BehaviourDrivenProgramming
 \end_layout
 
 \begin_layout Bibliography
