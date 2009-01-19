@@ -1331,11 +1331,11 @@ REST
 \end_layout
 
 \begin_layout Subsection
-Ruby
+Ruby on Rails
 \end_layout
 
-\begin_layout Subsection
-Ruby on Rails
+\begin_layout Subsubsection
+Ruby
 \end_layout
 
 \begin_layout Subsubsection
@@ -1343,7 +1343,7 @@ Wsparcie dla REST
 \end_layout
 
 \begin_layout Subsubsection
-Rspec-rails
+Rspec on rails
 \end_layout
 
 \begin_layout Paragraph
@@ -1369,16 +1369,1016 @@ Plany rozwoju Frameworka
 Wspomaganie procesu produkcji oprogramowania
 \end_layout
 
-\begin_layout Subsection
-Ogólne zachowanie systemu
+\begin_layout Standard
+System ma dostarczać cztery główne moduły funkcjonalności, które są wymagane
+ aby wspierać proces specyfikowania systemu.
 \end_layout
 
-\begin_layout Paragraph
-dokładny zapis kto, kiedy, co wprowadzil do systemu
+\begin_layout Standard
+<#TODO napisać coś więcej, dlaczego taki pomysł, itp>
 \end_layout
 
 \begin_layout Subsection
-Zachowanie systemu ze względu na charakter użytkownika
+Zarządzanie specyfikacją projektu 
+\end_layout
+
+\begin_layout Standard
+zadaniem to opiera się na udostepnieniu użytkownikom wprowadzania specyfikacji
+ w intuicyjny dla nich sposób, jednocześnie wymuszajać formalną strukturę
+ dzięki czemu fukncjonalności bedą opisane zgodnie z zasadą historyjek użytkowni
+ka (BDD).
+ Dzięki temu będą one posiadały odpowiednią strukturę dając możliwośc prezentacj
+i informacji w róznej postaci.
+\end_layout
+
+\begin_layout Standard
+Związane jest z dwoma funkcjonalnościami systemu, które postaram się poniżej
+ zaprezentować w formie historyjek, gdyż taka forma daje najlepsze możliwości.
+\end_layout
+
+\begin_layout Subsubsection
+Zarządzanie funkcjonalnościami
+\end_layout
+
+\begin_layout Description
+Tytuł 
+\bar under
+Zarządzanie funkcjonalnościami
+\end_layout
+
+\begin_layout Description
+Cel W celu umożliwienia wprowadzania opisów funkcjonaności 
+\end_layout
+
+\begin_layout Description
+Jako klient lub programista
+\end_layout
+
+\begin_layout Description
+Chcę mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
+ funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Dodanie nowego opisu funcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie tworzenia opisu funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wpisze 
+\begin_inset Quotes sld
+\end_inset
+
+Zarządzanie Scenariuszami
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'tytuł' 
+\begin_inset Newline newline
+\end_inset
+
+i 
+\begin_inset Quotes sld
+\end_inset
+
+umożliwić zarządzanie opisami funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'cel'
+\begin_inset Newline newline
+\end_inset
+
+i 
+\begin_inset Quotes sld
+\end_inset
+
+klient lub programista
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'jako'
+\begin_inset Newline newline
+\end_inset
+
+i 
+\begin_inset Quotes sld
+\end_inset
+
+mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
+ funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+ w polę 'chcę'
+\begin_inset Newline newline
+\end_inset
+
+i nacisnę przycisk utwórz
+\end_layout
+
+\begin_layout Description
+Wtedy powinien zostać przeniesiony na stronę funcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć 
+\begin_inset Quotes sld
+\end_inset
+
+Zarządzanie Scenariuszami
+\begin_inset Quotes srd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć 
+\begin_inset Quotes sld
+\end_inset
+
+umożliwić zarządzanie opisami funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć 
+\begin_inset Quotes sld
+\end_inset
+
+klient lub programista
+\begin_inset Quotes srd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć 
+\begin_inset Quotes sld
+\end_inset
+
+mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
+ funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć przycisk dodaj scenariusz
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Dodanie nowego opisu funcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie tworzenia opisu funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy nacisnę przycisk utwórz
+\end_layout
+
+\begin_layout Description
+Wtedy powinien zostać na stronie której byłem
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć błąd 
+\begin_inset Quotes sld
+\end_inset
+
+tytuł pole nie może być puste
+\begin_inset Quotes srd
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć błąd 
+\begin_inset Quotes sld
+\end_inset
+
+cel pole nie może być puste
+\begin_inset Quotes srd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Zobaczenie listy funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie głównej
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę link 'Funkcjonaności' w menu głównym
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć listę funkcjonalności 
+\begin_inset Newline newline
+\end_inset
+
+i powinienem zobaczyć wyszukiwarkę 
+\begin_inset Newline newline
+\end_inset
+
+i powinienem zobaczyć nawigacje paginacji
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęgladnia funkcjonalności ze wzgledu na date dodania
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie z listy funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę zakres 'od' z kalendarza '01.01.2009'
+\begin_inset Newline newline
+\end_inset
+
+i wybiorę zakres 'do' z kalendarza '10.01.2009'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć funcjonalności dodane w okresie od '01.01.2009'
+ do '10.01.2009'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Wejscie na strone funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na na stronie listy funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę na element listy
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć stronę funkcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć listę scenariuszy powiązanych
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przejście do Edycji opisu funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie funcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę w link edytuj
+\end_layout
+
+\begin_layout Description
+Wtedy powinienm zostac przeniesiony na strone edycji
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć formularz z wypełnionym polem 'tytuł'
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć formularz z wypełnionym polem 'cel'
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć formularz z wypełnionym polem 'jako'
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć formularz z wypełnionym polem 'chce'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Edycja opisu funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie edycji funcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wpisze i 
+\begin_inset Quotes sld
+\end_inset
+
+klient lub programista lub grafik
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'jako'
+\begin_inset Newline newline
+\end_inset
+
+i nacisnę przycisk 'aktualizuj'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienm zostac przeniesiony na strone funkcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i powinienem widzieć pole 'jako' wypełnione 
+\begin_inset Quotes sld
+\end_inset
+
+klient lub programista lub grafik
+\begin_inset Quotes srd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Usunięcie opisu funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie funcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę link usuń
+\begin_inset Newline newline
+\end_inset
+
+i potwierdzę
+\end_layout
+
+\begin_layout Description
+Wtedy powinienm zostac przeniesiony na strone listy funkcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i powinienem zobaczyć informacje 
+\begin_inset Quotes sld
+\end_inset
+
+Funkcjonalność 'nazwa' została pomyślnie usunięta
+\begin_inset Quotes srd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Zarządzaniem scenariuszami
+\end_layout
+
+\begin_layout Description
+Tytuł 
+\bar under
+Zarządzanie scenariuszami
+\end_layout
+
+\begin_layout Description
+Cel Weryfikacja jednoznaczności zachowania danej funkcjonalności
+\end_layout
+
+\begin_layout Description
+Jako klient lub programista
+\end_layout
+
+\begin_layout Description
+Chcę mieć możliwość dodawanie, edytowanie, usuwanie, przegladania scenariuszy
+ w kontekście danej funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przejście na stronę nowy scenariusz
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę przycisk dodaj nowy scenariusz
+\end_layout
+
+\begin_layout Description
+Wtedy powinien zostać przeniesiony na stronę nowego scenariusza
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć tytuł funkcjonalności do której dodaje scenariusz
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć formularz `edycja scenariusz`
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Dodanie nowego scenariusza
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na nowej stronie scenariusza danej funcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wprowadze 
+\begin_inset Quotes sld
+\end_inset
+
+Usunięcie opisu funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'tytuł'
+\begin_inset Newline newline
+\end_inset
+
+i wprowadze 
+\begin_inset Quotes sld
+\end_inset
+
+jestem na stronie funcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'gdy'
+\begin_inset Newline newline
+\end_inset
+
+i wprowadze 
+\begin_inset Quotes sld
+\end_inset
+
+kliknę link usuń i potwierdzę
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'kiedy'
+\begin_inset Newline newline
+\end_inset
+
+i wprowadze 
+\begin_inset Quotes sld
+\end_inset
+
+powinienm zostac przeniesiony na strone listy funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+ w pole 'wtedy'
+\end_layout
+
+\begin_layout Description
+Wtedy powiniem zostan przeniesiony na strone funkcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i powinienem zobaczyć jako tytuł jednego elementu listy scenariuszy 
+\begin_inset Quotes sld
+\end_inset
+
+Usunięcie opisu funkcjonalności
+\begin_inset Quotes srd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Usunięcie scenariusza
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie funcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę link usuń na elemencie listy scenariuszy
+\begin_inset Newline newline
+\end_inset
+
+i potwierdzę
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zostać na tej samej stronie
+\begin_inset Newline newline
+\end_inset
+
+i powinienem zobaczyć komunikat 
+\begin_inset Quotes sld
+\end_inset
+
+scenariusz #nazwa został usunięty
+\begin_inset Quotes srd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Wejscie na strone scenariusza
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na na stronie funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę na element listy scenariuszy
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć stronę scenariusza
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przejście na stronę edycja scenariusza
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy jestem na stronie scenariusza
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę przycisk edytuj scenariusz
+\end_layout
+
+\begin_layout Description
+Wtedy powinien zostać przeniesiony na stronę edycji scenariusza
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć tytuł funkcjonalności do której edytuje scenariusz
+\begin_inset Newline newline
+\end_inset
+
+i powinien widzieć formularz `edycja scenariusza`
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Historia zmian
+\end_layout
+
+\begin_layout Standard
+w procesie agile, zmiany są mile wiedziane na każdym etapie - zgodnie z
+ drugą zasadą monifestu agile - jednak klient bardzo często zapomina jak
+ dużo zmian nastąpiło w całym procesie produkcji.
+ Możliwość wykazania mu tych zmian jest niezwykle pomocna, gdy chcemy zwrócić
+ uwagę na jakość produkcji - zmiany ulepszaja produkt, oraz gdy chodzi o
+ kwestie finansowe.
+\end_layout
+
+\begin_layout Subsubsection
+Prezentacja zmian poprzez archiwum
+\end_layout
+
+\begin_layout Description
+Tytuł 
+\bar under
+Prezentajca histori zmian poprzez archiwum
+\end_layout
+
+\begin_layout Description
+Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
+\end_layout
+
+\begin_layout Description
+Jako klient lub programista
+\end_layout
+
+\begin_layout Description
+Chcę mieć możliwość przęgladniam zmian które nastepiły w funkcjonalnościach,
+ dodane, usunięto, zmodyfikowane, kiedy i przez kogo
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie archiwum
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie z listą funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy klikne na link archiwum
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ dodanie nowych czy to usunięciach funkcjonalności
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie archiwum ze względu na użytkownika
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie archiwum
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę użytkownika 'Marek W.' z listy
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ dodanie nowych czy to usunięciach funkcjonalności którymi autorem jest
+ 'Marek W.'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie archiwum ze względu na czas wprowadzenia zmiany
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie archiwum
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę zakres 'od' z kalendarza '15.01.2009'
+\begin_inset Newline newline
+\end_inset
+
+i wybiorę zakres 'do' z kalendarza '29.01.2009'
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ dodanie nowych czy to usunięciach funkcjonalności które miały miejsce pomiedzy
+ '15.01.2009' a '29.01.2009'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Różnice w kontekscie jednej zmiany
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie archiwum
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę na element listy zmian 
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć wersje wcześniejszą i aktualną
+\begin_inset Newline newline
+\end_inset
+
+i powinny być zaznaczone różnice
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przeglądania konretnej zmiany
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie prezentująca zmiany pomiedzy dwiema wersjami
+\end_layout
+
+\begin_layout Description
+Kiedy kliknę pokaż pełną historię obiektu
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ na konkretnym obiekcie(funkcjonalnośc, bądź scenariusz)
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Prezentacja zmian w funkcjonalnościach
+\end_layout
+
+\begin_layout Description
+Tytuł 
+\bar under
+Prezentajca histori zmian w funkcjonalności
+\end_layout
+
+\begin_layout Description
+Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
+\end_layout
+
+\begin_layout Description
+Jako klient lub programista
+\end_layout
+
+\begin_layout Description
+Chcę mieć możliwość przęgladniam zmian które nastepiły w funkcjalności,
+ oraz dodane, usunięto, zmodyfikowane scenariusze, kiedy i przez kogo
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Wejście do historii zmian funkcjonalności
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy klikam na link historia zmian funkcjonalności
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ na konkretnym funkcjonalności
+\begin_inset Newline newline
+\end_inset
+
+i zmiany na scenariusach powiązanych
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie historie zmian funkcjonalności ze względu na użytkownika
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie historii zmian funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę użytkownika 'Kasia W.' z listy
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
+ na funkcjonalności którymi autorem jest 'Kasia W.'
+\begin_inset Newline newline
+\end_inset
+
+i scenariuszach którymi autorem jest 'Kasia W.'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie historii zmian w funkcjonalnościach ze względu na czas wprowadzenia
+ zmiany
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie historii zmian funkcjonalności
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę zakres 'od' z kalendarza '1.12.2008'
+\begin_inset Newline newline
+\end_inset
+
+i wybiorę zakres 'do' z kalendarza '22.12.2008'
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
+ na funkcjonalnościach które miały miejsce pomiedzy '1.12.2008' a '22.12.2008'
+\begin_inset Newline newline
+\end_inset
+
+i na scenariuszach powiązanych które miały miejsce pomiedzy '1.12.2008' a
+ '22.12.2008'
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Prezentacja zmian w scenariuszach
+\end_layout
+
+\begin_layout Description
+Tytuł 
+\bar under
+Prezentajca histori zmian w scenariuszach
+\end_layout
+
+\begin_layout Description
+Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
+\end_layout
+
+\begin_layout Description
+Jako klient lub programista
+\end_layout
+
+\begin_layout Description
+Chcę mieć możliwość przęgladniam zmian które nastepiły w scenariuszach,
+ dodane, usunięto, zmodyfikowane, kiedy i przez kogo
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Wejście do historii zmian scenariusza
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie scenariusza
+\end_layout
+
+\begin_layout Description
+Kiedy klikne na link historia zmian scenariusza
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
+ na konkretnym scenariuszu
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie historie zmian scenariusza ze względu na użytkownika
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie historii zmian scenariusza
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę użytkownika 'Tomek B.' z listy
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
+ na scenariuszu którymi autorem jest 'Tomek B.'
+\end_layout
+
+\end_deeper
+\begin_layout Description
+Scenariusz 
+\bar under
+Przęglądanie historii zmian ze względu na czas wprowadzenia zmiany
+\end_layout
+
+\begin_deeper
+\begin_layout Description
+Gdy Jestem na stronie historii zmian scenariusza
+\end_layout
+
+\begin_layout Description
+Kiedy wybiorę zakres 'od' z kalendarza '1.12.2008'
+\begin_inset Newline newline
+\end_inset
+
+i wybiorę zakres 'do' z kalendarza '22.12.2008'
+\begin_inset Newline newline
+\end_inset
+
+i klikne link 'zastosuj filtr'
+\end_layout
+
+\begin_layout Description
+Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
+ na scenariuszu które miały miejsce pomiedzy '1.12.2008' a '22.12.2008'
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsection
+Spersonalizowane interfejsy
+\end_layout
+
+\begin_layout Standard
+Celem systemu jest intuicyjnie oraz efektywny dostęp do najistotniejszych
+ informacji na temat systemu specyfikowane ze względu na rolę użytkownika.
+ Celem jest nie wprowadzanie klienta biznesowego w zakłopotanie - aby czuł
+ się z narządziem swobodnie.
+ Znów perspektywa dla programistów musi dostarczać dużo wiecej informacji,
+ które są im potrzebne bardzo często w jednym widoku aby efektywnie wykonać
+ swoją pracę
 \end_layout
 
 \begin_layout Subsubsection
@@ -1422,7 +2422,7 @@ wgląd w estymacje funkcjonalności, oraz rzeczywistego spędzonego czasu
 \end_layout
 
 \begin_layout Subsubsection
-Dla programistów oraz projektantów interfejsów
+Dla programistów
 \end_layout
 
 \begin_layout Paragraph
@@ -1436,6 +2436,16 @@ wsparcie dla pisanie testów (generatory kodu, export do formatu historyjek
 
 \begin_layout Paragraph
 export do systemu zarzadzania zadań
+\end_layout
+
+\begin_layout Subsection
+wsparcie do automatycznych testów
+\end_layout
+
+\begin_layout Standard
+Jest to możliwe dzięki przechowywaniu specyfikacji jak strukturę, dzięki
+ której eksport do historyjek akceptowanych przez Cucumber nie będzie stanowić
+ probelmu, a znacznie ułatwi to pisanie testów integracyjnych.
 \end_layout
 
 \begin_layout Standard
