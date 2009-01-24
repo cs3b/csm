@@ -318,8 +318,34 @@ Wstęp
 Właściwe zarządzanie wymaganiami które ma spełniać oprogramowanie a którym
  źródłem jest osoba zamawiając ma strategiczne znaczenie aby produkt spełniał
  oczekiwania użytkownika końcowego.
- Biorąc pod uwagę doświadczenia innych <#TODO znaleźć referencje do książki,
- artykule>, oraz własne można powiedzieć ze jest to zadanie nie łatwe.
+ Biorąc pod uwagę doświadczenia innych, oraz własne można powiedzieć ze
+ jest to zadanie nie łatwe niektóre źrodła donoszę że od 50 do 70 procent
+ oprogramowania nie spełnia oczekiwań użytkowników.
+\end_layout
+
+\begin_layout Standard
+Celem tej pracy jest przybliżenie metodologi zwinnych jako aktualnie najlepszego
+ sposobu prowadzenie małych i średnich projektów.
+ Wieże się z przygotowaniem prostego narzędzia które pozwoli formalizować
+ zapotrzebowania i usprawni rozliczanie z klientem.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+http://martinfowler.com/bliki/BusinessReadableDSL.html
+\begin_inset Newline newline
+\end_inset
+
+Ludzie biznesu nie umia programowac (cobol, jako przyklad)
+\begin_inset Newline newline
+\end_inset
+
+cel pracy
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -480,20 +506,6 @@ Założeniem tej pracy jest przedstawienie procesu zbierania zapotrzebowań
 \end_layout
 
 \begin_layout Standard
-cel pracy 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-http://martinfowler.com/bliki/BusinessReadableDSL.html
-\end_layout
-
-\end_inset
-
- Ludzie biznesu nie umia programowac (cobol, jako przyklad)
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -611,16 +623,6 @@ key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
 
-, <#TODO ?del>KISS
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Keep it Small & Simple
-\end_layout
-
-\end_inset
-
 , BDD
 \begin_inset Foot
 status collapsed
@@ -639,9 +641,6 @@ key "BDD.info"
 \end_inset
 
  - które postaram się jak najlepiej przedstawić.
- Jedną z ciekawszych części będą narzędzia do generowania 'fałszywych' danych,
- dzięki którym testowanie jest efektywniejsze.
- <#Todo odnosnik do sekcji>
 \end_layout
 
 \begin_layout Standard
@@ -668,55 +667,385 @@ Ostatnim etapem tej pracy jest prezentacja możliwości aplikacji, krok po
 \end_layout
 
 \begin_layout Section
-Historia zarządzania wymagań
+Zarządzanie projektem
+\end_layout
+
+\begin_layout Standard
+Na przełomnie ostatnich lat wiele method było forsowanych jako ten najlepsze
+ przyjrzyjmy się dwom najbardziej popularnym, uznawanych za tradycyjne.
 \end_layout
 
 \begin_layout Subsection
-Metody 'cieżkie'
+Metody tradycyjne
 \end_layout
 
-\begin_layout Subsubsection
-BDUF
+\begin_layout Standard
+Metody tradycyjne zwane też 'ciężkimi' zawdzięczają taki przydomek ilości
+ dokumentacji która jest tworzona wiąże sie tym pojęcia Wielkie projektowanie
+ na początku
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Z języka angielskiego BDUF
+\end_layout
+
+\end_inset
+
+.
+ Argumentacją takiego podejścia jest przeświadczenie że solidna dokumentacja
+ niesie za sobą sukces projektu.
+ Kolejną sprawą jest unikanie tak zwanego kosztu zmiany, gdyż bardzo dokładna
+ dokumentacja pozwala ich uniknąc, oraz daje możliwość obliczyć koszt produktu
+ na początku.
+ Zwróćmy uwagę na dwie sztandarowe modele.
 \end_layout
 
 \begin_layout Subsubsection
 Model Kaskadowy
 \end_layout
 
+\begin_layout Standard
+Model Kaskadowy
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Waterfall model - z języka angielskiego
+\end_layout
+
+\end_inset
+
+ został w prowadzony przez Winstona W.
+ Royce w roku 1970 roku w artykule 'Zarządzanie produkcją dużych systemów
+ informatycznych'
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Waterfall.introduction"
+
+\end_inset
+
+.
+ Głównym założeniem tej metodologi jest podział produkcji oprogramowania
+ na sześć niepodzielny faz:
+\end_layout
+
+\begin_layout Itemize
+Specyfikacja wymagań funkcjonalnych
+\end_layout
+
+\begin_layout Itemize
+Analiza systemu
+\end_layout
+
+\begin_layout Itemize
+Modelowanie systemu, rozwiązań
+\end_layout
+
+\begin_layout Itemize
+Implementacja
+\end_layout
+
+\begin_layout Itemize
+Testy jednostkowe, oraz integracyjne
+\end_layout
+
+\begin_layout Itemize
+Wdrożenie i pielęgnacja systemu
+\end_layout
+
+\begin_layout Standard
+Przejście do kolejnej fazy jest możliwy tylko i wyłącznie po ukończenie
+ aktualnej.
+ Jeżeli na kolejnym etapie pojawią się problemy związane z poprzednim etapem
+ należy się wrócić do poprzedniego etapu i wykonać go jeszcze, i tak do
+ skutku.
+ Proces kończy się w momencie gdy ostatni etap da zadowalający efekt.
+\end_layout
+
 \begin_layout Subsubsection
 Model Spiralny
+\end_layout
+
+\begin_layout Standard
+Model spiralny
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Spiral Model - z języka angielskiego
+\end_layout
+
+\end_inset
+
+ zdefiniował Barry Boehm w artykule 'Model Spiralny w produkcji oprogramowania
+ i usprawnienia'
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SpiralModel.introduction"
+
+\end_inset
+
+ z 1988 roku.
+ Boehm podzieł proces produkcji oprogramowania na cztery iteracyjne fazy:
+\end_layout
+
+\begin_layout Itemize
+Specyfikowanie systemu jak najbardziej precyzyjnie, ustalenie celów
+\end_layout
+
+\begin_layout Itemize
+Analiza ryzyka oraz prototypowanie
+\end_layout
+
+\begin_layout Itemize
+Implementacja, zawierająca 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+przygotowanie szczegółowych koncepcji
+\end_layout
+
+\begin_layout Itemize
+programowanie
+\end_layout
+
+\begin_layout Itemize
+intergrowanie z istniejąca częścią systemu
+\end_layout
+
+\begin_layout Itemize
+testowanie
+\end_layout
+
+\begin_layout Itemize
+odbiór
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Analiza zakończonej iteracji i planowanie następnej
+\end_layout
+
+\begin_layout Standard
+Specyfikacja modelu iteracyjnego nie narzuca jedynej takich etapów w fazie
+ trzeciej, można tutaj użyć modelu kaskadowego.
+ Każda iteracja jest swego rodzaju somdzielna, może rozpocząc się na juz
+ prowadzonym projekcie, a po jej zakonczenie wszystkie zmiany które miały
+ zostać osiągnięte są wdrożone w działający system.
 \end_layout
 
 \begin_layout Subsection
 Filozofia Agile
 \end_layout
 
-\begin_layout Subsubsection
-manifest 12 zasad
+\begin_layout Standard
+Jak wykazano we wstepnie filozofia agile jest inna, jest pierwszą która
+ kieruje uwagę na dostosowyanie się do konkretnego projektu klienta, i bycia
+ elastycznym.
+ Bardzo klarowny jest przekaz manifestu agile ( wartości które są najistoniejsze
+, wymienione są jeszcze raz poniżej) oraz uzupełniając 12 zasad.
 \end_layout
 
-\begin_layout Subsubsection
-Nie każdy etap prac 'zwinny'
+\begin_layout Standard
+\align center
+
+\series bold
+Największe wartości Agile
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Quote
+\align center
+
+\emph on
+Jednostki i współdziałania między
+\emph default
+ 
+\end_layout
+
+\begin_layout Quote
+\align center
+
+\emph on
+Działające oprogramowanie
+\end_layout
+
+\begin_layout Quote
+\align center
+
+\emph on
+Współpracę z klientem
+\end_layout
+
+\begin_layout Quote
+\align center
+
+\emph on
+Reagowanie na zmiany
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+Zasady Agile
+\end_layout
+
+\begin_layout Quote
+\align center
+Najwyższy priorytetem jest zadowolenie klienta 
+\begin_inset Newline newline
+\end_inset
+
+poprzez wczesne i ciagłe dostarczanie wartościowego oprogramowania.
+\end_layout
+
+\begin_layout Quote
+\align center
+Zmiany w wymaganiach są mile wiedziane, nawet na późnym
+\begin_inset Newline newline
+\end_inset
+
+ etapie prac.
+ Proces agile rodzi sobie ze zmianą 
+\begin_inset Newline newline
+\end_inset
+
+przez względ na korzyść dla klienta.
+\end_layout
+
+\begin_layout Quote
+\align center
+Dostarczać działający system często, 
+\begin_inset Newline newline
+\end_inset
+
+czy to co kilka tygodni czy też miesięcy, 
+\begin_inset Newline newline
+\end_inset
+
+z naciskiem na krótsze okresy.
+\end_layout
+
+\begin_layout Quote
+\align center
+Ludzie biznesu i developerzy muszą codziennie 
+\begin_inset Newline newline
+\end_inset
+
+pracować razem przez cały okres projektu.
+\end_layout
+
+\begin_layout Quote
+\align center
+Prace na projektem należy połączyć z motywacją jednostek.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Zapewnij im środowisko pracy oraz wsparcie jakiego potrzebują.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Obdarz ich zaufaniem że wykonają pracę jak należy.
+\end_layout
+
+\begin_layout Quote
+\align center
+Najbardziej wydajną i efektowną metodą 
+\begin_inset Newline newline
+\end_inset
+
+przekazu informacji dla zespołu developerów 
+\begin_inset Newline newline
+\end_inset
+
+jest rozmowa twarzą w twarz.
+\end_layout
+
+\begin_layout Quote
+\align center
+Główną miarą postępu jest działające oprogramowanie.
+\end_layout
+
+\begin_layout Quote
+\align center
+Proces Agile promuje ciągły niczym nieprzerwany proces 
+\begin_inset Newline newline
+\end_inset
+
+developemntu.
+ Inwestorzy, developerzy oraz użytkownicy powinni 
+\begin_inset Newline newline
+\end_inset
+
+zabiegać <constant pace indefinitely>.
+\end_layout
+
+\begin_layout Quote
+\align center
+Zwracanie ciągłej uwagi na techniczny kunszt 
+\begin_inset Newline newline
+\end_inset
+
+oraz dobre projektowanie wspiera bycie zwinnym.
+\end_layout
+
+\begin_layout Quote
+\align center
+Prostota - czyli sztuka maksymalizacji ilości pracy 
+\begin_inset Newline newline
+\end_inset
+
+która nie jest wykonana - jest wymagana.
+\end_layout
+
+\begin_layout Quote
+\align center
+Najlepsze architektury, wymagania oraz projekty 
+\begin_inset Newline newline
+\end_inset
+
+pochodzą od zespołów które same sobą zarządzają.
+\end_layout
+
+\begin_layout Quote
+\align center
+W równych odstępach czasowych, zespół analizuje w jaki 
+\begin_inset Newline newline
+\end_inset
+
+sposób stać się bardziej efektywny, następie zgodnie ze spostrzeżeniami
+\begin_inset Newline newline
+\end_inset
+
+adaptuje zmiany we własnym zachowaniu zachowaniu.
+\end_layout
+
+\begin_layout Paragraph
+roznice pomiędzy agile a metodologiami zwinnymi
+\end_layout
+
+\begin_layout Quote
+czestszy deployment, silan kolaboracja z klientem
+\end_layout
+
+\begin_layout Paragraph
 ui prototypes
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
 Iteracyjny proces wytwarzania
-\end_layout
-
-\begin_layout Subparagraph
-YAGNI
 \end_layout
 
 \begin_layout Subparagraph
 Najprostrza rzecz która działa
 \end_layout
 
-\begin_layout Subsubsection
-scrum
+\begin_layout Paragraph
+scrum nastepca extreme programming
 \end_layout
 
 \begin_layout Standard
@@ -751,7 +1080,7 @@ Przy motodologi agile bardza istone jest jakie narzędzia wybierzemy, oraz
 \end_layout
 
 \begin_layout Subsection
-MODEL-VIEW-CONTROLLER
+Model-Widok-Kontroller
 \end_layout
 
 \begin_layout Standard
@@ -1164,42 +1493,30 @@ Test-Driven-Development
 
 \begin_layout Description
 .NET NBehave
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://code.google.com/p/nbehave/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NBehave"
 
 \end_inset
 
 , NSpec
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://nspec.tigris.org/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NSpec"
 
 \end_inset
 
 , NSpecify
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://nspecify.sourceforge.net/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NSpecify"
 
 \end_inset
 
 , NUnit
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://www.nunit.org
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NUnit"
 
 \end_inset
 
@@ -1215,63 +1532,34 @@ key "Cucumber.wiki"
 
 \begin_layout Description
 Java Instinct
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://code.google.com/p/instinct/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "instinct"
 
 \end_inset
 
 , JBehave
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://jbehave.org/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JBehave"
 
 \end_inset
 
 , JDave
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://www.jdave.org/
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "JDave"
 
 \end_inset
 
 , Cucumber
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Cucumber.wiki"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Description
-JavaScript JSSpec
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://jania.pe.kr/aw/moin.cgi/JSSpec
-\end_layout
-
-\end_inset
-
-, JSpec
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://wiki.github.com/visionmedia/jspec
-\end_layout
+JavaScript JSSpec, JSpec
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Jspec"
 
 \end_inset
 
@@ -1280,12 +1568,9 @@ http://wiki.github.com/visionmedia/jspec
 
 \begin_layout Description
 C CSpec
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://wiki.github.com/arnaudbrejeon/cspec/home
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand cite
+key "CSpec"
 
 \end_inset
 
@@ -1293,13 +1578,10 @@ http://wiki.github.com/arnaudbrejeon/cspec/home
 \end_layout
 
 \begin_layout Description
-Scala Spec
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://code.google.com/p/specs/
-\end_layout
+Scala Specs
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Specs"
 
 \end_inset
 
@@ -1315,13 +1597,6 @@ key "Rspec.homepage"
 \end_inset
 
 , Cucumber
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Cucumber.wiki"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3188,18 +3463,7 @@ Prezentacja aplikacji
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage clearpage
-\end_inset
 
-
-\end_layout
-
-\begin_layout Section
-Dalsze plany rozwoju
-\end_layout
-
-\begin_layout Subsection
-modul zwiazany z modelowaniem rozwiazan
 \end_layout
 
 \begin_layout Standard
@@ -3829,6 +4093,176 @@ The Apache Software Foundation
 \end_inset
 
 http://www.apache.org/
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Waterfall.introduction"
+
+\end_inset
+
+Royce W.W.
+ - Managing the Development of Large Software Systems
+\begin_inset Newline newline
+\end_inset
+
+http://www.cs.umd.edu/class/spring2003/cmsc838p/Process/waterfall.pdf - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SpiralModel.introduction"
+
+\end_inset
+
+Boehm B.
+ - A Spiral Model of Software Development and Enhancement
+\begin_inset Newline newline
+\end_inset
+
+http://www.cs.usu.edu/~supratik/CS%205370/r5061.pdf - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "NBehave"
+
+\end_inset
+
+NBehave
+\begin_inset Newline newline
+\end_inset
+
+http://code.google.com/p/nbehave/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "NSpec"
+
+\end_inset
+
+NSpec
+\begin_inset Newline newline
+\end_inset
+
+http://nspec.tigris.org/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "NSpecify"
+
+\end_inset
+
+NSpecify
+\begin_inset Newline newline
+\end_inset
+
+http://nspecify.sourceforge.net/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "NUnit"
+
+\end_inset
+
+Nunit
+\begin_inset Newline newline
+\end_inset
+
+http://www.nunit.org - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "instinct"
+
+\end_inset
+
+Instinct
+\begin_inset Newline newline
+\end_inset
+
+http://code.google.com/p/instinct/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "JBehave"
+
+\end_inset
+
+JBehave
+\begin_inset Newline newline
+\end_inset
+
+http://jbehave.org/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "JDave"
+
+\end_inset
+
+JDave
+\begin_inset Newline newline
+\end_inset
+
+http://www.jdave.org/ - 10.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Jspec"
+
+\end_inset
+
+JSpec
+\begin_inset Newline newline
+\end_inset
+
+http://wiki.github.com/visionmedia/jspec
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "CSpec"
+
+\end_inset
+
+CSpec
+\begin_inset Newline newline
+\end_inset
+
+http://wiki.github.com/arnaudbrejeon/cspec/home
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Specs"
+
+\end_inset
+
+Specs
+\begin_inset Newline newline
+\end_inset
+
+http://code.google.com/p/specs/
 \end_layout
 
 \end_body
