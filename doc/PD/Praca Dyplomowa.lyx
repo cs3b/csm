@@ -31,7 +31,7 @@
 \rightmargin 2.5cm
 \bottommargin 2.5cm
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 4
 \paragraph_separation indent
 \defskip medskip
 \quotes_language swedish
@@ -548,8 +548,8 @@ h testów wraz z narzędziami do masowego tworzenia danych testowych.
 Trzecia częśc będzie prezentacja koncepcji związanych z narządziem wspomnianym
  na wstępię.
  Zaprezentowane zostaną wymagania dotyczące tego projektu opisane za pomacą
- opowieści użytkownika - technika ta będzie opisana w sekcji Behaviour Driven
- Development.
+ opowieści użytkownika - technika ta będzie opisana w sekcjach poświeconych
+ BDD i Cucumber.
  Kolejno zostanie zwrócona uwaga na rozwiazania od strony technicznej zwiazane
  z tą aplikacją.
 \end_layout
@@ -570,24 +570,14 @@ Zarządzanie projektem
 \end_layout
 
 \begin_layout Standard
-Na przełomnie ostatnich lat wiele method było forsowanych jako ten najlepsze
- przyjrzyjmy się dwom najbardziej popularnym, uznawanych za tradycyjne.
-\end_layout
-
-\begin_layout Standard
-dlaczego wazne
-\end_layout
-
-\begin_layout Standard
-organizacja czasu pracy
-\end_layout
-
-\begin_layout Standard
-rozliczanie czasu pracy
-\end_layout
-
-\begin_layout Standard
-dostarczanie wartosciowego oprogramowania
+Każda metodologia ma na celu ulepszenie procesu produkcji oprogramowania.
+ Celem jest dostarczanie produktu który spełni oczekiwania użytkownika końcowego.
+ Model zarządzanie powinniem ułatwać szacowania czasu potrzebnego na powstanie
+ systemu oraz kosztów lub umożliwić wykonanie jak największej ilości pracy
+ w danym budżecie.
+ Wymaga to pewnej formalizacji wymagań, oraz rejestrowania postępów, dzięki
+ której developerzy wiedzą ki wszystko jest już zrobione.
+ Zwrócona zostanie teraz uwaga na kilka takich modeli.
 \end_layout
 
 \begin_layout Subsection
@@ -596,24 +586,22 @@ Metody tradycyjne
 
 \begin_layout Standard
 Metody tradycyjne zwane też 'ciężkimi' zawdzięczają taki przydomek ilości
- dokumentacji która jest tworzona wiąże sie tym pojęcia Wielkie projektowanie
- na początku
+ dokumentacji która jest tworzona przed rozpoczęciem prac implementacyjnych,
+ często określane jako BDUF
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Z języka angielskiego BDUF
+Big Design Up Front
 \end_layout
 
 \end_inset
 
 .
  Argumentacją takiego podejścia jest przeświadczenie że solidna dokumentacja
- niesie za sobą sukces projektu.
- Kolejną sprawą jest unikanie tak zwanego kosztu zmiany, gdyż bardzo dokładna
- dokumentacja pozwala ich uniknąc, oraz daje możliwość obliczyć koszt produktu
- na początku.
- Zwróćmy uwagę na dwie sztandarowe modele.
+ niesie ze sobą sukces projektu oraz pozwala też uniknąć kosztu zmiany,
+ gdyż zmiejsza prawdopodobieństwo pojawienia się zmian w trakcie implementacji.
+ Zwróćmy uwagę na dwa najpopularniejsze modele.
 \end_layout
 
 \begin_layout Subsubsection
@@ -672,10 +660,11 @@ Wdrożenie i pielęgnacja systemu
 \begin_layout Standard
 Przejście do kolejnej fazy jest możliwy tylko i wyłącznie po ukończenie
  aktualnej.
- Jeżeli na kolejnym etapie pojawią się problemy związane z poprzednim etapem
- należy się wrócić do poprzedniego etapu i wykonać go jeszcze, i tak do
- skutku.
- Proces kończy się w momencie gdy ostatni etap da zadowalający efekt.
+ Jeżeli na kolejnym etapie pojawią się problemy związane z niedopatrzeniami
+ w którejś z poprzednich faz należy się wrócić, wykonać jeszcze wszystkie
+ w kolejności i tak aż do skutku.
+ Oprogramowanie jest wdrażane gdy ostatnia faza da zadawalający efekt, jest
+ to zazwyczaj długi okres czasu około jednego roku.
 \end_layout
 
 \begin_layout Subsubsection
@@ -706,7 +695,7 @@ key "SpiralModel.introduction"
 \end_layout
 
 \begin_layout Itemize
-Specyfikowanie systemu jak najbardziej precyzyjnie, ustalenie celów
+Specyfikowanie systemu wraz z detalami, ustalenie celów
 \end_layout
 
 \begin_layout Itemize
@@ -749,6 +738,8 @@ Specyfikacja modelu iteracyjnego nie narzuca jedynej takich etapów w fazie
  Każda iteracja jest swego rodzaju somdzielna, może rozpocząc się na juz
  prowadzonym projekcie, a po jej zakonczenie wszystkie zmiany które miały
  zostać osiągnięte są wdrożone w działający system.
+ Zazwyczaj iteracja trwa od jednego do trzech miesięcy, jest krótsza niż
+ w modelu kaskadowym
 \end_layout
 
 \begin_layout Subsection
@@ -756,76 +747,12 @@ Filozofia Agile
 \end_layout
 
 \begin_layout Standard
-P
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-slajd 21 wisdom of expierience
-\end_layout
-
-\end_inset
-
-rzez okres ostatnich 40 lat promowane były najróżniejsze metody zarządzaniem
- projektem, według Alan Cooper średnio co 7 lat
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AlanCooper.every.7.years"
-
-\end_inset
-
- zmienia się metodologia tworzenia oprogramowania.
- Począwszy na schematach blokowych a kończąc na zwinnym procesie tworzenia
- oprogramowania.
- Oczywiście nie ma srebrnej kuli, nie ma dotychczas rozwiązań które zapewniały
- by idealne rozwiązanie dla każdej sytuacji.
- Na co warto zwrócić uwagę w przypadku metodologi zwinnych to że różnią
- się znacznie od swych poprzedników, jest to pierwsza metodologia której
- zasady nie skupiają się na narzędziach i sztywnych regułach.
- Właśnie od jego nazwy wzięła się nazwa - metodologia zwinna (agile development).
- Manifest ten brzmi następująco.
-\end_layout
-
-\begin_layout Standard
-Ja również podpisuje się pod tym dokumentem, w dalszym ciągu widze zastosowanie
- dla wcześniejszych metodologi, aczkolwiek skłonny jestem w większym stopniu
- skupiać się na współdziałaniu z klientem oraz reagowanie na zmiany (od
- strony klienta bądź zespołu), traktować decyzje jako tymczasowe.
- Przekładania zaimplementowanie malej funkcjonalności ponad bardzo szczegółową
- dokumentacje (BDUF
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Big Design Up Front - metodologia zakładająca stworzenie kompletnej dokumentacji
- przed rozpoczęciem prac implementacyjnych, zakłada ona że bez developerzy
- wstanie przewidziec rozwiązanie bez potrzeby budowania prototypów, bez
- napisania fragmentu kodu
-\end_layout
-
-\end_inset
-
-).
- Zasady Agile Development
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AgileManifesto.Principles"
-
-\end_inset
-
- zwracają największą uwagę że najważniejsza jest użyteczność produkowanego
- oprogramowania, nawet jeśli wymusza to zmiany w późnym stadium produkcji.
- Kładą one nacisk na minimalizm, oraz na ciągłe usprawnianie procesu - częste
- retrospekcje połączone z wprowadzaniem zmian w sposobie tworzenia oprogramowani
-a.
-\end_layout
-
-\begin_layout Standard
 Jak wykazano we wstepnie filozofia agile jest inna, jest pierwszą która
  kieruje uwagę na dostosowyanie się do konkretnego projektu klienta, i bycia
  elastycznym.
  Bardzo klarowny jest przekaz manifestu agile ( wartości które są najistoniejsze
-, wymienione są jeszcze raz poniżej) oraz uzupełniając 12 zasad.
+, wymienione są jeszcze raz poniżej).
+ Poniżej 12 zasad które uzupełniają sam manifest.
 \end_layout
 
 \begin_layout Standard
@@ -839,7 +766,7 @@ Największe wartości Agile
 \align center
 
 \emph on
-Jednostki i współdziałania między
+Jednostki i współdziałania między nimi
 \emph default
  
 \end_layout
@@ -855,7 +782,7 @@ Działające oprogramowanie
 \align center
 
 \emph on
-Współpracę z klientem
+Współpraca z klientem
 \end_layout
 
 \begin_layout Quote
@@ -870,11 +797,18 @@ Reagowanie na zmiany
 
 \series bold
 Zasady Agile
+\begin_inset CommandInset citation
+LatexCommand cite
+key "AgileManifesto.Principles"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Quote
 \align center
-Najwyższy priorytetem jest zadowolenie klienta 
+Najważniejsze jest zadowolenie klienta 
 \begin_inset Newline newline
 \end_inset
 
@@ -888,7 +822,7 @@ Zmiany w wymaganiach są mile wiedziane, nawet na późnym
 \end_inset
 
  etapie prac.
- Proces agile rodzi sobie ze zmianą 
+ Proces agile radzi sobie ze zmianą 
 \begin_inset Newline newline
 \end_inset
 
@@ -938,7 +872,7 @@ Najbardziej wydajną i efektowną metodą
 \begin_inset Newline newline
 \end_inset
 
-przekazu informacji dla zespołu developerów 
+przekazu informacji dla zespołu oraz dla klienta
 \begin_inset Newline newline
 \end_inset
 
@@ -1001,70 +935,33 @@ sposób stać się bardziej efektywny, następie zgodnie ze spostrzeżeniami
 \begin_inset Newline newline
 \end_inset
 
-adaptuje zmiany we własnym zachowaniu zachowaniu.
+adaptuje zmiany we własnym zachowaniu.
 \end_layout
 
-\begin_layout Paragraph
-roznice pomiędzy agile a metodologiami zwinnymi
-\end_layout
-
-\begin_layout Quote
-czestszy deployment, silan kolaboracja z klientem
-\end_layout
-
-\begin_layout Paragraph
-ui prototypes
-\end_layout
-
-\begin_layout Paragraph
-Iteracyjny proces wytwarzania
-\end_layout
-
-\begin_layout Subparagraph
-Najprostrza rzecz która działa
-\end_layout
-
-\begin_layout Paragraph
-scrum nastepca extreme programming
+\begin_layout Standard
+Powyższe zasad i wartości warto mieć zawsze w pamięci jeśli chcemy pozstać
+ w z zgodzie z filozofią agile.
+ Na podstawie tych reguł powstało wiele zasad i metodologii które wdrażane
+ wraz z dostosowaniem do możliwości zespołu i charakteru projektu daję dobre
+ efekty.
 \end_layout
 
 \begin_layout Subsubsection
-Don't Repeat Yourself
+Reguły usprawniające proces
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Shadowbox
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Quote
-Welcome changing requirements, even late in development.
- Agile processes harness change for the customer's competitive advantage.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AgileManifesto.Principles"
-
-\end_inset
-
-
+Reguły wymienione poniżej są bardzo proste ale gdy dobrze je zrozumieniemy
 \end_layout
 
-\end_inset
-
-
+\begin_layout Paragraph
+Nie powtarzaj się
 \end_layout
 
 \begin_layout Standard
-Druga reguła Agile zacytowana powyżej stwierdza, że zmiany są mile widziane
- na każdym etapie pracy, nawet na tym bardzo zaawansowanym.
+Druga zasada Agile, zwraca traktuje zmiany jako mile widziane na każdym
+ etapie pracy, nawet na tym bardzo zaawansowanym.
+ Wymaga to częstych zmian w kodzie źródłowym.
  Jedną z zasad która ułatwia taki cykl obróbki kodu - czasem wręcz tylko
  dzięki stosowaniu się do niej jest to możliwe - jest unikanie duplikacji
  kodu.
@@ -1073,12 +970,13 @@ Druga reguła Agile zacytowana powyżej stwierdza, że zmiany są mile widziane
 status collapsed
 
 \begin_layout Plain Layout
-Don't Repeat Yourself, znana również jako Single Point of Truth
+Don't Repeat Yourself, znana również jako Single Point of Truth.
+ Popularny akronim DRY
 \end_layout
 
 \end_inset
 
- zwraca ona uwagę na coś więcej niż tylko niepowtarzaniu kodu.
+ przez wielu odczytywana jako unikanie powtórzeń w kodzie.
  Jak zwrócił Dave Thomas
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1086,8 +984,8 @@ key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
 
- to nie jest prawdziwa jej idea, sednem sprawy tej reguły jest aby każda
- cześc wiedzy systemu miała jedną autoratywną i jednoznaczną reprezentacje.
+ to nie jest prawdziwy cel tej reguły, jej sednem jest aby każda cześc wiedzy
+ - zachowania - systemu miała jedną autoratywną i jednoznaczną reprezentacje.
  Wiedza na temat systemu jak zwrócił w wywiadzie wychodzi ponad sam kod
  aplikacji, dotyczy ona schamatu baz danych, kwesti testów a nawet dokumentacji.
  Czasem aby móc osiągnać taki stan potrzebne są generatory kodu wiążace
@@ -1096,45 +994,184 @@ key "DRY.Interview.With.Dave.Thomas"
  system.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Paragraph
+Najprostrza rzecz która działa
+\end_layout
+
+\begin_layout Standard
+Istotą tej reguły jest aby jak najszybciej pokazać efekt pracy klientowi.
+ Jeśli coś jest proste uzyskanie efektu jest szybsze.
+ Jest najbardziej zgodne z pierwszą, trzecią oraz siódmą zasadą manifestu
+ agile.
+ Pokazywanie klientowi często tego co zostało zrobione stymuluje potrzebne
+ zmiany w systemie, które bez wizualnej reprezentacji zostały by pominięte,
+ czy też zepchnięte a bardziej odległy termin.
+\end_layout
+
+\begin_layout Paragraph
+Naprawdę tego nie potrzebujesz
+\end_layout
+
+\begin_layout Standard
+Czasem zdarza się że tworzymy nowe klasy metody nie zastanawiając się czy
+ aby napewno tego naprawdę potrzebujemy w tej chwili.
+ Bądź też piszemy kod z myślą o przyszłych ewentualnych udogodnieniach które
+ mogły by mieć miejsce jeśli trzeba będzie zrobić to lub owo.
+ Jest w tym dużo gdybania.
+ Reguła
+\begin_inset CommandInset citation
+LatexCommand cite
+key "You.not.gonna.need.it"
+
+\end_inset
+
+ silnie nawołuje aby kodować tylko funkcjonalności rzeczywiste, te które
+ są ważne - warto zadować sobie samemu pytanie 
+\begin_inset Quotes sld
+\end_inset
+
+Czy aby napewno tego potrzebuje?
+\begin_inset Quotes srd
+\end_inset
+
+, zamiast mechanicznie 'klepać' kod.
+ Drugą sprawą na które zwraca ona uwagę to fakt że tracony jest fokus nad
+ głównym celem, w momencie gdy zaczynamy gdybać o przyszłych udogodnieniach.
+\end_layout
+
+\begin_layout Paragraph
+Iteracyjny proces wytwarzania
+\end_layout
+
+\begin_layout Standard
+Aby czesto dostarczać działający system potrzeba jest podzielić proces tworzenia
+ systemu na małe kawałki, z których każdy z nich dostarcza biznesową wartośc
+ dla systemu.
+ XP
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+skrót - Extreme Programing
+\end_layout
+
+\end_inset
+
+ preferuje jako jednostkę przyjąć tydzień, dla scrum'a dwa.
+ Lecz nie jest to sztywną regułą, warto dostoswać do możliwośc, jadnakże
+ nacisk jest kładziony na krótkie okresy.
+\end_layout
+
+\begin_layout Paragraph
+Scrum
+\end_layout
+
+\begin_layout Standard
+W 1986 roku Hirotaka Takeuchi wraz Ikujiro Nonaka opisali całkowicie nową
+ koncepcje zarządzania projektami informatycznymi.
+ Położyli w nim nacisk na postęp całej drużyny współdziałającej razem nad
+ wspolnymi celami.
+ W 1991 roku DeGrace i Stahl jako pierwsi odniesli sie to tej metodologi
+ pod nazwą Scrum.
+\end_layout
+
+\begin_layout Standard
+Idea Scrum'a
+\begin_inset CommandInset citation
+LatexCommand cite
+key "scrum.10.steps"
+
+\end_inset
+
+ wychodzi z założenia że na początku realizacji projektu mamy ogólny obraz
+ jakie włąsciwości musi posiadać dany system.
+ Zestawienei tych cech nazywane jest listą właściwości produktu
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+product backlog(ang.)
+\end_layout
+
+\end_inset
+
+, lista ta powinna byc posortowana według biznesowej wartości.
+ Powinna być też wydzielona częśc na włąsciwości krytyczne, oraz tak zwaną
+ listę życzeń.
+ Kolejnym etapem jest pogrupowanie - biorąc pod uwagę ich priorytety - celów
+ i wydzielenie ram czasowych dla każdej z grup - okresy te nazywami sprintami.
+ 
+\end_layout
+
+\begin_layout Standard
+Każdy sprint posiada własną listę włąsciwości, która jest juz bardziej szczegóło
+wa, każdy element listy posiada swój priorytet dzięki czemu wiadomo jaka
+ jest kolejnośc wykonywania zadań, może ona zawierać także włąsciwości opcjonaln
+e choć nie jest to konieczne.
+ Sprint trwa od dwóch tygodni do miesiąca.
+ Zadania które estymowane są na wiecej niż 16 godzin powinny być podzielone.
+ 
+\end_layout
+
+\begin_layout Standard
+Najpóźniej - jeśli to możliwe, można wcześniej - na koniec sprinta wszystkie
+ właściwości z backloga muszą być gotowe do użycia.
+ Dzięki temu możliwe jest zebrania reakcji od użytkowników.
+ Ich uwagi są brane pod uwagę przy następnym sprincie, lub jeśli czas pozwala
+ to w tym samym.
+\end_layout
+
+\begin_layout Standard
+W ramach sprintu każdy dzień rozpoczyna się od krótkiego - około pietnastominuto
+wego - spotkania w którym uczesniczą wszyscy członkowie zespołu.
+ Każdy odpowiada na trzy pytania:
+\end_layout
+
+\begin_layout Itemize
+Co udało mi się zrobić w dniu wczorajszym?
+\end_layout
+
+\begin_layout Itemize
+Co planuje zrobić dziś?
+\end_layout
+
+\begin_layout Itemize
+Na jakie przeszkody natrafiłem?
+\end_layout
+
+\begin_layout Standard
+Dzięki temu cały zespół wie jakie zmiany następują w systemie, oraz daje
+ to możliwość szybszego rozwiązania przeszkód dzięki spojżeniu na problem
+ z wielu perspektyw.
+\end_layout
+
+\begin_layout Standard
+Postęp w projekcie jest mierzony za pomocą 'tablic spalania'
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+burnout chart(ang.)
+\end_layout
+
+\end_inset
+
+.
+ Jest ona osobna dla całego projektu (poszczegolnych właściwości), oraz
+ dla poszczególnych sprintów.
+ Jako skali używa się czasem liczb pierwszych, lub liczb z ciągu Fibonnaciego.
+\end_layout
+
+\begin_layout Paragraph
 Behavior Driven Development
 \end_layout
 
 \begin_layout Standard
-\begin_inset Box Shadowbox
-position "t"
-hor_pos "c"
-has_inner_box 1
-inner_pos "t"
-use_parbox 0
-width "100col%"
-special "none"
-height "1in"
-height_special "totalheight"
-status collapsed
-
-\begin_layout Quote
-Business people and developers must work together daily throughout the project.
-\begin_inset CommandInset citation
-LatexCommand cite
-key "AgileManifesto.Principles"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-BDD to technika produkcji oprogramowania która kładzie duży nacisk na współpracę
- pomiędzy programistami a ludźmi związanymi z biznesem - tymi którzy zamawiają
- system jak również z tymi którzy będą go używać, jest to zgodne z regułą
- agile manifest zacytowanej powyżej.
- Dan North
+BDD jest techniką organizacji produkcji oprogramowania która kładzie duży
+ nacisk na współpracę pomiędzy programistami a ludźmi związanymi z biznesem
+ - tymi którzy zamawiają system jak również z tymi którzy będą go używać,
+ jest to zgodne z filozofią agile.
+ Dana Northa
 \begin_inset Foot
 status collapsed
 
@@ -1171,6 +1208,8 @@ http://www.flickr.com/photos/obie/421149993/
  implementować, sugeruje że powinniśmy sobie zadać pytanie 'Jaka jest kolejną
  najważniejsza cecha której system nie posiada?', wydaje sie banalne aczkolwiek
  daje najlepsze rezultaty dla investorow, a zwłaszcza końcowych użytkowników.
+ W przypadku korzystania ze scrum'a jest to dobra reguła dla ustawiania
+ priorytetów w backlog'u.
 \end_layout
 
 \begin_layout Standard
@@ -1185,7 +1224,7 @@ key "BDD.info"
  dokładniej.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Najważniejszy jest opis zachowania systemu
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1206,7 +1245,7 @@ Ta reguła zwraca uwagę że najważniejsze jest aby wiedzieć jak system ma
  interakcji użytkownika z systemem, dokładniej zostaną omówione później.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 System udostepnia pewne zachowanie ponieważ wnosi ono wartość dla biznesu
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1223,10 +1262,10 @@ Jest dosyć częstym błedem gdy w systemie pojawiają się nowe funkcjonalści
 ych, jest to pewnego rodzaju patologia występująca w produkcji oprogramowania.
  Zwrócenie uwagi na wartość biznesową ma ogromny wpływ na efektywność oraz
  koszt związany z systemem, choć zazwyczaj nie jest to sprawa oczywista
- ani nie jest to postrzegane jako rzecz niezbędna, na co zwraca uwagę Dan.
+ ani nie jest to postrzegane jako rzecz niezbędna, na co zwraca uwagę North.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subparagraph
 Opierać się na wiedzy, a nie przewidywaniach
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1261,7 +1300,7 @@ Historyjki użytkownika
 \end_layout
 
 \begin_layout Standard
-Dan North zwraca uwagę na trzy części które występują w historyjce
+North zwraca uwagę na trzy części które występują w historyjce
 \end_layout
 
 \begin_layout Itemize
@@ -1279,10 +1318,10 @@ warunki akceptacji, które definiuje kiedy funkcjonalność w systemie jest
 \end_layout
 
 \begin_layout Standard
-<#TODO przykład>
+<#TODO przykład (potrzebny szablon)>
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subparagraph
 Automatyczne testowanie zachowania systemu
 \end_layout
 
@@ -1290,9 +1329,8 @@ Automatyczne testowanie zachowania systemu
 Celem BDD jest wymuszenie współpracy z klientem oraz polepszenie z nim komunikac
 ji poprzez stosowanie języka które obie strony rozumieją.
  Efektem takiej pracy jest specyfikacja w postaci historyjek użytkownika,
- które to umożliwiają pisanie testów które dokładniej, i w krótszym czasie
- są w stanie zweryfikować czy poszczególne części systemu zachowują się
- tak jak powinny.
+ które to umożliwiają pisanie automatycznych testów akceptacji, dzięki czemu
+ jest możliwa lepsza weryfikacja poprawności zachowania systemu..
  Dużym błędem
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1311,14 +1349,25 @@ Test-Driven-Development
 \end_inset
 
  było zbyt dokładne testowanie kodu a nie zachowania systemu, które utrudniały
- zmiany, zamiast je stymulować.
+ zmiany, zamiast je stymulować
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ludzie z kręgu BDD, nie zalecają pisania testów dla metod prywatnych, i
+ chronionych
+\end_layout
+
+\end_inset
+
+.
  Dlatego tak ważne jest aby pisać testy które weryfikują zachowanie systemu,
  badź poszczególnych komponentów.
  Tak też narodził się pomysł aby przygotować narzedzia wspierające ten proces.
- Tak oto również w 2003 roku Dan postanowił zastąpić JUnit własną biblioteką
- które ułatwiała by pisanie testów zachowania, nazwał ją JBahave.
+ W 2003 roku Dan postanowił zastąpić JUnit własną biblioteką które ułatwiała
+ by pisanie testów zachowania, nazwał ją JBahave.
  Na przełomie ostatnich pięciu lat powstało wiele odpowiednich, badź też
- rozszerzeń dla poszczególnych języków takich jak:
+ rozszerzeń dla poszczególnych języków, poniżej lista.
 \end_layout
 
 \begin_layout Description
@@ -1430,18 +1479,23 @@ key "Rspec.homepage"
 \end_layout
 
 \begin_layout Standard
-W dalszej części pracy skupina będzie uwaga bibliotece RSpec ze względu
- na użycie języka ruby w projekcie oraz biblioteki Cucumber która daje możliwośc
- uruchamiania historyjek użytkownika jako wykonywalny kod, przez co jest
- niezwykle użyteczna.
- Zostaną one omówione w kolejnych dwóch sekcjach.
+W kolejnej sekcji zostanie omówiona biblioteka RSpec ze względu na użycie
+ języka ruby w projekcie oraz biblioteka Cucumber która daje możliwośc uruchamia
+nia historyjek użytkownika jako wykonywalny kod, przez co jest niezwykle
+ użyteczna - narzędzie które jest opisane w sekcji piątej, wspiera export
+ do tego formatu.
+\end_layout
+
+\begin_layout Subsubsection
+Dlaczego Agile
 \end_layout
 
 \begin_layout Standard
-
+What i have learnet from first scrum (1,5 storna)
 \end_layout
 
 \begin_layout Standard
+http://jeffsutherland.com/scrum/FirstScrum2004.pdf
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -1453,19 +1507,22 @@ Technologie i wzorce projektowe
 \end_layout
 
 \begin_layout Standard
-Przy motodologi agile bardza istone jest jakie narzędzia wybierzemy, oraz
- jakich wzorców musimy się bezwzglednie trzymać aby produkcja była efektywna.
- Wynika go z charakteru pracy, musimy być ciągle otwarci na zmieny zgłaszane
- przez klienta, oraz developerów.
+Choć metologia agile nie jest związana z konkretnymi technologiami, to jednak
+ języki, oraz środowiska dające się łatwo refaktorować są korzystniejsze.
+ Stosowanie się do opowiednich wzorców stymuluje pisanie dobrego kodu dzięki
+ czemu zmiany w takim systemi są efektywniejsze, i łatwiej takim system
+ sprzeżyć z innym.
+ Jest to efetk filozofi jaką agile ma do zmian, musimy być na nie ciągle
+ otwarci.
  Zmiany ze strony klienta są nieuniknione, a mowiac bardziej precyzyjnie
  są niezbędne aby produkt był wartościowy.
- Zmiany które wychodzą od strony developerów czy to programistyczne, czy
- to związane z interfejsem użytkownika, są równie częste gdyż projekt na
- osi czasu ewoluje, znajdujemy lepsze, efektywniejsze rozwiązania.
+ Wpływ na to ma również użytkownik końcowego którego uwagi mogą podnięść
+ znacznie używalnośc systemu, a informacje takie docierają późno.
+ Czasem sami developerzy zauważają pewne nieprawidłowości i decydują się
+ na zmiany.
  Wymaga to aby kod był dobrze utrzymany, bez redundantności, przejżysty
  i jednoznaczny.
- Poniżej zwrócę uwagę na sprawdzone wzorce które umożliwiają osiągnąć ten
- cel.
+ Poniżej zwrócę uwagę na sprawdzone wzorce które pomagają osiągnąć ten cel.
 \end_layout
 
 \begin_layout Subsection
@@ -1473,8 +1530,18 @@ Model-Widok-Kontroler
 \end_layout
 
 \begin_layout Standard
-Wzorzec MVC ma już za sobą prawie 30 lat, został opracowany przez norwega
- Trygve Renskaug na Uniwersytecie w Oslo na przełomie lat 1978-79.
+Wzorzec MVC
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Model-View-Controller
+\end_layout
+
+\end_inset
+
+ ma już za sobą prawie 30 lat, został opracowany przez norwega Trygve Renskauga
+ na Uniwersytecie w Oslo na przełomie lat 1978-79.
  Pierwotna nazwa brzmiała THING-MODEL-VIEW-EDITOR, końcową nazwę zawdzięczamy
  dyskusji autora z Adele Goldberg, dzięki której 10 grudnia 1979 przyjęto
  ostateczną nazwę.
@@ -1489,42 +1556,41 @@ key "MVC.Author.Report"
 
 .
  Wskazuje to na idee odzielenia samych danych i sposobu ich prezentacji
- oraz modyfikacji, co jest w założeniu proste oraz logiczne.
+ oraz modyfikacji, co jest logiczne.
  Zwróćmy uwagę dokładniej na poszczególne elementy oraz interakcje między
  nimi.
  
 \end_layout
 
 \begin_layout Paragraph
-MODEL
+Model
 \end_layout
 
 \begin_layout Standard
 Model jako abstrakcyjna forma reprezentacja encji jest ważnym aspektem izolacji.
- Cześć systemu kwalifikowana jako model można przedstawic jako zestaw atrybutów,
- informacje które przechowuje oraz logike biznesową która jednoznacznie
- okręśla zachowanie.
+ Cześć systemu kwalifikowana jako model można przedstawic jako zestaw atrybutów
+ które przechowuje oraz logike biznesową która jednoznacznie okręśla zachowanie.
  Zgodnie z definicja wzorca model nie ma bezpośredniego dostępu do kontrolera
  czy widoku.
- Jeśli próby przechowywanie informacji poza modelem wydają sie dziwne i
- rzadko spotykane, to umieszczanie logiki w kontrolerach czy też widokach
- jest dosyc powszechną patologią która powoduje duże problemy w momencie
- prób optymalizacji czy też w okresie pięlegnacji kodu.
- Doświadczenie pokazuje że trzymanie się ściśle prostych dwóch reguł daje
- znaczne korzyści dla procesu produkcji oprogramowania.
- Łatwiej jest uniknąc redundancji kodu, oraz optymalizacja kodu jest możliwa
- efektywniej.
+ Jeśli próby przechowywanie atrybutów poza modelem wydają sie dziwne i rzadko
+ spotykane, to umieszczanie logiki w kontrolerach czy też widokach jest
+ dosyc powszechną patologią która powoduje duże problemy w momencie prób
+ optymalizacji czy też pięlegnacji kodu.
+ Doświadczenie pokazuje że trzymanie się ściśle tych prostych dwóch reguł
+ wymusza większy porządek w implementacji systemu.
+ Łatwiej jest uniknąc redundancji kodu, oraz optymalizacja kodu jest mniej
+ ryzkowna.
  Ma to duże znaczenie zwłaszcza w aplikacjach webowych gdzie mnogość form
  prezentacji danych wymaga jednoznacznie określonej logiki na poziomie modelu.
 \end_layout
 
 \begin_layout Paragraph
-VIEW
+Widok
 \end_layout
 
 \begin_layout Standard
-Widok jest jednoznacznie odpowiedzialny za reprezentacje wizualna danych,
- oraz interfejsów edycyjnych.
+Widok jest odpowiedzialny za reprezentacje wizualna danych, oraz interfejsów
+ edycyjnych.
  Pierwotana dofinicja
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1535,14 +1601,16 @@ key "MVC.Author.Report"
  zakładała że widok jest bezpośrednio powiązany z modelem.
  The Passive View Pattern zakłada że widok ma dostęp do modelu tylko za
  pomocą kontrolera - nie występuje bezpośrednie odwołanie do modelu.
- Celem jest aby widok prezentował dane, bez znajomości co znajduje sie w
- modelu - jego celem jest prezentacja danych które dostarcza mu kontroler.
- Jedyna logika jaka może tutaj występować to ta związana z kontrolkami których
- zachowanie nie jest bezpośrednio związane z logiką biznesową.
+ Widok który operuje tylko na danych przygotowanych przez kontroller jest
+ dużo prostszy, a ponieważ wszelkie dane przechodzą przez kontroler jest
+ programista ma nad nimi wiekszą kontrole - ta odmiana wzorca, jest promowana
+ w aplikacjach webowych.
+ Jedyna logika jaka może występować w widoku to ta związana z kontrolkami
+ których zachowanie nie jest bezpośrednio związane z logiką biznesową.
 \end_layout
 
 \begin_layout Paragraph
-CONTROLLER
+Kontroler
 \end_layout
 
 \begin_layout Standard
@@ -1552,43 +1620,291 @@ Kontroler ma spełniać dwa proste zadania, przyjąc komunikat od użytkownika
  od użytkownika, przekazac komunikat razem z danymi do odpowiedniego modelu
  przyjac wynik ktory model zwrocił, przygotowane dane przeslac do odpowiedniego
  widoku.
- Dla aplikacji webowych dochodzą kwestie jak autentykacja, oraz kwestie
- własnościowe obiektów.
-\end_layout
-
-\begin_layout Standard
-#TODO wykres zależności
+ Dodatkowo dochodzą kwestie jak uwierzytelnienie użytkownika, oraz kwestie
+ własności do obiektów.
 \end_layout
 
 \begin_layout Standard
 Pilnowanie aby nie wychodzic poza kompetencje owocuje duża niezależnosci
- poszczególnych kompomentów, oraz duże możliwości rozwoju aplikacji bez
- naruszania wcześniejszych elementów
+ poszczególnych kompomentów, oraz możliwość rozwoju aplikacji bez naruszania
+ wcześniejszych elementów.
+\end_layout
+
+\begin_layout Subsection
+Representational state transfer
 \end_layout
 
 \begin_layout Standard
-<#TODO, wiecej info, - Szczególnie zwróce uwagę na wariację MVP
+REST jest stylen projektowania interfejsów w sytemach rozproszonych takich
+ jak globalna sieć.
+ Samo pojęcie zostało wprowadzone w 2000 roku przez Roy T.
+ Fieldinga
+\begin_inset CommandInset citation
+LatexCommand cite
+key "REST.roy.t.fielding.homepage"
+
+\end_inset
+
+, warto wspomnieć że jest on jednocześnie jednym z głównych autorów protokołu
+ HTTP, oraz współtworcą Apacha
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ApacheFoundation"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Najważniejszą regułą jest projektowanie systemu ze zewnątrz (publicznych
+ interfejsów) jako zasoby
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Model-View-Presenter
+resource, w języku angielskim
 \end_layout
 
 \end_inset
 
- - The Passive View Patern
-\begin_inset CommandInset citation
-LatexCommand cite
-key "MVC.pattern.describe"
+.
+ Zasób jest to źródło informacji o danym charakterze i musi być określone
+ przez rzeczownik nigdy przez czasownik.
+ Przykładem zasobu może być profil użytkownika w danym serwisie, daje on
+ najczęsciej możliwość pobierania informacji oraz manipulowania.
+ Każdy zasób musi posiadać unikalny identyfikator, dla protokołu HTTP jest
+ to URI
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Uniform Resource Identifier
+\end_layout
 
 \end_inset
 
-, gdyż najlepiej wpisuje się on gdy patrzymy przez pryzmat aplikacji webowych>
+.
+ Bardzo często w aplikacjach webowych, jeden zasób potrafi prezentować te
+ same dane w różnych formatach.
+ W postaci HTML lub w formacie XML lub JSON dla różnego typu kontrolek javascrip
+towych czy też RSS, ATOM dla czytników wiadomości.
+\end_layout
+
+\begin_layout Standard
+Kolejną istotną sprawą jest kwestia minimalizacja metod w zasobie, czyli
+ tak naprawde ilości komunikatów na które odpowiadają.
+ Z założenie należy sie ograniczyć do maksymalnie siedmiu metod.
+ Cztery z nich są związane z operacjami na pamięci stałej
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+często określane akronimem CRUD(Create,Read, Update, Delete)
+\end_layout
+
+\end_inset
+
+, a są to metody:
+\end_layout
+
+\begin_layout Itemize
+Utwórz
+\end_layout
+
+\begin_layout Itemize
+Odczytaj
+\end_layout
+
+\begin_layout Itemize
+Uaktualnij
+\end_layout
+
+\begin_layout Itemize
+Usuń
+\end_layout
+
+\begin_layout Standard
+Kolejne dwie metody związane są z ułatwieniem operacji edycyjnych:
+\end_layout
+
+\begin_layout Itemize
+Nowy - wspiera tworzenie interfejsu tworzenia nowe instancji zasobu
+\end_layout
+
+\begin_layout Itemize
+Edycja - przygotowuje interfejs z wczytanymi danymi istniejacej instacji
+ zasobu
+\end_layout
+
+\begin_layout Standard
+Siódma metoda służy do pobierania z zasobu kolekcji instancji, często określana
+ słowem indeks lub lista.
+\end_layout
+
+\begin_layout Standard
+Wyjście ponad siedem akcji jest dopuszczalne tylko w szczególnych przypadkach.
+ Jeśli w systemie występuje średnio wiecej niż półtora akcji na zasób, sugeruje
+ to możliwy bład związany ze sposobem zaprojektowania zasobów.
+\end_layout
+
+\begin_layout Standard
+Wielką zaletą projektowania systemu zgodnie z tymi zasadami jest przejżysta
+ możliwość interakcji między różnymi aplikacjami.
+ Platforma taka jak Rails moją osobny moduł - ActiveResource - wspierający
+ podpięcie zewnętrznych zasób jako wewnętrzne w systemie, ale i bez tego
+ komunikacja z innymi systemami jest przejżysta.
+ Ponad to przybliża to marzenie Sun'a o globalnej sieci jako jednym wielkim
+ komputerze.
 \end_layout
 
 \begin_layout Subsection
-RSPEC
+Narzędzia wykorzystane w pracy
+\end_layout
+
+\begin_layout Standard
+Poniżej zmieszczona jest krótki opis poszczęgólnych technologi użytych w
+ części praktycznej, czyli języka Ruby, oraz środowiska rozwoju aplikacji
+ Ruby on Rails.
+ Następnie dokłanie zostanie zwrócona uwage na środowisko wspierające przygotowa
+nie testów - RSpec i biblioteka to uruchamnia opowieści użytkownika w formacie
+ tekstowym Cucumbers.
+\end_layout
+
+\begin_layout Subsubsection
+Ruby
+\end_layout
+
+\begin_layout Standard
+Jest język opracowany w połowie lat dziewiędziesiątych przez Yukihiro Matsumoto
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Yukihro Matsumoto jest często nazywany wśród ludzi związanych z rubym jako
+ 'matz'.
+\end_layout
+
+\end_inset
+
+.
+ Chiał aby powstał język w którym znalazłoby sie miejsce dla wybranych cech
+ a takich języków jak Perl, Smalltalk, Eiffel, Ada i Lisp.
+ Miał to być balans pomiedzy programowaniem funkcyjnymi a programowaniem
+ imperatywnym.
+ Pierwszy publiczne wydanie nastąpiło 1995 roku.
+ Ogromny zwrost popularności w ostanich latach zawdzięcza środowisku rozwoju
+ aplikacji Ruby on Rails, co znów zoowocowała w dużo społeczność która zaczeła
+ używać język ruby w różnych innych zastosowaniach.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Jako przykład może posłużyć powłoka systemowa - które może być użyte jako
+ zamięnnik dla basha - w której posługujemy sie językiem ruby, nazywa się
+ rush(http://rush.heroku.com).
+ Warto nadmienić że wiele skryptów dla systemów *nix, również jest już pisane
+ w tym języku.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Główne cechy języka
+\end_layout
+
+\begin_layout Itemize
+wszystko jest obiektem (liczba, napis tekstowy)
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Wyjątek stanowi tu referencja do obiektu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+elastyczna składnia
+\end_layout
+
+\begin_layout Itemize
+wsparcie dla bloków kodu
+\end_layout
+
+\begin_layout Itemize
+mixiny, które w naturalny sposób rozwiązują problem wielodziedziczenia
+\end_layout
+
+\begin_layout Itemize
+obsługa błędów przez wyjątki
+\end_layout
+
+\begin_layout Itemize
+garbage collector
+\end_layout
+
+\begin_layout Subsubsection
+Ruby on Rails
+\end_layout
+
+\begin_layout Standard
+Jest to środowisko do szybkiego rozwoju aplikacji webowych opartych o bazy
+ danych.
+ Jest bardzo szybko rozwijające się środowiski, dzieki dużej społęczności
+ zaangażowanej w projekt.
+ Ruby on Rails
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RoR.homepage"
+
+\end_inset
+
+ powstał poprzez wyciągniecie z projektu BaseCamp w 2004 roku przez Davida
+ Heinemeiera Hanssona.
+ Od tego czasu rozwija się bardzo prężnie, zwłaszcza na przełomie ostatniego
+ roku.
+\end_layout
+
+\begin_layout Paragraph
+Zalety środowiska
+\end_layout
+
+\begin_layout Itemize
+narzucony wzorzec MVC
+\end_layout
+
+\begin_layout Itemize
+bardzo dobre wsparcie dla REST'a
+\end_layout
+
+\begin_layout Itemize
+abstrakcyjna mapper bazy danych ActiveRecord
+\end_layout
+
+\begin_layout Itemize
+rozbudowany wsparcie dla testów (TestUnit, RSpec-on-rails, Cucumber)
+\end_layout
+
+\begin_layout Itemize
+mnóstwo pluginów
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RoR.plugins"
+
+\end_inset
+
+, wraz ze wsparcie do wydzielania częsci systemu
+\end_layout
+
+\begin_layout Subsubsection
+RSpec
 \end_layout
 
 \begin_layout Standard
@@ -1598,13 +1914,13 @@ Jedno z założeń BDD wiąże się z automatyzacją testów w aplikacji.
 status collapsed
 
 \begin_layout Plain Layout
-Domain-specific language
+Domain specific language (DSL)
 \end_layout
 
 \end_inset
 
- dla tego konkretnego zastosowania.
- Pierwsze myśli aby taki powstał przedstawił Dave Astel
+ dla tego konkretnego zadania.
+ Pierwsze myśli aby powstał dla języka ruby taki DSL, przedstawił Dave Astel
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DaveAstel.Blog"
@@ -1620,7 +1936,7 @@ key "BDD.RSPEC.FirstIntroduction"
 
 z 2005 roku.
  Zwrócił on uwagę na zbudowanie takiego DSL'a który będzie wspierał opis
- zachowania pożądanego wraz z ułatwieniami w weryfikacji tego zachowania.
+ zachowania wraz z weryfikacją tego zachowania.
  Zaproponował kilka zmian związanych z nazewnictwem, zamiast zaczynać nazwy
  metod od słowa 'test', zacząć od słowa 'should', używać słowa 'Context'
  zamiast 'TestCase' oraz 'shouldBe' w zamian 'assert'.
@@ -1655,8 +1971,9 @@ key "RSPEC.community,RSPEC.commit.history"
 \end_inset
 
  formalny zapis testów jest jeszcze bardziej przejrzysty i intuicyjny.
- Gdyby uaktualnić test powyżej do aktualnie specyfikacji frameworka, będzie
- on miał postać zbliżoną do zamieszczonej poniżej.
+ Gdyby uaktualnić przykład zamieszczony powyżej, biorąc pod uwagę aktualną
+ specyfikacje frameworka, będzie on miał postać zbliżoną do zamieszczonej
+ poniżej.
 \end_layout
 
 \begin_layout Standard
@@ -1669,10 +1986,21 @@ key "RSPEC.community,RSPEC.commit.history"
 \end_layout
 
 \begin_layout Standard
-Tak napisany spec ma duzo wiekszy wplyw na postrzeganie zachowania systemu
- ktory testujemy.
+Tak napisany spec
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Zamiast używać słowa test, Astel zaczoł nazywać taką weryfikajcę 'spec',
+ prawdopodbnie od agnielskiego słowa specyfication
+\end_layout
+
+\end_inset
+
+ ma duzo wiekszy wplyw na postrzeganie zachowania systemu ktory chcemy weryfikow
+ać.
  Jest to również wielce pomocne przy generowanie raportów, które notabene
- są pewną formą dokumentacji systemu.
+ są pewną formą dokumentacji systemu - opisują jego pożądane zachowanie.
 \end_layout
 
 \begin_layout Standard
@@ -1690,7 +2018,7 @@ http://pastie.org/368648
 \end_layout
 
 \begin_layout Standard
-Aktualnie czołowym developerem projektu jest David Chelimsky
+Aktualnie liderem projektu jest David Chelimsky
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DavidChelimsky.Blog"
@@ -1700,7 +2028,7 @@ key "DavidChelimsky.Blog"
 , Astel ciągle jest aktywny w projekcie, zwłascza w promowaniu metodologi
  BDD.
  Sam Rspec nie doczekał się jeszcze żadnej książki, która zebrała by informacje
- na temat BDD, RSPEC i Cucumber.
+ na temat BDD, RSpec i Cucumber.
  W planach jest wydanie takiej książki
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1731,30 +2059,26 @@ key "Bryan.Helmkapm.Blog"
 \end_inset
 
 .
- Zwracając uwagę na autorów będzie to spewnością pozycja warta zapoznania
+ Zwracając uwagę na autorów będzie to spewnością pozycja z którą warto się
+ zapoznać.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
 Cucumber
 \end_layout
 
 \begin_layout Standard
-Członkami zespołu są również ludzie biznesu którzy nie programują, po doświadzcz
-eniach
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ProgramingByBusinnessPeople"
-
-\end_inset
-
- z językiem COBOL jest to wręcz wskazane aby tak zostało.
- Celem ich obecności jest utworzenie specyfikacji systemu zrozumiałej dla
- obu stron, oraz dającej się łatwo przetworzyć na automatyczne testy.
- 
+Idealnym rozwiazaniem była by możliwość pisania testów integracyjnych -
+ przez osoby które nie są programistami - która mogłyby powtarzalnie weryfikować
+ system.
+ Niestety nie jest to w pełni osiagalne, pewnym postępem w tym kierunku
+ jest tworzenie tekstowy opowieści użytkownika, z wydziolonymi scenariuszami,
+ które są zruzumiałe dla ludzi biznesu, jedna z najciekawszych implementacji
+ jest Cucumber.
 \end_layout
 
 \begin_layout Standard
-Pierwszą próbą zbudowania takiego dsl był RBehave
+Jego historia zaczyna się od pierwszej próby - dla rspec'a - którą był RBehave
 \begin_inset CommandInset citation
 LatexCommand cite
 key "RSPEC.rbehave.introduction"
@@ -1773,11 +2097,11 @@ key "Cucumber.StoryRunnerInPlainText"
  nad którym pracowali Astel we wspópracy z Northem - pierwsze wersja były
  dostępne w drugie połowie 2007 roku.
  Projekt bazował na wcześniejszym RBehave, jednak jego największym sukcesem
- było możliwość uruchamiania opowieści użytkownika napisanych po angielsku.
+ było możliwość uruchamiania opowieści użytkownika napisanych po angielsku
+ z pliku tekstowego.
  Początkiem kwietnia 2008 roku Aslak Hellesoy rozpoczal prace nad nowym
- sródowiksiem do uruchamiania opowieści użytkownika z czystego pliku jako
- automatycznych testów integracyjnych, projekt został ostatecznie nazwany
- Cucumber (pierwotnie nazywał się Stories).
+ sródowiksiem do uruchamiania opowieści użytkownika z czystego pliku, projekt
+ został ostatecznie nazwany Cucumber (pierwotnie nazywał się Stories).
  Po zaledwie pięciu miesiącach prac został on zamiennikiem dla Story Runner
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1785,9 +2109,9 @@ key "Cucumber.replacement.of.story.runner"
 
 \end_inset
 
-, Chelimsky zmianę te uargumentował, że projekt posiada wiekszą ilośc funkcjonal
-ności, i jest prostszy w konfiguracji.
- Zwróćmy uwagę na te funkcjonalności.
+, Chelimsky zmianę te uargumentował, że Cucumber posiada wiekszą ilośc funkcjona
+lności, i jest prostszy w konfiguracji.
+ Poniżej wymienione jego cechy.
 \end_layout
 
 \begin_layout Itemize
@@ -1799,11 +2123,11 @@ pozwala pisać opowieści użytkownika w ponad 20 językach (wtym także po pols
 \end_layout
 
 \begin_layout Itemize
-lepsze śledzenie błędu
+lepsze śledzenie błędu (od story runnera)
 \end_layout
 
 \begin_layout Itemize
-prosta konfigurcja
+prosta konfigurcja (od story runnera)
 \end_layout
 
 \begin_layout Itemize
@@ -1837,8 +2161,8 @@ key "Cucumber.Gherkin.spokenlanguege"
 
 \end_inset
 
-, wraz z dosyć łatwą możliwością dodawania nowych lub adaptacji dla własnych
- potrzeb.
+, możliwe jest również dodawania nowych lub adaptacji dla własnych potrzeb
+ już istniejących.
  Sam język posiada niewielką gamę słów kluczowych
 \begin_inset Foot
 status collapsed
@@ -1875,6 +2199,10 @@ Wtedy (Then) - określa pożadany efekt końcowy
 
 \begin_layout Itemize
 Oraz (And) - łączy kroki w sekcjach (Dane, Jeżeli, Wtedy)
+\end_layout
+
+\begin_layout Standard
+Poniżej zamieszczony jest przykład.
 \end_layout
 
 \begin_layout Quote
@@ -2088,186 +2416,6 @@ oraz
 
 \end_deeper
 \end_deeper
-\begin_layout Subsection
-Representational state transfer
-\end_layout
-
-\begin_layout Standard
-REST jest stylen projektowania interfejsów w sytemach rozproszonych takich
- jak globalna sieć.
- Samo pojęcie zostało wprowadzone w 2000 roku przez Roy T.
- Fieldinga
-\begin_inset CommandInset citation
-LatexCommand cite
-key "REST.roy.t.fielding.homepage"
-
-\end_inset
-
-, warto wspomnieć że jest on jednocześnie jednym z głównych autorów protokołu
- HTTP, oraz współtworcą Apacha
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ApacheFoundation"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Najważniejszą regułą jest projektowanie systemu ze zewnątrz (elementów odbierają
-cych komunikaty) jako zasoby
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-resource, w języku angielskim
-\end_layout
-
-\end_inset
-
-.
- Zasób jest to źródło informacji o danym charakterze i musi być reprezentowany
- przez rzeczownik nigdy przez czasownik.
- Przykładem zasobu może być profil użytkownika w danym serwisie, daje on
- najczęsciej możłiwość podglądniecia informacji oraz ich zaktualizowanie.
- Każdy zasób musi posiadać unikalny identyfikator, dla protokołu HTTP jest
- to URI
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Uniform Resource Identifier
-\end_layout
-
-\end_inset
-
-.
- Bardzo często w aplikacjach webowych, jeden zasób potrafi prezentować te
- same dane w różnych formatach.
- W postaci HTML lub w formacie XML lub JSON dla różnego typu kontrolek javascrip
-towych czy też RSS, ATOM dla czytników wiadomości.
-\end_layout
-
-\begin_layout Standard
-Kolejną istotną sprawą jest kwestia minimalizacja metod w zasobie, czyli
- tak naprawde ilości komunikatów na które odpowiadają.
- Z założenie należy sie ograniczyć do maksymalnie siedmiu metod.
- Cztery z nich są związane z operacjami na pamięci stałej
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-często określane akronimem CRUD(Create,Read, Update, Delete)
-\end_layout
-
-\end_inset
-
-, a są to metody:
-\end_layout
-
-\begin_layout Itemize
-Utwórz
-\end_layout
-
-\begin_layout Itemize
-Odczytaj
-\end_layout
-
-\begin_layout Itemize
-Uaktualnij
-\end_layout
-
-\begin_layout Itemize
-Usuń
-\end_layout
-
-\begin_layout Standard
-Kolejne dwie metody związane są z ułatwieniem operacji edycyjnych:
-\end_layout
-
-\begin_layout Itemize
-Nowy - wspiera tworzenie interfejsu tworzenia nowe instancji zasobu
-\end_layout
-
-\begin_layout Itemize
-Edycja - przygotowuje interfejs z wczytanymi danymi istniejacej instacji
- zasobu
-\end_layout
-
-\begin_layout Standard
-Siódma metoda służy do odpytywania zasobu o kolekcje instancji, często określana
- słowem indeks lub lista.
-\end_layout
-
-\begin_layout Standard
-Wychodznie ponad siedem akcji jest dopuszczalne tylko w szczególnych przypadkach.
- Jeśli w systemie występuje średnio wiecej niż półtora akcji na zasób, sugeruje
- to możliwy bład związany ze sposobem zaprojektowania zasobów
-\end_layout
-
-\begin_layout Standard
-Wielką zaletą projektowania systemu zgodnie z tymi zasadami jest przejżysta
- możliwość interakcji między różnymi systemami.
- Platforma taka jak Rails moją osobny moduł - ActiveResource - wspierający
- podpięcie zewnętrznych zasób jako wewnętrzne w systemie, ale i bez tego
- komunikacja z innymi systemami jest przejżysta.
- Ponad to przybliża to marzenie Sun'a o globalnej sieci jako jednym wielkim
- komputerze.
-\end_layout
-
-\begin_layout Subsection
-Ruby on Rails
-\end_layout
-
-\begin_layout Standard
-Aby specyfikowanie, miało sens musi być ono zwiączone zaimplementowanym
- system.
- Powyższe wzorce bardzo dobrze są wspierane w środkowisku Ruby on Rails.
- Jest to w pełni wyposażone środowisko do tworznia aplikacji internetowych
- opartych o bazy danych zgodne ze wzorcem MVC
-\begin_inset CommandInset citation
-LatexCommand cite
-key "RoR.homepage"
-
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-Ruby on Rails powstał poprzez wyciągniecie z projektu BaseCamp w 2004 roku
- przez Davida Heinemeiera Hanssona.
- Od tego czasu rozwija się bardzo prężnie, zwłaszcza na przełomie ostatniego
- roku.
-\end_layout
-
-\begin_layout Standard
-Od wersji 2.0 (Grudzień 2007) wspiera bardza dobrze REST.
- Narzędzia takie jak rspec on rails, remarkable, cucumber ułatwiają prowadzeni
- procesu w ramach metodologi BDD.
-\end_layout
-
-\begin_layout Subsubsection
-Ruby
-\end_layout
-
-\begin_layout Standard
-Sam język ruby
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Ruby.about.language"
-
-\end_inset
-
- też zasługuje na uwagę, miał i ciągle ma duży wpływ na wszystkie narzędzia
- które omówiono powyżej.
- Jak również na kod który sami musimy napisać.
- Dzięki nazwykłej elastyczności, i zaawansowanym możliwością metaprogramowania
- było mozliwe powstanie takich narzędzi jak Rails, Rspec czy też Cucumber.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
@@ -2310,599 +2458,10 @@ Związane jest z dwoma funkcjonalnościami systemu, które postaram się poniże
 Zarządzanie funkcjonalnościami
 \end_layout
 
-\begin_layout Description
-Tytuł 
-\bar under
-Zarządzanie funkcjonalnościami
-\end_layout
-
-\begin_layout Description
-Cel W celu umożliwienia wprowadzania opisów funkcjonaności 
-\end_layout
-
-\begin_layout Description
-Jako klient lub programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
- funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Dodanie nowego opisu funcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie tworzenia opisu funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wpisze 
-\begin_inset Quotes sld
-\end_inset
-
-Zarządzanie Scenariuszami
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'tytuł' 
-\begin_inset Newline newline
-\end_inset
-
-i 
-\begin_inset Quotes sld
-\end_inset
-
-umożliwić zarządzanie opisami funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'cel'
-\begin_inset Newline newline
-\end_inset
-
-i 
-\begin_inset Quotes sld
-\end_inset
-
-klient lub programista
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'jako'
-\begin_inset Newline newline
-\end_inset
-
-i 
-\begin_inset Quotes sld
-\end_inset
-
-mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
- funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
- w polę 'chcę'
-\begin_inset Newline newline
-\end_inset
-
-i nacisnę przycisk utwórz
-\end_layout
-
-\begin_layout Description
-Wtedy powinien zostać przeniesiony na stronę funcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć 
-\begin_inset Quotes sld
-\end_inset
-
-Zarządzanie Scenariuszami
-\begin_inset Quotes srd
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć 
-\begin_inset Quotes sld
-\end_inset
-
-umożliwić zarządzanie opisami funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć 
-\begin_inset Quotes sld
-\end_inset
-
-klient lub programista
-\begin_inset Quotes srd
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć 
-\begin_inset Quotes sld
-\end_inset
-
-mieć możliwość zarządzania(dodawanie, edytowanie, usuwanie, przegladania)
- funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć przycisk dodaj scenariusz
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Dodanie nowego opisu funcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie tworzenia opisu funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy nacisnę przycisk utwórz
-\end_layout
-
-\begin_layout Description
-Wtedy powinien zostać na stronie której byłem
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć błąd 
-\begin_inset Quotes sld
-\end_inset
-
-tytuł pole nie może być puste
-\begin_inset Quotes srd
-\end_inset
-
-
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć błąd 
-\begin_inset Quotes sld
-\end_inset
-
-cel pole nie może być puste
-\begin_inset Quotes srd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Zobaczenie listy funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie głównej
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę link 'Funkcjonaności' w menu głównym
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć listę funkcjonalności 
-\begin_inset Newline newline
-\end_inset
-
-i powinienem zobaczyć wyszukiwarkę 
-\begin_inset Newline newline
-\end_inset
-
-i powinienem zobaczyć nawigacje paginacji
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęgladnia funkcjonalności ze wzgledu na date dodania
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie z listy funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę zakres 'od' z kalendarza '01.01.2009'
-\begin_inset Newline newline
-\end_inset
-
-i wybiorę zakres 'do' z kalendarza '10.01.2009'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć funcjonalności dodane w okresie od '01.01.2009'
- do '10.01.2009'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Wejscie na strone funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na na stronie listy funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę na element listy
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć stronę funkcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć listę scenariuszy powiązanych
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przejście do Edycji opisu funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie funcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę w link edytuj
-\end_layout
-
-\begin_layout Description
-Wtedy powinienm zostac przeniesiony na strone edycji
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć formularz z wypełnionym polem 'tytuł'
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć formularz z wypełnionym polem 'cel'
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć formularz z wypełnionym polem 'jako'
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć formularz z wypełnionym polem 'chce'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Edycja opisu funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie edycji funcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wpisze i 
-\begin_inset Quotes sld
-\end_inset
-
-klient lub programista lub grafik
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'jako'
-\begin_inset Newline newline
-\end_inset
-
-i nacisnę przycisk 'aktualizuj'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienm zostac przeniesiony na strone funkcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i powinienem widzieć pole 'jako' wypełnione 
-\begin_inset Quotes sld
-\end_inset
-
-klient lub programista lub grafik
-\begin_inset Quotes srd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Usunięcie opisu funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie funcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę link usuń
-\begin_inset Newline newline
-\end_inset
-
-i potwierdzę
-\end_layout
-
-\begin_layout Description
-Wtedy powinienm zostac przeniesiony na strone listy funkcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i powinienem zobaczyć informacje 
-\begin_inset Quotes sld
-\end_inset
-
-Funkcjonalność 'nazwa' została pomyślnie usunięta
-\begin_inset Quotes srd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Zarządzaniem scenariuszami
 \end_layout
 
-\begin_layout Description
-Tytuł 
-\bar under
-Zarządzanie scenariuszami
-\end_layout
-
-\begin_layout Description
-Cel Weryfikacja jednoznaczności zachowania danej funkcjonalności
-\end_layout
-
-\begin_layout Description
-Jako klient lub programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość dodawanie, edytowanie, usuwanie, przegladania scenariuszy
- w kontekście danej funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przejście na stronę nowy scenariusz
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę przycisk dodaj nowy scenariusz
-\end_layout
-
-\begin_layout Description
-Wtedy powinien zostać przeniesiony na stronę nowego scenariusza
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć tytuł funkcjonalności do której dodaje scenariusz
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć formularz `edycja scenariusz`
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Dodanie nowego scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na nowej stronie scenariusza danej funcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wprowadze 
-\begin_inset Quotes sld
-\end_inset
-
-Usunięcie opisu funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'tytuł'
-\begin_inset Newline newline
-\end_inset
-
-i wprowadze 
-\begin_inset Quotes sld
-\end_inset
-
-jestem na stronie funcjonalności
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'gdy'
-\begin_inset Newline newline
-\end_inset
-
-i wprowadze 
-\begin_inset Quotes sld
-\end_inset
-
-kliknę link usuń i potwierdzę
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'kiedy'
-\begin_inset Newline newline
-\end_inset
-
-i wprowadze 
-\begin_inset Quotes sld
-\end_inset
-
-powinienm zostac przeniesiony na strone listy funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
- w pole 'wtedy'
-\end_layout
-
-\begin_layout Description
-Wtedy powiniem zostan przeniesiony na strone funkcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i powinienem zobaczyć jako tytuł jednego elementu listy scenariuszy 
-\begin_inset Quotes sld
-\end_inset
-
-Usunięcie opisu funkcjonalności
-\begin_inset Quotes srd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Usunięcie scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie funcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę link usuń na elemencie listy scenariuszy
-\begin_inset Newline newline
-\end_inset
-
-i potwierdzę
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zostać na tej samej stronie
-\begin_inset Newline newline
-\end_inset
-
-i powinienem zobaczyć komunikat 
-\begin_inset Quotes sld
-\end_inset
-
-scenariusz #nazwa został usunięty
-\begin_inset Quotes srd
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Wejscie na strone scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na na stronie funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę na element listy scenariuszy
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć stronę scenariusza
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przejście na stronę edycja scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy jestem na stronie scenariusza
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę przycisk edytuj scenariusz
-\end_layout
-
-\begin_layout Description
-Wtedy powinien zostać przeniesiony na stronę edycji scenariusza
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć tytuł funkcjonalności do której edytuje scenariusz
-\begin_inset Newline newline
-\end_inset
-
-i powinien widzieć formularz `edycja scenariusza`
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsection
 Historia zmian
 \end_layout
@@ -2920,373 +2479,14 @@ w procesie agile, zmiany są mile wiedziane na każdym etapie - zgodnie z
 Prezentacja zmian poprzez archiwum
 \end_layout
 
-\begin_layout Description
-Tytuł
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-http://github.com/aslakhellesoy/cucumber/blob/master/lib/cucumber/languages.yml
-\end_layout
-
-\end_inset
-
- 
-\bar under
-Prezentajca histori zmian poprzez archiwum
-\end_layout
-
-\begin_layout Description
-Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
-\end_layout
-
-\begin_layout Description
-Jako klient lub programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość przęgladniam zmian które nastepiły w funkcjonalnościach,
- dodane, usunięto, zmodyfikowane, kiedy i przez kogo
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie archiwum
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie z listą funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy klikne na link archiwum
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- dodanie nowych czy to usunięciach funkcjonalności
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie archiwum ze względu na użytkownika
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie archiwum
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę użytkownika 'Marek W.' z listy
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- dodanie nowych czy to usunięciach funkcjonalności którymi autorem jest
- 'Marek W.'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie archiwum ze względu na czas wprowadzenia zmiany
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie archiwum
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę zakres 'od' z kalendarza '15.01.2009'
-\begin_inset Newline newline
-\end_inset
-
-i wybiorę zakres 'do' z kalendarza '29.01.2009'
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- dodanie nowych czy to usunięciach funkcjonalności które miały miejsce pomiedzy
- '15.01.2009' a '29.01.2009'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Różnice w kontekscie jednej zmiany
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie archiwum
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę na element listy zmian 
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć wersje wcześniejszą i aktualną
-\begin_inset Newline newline
-\end_inset
-
-i powinny być zaznaczone różnice
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przeglądania konretnej zmiany
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie prezentująca zmiany pomiedzy dwiema wersjami
-\end_layout
-
-\begin_layout Description
-Kiedy kliknę pokaż pełną historię obiektu
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- na konkretnym obiekcie(funkcjonalnośc, bądź scenariusz)
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Prezentacja zmian w funkcjonalnościach
 \end_layout
 
-\begin_layout Description
-Tytuł 
-\bar under
-Prezentajca histori zmian w funkcjonalności
-\end_layout
-
-\begin_layout Description
-Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
-\end_layout
-
-\begin_layout Description
-Jako klient lub programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość przęgladniam zmian które nastepiły w funkcjalności,
- oraz dodane, usunięto, zmodyfikowane scenariusze, kiedy i przez kogo
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Wejście do historii zmian funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy klikam na link historia zmian funkcjonalności
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- na konkretnym funkcjonalności
-\begin_inset Newline newline
-\end_inset
-
-i zmiany na scenariusach powiązanych
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie historie zmian funkcjonalności ze względu na użytkownika
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie historii zmian funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę użytkownika 'Kasia W.' z listy
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
- na funkcjonalności którymi autorem jest 'Kasia W.'
-\begin_inset Newline newline
-\end_inset
-
-i scenariuszach którymi autorem jest 'Kasia W.'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie historii zmian w funkcjonalnościach ze względu na czas wprowadzenia
- zmiany
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie historii zmian funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę zakres 'od' z kalendarza '1.12.2008'
-\begin_inset Newline newline
-\end_inset
-
-i wybiorę zakres 'do' z kalendarza '22.12.2008'
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
- na funkcjonalnościach które miały miejsce pomiedzy '1.12.2008' a '22.12.2008'
-\begin_inset Newline newline
-\end_inset
-
-i na scenariuszach powiązanych które miały miejsce pomiedzy '1.12.2008' a
- '22.12.2008'
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsubsection
 Prezentacja zmian w scenariuszach
 \end_layout
 
-\begin_layout Description
-Tytuł 
-\bar under
-Prezentajca histori zmian w scenariuszach
-\end_layout
-
-\begin_layout Description
-Cel Lepsza argumentacja jakości procesu, oraz jego kosztów
-\end_layout
-
-\begin_layout Description
-Jako klient lub programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość przęgladniam zmian które nastepiły w scenariuszach,
- dodane, usunięto, zmodyfikowane, kiedy i przez kogo
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Wejście do historii zmian scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie scenariusza
-\end_layout
-
-\begin_layout Description
-Kiedy klikne na link historia zmian scenariusza
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje,
- na konkretnym scenariuszu
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie historie zmian scenariusza ze względu na użytkownika
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie historii zmian scenariusza
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę użytkownika 'Tomek B.' z listy
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
- na scenariuszu którymi autorem jest 'Tomek B.'
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Przęglądanie historii zmian ze względu na czas wprowadzenia zmiany
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie historii zmian scenariusza
-\end_layout
-
-\begin_layout Description
-Kiedy wybiorę zakres 'od' z kalendarza '1.12.2008'
-\begin_inset Newline newline
-\end_inset
-
-i wybiorę zakres 'do' z kalendarza '22.12.2008'
-\begin_inset Newline newline
-\end_inset
-
-i klikne link 'zastosuj filtr'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w porządku odwrotnym chronologicznie modyfikacje
- na scenariuszu które miały miejsce pomiedzy '1.12.2008' a '22.12.2008'
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Subsection
 Spersonalizowane interfejsy
 \end_layout
@@ -3368,70 +2568,6 @@ Jest to możliwe dzięki przechowywaniu specyfikacji jak strukturę, dzięki
  probelmu, a znacznie ułatwi to pisanie testów integracyjnych.
 \end_layout
 
-\begin_layout Description
-Tytuł 
-\bar under
-Generowanie opowieści użytkownika w formacie Cucumber
-\end_layout
-
-\begin_layout Description
-Cel Przygotowanie testów intergracyjnych
-\end_layout
-
-\begin_layout Description
-Jako programista
-\end_layout
-
-\begin_layout Description
-Chcę mieć możliwość utworzenia opowięści użytkownika dla poszczególnej funkcjona
-lności badź scenariusza.
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Utworzenie dla funkcjonalności
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie funkcjonalności
-\end_layout
-
-\begin_layout Description
-Kiedy klikne na link eksportuj do formatu 'cucumber'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w nowej stronie funkcjonalność wraz z wszystkimi
- scenariuszami w formacie tekstowym utworzony na podstawie danych z funkcjonalno
-ści i połączonych scenariuszy
-\end_layout
-
-\end_deeper
-\begin_layout Description
-Scenariusz 
-\bar under
-Utworzenie dla scenariusza
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-Gdy Jestem na stronie scenariusza
-\end_layout
-
-\begin_layout Description
-Kiedy klikne na link eksportuj do formatu 'cucumber'
-\end_layout
-
-\begin_layout Description
-Wtedy powinienem zobaczyć w nowej stronie scenariusz w formacie tekstowym
- utworzony na podstawie danych z danego scenariusza
-\end_layout
-
-\end_deeper
-\end_deeper
 \begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
@@ -3598,7 +2734,7 @@ key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
 
-Orthogonality and the DRY Principle
+Bill Venners - Orthogonality and the DRY Principle
 \begin_inset Newline newline
 \end_inset
 
@@ -3612,7 +2748,7 @@ key "MVC.Author.Report"
 
 \end_inset
 
-The original MVC reports Trygve Reenskaug Dept.
+Trygve Reenskaug - The original MVC reports Trygve Reenskaug Dept.
  of Informatics University of Oslo
 \begin_inset Newline newline
 \end_inset
@@ -3642,7 +2778,7 @@ key "BDD.Author.Introduction"
 
 \end_inset
 
-Introducing BDD
+IDan North - ntroducing BDD
 \begin_inset Newline newline
 \end_inset
 
@@ -3656,7 +2792,7 @@ key "BDD.info"
 
 \end_inset
 
-Oficjlna strona o BDD
+Dan North - Oficjlna strona o BDD
 \begin_inset Newline newline
 \end_inset
 
@@ -3670,7 +2806,7 @@ key "BDD.AllAboutBehaviour"
 
 \end_inset
 
-BDD - It's All Behaviour
+Dan North - BDD - It's All Behaviour
 \begin_inset Newline newline
 \end_inset
 
@@ -3684,7 +2820,7 @@ key "BDD.BusinessValue"
 
 \end_inset
 
-BDD - Where's The Business Value
+Dan North - BDD - Where's The Business Value
 \begin_inset Newline newline
 \end_inset
 
@@ -3698,7 +2834,7 @@ key "BDD.EnoughIsEnough"
 
 \end_inset
 
-BDD - Enough Is Enough
+Dan North - BDD - Enough Is Enough
 \begin_inset Newline newline
 \end_inset
 
@@ -3712,7 +2848,7 @@ key "BDD.Stories"
 
 \end_inset
 
-BDD - Stories
+Dan North - BDD - Stories
 \begin_inset Newline newline
 \end_inset
 
@@ -3726,7 +2862,7 @@ key "BDD.BehaviourDrivenPrograming"
 
 \end_inset
 
-BDD - Behaviour Driven Programming
+Dan North - BDD - Behaviour Driven Programming
 \begin_inset Newline newline
 \end_inset
 
@@ -3740,7 +2876,7 @@ key "BDD.GettingTheWordsRight"
 
 \end_inset
 
-BDD - Getting The Words Right
+Dan North - BDD - Getting The Words Right
 \begin_inset Newline newline
 \end_inset
 
@@ -3754,7 +2890,7 @@ key "BDD.CostOfChange"
 
 \end_inset
 
-BDD - Cost Of Change
+Dan North - BDD - Cost Of Change
 \begin_inset Newline newline
 \end_inset
 
@@ -4257,13 +3393,56 @@ key "WaterfallDoesntWork"
 
 \end_inset
 
-Don’t draw diagrams of wrong practices - or: Why people still believe in
- the Waterfall model
+Tarmo Toikkanen - Don’t draw diagrams of wrong practices - or: Why people
+ still believe in the Waterfall model
 \begin_inset Newline newline
 \end_inset
 
 http://tarmo.fi/blog/2005/09/09/dont-draw-diagrams-of-wrong-practices-or-why-peop
 le-still-believe-in-the-waterfall-model/ - 24.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "You.not.gonna.need.it"
+
+\end_inset
+
+Ronald E Jeffries - You’re NOT gonna need it!
+\begin_inset Newline newline
+\end_inset
+
+http://www.xprogramming.com/Practices/PracNotNeed.html - 24.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "scrum.10.steps"
+
+\end_inset
+
+Agile Software - How To Implement Scrum In 10 Easy Steps
+\begin_inset Newline newline
+\end_inset
+
+http://www.agile-software-development.com/2007/09/how-to-implement-scrum-in-10-eas
+y-steps.html
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "RoR.plugins"
+
+\end_inset
+
+Agile Web Development - Zbiór pluginów dla Railsów
+\begin_inset Newline newline
+\end_inset
+
+http://agilewebdevelopment.com/plugins - 24.01.2009
 \end_layout
 
 \end_body
