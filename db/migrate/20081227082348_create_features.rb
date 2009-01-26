@@ -2,7 +2,9 @@ class CreateFeatures < ActiveRecord::Migration
   def self.up
     create_table :features do |t|
       t.string :title
-      t.text :in_order_to
+      t.string :what
+      t.string :who
+      t.string :why
 
       t.timestamps
     end

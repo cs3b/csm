@@ -9,30 +9,33 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090103151236) do
+ActiveRecord::Schema.define(:version => 20090126163815) do
 
   create_table "features", :force => true do |t|
     t.string   "title"
-    t.text     "in_order_to"
+    t.string   "what"
+    t.string   "who"
+    t.string   "why"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "scenario_steps", :force => true do |t|
+    t.integer  "keyword_id"
+    t.string   "instruction"
+    t.boolean  "main"
+    t.integer  "scenario_id"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "scenarios", :force => true do |t|
-    t.string   "content"
-    t.integer  "parent_id"
-    t.integer  "position"
-    t.integer  "type_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "stories", :force => true do |t|
     t.string   "title"
-    t.text     "description"
+    t.integer  "feature_id"
+    t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "feature_id"
   end
 
 end

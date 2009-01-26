@@ -1,10 +1,9 @@
 class CreateScenarios < ActiveRecord::Migration
   def self.up
     create_table :scenarios do |t|
-      t.string :content
-      t.belongs_to :parent
+      t.string :title
+      t.belongs_to :feature
       t.integer :position
-      t.integer :type
 
       t.timestamps
     end
