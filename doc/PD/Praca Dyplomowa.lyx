@@ -619,7 +619,7 @@ Waterfall model - z języka angielskiego
 
 \end_inset
 
- został w prowadzony przez Winstona W.
+ został w opisany przez Winstona W.
  Royce w roku 1970 roku w artykule 'Zarządzanie produkcją dużych systemów
  informatycznych'
 \begin_inset CommandInset citation
@@ -629,6 +629,10 @@ key "Waterfall.introduction"
 \end_inset
 
 .
+ Choć on sam nie użył tej nazwy, to jednak jest to najbardziej znany dokument
+ opisujący ten.
+ Royce w żadnym wypadku nie chwali takie podejście, a raczej je krytykuje
+ jako nieskutecznei nieefektowne.
  Głównym założeniem tej metodologi jest podział produkcji oprogramowania
  na sześć niepodzielny faz:
 \end_layout
@@ -1296,11 +1300,11 @@ Domena metodologi BDUF zakłada że jesteśmy wstanie zapisać wszystkie informa
 \end_layout
 
 \begin_layout Subparagraph
-Historyjki użytkownika
+Opowieści użytkownika
 \end_layout
 
 \begin_layout Standard
-North zwraca uwagę na trzy części które występują w historyjce
+North zwraca uwagę na trzy części które występują w opowieści
 \end_layout
 
 \begin_layout Itemize
@@ -1486,16 +1490,85 @@ nia historyjek użytkownika jako wykonywalny kod, przez co jest niezwykle
  do tego formatu.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Dlaczego Agile
 \end_layout
 
 \begin_layout Standard
-What i have learnet from first scrum (1,5 storna)
+Metodologie zwinne nie są wymysłem ostatnich lat
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WaterfallDoesntWork"
+
+\end_inset
+
+, a jednak popularność ich rozpoczeła zaczeła wzrastać w połowie lat dziewiędzie
+siątch.
+ Co więcej model kaskadowy jest ciągle w użyciu.
+ Powodem takiej sytuacji jest zapewne zatwierdzenie modelu kaskadowego jako
+ standardu dla projektów informatycznych przez DoD
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Departament Obrony Narodowej Stanów Zjednoczonych
+\end_layout
+
+\end_inset
+
+, następnie przyłączyło się do tego NATO.
+ Royce - jako jeden z pierwszych dokonał analizy tej metodologi - który
+ opisał dokładnie ten proces w latach siedemdziesiątych, w artykule 'Zarządzanie
+ produkcją dużych systemów informatycznych', podał go jako przykład negatywny.
+ Zwrócił uwagę na jego niską skuteczność oraz ogromne koszty.
 \end_layout
 
 \begin_layout Standard
-http://jeffsutherland.com/scrum/FirstScrum2004.pdf
+Jeff Sutherland w artykule 'Czego mnie nauczył pierwszy Scrum'
+\begin_inset CommandInset citation
+LatexCommand cite
+key "SCRUM.what.i.learned"
+
+\end_inset
+
+.
+ Zapisał w nim cztery spostrzeżenia na temat metodologi kaskadowych względem
+ Scrum'a.
+\end_layout
+
+\begin_layout Itemize
+nie jest wstanie przewidzieć wszystkiego na początku
+\end_layout
+
+\begin_layout Itemize
+nie jest wstanie dostarczyć projektu na czas
+\end_layout
+
+\begin_layout Itemize
+jest mniej efektywna - mniejsza ilość funkcjonalności na jednostke czasu
+ progrmisty
+\end_layout
+
+\begin_layout Itemize
+wrażenie użytkownika jest tragiczne
+\end_layout
+
+\begin_layout Standard
+Metodologie Agile zamiast walczyć z problem uzyskania całkowitej wiedzy
+ na początku, stara się radzić z tą niewiedzą - bo jest to naturalne, że
+ nie da sie napoczatku wszystkiego ustalić.
+ To samo tyczy się zmian które wynikają w okresie produkcji, są one nawet
+ traktowane jako coś porządanego.
+ A skoro użytkownicy potrafią sprecyzować czego oczekują od systemu gdy
+ zobaczą jego początkową wersje, warto ją pokazać jak najwcześniej, i często.
+ Zwinne zarządzanie projektem stara się wkomponować w proces który daje
+ klientowi duża kontrolę nad kształtem sytemu, i to na każdym etapie prac,
+ a nie tylko na etapie wstępnej specjalizacji.
+ Jest to ważnym element przyczyniającym się do zadowolenia z wyprodudukowanego
+ oprogramowania - co potwierdza skutecznośc tej metody.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Newpage clearpage
 \end_inset
 
@@ -2004,13 +2077,9 @@ ać.
 \end_layout
 
 \begin_layout Standard
-<# raport >
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-http://pastie.org/368648
-\end_layout
+\align center
+\begin_inset Graphics
+	filename images/report/rspec.png
 
 \end_inset
 
@@ -3443,6 +3512,20 @@ Agile Web Development - Zbiór pluginów dla Railsów
 \end_inset
 
 http://agilewebdevelopment.com/plugins - 24.01.2009
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "SCRUM.what.i.learned"
+
+\end_inset
+
+Jeff Sutherland - What i have learned from first Scrum
+\begin_inset Newline newline
+\end_inset
+
+http://jeffsutherland.com/scrum/FirstScrum2004.pdf
 \end_layout
 
 \end_body
