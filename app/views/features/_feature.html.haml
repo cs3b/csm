@@ -1,0 +1,46 @@
+.feature.grid_6.alpha
+  .grid_1
+    .feature_header
+      Feature
+  .grid_5
+    .feature_title
+      = feature.title
+  .clear &nbsp;
+  .grid_5
+    .feature_what
+      =# feature.what
+  .clear &nbsp;
+  .grid_5
+    .feature_who
+      =# feature.who
+  .clear &nbsp;
+  .grid_5
+    .feature_why
+      =# feature.why
+  .clear &nbsp;
+  - feature.scenarios.each do |scenario|
+  .scenario.grid_6.alpha
+    .grid_2
+      .scenario_header
+        Scenario
+    .grid_3
+      .scenario_title
+        = scenario.title
+    .clear &nbsp;
+    - scenario.steps.each do |step|
+    .grid_1.prefix_1
+      .scenario_keyword
+        = step.keyword
+    .grid_4
+      .scenario_step
+        = step.instruction
+    .clear &nbsp;
+    - step.siblings.each |sibbling|
+    .grid_1.prefix_1
+      .scenario_link_keyword
+        = sibbling.keyword
+    .grid_4
+      .scenario_step
+        = sibbling.instruction
+    .clear &nbsp;
+.clear &nbsp;
