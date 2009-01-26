@@ -19,6 +19,19 @@ class ScenarioStep < ActiveRecord::Base
     :order       => :position, :scope => [:parent_id, :keyword_id]
   belongs_to :scenario
 
+  WORDS = {
+  :feature => "Właściwość",
+  :scenario => "Scenariusz",
+  :more_examples => "WięcejPrzykładów",
+  :given_scenario => "DanyScenariusz",
+  :given => "Dane",
+  :when => "Jeżeli",
+  :then => "Wtedy",
+  :and => "Oraz",
+  :but => "Ale",
+
+  }
+
   # main keywords, differnt type of step
   MAIN_KEYWORDS = {
     :given => 101,
@@ -39,7 +52,7 @@ class ScenarioStep < ActiveRecord::Base
   #TODO should work on arrays from cucumber
   def keyword
     key = KEYWORDS.invert[keyword_id]
-    key.to_s
+    WORDS[key]
   end
 
 end

@@ -1,7 +1,7 @@
 .feature.grid_7.alpha
   .grid_1
     .feature_header
-      Feature
+      Właściwość
   .grid_5
     .feature_title
       = feature.title
@@ -22,11 +22,10 @@
     .scenario.grid_7.alpha
       .grid_2
         .scenario_header
-          Scenario
+          Scenariusz
       .grid_4
         .scenario_title
           = scenario.title
-      .grid_1= link_to 'new_step', new_scenario_scenario_step_path(scenario)
       .clear &nbsp;
       - scenario.main_steps.each do |step|
         .grid_1.prefix_1
