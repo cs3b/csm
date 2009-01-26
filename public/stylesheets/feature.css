@@ -1,0 +1,52 @@
+.feature {
+  border: 1px solid #666;
+  width: 500px;
+  color: #fff;
+  padding: 10px;
+}
+.feature_header {
+  color: #8da6ce;
+  font-style: italic;
+}
+.feature_title {
+  color: #ff6400;
+}
+.feature_what {
+  color: #61a95d;
+  padding-left: 35px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+.feature_who {
+  color: #61a95d;
+  padding-left: 45px;
+}
+.feature_why {
+  color: #61a95d;
+  padding-left: 35px;
+}
+.scenario {
+  border: 1px solid #666;
+  padding-top: 10px;
+}
+.scenario_header {
+  color: #8da6ce;
+  font-style: italic;
+padding-left: 20px;
+padding-bottom: 5px;
+}
+.scenario_title {
+  color: #ff6400;
+}
+.scenario_keyword {
+  color: #fbde2d;
+text-align: center;
+}
+.scenario_step {
+  color: #61a95d;
+}
+.scenario_link_keyword {
+  color: #d8fa3c;
+text-align: right;
+}
