@@ -4,7 +4,9 @@ describe Feature do
   before(:each) do
     @valid_attributes = {
       :title => "value for title",
-      :in_order_to => "value for in_order_to"
+      :what => "value for what",
+      :who => "value for who",
+      :why => "value for why"
     }
   end
 

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20090126163815) do
   create_table "scenario_steps", :force => true do |t|
     t.integer  "keyword_id"
     t.string   "instruction"
-    t.boolean  "main"
+    t.integer  "parent_id"
     t.integer  "scenario_id"
     t.integer  "position"
     t.datetime "created_at"

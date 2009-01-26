@@ -3,7 +3,7 @@ class CreateScenarioSteps < ActiveRecord::Migration
     create_table :scenario_steps do |t|
       t.integer :keyword_id
       t.string :instruction
-      t.boolean :main
+      t.integer :parent_id
       t.belongs_to :scenario
       t.integer :position
 

@@ -2,8 +2,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :scenarios
 
   
-  map.resources :features do |features|
-    features.resources :stories
+  map.resources :features, :shallow => true do |features|
+    features.resources :scenarios do |scenarios|
+      scenarios.resources :scenario_steps
+    end
   end
 
   map.root :controller => 'features'

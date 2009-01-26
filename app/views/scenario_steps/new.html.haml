@@ -1,0 +1,13 @@
+%h1 New Step
+
+- form_for([@scenario,@step]) do |f|
+  = f.error_messages
+  %p
+    = f.label :keyword_id
+    %br
+    = f.select :keyword_id, ScenarioStep::MAIN_KEYWORDS
+  %p
+    = f.label :instruction
+    %br
+    = f.text_field :instruction
+  %p= f.submit "Create"

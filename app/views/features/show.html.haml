@@ -1,5 +1,4 @@
-= render :partial => 'show'
-= link_to "Add Story", new_feature_story_path(@feature)
-= link_to "Show Stories", feature_stories_path(@feature)
+= render :partial => 'feature', :locals => {:feature => @feature }
+= link_to "Add Story", new_feature_scenario_path(@feature)
 = link_to 'Edit', edit_feature_path(@feature)
 = link_to 'Back', features_path

@@ -14,5 +14,32 @@
 #
 
 class ScenarioStep < ActiveRecord::Base
-  belogns_to :scenario
+  #TODO take something new, acts_as_list+tree - scope in position should more work properly
+  acts_as_ordered_tree :foreign_key => :parent_id,
+    :order       => :position, :scope => [:parent_id, :keyword_id]
+  belongs_to :scenario
+
+  # main keywords, differnt type of step
+  MAIN_KEYWORDS = {
+    :given => 101,
+    :when => 102,
+    :then => 103
+  }
+  # link keywords, sibblings of main type step
+  LINK_KEYWORDS = {
+    :and => 201,
+    :but => 202
+  }
+
+  # main and link keywords together
+  # use for converting keyword_id from db to keyword symbol
+  KEYWORDS = MAIN_KEYWORDS.merge LINK_KEYWORDS
+
+  # return keyword string
+  #TODO should work on arrays from cucumber
+  def keyword
+    key = KEYWORDS.invert[keyword_id]
+    key.to_s
+  end
+
 end

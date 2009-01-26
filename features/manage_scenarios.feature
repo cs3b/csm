@@ -8,7 +8,8 @@ Feature: Manage scenarios
     When I fill in "Title" with "Register new scenario"
     And I fill in "Given" with "I am on the new scenario page"
     And I fill in "When" with "I fill all required fields And I press 'Create' button"
-    And I fill in "Then" with "I should see notice that new scenario is created And I should be redirected to show scenario page"
+    And I fill in "Then" with "I should see notice that new scenario is created 
+    And I should be redirected to show scenario page"
     And I press "Create"
     Then I should see "Scenario created successfull"
     And I should see "Register new scenario"

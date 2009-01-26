@@ -1,5 +1,4 @@
 .feature {
-  border: 1px solid #666;
   width: 500px;
   color: #fff;
   padding: 10px;
@@ -27,7 +26,6 @@
   padding-left: 35px;
 }
 .scenario {
-  border: 1px solid #666;
   padding-top: 10px;
 }
 .scenario_header {
@@ -41,7 +39,7 @@ padding-bottom: 5px;
 }
 .scenario_keyword {
   color: #fbde2d;
-text-align: center;
+text-align: left;
 }
 .scenario_step {
   color: #61a95d;
