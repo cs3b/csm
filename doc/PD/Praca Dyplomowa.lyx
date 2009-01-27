@@ -2295,144 +2295,174 @@ Wspomaganie procesu produkcji oprogramowania
 \end_layout
 
 \begin_layout Standard
-System ma dostarczać cztery główne moduły funkcjonalności, które są wymagane
- aby wspierać proces specyfikowania systemu.
+Jak zostało wspomniane napoczątku, metodologie agile nie są związane z konkretną
+ technologią czy też narzędziem, jednakże bardzo proste narzędzia potrafią
+ usprawnić ten proces.
+ Taki też cel jest postawiony przed tym narzędziem, ma wspomagać proces
+ agregowania wymagań od klienta, ułatwiać pisania dokumentacji dla projektów,
+ oraz analizy wykonanej pracy względem tej wyznaczonej.
+ Od strony developerów ma ponadto ułatwiać pisanie automatycznych testów.
 \end_layout
 
 \begin_layout Standard
-<#TODO napisać coś więcej, dlaczego taki pomysł, itp>
+Potrzeba powstania takiego narzędzie była efektem współpracy z klientami
+ którzy często zmieniali wymagania dotyczące projektów, czy też dokładali
+ mnóstwo pracy w trakcie realizacji zadań.
+ Było to powodem wielu problemów i komplikacji względem rozliczania pracy
+ wykonej, gdyż nie było dobrego sposobu śledzenia zmian.
+ 
+\end_layout
+
+\begin_layout Standard
+Kwestią drugą był problem związanym z brakiem automatycznych testów.
+ Powodowało to często problemy które pojawiały się najczęściej tuż po przekazani
+u kodu do produkcji.
+ To uzmysłowiło jak ważne jest posiadania testów integracyjnych.
+ 
+\end_layout
+
+\begin_layout Standard
+Środowisko Cucumber do uruchamiania historyjek tekstowych, na podstawie
+ których weryfikowane jest zachowanie systemu jest w tym przypadku idealnym
+ rozwiazaniem.
+ Dodając do tego intuicyjny interfejs tworzenia takich opowieści, dzięki
+ czemu klienci sami by mogli wprowadzać te informacje, to zaczyna to nabierąc
+ coraz lepszej formy.
+ Uzupełniem powyższych możliwości jest śledzeniem zmian.
+ Gdy weźmiemy trzy na pozór proste właściwości, otrzymamy wartościowe narzędzie
+ dla developerów.
 \end_layout
 
 \begin_layout Subsection
-Zarządzanie specyfikacją projektu 
+Specyfikacja funkcjonalna
 \end_layout
 
 \begin_layout Standard
-zadaniem to opiera się na udostepnieniu użytkownikom wprowadzania specyfikacji
- w intuicyjny dla nich sposób, jednocześnie wymuszajać formalną strukturę
- dzięki czemu fukncjonalności bedą opisane zgodnie z zasadą historyjek użytkowni
-ka (BDD).
- Dzięki temu będą one posiadały odpowiednią strukturę dając możliwośc prezentacj
-i informacji w róznej postaci.
+Poniżej zostanie zwrócona uwaga na główne włąściwości projektu oraz cele
+ które są ważne dla realizacji tego projetku
+\end_layout
+
+\begin_layout Subsubsection
+Opowieści użytkownika
 \end_layout
 
 \begin_layout Standard
-Związane jest z dwoma funkcjonalnościami systemu, które postaram się poniżej
- zaprezentować w formie historyjek, gdyż taka forma daje najlepsze możliwości.
+Jest to w zasadzie trzon całej aplikacji.
+ O samej wartości opowieści użytkownika dużo powiedziano w sekcjach poświęconych
+ BDD i Cucumber.
+ Zalety opowieści w postaci czystego tekstu są ogromne, jednakoż czasem
+ potrzeba jest monipulacji na tych danych, jak naprzykład eksportu do dokumentac
+ji ładnie sformatowanych opowieści.
+ Kolejną istotną kwestią jest wygoda wprowadzania tych historyjek.
+ Developerzy lubią specyficzne
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Przykładem może być vi(m) czy też emacs.
+\end_layout
+
+\end_inset
+
+ edytory tekstowe, jednakże pozostali ludzie preferują dostosowane interfejsy
+ i właśnie dla nich to narzędzia będzie użyteczne.
 \end_layout
 
 \begin_layout Subsubsection
-Zarządzanie funkcjonalnościami
+Śledzenie zmian
+\end_layout
+
+\begin_layout Standard
+Wielokrotnie była zwrócona uwaga na sposób traktowania zmiany w metodologiach
+ zwinnych - są one mile wiedziane na każdym etapie prac.
+ Chociaż klienci bardzo chętnie te zmiany wprowadzają, to już trudniej im
+ wszystkie modyfikacja spamiętać.
+ Nie zawsze są świadomi jak bardzo ich pierwotna wizja różni się od wersji
+ końcowej.
+ Możliwość wykazania tych zmian w przejżysty sposób daje dwie korzyści.
+ Po pierwsze klient może zaboczyć jak proces w którym bierze aktywny udział
+ wpływa na poprawę jakości produktu.
+ Drugą sprawą są kwestia finansowe, dzięki takiemu raportowi negocjatorzy
+ otrzymają solidne argumenty.
+\end_layout
+
+\begin_layout Standard
+Ważne jest tutaj śledzenie zmian ze względu na konkretną włąściwość systemu,
+ oraz ze względu na wydzielony okres czasu.
 \end_layout
 
 \begin_layout Subsubsection
-Zarządzaniem scenariuszami
+Eksport opowieści użytkownika
+\end_layout
+
+\begin_layout Standard
+Przechowując dane o odpowiedniej strukturze, mamy możliwośc zautomatyzownia
+ procesów 'odtwórczych', poprzez prezentacje danych w innych formatach.
+\end_layout
+
+\begin_layout Paragraph
+Cucumber
+\end_layout
+
+\begin_layout Standard
+Ten format jest sztandarowy dla tego projektu, dzięki eksportowaniu do tego
+ formatu zautomatyzowany jest proces tworzenie plików dla poszczególnych
+ właściwości.
+ Dzieki temu zmiany w specyfikacji, można szybko aktualizować dla systemu
+ automatycznych testów.
+\end_layout
+
+\begin_layout Paragraph
+PDF
+\end_layout
+
+\begin_layout Standard
+Potrzeba tworzenia dokumentacji technicznej systemu implementowanego jest
+ ważne, gdy weźmieniemy pod uwagę fakt że opowieści użytkownika to świetna
+ dokumentacja, to automatyczne utworzenie dokumentu pdf ze wszystkimi właściwośc
+iami docenią wszyscy - nawet ci którzy lubią pisać dokumentacje.
+\end_layout
+
+\begin_layout Paragraph
+WIKI
+\end_layout
+
+\begin_layout Standard
+Dobrym narzędziem współpracy - czy to wewnątrz firmy, czy też pomiędzy -
+ jest proste a zarazem elastyczne narzędzie jakim jest wiki.
+ Dlatego eksport dla tego formatu spewnością będzie użyteczny.
+\end_layout
+
+\begin_layout Subsubsection
+Import z formatu tekstowego <# jeśli termin pracy zostanie przesunięty>
+\end_layout
+
+\begin_layout Subsubsection
+Używalność systemu <# jeśli termin pracy zostanie przesunięty>
+\end_layout
+
+\begin_layout Paragraph
+łatwe wprowadzanie opowieści
+\end_layout
+
+\begin_layout Paragraph
+szybka modyfikacja
+\end_layout
+
+\begin_layout Paragraph
+reaporty związane ze zmianamis
 \end_layout
 
 \begin_layout Subsection
-Historia zmian
-\end_layout
-
-\begin_layout Standard
-w procesie agile, zmiany są mile wiedziane na każdym etapie - zgodnie z
- drugą zasadą monifestu agile - jednak klient bardzo często zapomina jak
- dużo zmian nastąpiło w całym procesie produkcji.
- Możliwość wykazania mu tych zmian jest niezwykle pomocna, gdy chcemy zwrócić
- uwagę na jakość produkcji - zmiany ulepszaja produkt, oraz gdy chodzi o
- kwestie finansowe.
+Implementacja narzędzia
 \end_layout
 
 \begin_layout Subsubsection
-Prezentacja zmian poprzez archiwum
+Diagram Modeli
 \end_layout
 
 \begin_layout Subsubsection
-Prezentacja zmian w funkcjonalnościach
-\end_layout
-
-\begin_layout Subsubsection
-Prezentacja zmian w scenariuszach
-\end_layout
-
-\begin_layout Subsection
-Spersonalizowane interfejsy
-\end_layout
-
-\begin_layout Standard
-Celem systemu jest intuicyjnie oraz efektywny dostęp do najistotniejszych
- informacji na temat systemu specyfikowane ze względu na rolę użytkownika.
- Celem jest nie wprowadzanie klienta biznesowego w zakłopotanie - aby czuł
- się z narządziem swobodnie.
- Znów perspektywa dla programistów musi dostarczać dużo wiecej informacji,
- które są im potrzebne bardzo często w jednym widoku aby efektywnie wykonać
- swoją pracę
-\end_layout
-
-\begin_layout Subsubsection
-Z punktu widzenia klienta biznesowego
-\end_layout
-
-\begin_layout Paragraph
-możliwość dodawania nowych funkcjonalności
-\end_layout
-
-\begin_layout Paragraph
-przegladanie historyjek w systemie
-\end_layout
-
-\begin_layout Paragraph
-widzenie statusów historyjek, ich postępu
-\end_layout
-
-\begin_layout Paragraph
-przeglądanie histori zmian
-\end_layout
-
-\begin_layout Paragraph
-akceptowanie poszczególnych scenariuszy, calych funkcjonalności
-\end_layout
-
-\begin_layout Subsubsection
-Dla menadżera projektu
-\end_layout
-
-\begin_layout Paragraph
-śledzenie statusu, postępu w pracach
-\end_layout
-
-\begin_layout Paragraph
-przeglądaniem zmian które nastąpiły w czasie rozwoju
-\end_layout
-
-\begin_layout Paragraph
-wgląd w estymacje funkcjonalności, oraz rzeczywistego spędzonego czasu
-\end_layout
-
-\begin_layout Subsubsection
-Dla programistów
-\end_layout
-
-\begin_layout Paragraph
-przeglądanie, modyfikowanie, dodawanie nowych scenariuszy
-\end_layout
-
-\begin_layout Paragraph
-wsparcie dla pisanie testów (generatory kodu, export do formatu historyjek
- cucumber)
-\end_layout
-
-\begin_layout Paragraph
-export do systemu zarzadzania zadań
-\end_layout
-
-\begin_layout Subsection
-wsparcie do automatycznych testów
-\end_layout
-
-\begin_layout Standard
-Jest to możliwe dzięki przechowywaniu specyfikacji jak strukturę, dzięki
- której eksport do historyjek akceptowanych przez Cucumber nie będzie stanowić
- probelmu, a znacznie ułatwi to pisanie testów integracyjnych.
+Diagram Kontrolerów
 \end_layout
 
 \begin_layout Standard
