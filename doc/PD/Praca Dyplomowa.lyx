@@ -2457,12 +2457,52 @@ reaporty związane ze zmianamis
 Implementacja narzędzia
 \end_layout
 
+\begin_layout Standard
+<# Interesujące fragmety kodu z objaśnieniami>
+\end_layout
+
 \begin_layout Subsubsection
 Diagram Modeli
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/diagrams/models.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Diagram Kontrolerów
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/diagrams/controllers.png
+	width 75page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Diagram Bazy Danych
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/diagrams/db.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Testy Wydajnościowe
 \end_layout
 
 \begin_layout Standard
