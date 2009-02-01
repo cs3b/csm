@@ -4,7 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :features, :shallow => true do |features|
     features.resources :scenarios do |scenarios|
-      scenarios.resources :scenario_steps
+      scenarios.resources :scenario_steps do |scenario_steps|
+        scenario_steps.resources :sub_steps
+      end
     end
   end
 

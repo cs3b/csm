@@ -1,51 +1,62 @@
+
 .feature {
   width: 500px;
   color: #fff;
   padding: 10px;
   font-family: monospace;
 }
-.feature_header {
+
+.feature .main_text {
+  color: #61a95d;
+}
+
+.feature .header {
   color: #8da6ce;
   font-style: italic;
 }
-.feature_title {
+
+.feature .title {
   color: #ff6400;
 }
-.feature_what {
-  color: #61a95d;
-  padding-left: 35px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
+
+.feature .keyword {
+  color: #fbde2d;
 }
-.feature_who {
-  color: #61a95d;
+
+.feature .link_keyword {
+  color: #d8fa3c;
+}
+
+.feature .feature_header {
+  float: left;
+  padding-right: 15px;
+}
+.feature .feature_title {
+
+}
+.feature .feature_what {
+  padding-left: 35px;
+}
+.feature .feature_who {
   padding-left: 45px;
 }
-.feature_why {
-  color: #61a95d;
+.feature .feature_why {
   padding-left: 35px;
 }
-.scenario {
+.feature .scenario {
   padding-top: 10px;
 }
-.scenario_header {
-  color: #8da6ce;
-  font-style: italic;
-padding-left: 20px;
-padding-bottom: 5px;
+.feature .scenario_header {
+  padding-left: 20px;
+  padding-bottom: 5px;
 }
-.scenario_title {
-  color: #ff6400;
+.feature .scenario_title {
 }
-.scenario_keyword {
-  color: #fbde2d;
-text-align: left;
+.feature .scenario_keyword {
+  text-align: left;
 }
-.scenario_step {
-  color: #61a95d;
+.feature .scenario_step {
 }
-.scenario_link_keyword {
-  color: #d8fa3c;
-text-align: right;
+.feature .scenario_link_keyword {
+  text-align: right;
 }

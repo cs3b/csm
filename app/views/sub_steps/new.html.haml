@@ -1,0 +1,13 @@
+%h1= "New Sub Step for: #{@scenario_step.scenario.title} / #{@scenario_step.keyword}: #{@scenario_step.instruction}"
+
+- form_for(:scenario_step, @sub_step, :url => scenario_step_sub_steps_path(@scenario_step)) do |f|
+  = f.error_messages
+  %p
+    = f.label :keyword_id
+    %br
+    = f.select :keyword_id, ScenarioStep::LINK_KEYWORDS
+  %p
+    = f.label :instruction
+    %br
+    = f.text_field :instruction
+  %p= f.submit "Create"
