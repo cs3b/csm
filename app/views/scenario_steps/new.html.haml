@@ -1,4 +1,4 @@
-%h1 New Step
+%h1= "New Step for: #{@scenario.title}"
 
 - form_for([@scenario,@step]) do |f|
   = f.error_messages

@@ -1,1 +1,19 @@
+%h1 Listing Features
 
+.grid_4
+  %p Title
+.grid_5
+  %p What
+.clear &nbsp;
+
+- @features.each_with_index do |feature, index|
+  %div{:id => "feature_line_#{index}"}
+    .grid_4
+      %p= feature.title
+    .grid_5
+      %p= feature.what
+    .grid_2
+      = link_to "Show", feature_path(feature)
+      = link_to "Deactivate", feature_path(feature), :method => 'delete', :confirm => 'Are you sure?'
+    .clear &nbsp;
+= link_to 'New Feature', new_feature_path
