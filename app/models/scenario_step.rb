@@ -19,6 +19,8 @@ class ScenarioStep < ActiveRecord::Base
     :order       => :position, :scope => [:parent_id, :keyword_id]
   belongs_to :scenario
 
+  default_scope :order => :keyword_id
+
   WORDS = {
   :feature => "Właściwość",
   :scenario => "Scenariusz",

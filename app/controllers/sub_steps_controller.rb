@@ -1,5 +1,5 @@
 class SubStepsController < ApplicationController
-  before_filter :get_scenario_substep
+  before_filter :get_scenario_sub_step
 
   def new
     @sub_step = ScenarioStep.new
@@ -13,7 +13,7 @@ class SubStepsController < ApplicationController
 
   private
 
-  def get_scenario_substep
+  def get_scenario_sub_step
     @scenario_step = ScenarioStep.find(params[:scenario_step_id])
   end
 end
