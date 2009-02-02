@@ -5,7 +5,12 @@ class FeaturesController < ApplicationController
 
   def index; end
 
-  def show; end
+  def show
+    respond_to do |format|
+      format.html
+      format.feature { render :layout => false }
+    end
+  end
   
   def new
     @feature = Feature.new

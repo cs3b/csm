@@ -1,0 +1,11 @@
+- width = 40
+= "Feature: #{ @feature.title }".wrap(width,4)
+= "  #{@feature.why}".wrap(width,2)
+= "  #{@feature.who}".wrap(width,2)
+= "  #{@feature.what}".wrap(width,2)
+- @feature.scenarios.each do |scenario|
+  = "  Scenario: #{scenario.title}".wrap(width,4)
+  - scenario.main_steps.each do |step|
+    = "    #{step.keyword} #{step.instruction}".wrap(width,4)
+    - step.children.each do |child_step|
+      = "    #{child_step.keyword} #{child_step.instruction}".wrap(width,4)
