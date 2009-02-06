@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/ar_fixtures"]
 	path = vendor/plugins/ar_fixtures
 	url = git://github.com/topfunky/ar_fixtures.git
+[submodule "vendor/plugins/prawnto"]
+	path = vendor/plugins/prawnto
+	url = git://github.com/thorny-sun/prawnto.git

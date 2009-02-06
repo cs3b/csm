@@ -9,6 +9,7 @@ class FeaturesController < ApplicationController
     respond_to do |format|
       format.html
       format.feature { render :layout => false }
+      format.pdf { render :layout => false }
     end
   end
   
