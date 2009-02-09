@@ -431,11 +431,12 @@ module WizardActsAsOrderedTree #:nodoc:
             def reorder_old_list #:nodoc:
               # after_update and after_destroy callback
               # re-order the old parent's list
-              if @old_parent == 'root'
-                reorder_roots
-              elsif @old_parent
-                @old_parent.reorder_children
-              end
+              #TODO why it is not working 'reorder_children'
+#              if @old_parent == 'root'
+#                reorder_roots
+#              elsif @old_parent
+#                @old_parent.reorder_children
+#              end
             end
 
           #protected

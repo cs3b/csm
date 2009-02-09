@@ -17,22 +17,8 @@ class ScenarioStep < ActiveRecord::Base
   #TODO take something new, acts_as_list+tree - scope in position should more work properly
   acts_as_ordered_tree :foreign_key => :parent_id,
     :order       => :position, :scope => [:parent_id, :keyword_id]
-  belongs_to :scenario
 
   default_scope :order => :keyword_id
-
-  WORDS = {
-  :feature => "Właściwość",
-  :scenario => "Scenariusz",
-  :more_examples => "WięcejPrzykładów",
-  :given_scenario => "DanyScenariusz",
-  :given => "Dane",
-  :when => "Jeżeli",
-  :then => "Wtedy",
-  :and => "Oraz",
-  :but => "Ale",
-
-  }
 
   # main keywords, differnt type of step
   MAIN_KEYWORDS = {
@@ -53,8 +39,22 @@ class ScenarioStep < ActiveRecord::Base
   # return keyword string
   #TODO should work on arrays from cucumber
   def keyword
-    key = KEYWORDS.invert[keyword_id]
-    WORDS[key]
+    KEYWORDS.invert[keyword_id]
+  end
+
+  # get connected scenario
+  # bacause child doesn't have information about scenario, only parent have
+  # this make it little bit more complicated (i don't know how to resolve
+  # that with belongs_to helper
+  def scenario
+    if scenario_id
+      _id = scenario_id
+    elsif parent.scenario_id
+      _id = parent.scenario_id
+    else
+      raise "Assosiation not found ScenarioStep\##{id}: scenario"
+    end
+    Scenario.find(_id)
   end
 
 end

@@ -1,49 +1,42 @@
 .feature.grid_7.alpha
   .grid_6
-    .feature_header.header
-      Właściwość
-    .feature_title.title
-      = feature.title
-  .grid_1= link_to "Add Scenario", new_feature_scenario_path(@feature)
+    .feature_header.header= t(:feature)
+    .feature_title.title= feature.title
   .clear &nbsp;
   .grid_7
-    .feature_why.main_text
-      = feature.why
+    .feature_why.main_text= feature.why
   .clear &nbsp;
   .grid_7
-    .feature_who.main_text
-      = feature.who
+    .feature_who.main_text= feature.who
   .clear &nbsp;
   .grid_7
-    .feature_what.main_text
-      = feature.what
+    .feature_what.main_text= feature.what
   .clear &nbsp;
   - feature.scenarios.each do |scenario|
     .scenario.grid_7.alpha
       .grid_2
-        .scenario_header.header
-          Scenariusz
-      .grid_4
+        .scenario_header.header= t(:scenario)
+      .grid_5
         .scenario_title.title
           = scenario.title
-      .grid_1= link_to 'Add Step', new_scenario_scenario_step_path(scenario)
       .clear &nbsp;
       - scenario.main_steps.each do |step|
         .grid_1.prefix_1
           .scenario_keyword.keyword
-            = step.keyword
+            = t(step.keyword)
         .grid_4
           .scenario_step.main_text
             = step.instruction
-        .grid_1= link_to 'Add SubStep', new_scenario_step_sub_step_path(step)
+        .grid_1= plus_link_to new_scenario_step_sub_step_path(step)
         .clear &nbsp;
         - step.children.each do |child_step|
           .grid_1.prefix_1
             .scenario_link_keyword.link_keyword
-              = child_step.keyword
-          .grid_5
+              = t(child_step.keyword)
+          .grid_4
             .scenario_step.main_text
               = child_step.instruction
+          .grid_1= minus_link_to scenario_step_path(child_step), :confirm => t(:are_you_sure), :method => :delete
           .clear &nbsp;
     .clear &nbsp;
 .clear &nbsp;

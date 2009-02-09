@@ -130,8 +130,34 @@ pl:
         what: "Oczekiwania wobec właściwości"
       scenario:
         title: "Tytuł scenariusza"
+      scenario_step:
+        keyword_id: "Typ"
+        instruction: "Instrukcja kroku"
 #other
+#common
   create: "Utwórz"
   new: "Nowy"
   back: "Powrót"
+  show: "Pokaż"
+  add: "Dodaj"
+  details: "Szczegóły"
+  delete: "Usuń"
+  are_you_sure: "Czy jesteś pewien?"
+#cucumber
+  feature: "Właściwość"
+  scenario: "Scenariusz"
+  more_examples: "WiecejPrzykładów"
+  given_scenario: "Dany Scenariusz"
+  given: "Dane"
+  when: "Jeżeli"
+  then: "Wtedy"
+  and: "Oraz"
+  but: "Ale"
+#feature
   new_feature: "Nowa właściwość"
+  listing_features: "Lista właściwości"
+#scenario
+  add_scenario: "Dodaj scenariusz"
+#scenario_step
+  new_step_for: "Dodanie nowego kroku do"
+  new_sub_step_for: "Dodanie kolejnego kroku do"
