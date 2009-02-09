@@ -1,5 +1,5 @@
-.grid_12.alpha.form
-  %h1= "#{t(:new_sub_step_for)}: #{@scenario_step.scenario.title} / #{t(@scenario_step.keyword)}: #{@scenario_step.instruction}"
+.grid_16.alpha.form
+  %h1= "#{t(:new_sub_step_for)} - #{t(:scenario)}: #{@scenario_step.scenario.title} / #{t(@scenario_step.keyword)}: #{@scenario_step.instruction}"
   - form_for(:scenario_step, @sub_step, :url => scenario_step_sub_steps_path(@scenario_step)) do |f|
     = f.error_messages
     .grid_3

@@ -158,6 +158,7 @@ pl:
   listing_features: "Lista właściwości"
 #scenario
   add_scenario: "Dodaj scenariusz"
+  new_scenario_for: "Dodanie nowego scenariusza do"
 #scenario_step
   new_step_for: "Dodanie nowego kroku do"
   new_sub_step_for: "Dodanie kolejnego kroku do"

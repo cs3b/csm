@@ -1,0 +1,14 @@
+.grid_16.alpha.form
+  %h1= "#{t(:new_scenario_for)} - #{t(:feature)}: #{@feature.title}"
+  - form_for ([@feature,@scenario]) do |f|
+    = f.error_messages
+    .grid_3
+      .form_label= f.label :title
+    .grid_5
+      .form_input= f.text_field :title
+    .clear &nbsp;
+    .grid_8= f.submit t(:add)
+    .clear &nbsp;
+  .top_spacer= link_to t(:back), feature_path(@feature)
+.clean &nbsp;
+
