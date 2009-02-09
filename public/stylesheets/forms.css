@@ -1,0 +1,10 @@
+.form {
+  text-align: center;
+}
+.form_label {
+  font-size: 1.8em;
+}
+
+.form_input {
+  padding: 10px;
+}

@@ -1,9 +1,8 @@
-%h1 Listing Features
-
-.grid_4
-  %p Title
-.grid_5
-  %p What
+%h1= t(:listing_features)
+.table_header.grid_4
+  %p= Feature.human_attribute_name 'title'
+.table_header.grid_7
+  %p= Feature.human_attribute_name 'what'
 .clear &nbsp;
 
 - @features.each_with_index do |feature, index|
@@ -12,8 +11,9 @@
       %p= feature.title
     .grid_5
       %p= feature.what
-    .grid_2
-      = link_to "Show", feature_path(feature)
-      = link_to "Deactivate", feature_path(feature), :method => 'delete', :confirm => 'Are you sure?'
+    .grid_1
+      = link_to t(:show), feature_path(feature)
+    .grid_1
+      = link_to t(:delete), feature_path(feature), :method => 'delete', :confirm => 'Are you sure?'
     .clear &nbsp;
-= link_to 'New Feature', new_feature_path
+= link_to t(:new_feature), new_feature_path

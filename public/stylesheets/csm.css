@@ -2,7 +2,7 @@
  {
    background: #121;
    border-top: 5px solid #000;
-   color: #333;
+   color: #61a95d;
    font-size: 11px;
    padding: 20px 0 40px;
  }
@@ -11,33 +11,4 @@
  {
    color: #fff;
    text-decoration: none;
- }
-
- a:hover
- {
-   text-decoration: underline;
- }
-
- h1
- {
-   font-family: Georgia, serif;
-   font-weight: normal;
-   text-align: center;
-   color: #fff;
- }
-
- h2
- {
-   padding: 20px 0 0;
-   text-align: center;
-   color: #fff;
- }
-
- p
- {
-   border: 1px solid #666;
-   overflow: hidden;
-   padding: 10px 5px;
-   text-align: center;
-   color: #fff
  }

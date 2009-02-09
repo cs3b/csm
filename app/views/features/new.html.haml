@@ -1,22 +1,15 @@
-%h1 New feature
-
-- form_for(@feature) do |f|
-  = f.error_messages
-  %p
-    = f.label :title
-    %br
-    = f.text_field :title
-  %p
-    = f.label :why
-    %br
-    = f.text_field :why
-  %p
-    = f.label :who
-    %br
-    = f.text_field :who
-  %p
-    = f.label :what
-    %br
-    = f.text_field :what
-  %p= f.submit "Create"
-= link_to 'Back', features_path
+.grid_8.alpha.form
+  %h1= t(:new_feature)
+  - form_for(@feature) do |f|
+    = f.error_messages
+    .form_label= f.label :title
+    .form_input= f.text_field :title, :size => 50
+    .form_label= f.label :why
+    .form_input.text_area= f.text_area :why, :rows => 3, :cols => 50
+    .form_label= f.label :who
+    .form_input= f.text_field :who
+    .form_label= f.label :what
+    .form_input.text_area= f.text_area :what, :rows => 3, :cols => 50
+    = f.submit t(:create)
+  .top_spacer= link_to t(:back), features_path
+.clear &nbsp;
