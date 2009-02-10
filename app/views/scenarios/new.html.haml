@@ -1,14 +1,40 @@
-.grid_16.alpha.form
-  %h1= "#{t(:new_scenario_for)} - #{t(:feature)}: #{@feature.title}"
-  - form_for ([@feature,@scenario]) do |f|
+- content_for :js do
+  = javascript_include_tag 'jquery-ui/ui.core', 'jquery-ui/ui.tabs', :cache => 'ui.tabs.js'
+  :javascript
+    jQuery(document).ready(function(){
+       scenario_tab = jQuery("#tabs > ul").tabs();
+       scenario_tab.tabs( "select", '#then' );
+    });
+%h1= "#{t(:new_scenario_for)} - #{t(:feature)}: #{@feature.title}"
+- form_for ([@feature,@scenario]) do |f|
+  .grid_8.alpha.form
     = f.error_messages
     .grid_3
       .form_label= f.label :title
     .grid_5
       .form_input= f.text_field :title
     .clear &nbsp;
-    .grid_8= f.submit t(:add)
+    .grid_8
+      .ui-tabs.ui-diget.ui-widget-content.ui-corner-all#tabs
+        %ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all
+          %li.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active
+            %a{:href => '#then'}= t(:then)
+          %li.ui-state-default.ui-corner-top
+            %a{:href => '#when'}= t(:when)
+          %li.ui-state-default.ui-corner-top
+            %a{:href => '#given'}= t(:given)
+        .ui-tabs-panel.ui-widget-content-ui-corner-bottom#then
+          %span then
+        .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#when
+          %span when
+        .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#given
+          %span given
     .clear &nbsp;
-  .top_spacer= link_to t(:back), feature_path(@feature)
-.clean &nbsp;
+  .grid_8.beta
+    %h2 preview
+  .clean &nbsp;
+  .grid_16.alpha
+    .top_spacer= link_to t(:back), feature_path(@feature)
+    = f.submit t(:add)
+  .clean &nbsp;
 
