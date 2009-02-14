@@ -26,6 +26,9 @@ module ActionController
       # The status message that accompanied the status code of the last request.
       attr_reader :status_message
 
+      # The body of the last request.
+      attr_reader :body
+
       # The URI of the last request.
       attr_reader :path
 
@@ -61,8 +64,8 @@ module ActionController
       end
 
       # Create and initialize a new Session instance.
-      def initialize(app)
-        @application = app
+      def initialize(app = nil)
+        @application = app || ActionController::Dispatcher.new
         reset!
       end
 
@@ -181,7 +184,7 @@ module ActionController
       # - +headers+: Additional HTTP headers to pass, as a Hash. The keys will
       #   automatically be upcased, with the prefix 'HTTP_' added if needed.
       #
-      # This method returns an AbstractResponse object, which one can use to
+      # This method returns an Response object, which one can use to
       # inspect the details of the response. Furthermore, if this method was
       # called from an ActionController::IntegrationTest object, then that
       # object's <tt>@response</tt> instance variable will point to the same
@@ -227,9 +230,7 @@ module ActionController
       def xml_http_request(request_method, path, parameters = nil, headers = nil)
         headers ||= {}
         headers['X-Requested-With'] = 'XMLHttpRequest'
-        headers['Accept'] ||= 'text/javascript, text/html, application/xml, ' +
-                              'text/xml, */*'
-
+        headers['Accept'] ||= [Mime::JS, Mime::HTML, Mime::XML, 'text/xml', Mime::ALL].join(', ')
         process(request_method, path, parameters, headers)
       end
       alias xhr :xml_http_request
@@ -278,6 +279,7 @@ module ActionController
             "SCRIPT_NAME"     => "",
 
             "REQUEST_URI"    => path,
+            "PATH_INFO"      => path,
             "HTTP_HOST"      => host,
             "REMOTE_ADDR"    => remote_addr,
             "CONTENT_TYPE"   => "application/x-www-form-urlencoded",
@@ -292,7 +294,7 @@ module ActionController
             "rack.multiprocess" => true,
             "rack.run_once"     => false,
 
-            "action_controller.test" => true
+            "rack.test" => true
           )
 
           (headers || {}).each do |key, value|
@@ -301,26 +303,22 @@ module ActionController
             env[key] = value
           end
 
-          unless ActionController::Base.respond_to?(:clear_last_instantiation!)
-            ActionController::Base.module_eval { include ControllerCapture }
+          [ControllerCapture, ActionController::ProcessWithTest].each do |mod|
+            unless ActionController::Base < mod
+              ActionController::Base.class_eval { include mod }
+            end
           end
 
           ActionController::Base.clear_last_instantiation!
 
-          app = Rack::Lint.new(@application)
+          app = @application
+          # Rack::Lint doesn't accept String headers or bodies in Ruby 1.9
+          unless RUBY_VERSION >= '1.9.0' && Rack.release <= '0.9.0'
+            app = Rack::Lint.new(app)
+          end
 
           status, headers, body = app.call(env)
           @request_count += 1
-
-          if @controller = ActionController::Base.last_instantiation
-            @request = @controller.request
-            @response = @controller.response
-
-            # Decorate the response with the standard behavior of the
-            # TestResponse so that things like assert_response can be
-            # used in integration tests.
-            @response.extend(TestResponseBehavior)
-          end
 
           @html_document = nil
 
@@ -329,13 +327,35 @@ module ActionController
 
           @headers = Rack::Utils::HeaderHash.new(headers)
 
-          (@headers['Set-Cookie'] || []).each do |cookie|
+          (@headers['Set-Cookie'] || "").split("\n").each do |cookie|
             name, value = cookie.match(/^([^=]*)=([^;]*);/)[1,2]
             @cookies[name] = value
           end
 
           @body = ""
-          body.each { |part| @body << part }
+          if body.is_a?(String)
+            @body << body
+          else
+            body.each { |part| @body << part }
+          end
+
+          if @controller = ActionController::Base.last_instantiation
+            @request = @controller.request
+            @response = @controller.response
+            @controller.send(:set_test_assigns)
+          else
+            # Decorate responses from Rack Middleware and Rails Metal
+            # as an Response for the purposes of integration testing
+            @response = Response.new
+            @response.status = status.to_s
+            @response.headers.replace(@headers)
+            @response.body = @body
+          end
+
+          # Decorate the response with the standard behavior of the
+          # TestResponse so that things like assert_response can be
+          # used in integration tests.
+          @response.extend(TestResponseBehavior)
 
           return @status
         rescue MultiPartNeededException
@@ -365,7 +385,7 @@ module ActionController
             "SERVER_PORT"    => https? ? "443" : "80",
             "HTTPS"          => https? ? "on" : "off"
           }
-          UrlRewriter.new(RackRequest.new(env), {})
+          UrlRewriter.new(Request.new(env), {})
         end
 
         def name_with_prefix(prefix, name)
@@ -411,7 +431,7 @@ module ActionController
         def multipart_body(params, boundary)
           multipart_requestify(params).map do |key, value|
             if value.respond_to?(:original_filename)
-              File.open(value.path) do |f|
+              File.open(value.path, "rb") do |f|
                 f.set_encoding(Encoding::BINARY) if f.respond_to?(:set_encoding)
 
                 <<-EOF
@@ -491,8 +511,7 @@ EOF
       # By default, a single session is automatically created for you, but you
       # can use this method to open multiple sessions that ought to be tested
       # simultaneously.
-      def open_session
-        application = ActionController::Dispatcher.new
+      def open_session(application = nil)
         session = Integration::Session.new(application)
 
         # delegate the fixture accessors back to the test instance

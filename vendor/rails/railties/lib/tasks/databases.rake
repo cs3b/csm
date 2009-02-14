@@ -250,6 +250,7 @@ namespace :db do
       File.open(ENV['SCHEMA'] || "#{RAILS_ROOT}/db/schema.rb", "w") do |file|
         ActiveRecord::SchemaDumper.dump(ActiveRecord::Base.connection, file)
       end
+      Rake::Task["db:schema:dump"].reenable
     end
 
     desc "Load a schema.rb file into the database"
@@ -380,7 +381,7 @@ namespace :db do
   end
 
   namespace :sessions do
-    desc "Creates a sessions migration for use with CGI::Session::ActiveRecordStore"
+    desc "Creates a sessions migration for use with ActiveRecord::SessionStore"
     task :create => :environment do
       raise "Task unavailable to this database (no migration support)" unless ActiveRecord::Base.connection.supports_migrations?
       require 'rails_generator'

@@ -1,3 +1,5 @@
+require 'active_support/test_case'
+
 module ActionView
   class Base
     alias_method :initialize_without_template_tracking, :initialize
@@ -21,6 +23,7 @@ module ActionView
 
   class TestCase < ActiveSupport::TestCase
     include ActionController::TestCase::Assertions
+    include ActionController::TestProcess
 
     class_inheritable_accessor :helper_class
     @@helper_class = nil
@@ -60,11 +63,14 @@ module ActionView
     end
 
     class TestController < ActionController::Base
-      attr_accessor :request, :response
+      attr_accessor :request, :response, :params
 
       def initialize
         @request = ActionController::TestRequest.new
         @response = ActionController::TestResponse.new
+        
+        @params = {}
+        send(:initialize_current_url)
       end
     end
 

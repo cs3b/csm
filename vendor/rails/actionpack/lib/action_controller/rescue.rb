@@ -38,8 +38,8 @@ module ActionController #:nodoc:
       'ActionView::TemplateError'         => 'template_error'
     }
 
-    RESCUES_TEMPLATE_PATH = ActionView::PathSet::Path.new(
-      File.join(File.dirname(__FILE__), "templates"), true)
+    RESCUES_TEMPLATE_PATH = ActionView::Template::EagerPath.new_and_loaded(
+      File.join(File.dirname(__FILE__), "templates"))
 
     def self.included(base) #:nodoc:
       base.cattr_accessor :rescue_responses
@@ -59,7 +59,9 @@ module ActionController #:nodoc:
     end
 
     module ClassMethods
-      def process_with_exception(request, response, exception) #:nodoc:
+      def call_with_exception(env, exception) #:nodoc:
+        request = env["action_controller.rescue.request"] ||= Request.new(env)
+        response = env["action_controller.rescue.response"] ||= Response.new
         new.process(request, response, :rescue_action, exception)
       end
     end
@@ -97,14 +99,20 @@ module ActionController #:nodoc:
 
       # Attempts to render a static error page based on the
       # <tt>status_code</tt> thrown, or just return headers if no such file
-      # exists. For example, if a 500 error is being handled Rails will first
-      # attempt to render the file at <tt>public/500.html</tt>. If the file
-      # doesn't exist, the body of the response will be left empty.
+      # exists. At first, it will try to render a localized static page.
+      # For example, if a 500 error is being handled Rails and locale is :da,
+      # it will first attempt to render the file at <tt>public/500.da.html</tt>
+      # then attempt to render <tt>public/500.html</tt>. If none of them exist,
+      # the body of the response will be left empty.
       def render_optional_error_file(status_code)
         status = interpret_status(status_code)
+        locale_path = "#{Rails.public_path}/#{status[0,3]}.#{I18n.locale}.html" if I18n.locale
         path = "#{Rails.public_path}/#{status[0,3]}.html"
-        if File.exist?(path)
-          render :file => path, :status => status
+
+        if locale_path && File.exist?(locale_path)
+          render :file => locale_path, :status => status, :content_type => Mime::HTML
+        elsif File.exist?(path)
+          render :file => path, :status => status, :content_type => Mime::HTML
         else
           head status
         end

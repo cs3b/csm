@@ -1,10 +1,8 @@
 require 'abstract_unit'
 
-uses_mocha 'integration' do
-
 class SessionTest < Test::Unit::TestCase
   StubApp = lambda { |env|
-    [200, {"Content-Type" => "text/html"}, "Hello, World!"]
+    [200, {"Content-Type" => "text/html", "Content-Length" => "13"}, "Hello, World!"]
   }
 
   def setup
@@ -231,8 +229,6 @@ end
 
 class IntegrationProcessTest < ActionController::IntegrationTest
   class IntegrationController < ActionController::Base
-    session :off
-
     def get
       respond_to do |format|
         format.html { render :text => "OK", :status => 200 }
@@ -268,6 +264,7 @@ class IntegrationProcessTest < ActionController::IntegrationTest
       assert_response :success
       assert_response :ok
       assert_equal({}, cookies)
+      assert_equal "OK", body
       assert_equal "OK", response.body
       assert_kind_of HTML::Document, html_document
       assert_equal 1, request_count
@@ -283,6 +280,7 @@ class IntegrationProcessTest < ActionController::IntegrationTest
       assert_response :success
       assert_response :created
       assert_equal({}, cookies)
+      assert_equal "Created", body
       assert_equal "Created", response.body
       assert_kind_of HTML::Document, html_document
       assert_equal 1, request_count
@@ -298,7 +296,7 @@ class IntegrationProcessTest < ActionController::IntegrationTest
       assert_equal "Gone", status_message
       assert_response 410
       assert_response :gone
-      assert_equal ["cookie_1=; path=/", "cookie_3=chocolate; path=/"], headers["Set-Cookie"]
+      assert_equal "cookie_1=; path=/\ncookie_3=chocolate; path=/", headers["Set-Cookie"]
       assert_equal({"cookie_1"=>"", "cookie_2"=>"oatmeal", "cookie_3"=>"chocolate"}, cookies)
       assert_equal "Gone", response.body
     end
@@ -362,6 +360,18 @@ class IntegrationProcessTest < ActionController::IntegrationTest
     end
   end
 
+  def test_head
+    with_test_route_set do
+      head '/get'
+      assert_equal 200, status
+      assert_equal "", body
+
+      head '/post'
+      assert_equal 201, status
+      assert_equal "", body
+    end
+  end
+
   private
     def with_test_route_set
       with_routing do |set|
@@ -375,4 +385,33 @@ class IntegrationProcessTest < ActionController::IntegrationTest
     end
 end
 
+class MetalTest < ActionController::IntegrationTest
+  class Poller
+    def self.call(env)
+      if env["PATH_INFO"] =~ /^\/success/
+        [200, {"Content-Type" => "text/plain", "Content-Length" => "12"}, "Hello World!"]
+      else
+        [404, {"Content-Type" => "text/plain", "Content-Length" => "0"}, '']
+      end
+    end
+  end
+
+  def setup
+    @integration_session = ActionController::Integration::Session.new(Poller)
+  end
+
+  def test_successful_get
+    get "/success"
+    assert_response 200
+    assert_response :success
+    assert_response :ok
+    assert_equal "Hello World!", response.body
+  end
+
+  def test_failed_get
+    get "/failure"
+    assert_response 404
+    assert_response :not_found
+    assert_equal '', response.body
+  end
 end

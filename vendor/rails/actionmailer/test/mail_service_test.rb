@@ -289,8 +289,6 @@ class TestMailer < ActionMailer::Base
   end
 end
 
-uses_mocha 'ActionMailerTest' do
-
 class ActionMailerTest < Test::Unit::TestCase
   include ActionMailer::Quoting
 
@@ -940,6 +938,7 @@ EOF
     ActionMailer::Base.delivery_method = :smtp
     TestMailer.deliver_return_path
     assert_match %r{^Return-Path: <another@somewhere.test>}, MockSMTP.deliveries[0][0]
+    assert_equal "another@somewhere.test", MockSMTP.deliveries[0][1].to_s
   end
 
   def test_body_is_stored_as_an_ivar
@@ -948,6 +947,7 @@ EOF
   end
 
   def test_starttls_is_enabled_if_supported
+    ActionMailer::Base.smtp_settings[:enable_starttls_auto] = true
     MockSMTP.any_instance.expects(:respond_to?).with(:enable_starttls_auto).returns(true)
     MockSMTP.any_instance.expects(:enable_starttls_auto)
     ActionMailer::Base.delivery_method = :smtp
@@ -955,18 +955,27 @@ EOF
   end
 
   def test_starttls_is_disabled_if_not_supported
+    ActionMailer::Base.smtp_settings[:enable_starttls_auto] = true
     MockSMTP.any_instance.expects(:respond_to?).with(:enable_starttls_auto).returns(false)
     MockSMTP.any_instance.expects(:enable_starttls_auto).never
     ActionMailer::Base.delivery_method = :smtp
     TestMailer.deliver_signed_up(@recipient)
   end
-end
 
-end # uses_mocha
+  def test_starttls_is_not_enabled
+    ActionMailer::Base.smtp_settings[:enable_starttls_auto] = false
+    MockSMTP.any_instance.expects(:respond_to?).never
+    MockSMTP.any_instance.expects(:enable_starttls_auto).never
+    ActionMailer::Base.delivery_method = :smtp
+    TestMailer.deliver_signed_up(@recipient)
+  ensure
+    ActionMailer::Base.smtp_settings[:enable_starttls_auto] = true
+  end
+end
 
 class InheritableTemplateRootTest < Test::Unit::TestCase
   def test_attr
-    expected = "#{File.dirname(__FILE__)}/fixtures/path.with.dots"
+    expected = ("#{File.dirname(__FILE__)}/fixtures/path.with.dots").sub(/\.\//, '')
     assert_equal expected, FunkyPathMailer.template_root.to_s
 
     sub = Class.new(FunkyPathMailer)
