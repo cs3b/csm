@@ -3,3 +3,4 @@ log/*.log
 tmp/**/*
 *~
 *.bak
+nbproject/private/rake-d.txt
