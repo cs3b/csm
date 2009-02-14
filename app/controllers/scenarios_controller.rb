@@ -28,6 +28,7 @@ class ScenariosController < ApplicationController
   def edit;  end
 
   def create
+#    throw params[:scenario].to_yaml
     @scenario = @feature.scenarios.build(params[:scenario])
     respond_to do |format|
       if @scenario.save

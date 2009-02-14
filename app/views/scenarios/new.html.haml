@@ -23,12 +23,13 @@
             %a{:href => '#when'}= t(:when)
           %li.ui-state-default.ui-corner-top
             %a{:href => '#given'}= t(:given)
-        .ui-tabs-panel.ui-widget-content-ui-corner-bottom#then
-          %span then
-        .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#when
-          %span when
-        .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#given
-          %span given
+        - f.fields_for :steps_attributes do |step|
+          .ui-tabs-panel.ui-widget-content-ui-corner-bottom#then
+            %span= render :partial => '/scenario_steps/new', :locals => {:step => step, :stype => :then }
+          .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#when
+            %span= render :partial => '/scenario_steps/new', :locals => {:step => step, :stype => :when }
+          .ui-tabs-panel.ui-widget-content-ui-corner-bottom.ui-tabs-hide#given
+            %span= render :partial => '/scenario_steps/new', :locals => {:step => step, :stype => :given }
     .clear &nbsp;
   .grid_8.beta
     %h2 preview
@@ -37,4 +38,3 @@
     .top_spacer= link_to t(:back), feature_path(@feature)
     = f.submit t(:add)
   .clean &nbsp;
-

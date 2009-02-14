@@ -20,6 +20,9 @@ class ScenarioStep < ActiveRecord::Base
 
   default_scope :order => :keyword_id
 
+  has_many :children, :class_name => 'ScenarioStep', :foreign_key => :parent_id
+  accepts_nested_attributes_for :children
+
   # main keywords, differnt type of step
   MAIN_KEYWORDS = {
     :given => 101,

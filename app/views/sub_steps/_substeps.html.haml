@@ -1,0 +1,21 @@
+- content_for :js do
+  :javascript
+    var substeps_index = 0;
+    function get_substep_index()
+      {
+        substeps_index += 1;
+        return substeps_index;
+      }
+    function substep_definition(stype)
+      {
+        index = get_substep_index();
+        prefix = "scenario[steps_attributes]["+stype+"][children_attributes]["+index+"]";
+        output = "";
+        output += "<select name='"+prefix+"[keyword_id]' id=\"scenario_steps_attributes_"+stype+"_children_attributes_"+index+"_keyword_id\">";
+        output += "#{scenario_step_link_keyword_select_tag}";
+        output += "</select>";
+        output += "<textarea rows='3' name='"+prefix+"[instruction]' id='"+prefix+"[instruction]' cols='40'/>";
+        return output;
+      }
+Add substep
+= render :partial => '/sub_steps/new', :locals => {:stype => stype, :index => "1"}
