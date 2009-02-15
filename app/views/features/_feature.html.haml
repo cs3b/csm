@@ -1,7 +1,11 @@
+- content_for :js do
+  :javascript
+    rails_authenticity_token = '#{form_authenticity_token}'
+
 .feature.grid_7.alpha
   .grid_6
     .feature_header.header= t(:feature)
-    .feature_title.title= feature.title
+    .feature_title.title.rest_in_place{:attribute => 'title', :id => dom_id(feature), :object => 'feature'}= feature.title
   .grid_1
     = link_to t(:add_scenario), new_feature_scenario_path(@feature)
   .clear &nbsp;
@@ -19,7 +23,7 @@
       .grid_2
         .scenario_header.header= t(:scenario)
       .grid_5
-        .scenario_title.title
+        .scenario_title.title.rest_in_place{:attribute => 'title', :id => dom_id(scenario), :object => 'scenario', :url => scenario_path(scenario)}
           = scenario.title
       .clear &nbsp;
       - scenario.main_steps.each do |step|
@@ -27,7 +31,7 @@
           .scenario_keyword.keyword
             = t(step.keyword)
         .grid_4
-          .scenario_step.main_text
+          .scenario_step.main_text.rest_in_place{:attribute => 'instruction', :id => dom_id(step), :object => 'scenario_step', :url => scenario_step_path(step)}
             = step.instruction
         .grid_1= plus_link_to new_scenario_step_sub_step_path(step)
         .clear &nbsp;
@@ -36,7 +40,7 @@
             .scenario_link_keyword.link_keyword
               = t(child_step.keyword)
           .grid_4
-            .scenario_step.main_text
+            .scenario_step.main_text.rest_in_place{:attribute => 'instruction', :id => dom_id(child_step), :object => 'scenario_step', :url => scenario_step_path(child_step)}
               = child_step.instruction
           .grid_1= minus_link_to scenario_step_path(child_step), :confirm => t(:are_you_sure), :method => :delete
           .clear &nbsp;

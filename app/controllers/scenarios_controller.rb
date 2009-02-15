@@ -1,7 +1,7 @@
 class ScenariosController < ApplicationController
-  before_filter :get_feature
+  before_filter :get_feature, :only => [:index, :new]
   before_filter :get_scenarios, :only => [:index]
-  before_filter :get_scenarios, :only => [:show, :edit, :update, :destroy]
+  before_filter :get_scenario, :only => [:show, :update, :destroy]
 
   def index
     respond_to do |format|
@@ -14,6 +14,7 @@ class ScenariosController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @scenario }
+      format.js { render :json => @scenario }
     end
   end
 
@@ -24,8 +25,6 @@ class ScenariosController < ApplicationController
       format.xml  { render :xml => @scenario }
     end
   end
-
-  def edit;  end
 
   def create
 #    throw params[:scenario].to_yaml
@@ -48,9 +47,11 @@ class ScenariosController < ApplicationController
         flash[:notice] = 'Scenario was successfully updated.'
         format.html { redirect_to(@scenario) }
         format.xml  { head :ok }
+        format.js  { head :ok }
       else
         format.html { render :action => "edit" }
         format.xml  { render :xml => @scenario.errors, :status => :unprocessable_entity }
+        format.js  { render :json => @scenario.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -71,6 +72,6 @@ class ScenariosController < ApplicationController
     @scenarios = @feature.scenarios.all
   end
   def get_scenario
-    @scenario = @feature.scenarios.find(params[:id])
+    @scenario = Scenario.find(params[:id])
   end
 end

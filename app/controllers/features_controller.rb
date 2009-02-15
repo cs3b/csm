@@ -10,6 +10,7 @@ class FeaturesController < ApplicationController
       format.html
       format.feature { render :layout => false }
       format.pdf { render :layout => false }
+      format.js {render :json => @feature}
     end
   end
   
@@ -22,7 +23,6 @@ class FeaturesController < ApplicationController
   def create
     @feature = Feature.new(params[:feature])
     if @feature.save
-      flash[:notice] = 'Feature was successfully created.'
       redirect_to(@feature)
     else
       render :action => "new"
@@ -30,12 +30,8 @@ class FeaturesController < ApplicationController
   end
 
   def update
-    if @feature.update_attributes(params[:feature])
-      flash[:notice] = 'Feature was successfully updated.'
-      redirect_to(@feature)
-    else
-      render :action => "edit"
-    end
+    @feature.update_attributes(params[:feature])
+    render :nothing => true, :status => :ok
   end
 
   def destroy

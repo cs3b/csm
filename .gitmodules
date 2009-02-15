@@ -19,3 +19,6 @@
 [submodule "vendor/plugins/acts_as_versioned"]
 	path = vendor/plugins/acts_as_versioned
 	url = git://github.com/technoweenie/acts_as_versioned.git
+[submodule "vendor/plugins/rest_in_place"]
+	path = vendor/plugins/rest_in_place
+	url = git://github.com/janv/rest_in_place.git

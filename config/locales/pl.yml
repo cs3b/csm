@@ -88,6 +88,7 @@ pl:
     array:
       sentence_connector: "i"
       skip_last_comma: true
+      two_words_connector: "oraz"
 # active record
   activerecord:
     errors:
