@@ -2,6 +2,8 @@
   .grid_6
     .feature_header.header= t(:feature)
     .feature_title.title= feature.title
+  .grid_1
+    = link_to t(:add_scenario), new_feature_scenario_path(@feature)
   .clear &nbsp;
   .grid_7
     .feature_why.main_text= feature.why
