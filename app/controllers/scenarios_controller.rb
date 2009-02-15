@@ -58,10 +58,7 @@ class ScenariosController < ApplicationController
 
   def destroy
     @scenario.destroy
-    respond_to do |format|
-      format.html { redirect_to(scenarios_url) }
-      format.xml  { head :ok }
-    end
+    redirect_to feature_path(@scenario.feature_id)
   end
 
   private

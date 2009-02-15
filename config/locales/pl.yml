@@ -165,3 +165,5 @@ pl:
 #scenario_step
   new_step_for: "Dodanie nowego kroku do"
   new_sub_step_for: "Dodanie kolejnego kroku do"
+  keyword_link: "Słowo Łączące"
+  step_instruction: "Instrukcja dla kroku"

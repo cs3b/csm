@@ -3,12 +3,12 @@
   - form_for(:scenario_step, @sub_step, :url => scenario_step_sub_steps_path(@scenario_step)) do |f|
     = f.error_messages
     .grid_3
-      .form_label= f.label :keyword_id
+      .form_label= f.label :keyword_id, t(:keyword_link)
     .grid_5
       .form_input= f.select :keyword_id, scenario_step_link_keyword_select
     .clear &nbsp;
     .grid_8
-      .form_label= f.label :instruction
+      .form_label= f.label :instruction, t(:step_instruction)
       .form_input.text_area= f.text_area :instruction, :rows => 3, :cols => 50
     .clear &nbsp;
     .grid_8= f.submit t(:add)
