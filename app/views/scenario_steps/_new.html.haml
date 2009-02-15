@@ -1,6 +1,3 @@
 = step.hidden_field :keyword_id, :value => ScenarioStep::MAIN_KEYWORDS[stype], :index => stype
-%p
-  = step.label :instruction
-  %br
-  = step.text_field :instruction, :index => stype
-  = render :partial => '/sub_steps/substeps', :locals => { :stype => stype }
+= step.text_field :instruction, :index => stype
+= render :partial => '/sub_steps/substeps', :locals => { :stype => stype }

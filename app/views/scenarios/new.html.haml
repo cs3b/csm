@@ -10,7 +10,7 @@
   .grid_8.alpha.form
     = f.error_messages
     .grid_3
-      .form_label= f.label :title
+      .form_label= f.label t(:title)
     .grid_5
       .form_input= f.text_field :title
     .clear &nbsp;
@@ -32,7 +32,7 @@
             %span= render :partial => '/scenario_steps/new', :locals => {:step => step, :stype => :given }
     .clear &nbsp;
   .grid_8.beta
-    %h2 preview
+    %h2= t(:preview)
   .clean &nbsp;
   .grid_16.alpha
     .top_spacer= link_to t(:back), feature_path(@feature)
