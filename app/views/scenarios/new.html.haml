@@ -1,5 +1,5 @@
 - content_for :js do
-  = javascript_include_tag 'jquery-ui/ui.core', 'jquery-ui/ui.tabs', :cache => 'ui.tabs.js'
+  = javascript_include_tag 'jquery-ui/ui.core', 'jquery-ui/ui.tabs', :cache => 'cache/ui.tabs'
   :javascript
     jQuery(document).ready(function(){
        scenario_tab = jQuery("#tabs > ul").tabs();

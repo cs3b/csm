@@ -5,3 +5,5 @@ tmp/**/*
 *.bak
 nbproject/private/rake-d.txt
 routes.txt
+public/stylesheets/cache/*
+public/javascripts/cache/*

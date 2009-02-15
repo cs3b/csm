@@ -8,6 +8,10 @@
   font-family: monospace;
 }
 
+.feature input[type=text] {
+  width: 220px;
+}
+
 .feature .main_text {
   color: #61a95d;
 }
