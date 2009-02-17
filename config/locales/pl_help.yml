@@ -1,0 +1,12 @@
+pl:
+  help:
+    feature:
+      title: 'Krótkie sformułownie które jednoznacznie identyfikuje daną funkcjonalność, przykład: "Logowanie się użytkowników"'
+      why: 'Dlaczego ta funkcjonalność jest potrzebna? Jaką biznesową wartość wnosi?, przykład: "W celu determinowania autorstwa zawartości dodawanej do systemu"'
+      who: 'Kto bedzie używał danej funkcjonalności?, przykład "Wszyscy użytkownicy systemu"'
+      what: 'W skrócie co dana funkcjonalność udostępnia? przykład: "Powinni móc się zalogować"'
+    scenario:
+      title: 'Tytuł scenariusza, przykład "Wejście na stronę logowania"'
+      instruction_step_then: 'Efekt końcowy dla danego scenariusza. przykład: "zostanę przekierowany do strony logowania", /oraz/ "zobacze formularz z polami login i hasło ]"'
+      instruction_step_when: ''
+      instruction_step_given: ''

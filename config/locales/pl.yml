@@ -125,10 +125,10 @@ pl:
 # models attribute
     attributes:
       feature:
-        title: "Tytuł właściwości"
-        why: "Powód wprowadzenia właściwości"
-        who: "Kto będzie korzystał z tej właściwości systemu"
-        what: "Oczekiwania wobec właściwości"
+        title: "Tytuł"
+        why: "Powód wprowadzenia"
+        who: "Kto będzie użytkownikiem"
+        what: "Oczekiwania"
       scenario:
         title: "Tytuł scenariusza"
       scenario_step:
