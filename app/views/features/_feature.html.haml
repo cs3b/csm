@@ -10,13 +10,13 @@
     = link_to t(:add_scenario), new_feature_scenario_path(@feature)
   .clear &nbsp;
   .grid_7
-    .feature_why.main_text= feature.why
+    .feature_why.main_text.rest_in_place{:attribute => 'why', :id => dom_id(feature), :object => 'feature'}= feature.why
   .clear &nbsp;
   .grid_7
-    .feature_who.main_text= feature.who
+    .feature_who.main_text.rest_in_place{:attribute => 'who', :id => dom_id(feature), :object => 'feature'}= feature.who
   .clear &nbsp;
   .grid_7
-    .feature_what.main_text= feature.what
+    .feature_what.main_text.rest_in_place{:attribute => 'what', :id => dom_id(feature), :object => 'feature'}= feature.what
   .clear &nbsp;
   - feature.scenarios.each do |scenario|
     .scenario.grid_7.alpha

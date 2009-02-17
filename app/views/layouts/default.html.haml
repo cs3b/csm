@@ -3,11 +3,11 @@
   %head
     %meta{'http-equiv' => "content-type", 'content' =>"text/html; charset=utf-8"}
     %title CSM - Cucumber Story Manager
-    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'layout', 'forms', 'main', 'feature', 'scenario', 'ui.theme', :cache => 'cache/csm'
+    = stylesheet_link_tag '960/reset', '960/text', '960/960', 'layout', 'forms', 'main', 'feature', 'scenario', 'ui.theme', 'jquery.bt', :cache => 'cache/csm'
   %body
     .container_16
       .grid_16.alpha
         = yield
       .clear &nbsp;
-    = javascript_include_tag 'jquery', 'jrails', 'rest_in_place/rest_in_place', :cache => 'cache/csm'
+    = javascript_include_tag 'jquery', 'jrails', 'rest_in_place/rest_in_place', 'jquery.bt', 'form_tooltip_help', :cache => 'cache/csm'
     = yield :js

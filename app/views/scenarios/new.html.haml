@@ -5,14 +5,37 @@
        scenario_tab = jQuery("#tabs > ul").tabs();
        scenario_tab.tabs( "select", '#then' );
     });
+    var substeps_index = 0;
+    var substeps_help_when = '#{t(:instruction_step_when, :scope => [:help,:scenario])}';
+    var substeps_help_given = '#{t(:instruction_step_given, :scope => [:help,:scenario])}';
+    var substeps_help_then = '#{t(:instruction_step_then, :scope => [:help,:scenario])}';
+
+    function get_substep_index()
+      {
+        substeps_index += 1;
+        return substeps_index;
+      }
+    function substep_definition(stype)
+      {
+        index = get_substep_index();
+        prefix = "scenario[steps_attributes]["+stype+"][children_attributes]["+index+"]";
+        output = "<div id='substep_"+index+"'";
+        output += "<select name='"+prefix+"[keyword_id]' id='substep_keyword_'"+index+">";
+        output += "#{scenario_step_link_keyword_select_tag}";
+        output += "</select>";
+        output += "<textarea title='"+eval('substeps_help_'+stype)+"' class='form_help' rows='1' name='"+prefix+"[instruction]' id='substep_instruction_'"+index+" cols='50'/>";
+        output += "<a onclick=\"$('#substep_"+index+"').remove(); return false;\" href=\"#\"><img src=\"/images/feature/minus_12x12.png\" alt=\"Minus_12x12\"/></a>"
+        output += "</div>";
+        return output;
+      }
 %h1= "#{t(:new_scenario_for)} - #{t(:feature)}: #{@feature.title}"
 - form_for ([@feature,@scenario]) do |f|
   .grid_8.alpha.form
     = f.error_messages
     .grid_3
-      .form_label= f.label t(:title)
+      .form_label= f.label :title
     .grid_5
-      .form_input= f.text_field :title
+      .form_input= f.text_field :title, :title => t(:title, :scope => [:help,:scenario]), :class => 'form_help'
     .clear &nbsp;
     .grid_8
       .ui-tabs.ui-diget.ui-widget-content.ui-corner-all#tabs

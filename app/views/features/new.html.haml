@@ -3,13 +3,13 @@
   - form_for(@feature) do |f|
     = f.error_messages
     .form_label= f.label :title
-    .form_input= f.text_field :title, :size => 50
+    .form_input= f.text_field :title, :size => 50, :title => t(:title, :scope => [:help,:feature]), :class => 'form_help'
     .form_label= f.label :why
-    .form_input.text_area= f.text_area :why, :rows => 3, :cols => 50
+    .form_input.text_area= f.text_area :why, :rows => 3, :cols => 50, :title => t(:why, :scope => [:help,:feature]), :class => 'form_help'
     .form_label= f.label :who
-    .form_input= f.text_field :who
+    .form_input= f.text_field :who, :title => t(:who, :scope => [:help,:feature]), :class => 'form_help'
     .form_label= f.label :what
-    .form_input.text_area= f.text_area :what, :rows => 3, :cols => 50
+    .form_input.text_area= f.text_area :what, :rows => 3, :cols => 50, :title => t(:what, :scope => [:help,:feature]), :class => 'form_help'
     = f.submit t(:create)
   .top_spacer= link_to t(:back), features_path
 .clear &nbsp;
