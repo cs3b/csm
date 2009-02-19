@@ -1,5 +1,5 @@
 database.yml
-log/*.log
+log/*
 tmp/**/*
 *~
 *.bak
