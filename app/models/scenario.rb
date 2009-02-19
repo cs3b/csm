@@ -13,6 +13,7 @@
 
 class Scenario < ActiveRecord::Base
   belongs_to :feature
+  has_many :changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_id => :scenario}
   has_many :steps, :class_name => 'ScenarioStep'
   has_many :main_steps, :class_name => 'ScenarioStep', :conditions => {:keyword_id => ScenarioStep::MAIN_KEYWORDS.values}
 

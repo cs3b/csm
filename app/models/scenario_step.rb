@@ -14,6 +14,7 @@
 #
 
 class ScenarioStep < ActiveRecord::Base
+  has_many :changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_id => :scenario_step}
   #TODO take something new, acts_as_list+tree - scope in position should more work properly
   acts_as_ordered_tree :foreign_key => :parent_id,
     :order       => :position, :scope => [:parent_id, :keyword_id]
