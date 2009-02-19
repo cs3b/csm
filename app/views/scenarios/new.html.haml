@@ -19,12 +19,12 @@
       {
         index = get_substep_index();
         prefix = "scenario[steps_attributes]["+stype+"][children_attributes]["+index+"]";
-        output = "<div id='substep_"+index+"'";
+        output = "<div id='substep_"+index+"'>";
         output += "<select name='"+prefix+"[keyword_id]' id='substep_keyword_'"+index+">";
         output += "#{scenario_step_link_keyword_select_tag}";
         output += "</select>";
+        output += "<br/><a onclick=\"$('#substep_"+index+"').remove(); return false;\" href=\"#\"><img src=\"/images/feature/minus_12x12.png\" alt=\"Minus_12x12\"/></a>"
         output += "<textarea title='"+eval('substeps_help_'+stype)+"' class='form_help' rows='1' name='"+prefix+"[instruction]' id='substep_instruction_'"+index+" cols='50'/>";
-        output += "<a onclick=\"$('#substep_"+index+"').remove(); return false;\" href=\"#\"><img src=\"/images/feature/minus_12x12.png\" alt=\"Minus_12x12\"/></a>"
         output += "</div>";
         return output;
       }

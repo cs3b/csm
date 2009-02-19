@@ -7,6 +7,6 @@ pl:
       what: 'W skrócie co dana funkcjonalność udostępnia? przykład: "Powinni móc się zalogować"'
     scenario:
       title: 'Tytuł scenariusza, przykład "Wejście na stronę logowania"'
-      instruction_step_then: 'Efekt końcowy dla danego scenariusza. przykład: "zostanę przekierowany do strony logowania", /oraz/ "zobacze formularz z polami login i hasło ]"'
-      instruction_step_when: ''
-      instruction_step_given: ''
+      instruction_step_then: 'element warunków definiujący efekt końcowy dla danego scenariusza. przykład: "zostanę przekierowany do strony logowania", /oraz/ "zobacze formularz z polami login i hasło ]"'
+      instruction_step_when: 'krok w sekwencja czynności które muszą zostać wykonane aby uzyskać efekt końcowy, przykład: "kliknę link zaloguj"'
+      instruction_step_given: 'stan systemu na początku, przed rozpoczęciem działań zmierząjących bezpośrednio do pożądanego efektu, przykład "na stronie głównej"'

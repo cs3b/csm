@@ -9,7 +9,7 @@
     .clear &nbsp;
     .grid_8
       .form_label= f.label :instruction, t(:step_instruction)
-      .form_input.text_area= f.text_area :instruction, :rows => 3, :cols => 50
+      .form_input.text_area= f.text_area :instruction, :rows => 3, :cols => 50, :title => t("instruction_step_#{@scenario_step.keyword}".to_sym, :scope => [:help,:scenario]), :class => 'form_help'
     .clear &nbsp;
     .grid_8= f.submit t(:add)
     .clear &nbsp;

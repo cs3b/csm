@@ -1,3 +1,4 @@
+= plus_link_to_function  "$('#substeps_#{stype}').append(substep_definition('#{stype}'));$('##{stype} * textarea').bt({trigger: ['focus', 'blur'], positions: ['right']});"
 = step.hidden_field :keyword_id, :value => ScenarioStep::MAIN_KEYWORDS[stype], :index => stype
-= step.text_field :instruction, :index => stype, :title => t(:instruction_step, :scope => [:help,:scenario]), :class => 'form_help'
+= step.text_area :instruction, :index => stype, :title => t("instruction_step_#{stype}".to_sym, :scope => [:help,:scenario]), :class => 'form_help', :rows => 1, :cols => 50
 = render :partial => '/sub_steps/substeps', :locals => { :stype => stype }
