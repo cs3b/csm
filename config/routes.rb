@@ -10,6 +10,8 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
+  map.resources :feature_changes
+
   map.root :controller => 'features'
 
   # The priority is based upon order of creation: first created -> highest priority.

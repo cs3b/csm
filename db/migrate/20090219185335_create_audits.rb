@@ -18,8 +18,5 @@ class CreateAudits < ActiveRecord::Migration
 
   def self.down
     drop_table :audits
-    remove_index :audits, :name => :objects
-    remove_index :audits, :name => :creation_time
-    remove_index :audits, :name => :creator
   end
 end

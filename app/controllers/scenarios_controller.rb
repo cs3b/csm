@@ -1,5 +1,5 @@
 class ScenariosController < ApplicationController
-  before_filter :get_feature, :only => [:index, :new]
+  before_filter :get_feature, :only => [:index, :new, :create]
   before_filter :get_scenarios, :only => [:index]
   before_filter :get_scenario, :only => [:show, :update, :destroy]
 
