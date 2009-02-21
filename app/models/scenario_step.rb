@@ -14,13 +14,12 @@
 #
 
 class ScenarioStep < ActiveRecord::Base
-  #TODO take something new, acts_as_list+tree - scope in position should more work properly
-  acts_as_ordered_tree :foreign_key => :parent_id,
-    :order       => :position, :scope => [:parent_id, :keyword_id]
+
+  acts_as_paranoid
 
   default_scope :order => :keyword_id
 
-  has_many :children, :class_name => 'ScenarioStep', :foreign_key => :parent_id
+  has_many :children, :class_name => 'ScenarioStep', :foreign_key => :parent_id, :dependent => :destroy
   has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => :scenario_step.to_i}
 
   before_save :audit_changes
@@ -76,8 +75,8 @@ class ScenarioStep < ActiveRecord::Base
   end
 
   def audit_deletion
-    [:title, :what, :who, :why].each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute_id => attribute, :committed_by => committed_by)
+    [:keyword_id, :instruction].each do |attribute|
+      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute_id => attribute, :committed_by => committed_by).save
     end
   end
 
