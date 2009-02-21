@@ -1,4 +1,5 @@
 class FeaturesController < ApplicationController
+  before_filter :authenticate
 
   before_filter :get_features, :only => [:index]
   before_filter :get_feature, :only => [:show, :edit, :update, :destroy]

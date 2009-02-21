@@ -1,4 +1,5 @@
 class ScenarioStepsController < ApplicationController
+  before_filter :authenticate
   before_filter :get_step, :only => [:destroy, :update, :show]
 
   def destroy

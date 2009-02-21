@@ -197,7 +197,7 @@ pl:
 #user
   user:
     edit_info: "Edycja danych Użytkownika"
-  password:
+  password_reset:
     we_will_email: "Wkrótce po poprawnym wypełnieniu formularza, otrzymasz emaila z linkiem do zmiany hasła"
     change_your_password: "Odzyskaj hasło"
     reset_password: "Zresetuj hasło"

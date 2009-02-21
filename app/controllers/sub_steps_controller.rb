@@ -1,4 +1,5 @@
 class SubStepsController < ApplicationController
+  before_filter :authenticate
   before_filter :get_scenario_sub_step
 
   def new
