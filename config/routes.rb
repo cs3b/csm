@@ -1,7 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :scenarios
 
-  
+  map.resources :users, :has_one => [:password, :confirmation]
+  map.resource :session
+  map.resources :passwords
+  map.resources :scenarios
+ 
   map.resources :features, :shallow => true do |features|
     features.resources :scenarios do |scenarios|
       scenarios.resources :scenario_steps do |scenario_steps|
