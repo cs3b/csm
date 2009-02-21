@@ -3,7 +3,7 @@ class FeaturesController < ApplicationController
   before_filter :get_features, :only => [:index]
   before_filter :get_feature, :only => [:show, :edit, :update, :destroy]
 
-  def index; end
+  def index;  end
 
   def show
     respond_to do |format|

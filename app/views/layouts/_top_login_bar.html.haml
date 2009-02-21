@@ -1,0 +1,11 @@
+- if current_user
+  Logoed as:
+  = current_user.email
+  |
+  = link_to "Logout", session_path, :method => :delete
+- else
+  = link_to "Sign In", new_session_path
+  |
+  = link_to "Sign Up", new_user_path
+  |
+  = link_to "Forgot password?", new_password_path
