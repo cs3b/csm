@@ -179,3 +179,4 @@ pl:
   export_as_cucumber: "Format cucumber"
   export_as_pdf: "Format PDF"
   instruction: "Instrukcja kroku"
+  scenario_step: "Krok scenariusza"
