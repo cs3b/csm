@@ -1,4 +1,6 @@
-database.yml
+config/database.yml
+config/mailer.yml
+db/schema.rb
 log/*
 tmp/**/*
 *~

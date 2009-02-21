@@ -1,0 +1,24 @@
+---
+:production:
+  :address: smtp.gmail.com
+  :port: 587
+  :user_name: 
+  :password: 
+  :authentication: :plain
+:staging:
+  :address: smtp.gmail.com
+  :port: 587
+  :user_name: 
+  :password: 
+  :authentication: :plain
+:development:
+  :address: smtp.gmail.com
+  :port: 587
+  :user_name: 
+  :password: 
+  :authentication: :plain
+  :dev_mailto: 
+:test:
+  :address:
+  :port:
+  :dev_mailto: null@null.null

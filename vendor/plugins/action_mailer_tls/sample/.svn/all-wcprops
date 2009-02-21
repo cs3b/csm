@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/gnz/!svn/ver/402/railsapp/trunk/vendor/plugins/action_mailer_tls/sample
+END
+mailer.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/gnz/!svn/ver/402/railsapp/trunk/vendor/plugins/action_mailer_tls/sample/mailer.yml.sample
+END
+smtp_gmail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/gnz/!svn/ver/402/railsapp/trunk/vendor/plugins/action_mailer_tls/sample/smtp_gmail.rb
+END
