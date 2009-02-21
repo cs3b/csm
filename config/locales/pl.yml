@@ -206,3 +206,7 @@ pl:
       intro: "Ktoś - jesteśmy pełni nadziei że ty - poprosił o wysłanie linku do zresetowania hasła"
       here_is_the_link: "Oto link:"
       ignore_if_not_you: "Jeśli to nie ty wysłałeś prośbę, zignoruj ten email. Bez obaw. Twoje hasło nie zostało zmienione."
+  top_login_bar:
+    logout: "Wyloguj się"
+    logoed_as: "Jesteś zalogowany jako: "
+    forgot_password?: "Zapomniałeś hasła?"
