@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090101184824
+# Schema version: 20090221092802
 #
 # Table name: scenarios
 #
@@ -9,6 +9,7 @@
 #  position   :integer(4)
 #  created_at :datetime
 #  updated_at :datetime
+#  deleted_at :datetime
 #
 
 class Scenario < ActiveRecord::Base
@@ -18,7 +19,7 @@ class Scenario < ActiveRecord::Base
   belongs_to :feature
   has_many :steps, :class_name => 'ScenarioStep', :dependent => :destroy
   has_many :main_steps, :class_name => 'ScenarioStep', :conditions => {:keyword_id => ScenarioStep::MAIN_KEYWORDS.values}
-  has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => :scenario.to_i}
+  has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => Audit::KEYS[:scenario]}
 
   before_save :audit_changes
   before_destroy :audit_deletion
@@ -31,13 +32,13 @@ class Scenario < ActiveRecord::Base
 
   def audit_changes
     changed.each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute_id => attribute.to_sym, :committed_by => committed_by)
+      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym, :committed_by => committed_by) unless ['feature_id'].include?(attribute)
     end
   end
 
   def audit_deletion
     [:title].each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute_id => attribute, :committed_by => committed_by).save
+      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute, :committed_by => committed_by).save
     end
   end
 end

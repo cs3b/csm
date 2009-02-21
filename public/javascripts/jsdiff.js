@@ -18,6 +18,8 @@ function escape(s) {
 }
 
 function diffString( o, n ) {
+  if ( o==null ) { o = "" };
+  if ( n==null ) { n = "" };
   o = o.replace(/\s+$/, '');
   n = n.replace(/\s+$/, '');
 

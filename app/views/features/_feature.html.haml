@@ -1,13 +1,10 @@
 - content_for :js do
   :javascript
     rails_authenticity_token = '#{form_authenticity_token}'
-
 .feature.grid_7.alpha
-  .grid_6
+  .grid_7
     .feature_header.header= t(:feature)
     .feature_title.title.rest_in_place{:attribute => 'title', :id => dom_id(feature), :object => 'feature'}= feature.title
-  .grid_1
-    = link_to t(:add_scenario), new_feature_scenario_path(@feature)
   .clear &nbsp;
   .grid_7
     .feature_why.main_text.rest_in_place{:attribute => 'why', :id => dom_id(feature), :object => 'feature'}= feature.why

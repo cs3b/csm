@@ -157,6 +157,12 @@ pl:
 #feature
   new_feature: "Nowa właściwość"
   listing_features: "Lista właściwości"
+
+#audit keys
+  title: "Tytuł"
+  why: "Powód wprowadzenia"
+  who: "Kto będzie użytkownikiem"
+  what: "Oczekiwania"
 #scenario
   add_scenario: "Dodaj scenariusz"
   new_scenario_for: "Dodanie nowego scenariusza do"
@@ -167,3 +173,9 @@ pl:
   new_sub_step_for: "Dodanie kolejnego kroku do"
   keyword_link: "Słowo Łączące"
   step_instruction: "Instrukcja dla kroku"
+
+#other
+  show_changes: "Pokaż Historie Zmian"
+  export_as_cucumber: "Format cucumber"
+  export_as_pdf: "Format PDF"
+  instruction: "Instrukcja kroku"

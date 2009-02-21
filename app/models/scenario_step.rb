@@ -1,16 +1,17 @@
 # == Schema Information
-# Schema version: 20090126163815
+# Schema version: 20090221092802
 #
 # Table name: scenario_steps
 #
 #  id          :integer(4)      not null, primary key
 #  keyword_id  :integer(4)
 #  instruction :string(255)
-#  main        :boolean(1)
+#  parent_id   :integer(4)
 #  scenario_id :integer(4)
 #  position    :integer(4)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  deleted_at  :datetime
 #
 
 class ScenarioStep < ActiveRecord::Base
@@ -20,7 +21,8 @@ class ScenarioStep < ActiveRecord::Base
   default_scope :order => :keyword_id
 
   has_many :children, :class_name => 'ScenarioStep', :foreign_key => :parent_id, :dependent => :destroy
-  has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => :scenario_step.to_i}
+  has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => Audit::KEYS[:scenario_step]}
+  belongs_to :parent, :class_name => 'ScenarioStep', :foreign_key => 'parent_id'
 
   before_save :audit_changes
   before_destroy :audit_deletion
@@ -66,17 +68,17 @@ class ScenarioStep < ActiveRecord::Base
     Scenario.find(_id)
   end
 
-
   private
+  
   def audit_changes
     changed.each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute_id => attribute.to_sym, :committed_by => committed_by)
+      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym, :committed_by => committed_by) if attribute == 'instruction'
     end
   end
 
   def audit_deletion
     [:keyword_id, :instruction].each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute_id => attribute, :committed_by => committed_by).save
+      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute, :committed_by => committed_by).save
     end
   end
 

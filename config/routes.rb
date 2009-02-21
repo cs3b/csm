@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
     end
   end
 
-  map.resources :feature_changes
+  map.changes 'changes/:object_type/:object_id', :controller => 'audits', :action => 'index', :conditions => { :method => :get }
 
   map.root :controller => 'features'
 

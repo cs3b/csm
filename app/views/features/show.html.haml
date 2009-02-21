@@ -1,2 +1,12 @@
+.grid_2
+  = link_to t(:add_scenario), new_feature_scenario_path(@feature)
+.grid_2
+  = link_to t(:show_changes), changes_path('feature', @feature.id)
+.grid_2
+  = link_to t(:export_as_cucumber), feature_path(@feature, :format => :feature)
+.grid_2
+  = link_to t(:export_as_pdf), feature_path(@feature, :format => :pdf)
+.clear
+  &nbsp;
 = render :partial => 'feature', :locals => {:feature => @feature }
 = link_to t(:back), features_path

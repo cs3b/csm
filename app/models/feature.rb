@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20090101184824
+# Schema version: 20090221092802
 #
 # Table name: features
 #
@@ -10,6 +10,7 @@
 #  why        :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  deleted_at :datetime
 #
 
 class Feature < ActiveRecord::Base
@@ -17,7 +18,7 @@ class Feature < ActiveRecord::Base
   acts_as_paranoid
 
   has_many :scenarios, :dependent => :destroy
-  has_many :small_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => :feature.to_i}
+  has_many :feature_changes, :class_name => 'Audit', :foreign_key => 'object_id', :conditions => {:object_type => Audit::KEYS[:feature]}
 
   before_save :audit_changes
   after_destroy :audit_deletion
@@ -28,13 +29,13 @@ class Feature < ActiveRecord::Base
 
   def audit_changes
     changed.each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute_id => attribute.to_sym, :committed_by => committed_by)
+      feature_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym, :committed_by => committed_by)
     end
   end
 
   def audit_deletion
     [:title, :who, :what, :why].each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute_id => attribute, :committed_by => committed_by).save
+      feature_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute, :committed_by => committed_by).save
+      end
     end
   end
-end
