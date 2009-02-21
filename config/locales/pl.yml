@@ -122,6 +122,7 @@ pl:
       feature: "Właściwość"
       scenario: "Scenariusz"
       scenario_step: "Krok Scenariusza"
+      user: "Użytkownik"
 # models attribute
     attributes:
       feature:
@@ -134,6 +135,11 @@ pl:
       scenario_step:
         keyword_id: "Typ"
         instruction: "Instrukcja kroku"
+      user:
+        email: "Adres email"
+        password: "Hasło"
+        password_confirmation: "Potwierdzenie hasła"
+        
 #other
 #common
   create: "Utwórz"
@@ -144,6 +150,14 @@ pl:
   details: "Szczegóły"
   delete: "Usuń"
   are_you_sure: "Czy jesteś pewien?"
+  please_wait_dots: "Proszę czekać ..."
+  password: "Hasło"
+  email: "Adres email"
+  remember_me: "Zapmietaj mnie"
+  sign_in: "Zaloguj się"
+  sign_in_me: "Zaloguj mnie"
+  sign_up: "Utwórz Konto"
+  loging: "Logowanie"
 #cucumber
   feature: "Właściwość"
   scenario: "Scenariusz"
@@ -180,3 +194,15 @@ pl:
   export_as_pdf: "Format PDF"
   instruction: "Instrukcja kroku"
   scenario_step: "Krok scenariusza"
+#user
+  user:
+    edit_info: "Edycja danych Użytkownika"
+  password:
+    we_will_email: "Wkrótce po poprawnym wypełnieniu formularza, otrzymasz emaila z linkiem do zmiany hasła"
+    change_your_password: "Odzyskaj hasło"
+    reset_password: "Zresetuj hasło"
+  mail_templates:
+    password:
+      intro: "Ktoś - jesteśmy pełni nadziei że ty - poprosił o wysłanie linku do zresetowania hasła"
+      here_is_the_link: "Oto link:"
+      ignore_if_not_you: "Jeśli to nie ty wysłałeś prośbę, zignoruj ten email. Bez obaw. Twoje hasło nie zostało zmienione."
