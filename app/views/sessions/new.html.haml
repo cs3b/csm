@@ -1,0 +1,19 @@
+.prefix_2.grid_14
+  %h2= t(:loging)
+.clear &nbsp;
+- form_for :session, :url => session_path do |form|
+  .text_field
+    .grid_2.prefix_2= form.label :email, t(:email)
+    .grid_2= form.text_field :email
+    .clear &nbsp;
+  .text_field
+    .grid_2.prefix_2= form.label :password, t(:password)
+    .grid_2= form.password_field :password
+    .clear &nbsp;
+  .text_field
+    .grid_2.prefix_2= form.label :remember_me, t(:remember_me)
+    .grid_2= form.check_box :remember_me
+    .clear &nbsp;
+  .submit_field.top_spacer
+    .grid_1.prefix_6= form.submit t(:sign_in_me), :disable_with => t(:please_wait_dots)
+    .clear &nbsp;
