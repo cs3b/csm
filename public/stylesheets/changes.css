@@ -1,9 +1,11 @@
 #changes del
 {
+  color: black;
   background-color: red;
 }
 
 #changes ins
 {
+  color: #fff;
   background-color: green;
 }

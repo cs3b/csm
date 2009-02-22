@@ -4,15 +4,13 @@
     var changes = #{@changes.to_json};
     function change_activity(audit)
     {
-      o = "";
-      o += "<div class='change_item'>";
-      o += audit.created_at
-      o += " | "
-      o += wordbook[audit.object_type];
-      o += " >> "
-      o += wordbook[audit.attribute_id];
-      o += ": "
-      o += diffString(audit.before,audit.after);
+      o = "<div class='change_item'>";
+      o += "<div class='grid_3'>"+audit.by+"</div>";
+      o += "<div class='grid_2'>"+wordbook[audit.object_type]+"</div>";
+      o += "<div class='grid_2'>"+wordbook[audit.attribute_id]+"</div>";
+      o += "<div class='grid_7'>"+diffString(audit.before,audit.after)+"</div>";
+      o += "<div class='grid_2'>"+audit.created_at+"</div>";
+      o += "<div class='clear'>&nbsp;</div>";
       o += "</div>";
       return o;
     };
