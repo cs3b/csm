@@ -8,7 +8,7 @@ module Clearance
           controller.send(:include, PrivateMethods)
           
           controller.class_eval do
-            protect_from_forgery :except => :create
+#            protect_from_forgery :except => :create
             filter_parameter_logging :password            
           end
         end

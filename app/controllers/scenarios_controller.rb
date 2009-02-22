@@ -1,4 +1,5 @@
 class ScenariosController < ApplicationController
+  before_filter :authenticate
   before_filter :get_feature, :only => [:index, :new, :create]
   before_filter :get_scenarios, :only => [:index]
   before_filter :get_scenario, :only => [:show, :update, :destroy]
@@ -28,7 +29,7 @@ class ScenariosController < ApplicationController
 
   def create
 #    throw params[:scenario].to_yaml
-    @scenario = @feature.scenarios.build(params[:scenario])
+    @scenario = @feature.scenarios.build(params[:scenario].merge({:committed_by => current_user}))
     respond_to do |format|
       if @scenario.save
         flash[:notice] = 'Scenario was successfully created.'
@@ -43,7 +44,7 @@ class ScenariosController < ApplicationController
 
   def update
     respond_to do |format|
-      if @scenario.update_attributes(params[:scenario])
+      if @scenario.update_attributes(params[:scenario].merge({:committed_by => current_user}))
         flash[:notice] = 'Scenario was successfully updated.'
         format.html { redirect_to(@scenario) }
         format.xml  { head :ok }
@@ -57,6 +58,7 @@ class ScenariosController < ApplicationController
   end
 
   def destroy
+    @scenario.committed_by = current_user
     @scenario.destroy
     redirect_to feature_path(@scenario.feature_id)
   end

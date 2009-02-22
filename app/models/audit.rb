@@ -37,6 +37,7 @@ class Audit < ActiveRecord::Base
   attr_accessor :committed_by, :attribute
 
   before_validation :attribute_symbols_to_fixnum
+  before_save :set_author
 
   def attribute_symbol
     KEYS.invert[attribute_id]
@@ -79,5 +80,10 @@ class Audit < ActiveRecord::Base
   def attribute_symbols_to_fixnum
     raise "Udefined key: #{attribute}" unless KEYS.keys.include?(attribute)
     self.attribute_id = KEYS[attribute]
+  end
+
+  def set_author
+    self.by = committed_by.email
+    self.by_id = committed_by.id
   end
 end

@@ -1,6 +1,6 @@
-<h2>Edit user information</h2>
+<h2><%= t(:edit_info, :scope => [:user]) %></h2>
 
 <% form_for @user do |form| %>
   <%= render :partial => '/users/form', :object => form %>
-  <%= form.submit 'Update', :disable_with => 'Please wait...' %>
+  <%= form.submit t(:update), :disable_with => t(:please_wait_dots) %>
 <% end %>

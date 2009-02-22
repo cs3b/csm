@@ -1,4 +1,5 @@
 class SubStepsController < ApplicationController
+  before_filter :authenticate
   before_filter :get_scenario_sub_step
 
   def new
@@ -6,7 +7,7 @@ class SubStepsController < ApplicationController
   end
 
   def create
-    @sub_step = @scenario_step.children.build(params[:scenario_step])
+    @sub_step = @scenario_step.children.build(params[:scenario_step].merge({:committed_by => current_user}))
     @sub_step.save
     redirect_to(@scenario_step.scenario.feature)
   end
