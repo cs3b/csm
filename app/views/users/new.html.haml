@@ -1,0 +1,8 @@
+.prefix_2.grid_14
+  %h2= t(:sign_up)
+.clear &nbsp;
+- form_for @user do |form|
+  = render :partial => '/users/form', :object => form
+  .submit_field.top_spacer
+    .grid_1.prefix_6= form.submit t(:sign_up), :disable_with => t(:please_wait_dots)
+    .clear &nbsp;

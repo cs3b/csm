@@ -1,6 +1,0 @@
-<h2><%= t(:sign_up) %></h2>
-
-<% form_for @user do |form| %>
-  <%= render :partial => '/users/form', :object => form %>
-  <%= form.submit t(:sign_up), :disable_with => t(:please_wait_dots) %>
-<% end %>
