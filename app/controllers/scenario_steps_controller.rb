@@ -4,12 +4,13 @@ class ScenarioStepsController < ApplicationController
 
   def destroy
     feature = @step.scenario.feature
+    @step.committed_by = current_user
     @step.destroy
     redirect_to(feature)
   end
 
   def update
-    @step.update_attributes(params[:scenario_step])
+    @step.update_attributes(params[:scenario_step].merge({:committed_by => current_user}))
     render :nothing => true, :status => :ok
   end
 

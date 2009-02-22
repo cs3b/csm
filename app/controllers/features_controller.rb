@@ -22,7 +22,7 @@ class FeaturesController < ApplicationController
   def edit; end
   
   def create
-    @feature = Feature.new(params[:feature])
+    @feature = Feature.new(params[:feature].merge({:committed_by => current_user}))
     if @feature.save
       redirect_to(@feature)
     else
@@ -31,11 +31,12 @@ class FeaturesController < ApplicationController
   end
 
   def update
-    @feature.update_attributes(params[:feature])
+    @feature.update_attributes(params[:feature].merge({:committed_by => current_user}))
     render :nothing => true, :status => :ok
   end
 
   def destroy
+    @feature.committed_by = current_user
     @feature.destroy
     redirect_to features_url
   end
