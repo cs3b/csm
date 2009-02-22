@@ -315,23 +315,23 @@ Wstęp
 \end_layout
 
 \begin_layout Standard
-Właściwe pozyskiwanie i przetwarzanie wymagań od klienta, ma kluczowe znaczenie
- w procesie produkcji oprogramowania.
- Jest to niełatwe zadanie, a wpływ na to ma wiele czynników.
- Jednym z powodów jest niejednolity język którym posługują się klienci a
- developerzy.
+Właściwe pozyskiwanie informacji dotyczących wymagań od klienta, oraz ich
+ dalsze przetwarzanie ma kluczowe znaczenie w procesie produkcji oprogramowania.
+ Na to niełatwe zadanie wpływ ma wiele czynników.
+ Jednym z powodów jest niejednolity język, którym posługują się klienci
+ i developerzy.
  Zamawiający mają problem z artykułowaniem swoich oczekiwań, a developerzy
  często im w tym nie pomagają.
- Powstają w ten sposób systemy które nie spełniają w pełni oczekiwań funkcjonaln
-ych, bądź są trudne w obsłudze, albo wręcz nie nadają się do jakiekolwiek
- zastosowania i lądują symbolicznie rzecz biorąc w koszu.
+ Powstają w ten sposób systemy, które nie spełniają w pełni oczekiwań funkcjonal
+nych, bądź są trudne w obsłudze, albo wręcz nie nadają się do jakiekolwiek
+ zastosowania i lądują, mówiąc obrazowo, w koszu.
 \end_layout
 
 \begin_layout Standard
-Problemy tego typu stara się rozwiązać Inżynieria Oprogramowania, na przełomie
- ostatnich 30 lat pojawiły się różne metodologie, czy też teorie które porządkow
-ały proces produkcji oprogramowania.
- Jednak jak uargumentował Brooks w artykule 'No Silver Bullet - Essence
+Problemy tego typu, stara się rozwiązać Inżynieria Oprogramowania.
+ Na przełomie ostatnich 30 lat pojawiły się różne metodologie, czy też teorie,
+ które porządkowały proces produkcji oprogramowania.
+ Jednak, jak uargumentował Brooks w artykule 'No Silver Bullet - Essence
  and Accidents of Software Engineering'
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -339,10 +339,10 @@ key "There.is.no.silver.bullet"
 
 \end_inset
 
- z 1986 roku, nie ma i nie będzie srebrnej kuli, jeśli chodzi o metodologie
+ z 1986 roku, nie ma i nie będzie srebrnej kuli, jeśli chodzi o metodologię
  zarządzania produkcją oprogramowania.
- Zwraca to naszą uwagę na fakt że tworzenie oprogramowania jest trudne i
- wymaga czegoś więcej niż formalnej struktury pracy, czy też listy kroków
+ Zwraca to naszą uwagę na fakt, że tworzenie oprogramowania jest trudne
+ i wymaga czegoś więcej, niż formalnej struktury pracy, czy też listy kroków
  za którymi wystarczy podążać.
 \end_layout
 
@@ -359,12 +359,12 @@ key "AlanCooper.every.7.years,WaterfallDoesntWork"
  Jeśli coś nie spełnia swojej roli, zaczynają się poszukiwania i eksperymenty
  nad nowymi koncepcjami.
  Od lat siedemdziesiątych wiele się zmieniło, developerzy zrozumieli że
- narzędzie nie rozwiążą tego problemu, wymagana jest natomiast zmiana w
- podejściu do klienta, która wymusza aby był on członkiem zespołu projektowego.
- Aby oprogramowanie było efektem silnej współpracy której celem jest jak
- najlepszy produkt.
- Jednak aby to było możliwe potrzeba wskazówek którymi należy się kierować.
- Trzeba umieć uargumentować klientowi że taki model współpracy da najlepsze
+ narzędzia nie rozwiążą tego problemu, potrzebna jest natomiast zmiana w
+ podejściu do klienta, która wymusza, aby był on członkiem zespołu projektowego.
+ Dzięki czemu oprogramowanie będzie efektem silnej współpracy, której celem
+ jest jak najlepszy produkt.
+ Jednak aby to było możliwe, potrzeba wskazówek, którymi należy się kierować.
+ Trzeba umieć uargumentować klientowi, że taki model współpracy da najlepsze
  efekty.
 \end_layout
 
@@ -376,10 +376,10 @@ key "AgileManifesto.Authors"
 
 \end_inset
 
- wielu idei jak extreme programming - Kent Beck, pragmatic programing -
- Dave Thomas, Andrew Hunt, SCRUM - Jeff Sutterland, crystal clear - Alistair
+ wielu idei, takich jak extreme programming - Kent Beck, pragmatic programing
+ - Dave Thomas, Andrew Hunt, SCRUM - Jeff Sutterland, crystal clear - Alistair
  Cockburn, adaptive software development - Jim Highsmith, oraz 11 innych
- doświadczonych programistów którzy podpisali się pod 'Agile Manifesto'
+ doświadczonych programistów, którzy podpisali się pod 'Agile Manifesto'
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AgileManifesto"
@@ -387,13 +387,13 @@ key "AgileManifesto"
 \end_inset
 
 .
- Zwrócili uwagę na cztery największe wartości o których należy pamiętać
- w trakcie produkcji oprogramowania, a brzmi on:
+ Zwrócili uwagę na cztery największe wartości, o których należy pamiętać
+ w trakcie produkcji oprogramowania, a brzmi one następująco:
 \end_layout
 
 \begin_layout Quote
-Poprzez wytwarzanie oprogramowania oraz pomaganie innym w tym zakresie odkrywamy
- lepsze sposoby realizowania tej pracy.
+Poprzez wytwarzanie oprogramowania, oraz pomaganie innym w tym zakresie,
+ odkrywamy lepsze sposoby realizowania tego zadania.
  W wyniku tych doświadczeń zaczęliśmy przedkładać: 
 \end_layout
 
@@ -433,8 +433,8 @@ Reagowanie na zmiany
 \end_layout
 
 \begin_layout Quote
-Oznacza to, że wprawdzie doceniamy to co wymieniono po prawej stornie to
- jednak bardziej cenimy to co wymieniono po lewej.
+Oznacza to, że wprawdzie doceniamy to, co wymieniono po prawej stronie,
+ jednak bardziej cenimy to, co znajduje się po lewej.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "AgileManifesto.Tlumaczenie"
@@ -445,7 +445,8 @@ key "AgileManifesto.Tlumaczenie"
 \end_layout
 
 \begin_layout Standard
-Sam manifest przykuwa uwagę że bycie zwinnym
+Sam manifest przykuwa uwagę.
+ Wskazuje, że bycie zwinnym
 \begin_inset Foot
 status collapsed
 
@@ -456,15 +457,16 @@ Agile (zwinny), w pracy na przemian będzie używany oryginał oraz polskie
 
 \end_inset
 
- jest nacelowane na proces oraz ludzi a nie na narzędzia i technologie.
- Aczkolwiek zrozumienie procesu jak i wdrożenia go efektywnie wymaga poznanie
- wiele więcej, prezentacja tej filozofii wraz z przykładem użycia przy produkcji
+ jest nacelowane na proces oraz ludzi, a nie na narzędzia i technologie.
+ Aczkolwiek zrozumienie tego procesu, oraz wdrożenie go efektywnie, wymaga
+ o wiele większej wiedzy.
+ Prezentacja tej filozofii, wraz z przykładem użycia jej przy produkcji
  - zwłaszcza aplikacji webowych - jest jednym z celów tej pracy.
  
 \end_layout
 
 \begin_layout Standard
-Drugim celem jest prezentacja narzędzia które ma za zadanie wspierać proces
+Drugim celem jest prezentacja narzędzia, które ma za zadanie wspierać proces
  pozyskiwania wymagań od klienta, udostępniając zaledwie trzy główne funkcjonaln
 ości.
  A są to:
@@ -475,7 +477,7 @@ przechowywać opowieści użytkownika
 \end_layout
 
 \begin_layout Itemize
-udostępniać historie zmian na tych opowieściach użytkownika
+udostępniać historie zmian dla tych opowieści użytkownika
 \end_layout
 
 \begin_layout Itemize
@@ -483,11 +485,11 @@ wspierać pisanie automatycznych testów integracyjnych
 \end_layout
 
 \begin_layout Standard
-Dzięki tym trzem funkcjonalnością jest możliwe jasne zarządzaniem wymaganiami
- klienta, wykazywanie jakie zmiany nastąpiły.
- Daje to obraz jaka ilość pracy została wykonana dodatkowo co umożliwi lepsze
- rozliczanie pracy.
- Kolejnym celem jest wykazanie jak dużo lepszy jest efekt końcowy od pierwotnego
+Dzięki tym trzem funkcjonalnościom, jest możliwe jasne zarządzaniem wymaganiami
+ klienta, oraz wykazywanie jakie zmiany nastąpiły.
+ Daje to obraz ilości pracy, która została wykonana dodatkowo, co umożliwi
+ lepsze rozliczanie pracy.
+ Kolejnym celem jest wykazanie, o ile lepszy jest efekt końcowy od pierwotnego
  - co wpłynie na zadowolenie klienta.
 \end_layout
 
@@ -507,23 +509,24 @@ W pierwszej części zostanie zwrócona uwaga na podstawy teoretyczne związane
  z zarządzaniem projektów.
  Krótko zostaną przedstawione metody tradycyjne, zwane też ciężkimi, takie
  jak model kaskadowy, czy też spiralny.
- Następnie zwrócona zostanie uwaga na metody zgodne z filozofią agile potocznie
- zwane lekkimi.
+ Następnie zwrócona zostanie uwaga na metody zgodne z filozofią agile -
+ potocznie zwane lekkimi.
  Kolejną sprawą będzie przedstawienie czterech wartości z manifestu agile,
- oraz uzupełniających ich zasad wraz z praktycznymi przykładami.
- Zostaną wydzielone fazy produkcji oprogramowania które są agile a które
+ oraz uzupełniających ich zasad, wraz z praktycznymi przykładami.
+ Zostaną wydzielone fazy produkcji oprogramowania - które są agile, a które
  fragile.
  Rozważone zostaną trzy główne metodologie związane z filozofią agile.
  Na koniec tej części nastąpi porównanie metod lekkich z ciężkimi.
 \end_layout
 
 \begin_layout Standard
-Aby móc być zwinnymi podczas procesu produkcji oprogramowania warto wybierać
- odpowiednie narzędzia których się wybiera nie jest to niezbędne aczkolwiek
- daje nam to większą efektywność w czasie pracy.
- Opisane zostaną wzorce projektowe które stymulują podejmowanie właściwy
- decyzji przy projektowaniu architektury systemu.
- Zwrócona zostanie uwaga na dynamiczny i funkcyjny język jakim jest Ruby
+Aby móc być zwinnymi podczas procesu produkcji oprogramowania, warto wybierać
+ odpowiednie narzędzia, które się wybiera.
+ Nie jest to niezbędne, aczkolwiek daje nam to większą efektywność w czasie
+ pracy.
+ Opisane zostaną wzorce projektowe, które stymulują podejmowanie właściwych
+ decyzji, przy projektowaniu architektury systemu.
+ Zwrócona zostanie uwaga, na dynamiczny i funkcyjny język jakim jest Ruby
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ruby.homepage"
@@ -531,8 +534,8 @@ key "Ruby.homepage"
 \end_inset
 
 .
- Kolejną zostaną omówione środowisko do budowy aplikacji webowych Ruby on
- Rails
+ Zostanie również omówione środowisko do budowy aplikacji webowych Ruby
+ on Rails
 \begin_inset CommandInset citation
 LatexCommand cite
 key "RoR.homepage"
@@ -540,18 +543,18 @@ key "RoR.homepage"
 \end_inset
 
 .
- Następnie zwrócona będzie uwaga na biblioteki wspierające pisanie automatycznyc
-h testów wraz z narzędziami do masowego tworzenia danych testowych.
+ Następnie zwrócona będzie uwaga, na biblioteki wspierające pisanie automatyczny
+ch testów, wraz z narzędziami do masowego tworzenia danych testowych.
 \end_layout
 
 \begin_layout Standard
-Trzecia część będzie prezentacja koncepcji związanych z narzędziem wspomnianym
+Trzecią częścią będzie prezentacja koncepcji związanych z narzędziem wspomnianym
  na wstępie.
- Zaprezentowane zostaną wymagania dotyczące tego projektu opisane za pomocą
+ Zaprezentowane zostaną wymagania dotyczące tego projektu, opisane za pomocą
  opowieści użytkownika - technika ta będzie opisana w sekcjach poświęconych
  BDD i Cucumber.
- Kolejno zostanie zwrócona uwaga na rozwiązania od strony technicznej związane
- z tą aplikacją.
+ Następnie zostanie zwrócona uwaga, na rozwiązania od strony technicznej,
+ związane z tą aplikacją.
 \end_layout
 
 \begin_layout Standard
@@ -571,12 +574,13 @@ Zarządzanie projektem
 
 \begin_layout Standard
 Każda metodologia ma na celu ulepszenie procesu produkcji oprogramowania.
- Celem jest dostarczanie produktu który spełni oczekiwania użytkownika końcowego.
- Model zarządzanie powinien ułatwiać szacowania czasu potrzebnego na powstanie
- systemu oraz kosztów lub umożliwić wykonanie jak największej ilości pracy
- w danym budżecie.
+ Celem jest dostarczanie produktu, który spełni oczekiwania użytkownika
+ końcowego.
+ Model zarządzania powinien ułatwiać szacowanie czasu, potrzebnego na powstanie
+ systemu, oraz kosztów, lub umożliwić wykonanie, jak największej ilości
+ pracy w danym budżecie.
  Wymaga to pewnej formalizacji wymagań, oraz rejestrowania postępów, dzięki
- której developerzy wiedzą ki wszystko jest już zrobione.
+ któremu developerzy wiedzą kiedy wszystko jest już zrobione.
  Zwrócona zostanie teraz uwaga na kilka takich modeli.
 \end_layout
 
@@ -585,9 +589,9 @@ Metody tradycyjne
 \end_layout
 
 \begin_layout Standard
-Metody tradycyjne zwane też ciężkimi zawdzięczają taki przydomek ilości
- dokumentacji która jest tworzona przed rozpoczęciem prac związanych z implement
-acją, często określane jako BDUF
+Metody tradycyjne, zwane też ciężkimi, zawdzięczają taki przydomek ilości
+ dokumentacji, która jest tworzona przed rozpoczęciem prac związanych z
+ implementacją, często określane jako BDUF
 \begin_inset Foot
 status collapsed
 
@@ -598,8 +602,8 @@ Big Design Up Front
 \end_inset
 
 .
- Argumentacją takiego podejścia jest przeświadczenie że solidna dokumentacja
- niesie ze sobą sukces projektu oraz pozwala też uniknąć kosztu zmiany,
+ Argumentacją takiego podejścia, jest przeświadczenie, że solidna dokumentacja
+ niesie ze sobą sukces projektu, oraz pozwala też uniknąć kosztów zmiany,
  gdyż zmiejsza prawdopodobieństwo pojawienia się zmian w trakcie implementacji.
  Zwróćmy uwagę na dwa najpopularniejsze modele.
 \end_layout
@@ -619,8 +623,8 @@ Waterfall model - z języka angielskiego
 
 \end_inset
 
- został w opisany przez Winstona W.
- Royce w roku 1970 roku w artykule 'Zarządzanie produkcją dużych systemów
+ został opisany przez Winstona W.
+ Royce w roku 1970 roku, w artykule 'Zarządzanie produkcją dużych systemów
  informatycznych'
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -629,11 +633,11 @@ key "Waterfall.introduction"
 \end_inset
 
 .
- Choć on sam nie użył tej nazwy, to jednak jest to najbardziej znany dokument
- opisujący ten.
- Royce w żadnym wypadku nie chwali takie podejście, a raczej je krytykuje
- jako nieskutecznie nieefektowne.
- Głównym założeniem tej metodologi jest podział produkcji oprogramowania
+ Choć on sam nie użył tej nazwy, jest to jednak najbardziej znany dokument
+ opisujący ten model.
+ Royce w żadnym wypadku nie chwali takiego podejścia, a raczej je krytykuje,
+ jako nieskutecznie i nieefektowne.
+ Głównym założeniem tej metodologi, jest podział produkcji oprogramowania
  na sześć niepodzielny faz:
 \end_layout
 
@@ -662,13 +666,13 @@ Wdrożenie i pielęgnacja systemu
 \end_layout
 
 \begin_layout Standard
-Przejście do kolejnej fazy jest możliwy tylko i wyłącznie po ukończenie
+Przejście do kolejnej fazy, jest możliwe tylko i wyłącznie po ukończeniu
  aktualnej.
  Jeżeli na kolejnym etapie pojawią się problemy związane z niedopatrzeniami
- w którejś z poprzednich faz należy się wrócić, wykonać jeszcze wszystkie
- w kolejności i tak aż do skutku.
- Oprogramowanie jest wdrażane gdy ostatnia faza da zadowalający efekt, jest
- to zazwyczaj długi okres czasu około jednego roku.
+ w którejś z poprzednich faz, należy wrócić do tego momentu, i wykonać jeszcze
+ raz wszystkie etapy w kolejności, aż do skutku.
+ Oprogramowanie jest wdrażane, gdy ostatnia faza da zadowalający efekt,
+ jest to zazwyczaj długi okres czasu, około jednego roku.
 \end_layout
 
 \begin_layout Subsubsection
@@ -686,7 +690,7 @@ Spiral Model - z języka angielskiego
 
 \end_inset
 
- zdefiniował Barry Boehm w artykule 'Model Spiralny w produkcji oprogramowania
+, zdefiniował Barry Boehm, w artykule 'Model Spiralny w produkcji oprogramowania
  i usprawnienia'
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -737,13 +741,13 @@ Analiza zakończonej iteracji i planowanie następnej
 \end_layout
 
 \begin_layout Standard
-Specyfikacja modelu iteracyjnego nie narzuca jedynej takich etapów w fazie
- trzeciej, można tutaj użyć modelu kaskadowego.
+Specyfikacja modelu iteracyjnego, nie narzuca jedynie takich etapów w fazie
+ trzeciej, można tutaj użyć również modelu kaskadowego.
  Każda iteracja jest swego rodzaju samodzielna, może rozpocząć się na już
- prowadzonym projekcie, a po jej zakończeniu wszystkie zmiany które miały
- zostać osiągnięte są wdrożone w działający system.
- Zazwyczaj iteracja trwa od jednego do trzech miesięcy, jest krótsza niż
- w modelu kaskadowym
+ prowadzonym projekcie, a po jej zakończeniu wszystkie zmiany, które miały
+ zostać osiągnięte, są wdrożone w działający system.
+ Zazwyczaj iteracja trwa od jednego do trzech miesięcy, a więc jest krótsza
+ niż w modelu kaskadowym
 \end_layout
 
 \begin_layout Subsection
@@ -751,9 +755,9 @@ Filozofia Agile
 \end_layout
 
 \begin_layout Standard
-Jak wykazano we wstępnie filozofia agile jest inna, jest pierwszą która
- kieruje uwagę na dostosowywanie się do konkretnego projektu klienta, i
- bycia elastycznym.
+Jak wykazano we wstępnie filozofia agile jest inna.
+ Jako pierwsza, kieruje uwagę na dostosowywanie się do konkretnego projektu
+ klienta, i bycie elastycznym.
  Bardzo klarowny jest przekaz manifestu agile ( wartości które są najistotniejsz
 e, wymienione są jeszcze raz poniżej).
  Poniżej 12 zasad które uzupełniają sam manifest.
@@ -839,7 +843,7 @@ Dostarczać działający system często,
 \begin_inset Newline newline
 \end_inset
 
-czy to co kilka tygodni czy też miesięcy, 
+czy to co kilka tygodni, czy też miesięcy, 
 \begin_inset Newline newline
 \end_inset
 
@@ -852,7 +856,7 @@ Ludzie biznesu i developerzy muszą codziennie
 \begin_inset Newline newline
 \end_inset
 
-pracować razem przez cały okres projektu.
+pracować razem, przez cały okres trwania projektu.
 \end_layout
 
 \begin_layout Quote
@@ -862,12 +866,12 @@ Prace na projektem należy połączyć z motywacją jednostek.
 \begin_inset Newline newline
 \end_inset
 
-Zapewnij im środowisko pracy oraz wsparcie jakiego potrzebują.
+Zapewnij im odpowiednie środowisko pracy, oraz wsparcie jakiego potrzebują.
  
 \begin_inset Newline newline
 \end_inset
 
-Obdarz ich zaufaniem że wykonają pracę jak należy.
+Obdarz ich zaufaniem, że wykonają pracę jak należy.
 \end_layout
 
 \begin_layout Quote
@@ -894,12 +898,12 @@ Proces Agile promuje ciągły niczym nieprzerwany proces
 \begin_inset Newline newline
 \end_inset
 
-developmentu.
+rozwoju systemu.
  Inwestorzy, developerzy oraz użytkownicy powinni 
 \begin_inset Newline newline
 \end_inset
 
-zabiegać <constant pace indefinitely>.
+zabiegać o ciągłe utrzymywanie stałego tempa pracy.
 \end_layout
 
 \begin_layout Quote
@@ -908,16 +912,16 @@ Zwracanie ciągłej uwagi na techniczny kunszt
 \begin_inset Newline newline
 \end_inset
 
-oraz dobre projektowanie wspiera bycie zwinnym.
+oraz dobre projektowanie, wspiera bycie zwinnym.
 \end_layout
 
 \begin_layout Quote
 \align center
-Prostota - czyli sztuka maksymalizacji ilości pracy 
+Prostota - czyli sztuka maksymalizacji ilości pracy, 
 \begin_inset Newline newline
 \end_inset
 
-która nie jest wykonana - jest wymagana.
+niewykonanej - to podstawa.
 \end_layout
 
 \begin_layout Quote
@@ -935,19 +939,16 @@ W równych odstępach czasowych, zespół analizuje w jaki
 \begin_inset Newline newline
 \end_inset
 
-sposób stać się bardziej efektywny, następie zgodnie ze spostrzeżeniami
-\begin_inset Newline newline
-\end_inset
-
-adaptuje zmiany we własnym zachowaniu.
+sposób mógłby stać się bardziej efektywny, a następnie dostosowywuje się
+ do własnych spostrzeżeń.
 \end_layout
 
 \begin_layout Standard
-Powyższe zasad i wartości warto mieć zawsze w pamięci jeśli chcemy pozostać
+Powyższe zasady i wartości warto mieć zawsze w pamięci, jeśli chcemy pozostać
  w z zgodzie z filozofią agile.
- Na podstawie tych reguł powstało wiele zasad i metodologii które wdrażane
- wraz z dostosowaniem do możliwości zespołu i charakteru projektu daję dobre
- efekty.
+ Na podstawie tych reguł, powstało wiele zasad i metodologii, które wdrażane,
+ wraz z dostosowaniem do możliwości zespołu i charakteru projektu, daję
+ dobre efekty.
 \end_layout
 
 \begin_layout Subsubsection
@@ -955,7 +956,7 @@ Reguły usprawniające proces
 \end_layout
 
 \begin_layout Standard
-Reguły wymienione poniżej są bardzo proste ale gdy dobrze je zrozumieniem
+Reguły wymienione poniżej są bardzo proste, ale tylko gdy dobrze je zrozumiemy
 \end_layout
 
 \begin_layout Paragraph
@@ -963,10 +964,10 @@ Nie powtarzaj się
 \end_layout
 
 \begin_layout Standard
-Druga zasada Agile, zwraca traktuje zmiany jako mile widziane na każdym
- etapie pracy, nawet na tym bardzo zaawansowanym.
+Druga zasada Agile, traktuje zmiany, jako mile widziane na każdym etapie
+ pracy, nawet na tym bardzo zaawansowanym.
  Wymaga to częstych zmian w kodzie źródłowym.
- Jedną z zasad która ułatwia taki cykl obróbki kodu - czasem wręcz tylko
+ Jedną z zasad, która ułatwia taki cykl obróbki kodu - czasem wręcz tylko
  dzięki stosowaniu się do niej jest to możliwe - jest unikanie duplikacji
  kodu.
  Pomocna przy tym jest reguła DRY
@@ -980,36 +981,38 @@ Don't Repeat Yourself, znana również jako Single Point of Truth.
 
 \end_inset
 
- przez wielu odczytywana jako unikanie powtórzeń w kodzie.
- Jak zwrócił Dave Thomas
+, przez wielu odczytywana jako unikanie powtórzeń w kodzie.
+ Jak zwrócił uwagę Dave Thomas
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DRY.Interview.With.Dave.Thomas"
 
 \end_inset
 
- to nie jest prawdziwy cel tej reguły, jej sednem jest aby każda część wiedzy
- - zachowania - systemu miała jedną autorytatywną i jednoznaczną reprezentacje.
- Wiedza na temat systemu jak zwrócił w wywiadzie wychodzi ponad sam kod
- aplikacji, dotyczy ona schematu baz danych, kwestii testów a nawet dokumentacji.
- Czasem aby móc osiągnąć taki stan potrzebne są generatory kodu wiążące
- się z zaawansowanymi technikami meta-programowania lecz właśnie dzięki
- stosowaniu się to tej reguły jesteśmy wstanie uzyskać elastyczny i dający
+ to nie jest prawdziwy cel tej reguły - jej sednem jest, aby każda część
+ wiedzy - zachowania - systemu miała jedną autorytatywną i jednoznaczną
+ reprezentację.
+ Wiedza na temat systemu, jak zwrócił uwagę w wywiadzie, wychodzi ponad
+ sam kod aplikacji, dotyczy ona schematu baz danych, kwestii testów, a nawet
+ dokumentacji.
+ Czasem, aby móc osiągnąć taki stan, potrzebne są generatory kodu wiążące
+ się z zaawansowanymi technikami meta-programowania, lecz właśnie dzięki
+ stosowaniu się to tej reguły jesteśmy w stanie uzyskać elastyczny i dający
  się pielęgnować system.
 \end_layout
 
 \begin_layout Paragraph
-Najprostsza rzecz która działa
+Najprostsza rzecz, która działa
 \end_layout
 
 \begin_layout Standard
-Istotą tej reguły jest aby jak najszybciej pokazać efekt pracy klientowi.
- Jeśli coś jest proste uzyskanie efektu jest szybsze.
- Jest najbardziej zgodne z pierwszą, trzecią oraz siódmą zasadą manifestu
+Istotą tej reguły jest jak najszybsze pokazanie efektu pracy klientowi.
+ Jeżeli uprościmy pierwszą wersję projektu, uzyskanie efektu jest szybsze.
+ Jest to jak najbardziej zgodne z pierwszą, trzecią oraz siódmą zasadą manifestu
  agile.
- Pokazywanie klientowi często tego co zostało zrobione stymuluje potrzebne
- zmiany w systemie, które bez wizualnej reprezentacji zostały by pominięte,
- czy też zepchnięte a bardziej odległy termin.
+ Pokazywanie klientowi często tego, co zostało zrobione, stymuluje potrzebne
+ zmiany w systemie, które bez wizualnej prezentacji zostałyby pominięte,
+ czy też zepchnięte na dalszy plan.
 \end_layout
 
 \begin_layout Paragraph
@@ -1017,11 +1020,11 @@ Naprawdę tego nie potrzebujesz
 \end_layout
 
 \begin_layout Standard
-Czasem zdarza się że tworzymy nowe klasy metody nie zastanawiając się czy
- aby na pewno tego naprawdę potrzebujemy w tej chwili.
- Bądź też piszemy kod z myślą o przyszłych ewentualnych udogodnieniach które
- mogły by mieć miejsce jeśli trzeba będzie zrobić to lub owo.
- Jest w tym dużo gdybania.
+Czasem zdarza się, że tworzymy nowe klasy, metody nie zastanawiając się,
+ czy aby na pewno tego naprawdę potrzebujemy w tej chwili.
+ Bądź też piszemy kod, z myślą o przyszłych ewentualnych udogodnieniach,
+ które mogłyby mieć miejsce, jeśli trzeba będzie zrobić to, lub owo.
+ Związane jest z tym wiele wątpliwości.
  Reguła
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1029,18 +1032,18 @@ key "You.not.gonna.need.it"
 
 \end_inset
 
- silnie nawołuje aby kodować tylko funkcjonalności rzeczywiste, te które
- są ważne - warto zadać sobie samemu pytanie 
+ silnie nawołuje, aby kodować tylko funkcjonalności rzeczywiste, te które
+ są ważne, i dlatego warto zadać sobie samemu pytanie 
 \begin_inset Quotes sld
 \end_inset
 
-Czy aby na pewno tego potrzebuje?
+Czy aby na pewno tego potrzebuję?
 \begin_inset Quotes srd
 \end_inset
 
 , zamiast mechanicznie klepać kod.
- Drugą sprawą na które zwraca ona uwagę to fakt że tracony jest fokus nad
- głównym celem, w momencie gdy zaczynamy gdybać o przyszłych udogodnieniach.
+ Drugą sprawą, na którą zwraca ona uwagę, to fakt, że w momencie gdy zaczynamy
+ rozwodzić się nad przyszłymi udogodnieniami, tracimy z oczu główny cel.
 \end_layout
 
 \begin_layout Paragraph
@@ -1048,9 +1051,9 @@ Iteracyjny proces wytwarzania
 \end_layout
 
 \begin_layout Standard
-Aby często dostarczać działający system potrzeba jest podzielić proces tworzenia
- systemu na małe kawałki, z których każdy z nich dostarcza biznesową wartość
- dla systemu.
+Aby często dostarczać działający system, potrzeba podzielić proces tworzenia
+ systemu, na małe kawałki, z których każdy dostarcza biznesową wartość dla
+ systemu.
  XP
 \begin_inset Foot
 status collapsed
@@ -1061,9 +1064,10 @@ skrót - Extreme Programing
 
 \end_inset
 
- preferuje jako jednostkę przyjąć tydzień, dla scrum'a dwa.
- Lecz nie jest to sztywną regułą, warto dostosować do możliwość, jednakże
- nacisk jest kładziony na krótkie okresy.
+ preferuje przyjąć jako jednostkę tydzień, Scrum dwa.
+ Lecz nie jest to sztywną regułą, warto dostosować jednostkę do swoich możliwośc
+i.
+ Jednakże nacisk jest kładziony na krótkie okresy.
 \end_layout
 
 \begin_layout Paragraph
@@ -1071,12 +1075,12 @@ Scrum
 \end_layout
 
 \begin_layout Standard
-W 1986 roku Hirotaka Takeuchi wraz Ikujiro Nonaka opisali całkowicie nową
- koncepcje zarządzania projektami informatycznymi.
- Położyli w nim nacisk na postęp całej drużyny współdziałającej razem nad
- wspólnymi celami.
- W 1991 roku DeGrace i Stahl jako pierwsi odnieśli się to tej metodologi
- pod nazwą Scrum.
+W 1986 roku Hirotaka Takeuchi wraz Ikujiro Nonaka, opisali całkowicie nową,
+ koncepcję zarządzania projektami informatycznymi.
+ Położyli w nim nacisk, na postęp całej drużyny, współdziałającej razem
+ nad wspólnymi celami.
+ W 1991 roku DeGrace i Stahl, jako pierwsi odnieśli się to tej metodologi,
+ która funkcjonuje pod nazwą Scrum.
 \end_layout
 
 \begin_layout Standard
@@ -1087,9 +1091,9 @@ key "scrum.10.steps"
 
 \end_inset
 
- wychodzi z założenia że na początku realizacji projektu mamy ogólny obraz
- jakie właściwości musi posiadać dany system.
- Zestawienie tych cech nazywane jest listą właściwości produktu
+ wychodzi z założenia, że na początku realizacji projektu, mamy ogólny obraz
+ właściwości, które musi posiadać dany system.
+ Zestawienie tych cech, nazywane jest listą właściwości produktu
 \begin_inset Foot
 status collapsed
 
@@ -1099,35 +1103,37 @@ produkt backlog(ang.)
 
 \end_inset
 
-, lista ta powinna być posortowana według biznesowej wartości.
- Powinna być też wydzielona część na właściwości krytyczne, oraz tak zwaną
+.
+ Lista ta, powinna być posortowana według biznesowej wartości.
+ Powinna być też wydzielona część, na właściwości krytyczne, oraz tak zwaną
  listę życzeń.
- Kolejnym etapem jest pogrupowanie - biorąc pod uwagę ich priorytety - celów
- i wydzielenie ram czasowych dla każdej z grup - okresy te nazywamy sprintami.
+ Kolejnym etapem jest pogrupowanie - biorąc pod uwagę ich priorytety - celów,
+ i wydzielenie ram czasowych, dla każdej z grup - okresy te nazywamy sprintami.
  
 \end_layout
 
 \begin_layout Standard
 Każdy sprint posiada własną listę właściwości, która jest już bardziej szczegóło
-wa, każdy element listy posiada swój priorytet dzięki czemu wiadomo jaka
- jest kolejność wykonywania zadań, może ona zawierać także właściwości opcjonaln
-e choć nie jest to konieczne.
+wa.
+ Każdy element listy posiada swój priorytet, dzięki czemu wiadomo jaka jest
+ kolejność wykonywania zadań.
+ Może ona zawierać także właściwości opcjonalne, choć nie jest to konieczne.
  Sprint trwa od dwóch tygodni do miesiąca.
- Zadania które estymowane są na więcej niż 16 godzin powinny być podzielone.
+ Zadania, które estymowane są na więcej niż 16 godzin, powinny być podzielone.
  
 \end_layout
 
 \begin_layout Standard
-Najpóźniej - jeśli to możliwe, można wcześniej - na koniec sprinta wszystkie
- właściwości z backloga muszą być gotowe do użycia.
+Najpóźniej - jeśli to możliwe, można wcześniej - na koniec sprinta, wszystkie
+ właściwości z backloga, muszą być gotowe do użycia.
  Dzięki temu możliwe jest zebrania reakcji od użytkowników.
  Ich uwagi są brane pod uwagę przy następnym sprincie, lub jeśli czas pozwala
- to w tym samym.
+ - w tym samym.
 \end_layout
 
 \begin_layout Standard
 W ramach sprintu każdy dzień rozpoczyna się od krótkiego - około piętnastominuto
-wego - spotkania w którym uczestniczą wszyscy członkowie zespołu.
+wego - spotkania, w którym uczestniczą wszyscy członkowie zespołu.
  Każdy odpowiada na trzy pytania:
 \end_layout
 
@@ -1144,13 +1150,13 @@ Na jakie przeszkody natrafiłem?
 \end_layout
 
 \begin_layout Standard
-Dzięki temu cały zespół wie jakie zmiany następują w systemie, oraz daje
- to możliwość szybszego rozwiązania przeszkód dzięki spojrzeniu na problem
+Dzięki temu cały zespół wie, jakie zmiany następują w systemie, oraz daje
+ to możliwość szybszego rozwiązywania przeszkód, dzięki spojrzeniu na problem
  z wielu perspektyw.
 \end_layout
 
 \begin_layout Standard
-Postęp w projekcie jest mierzony za pomocą 'tablic spalania'
+Rozwój projektu jest mierzony za pomocą 'tablic postępu'
 \begin_inset Foot
 status collapsed
 
@@ -1171,11 +1177,11 @@ Behavior Driven Development
 \end_layout
 
 \begin_layout Standard
-BDD jest techniką organizacji produkcji oprogramowania która kładzie duży
- nacisk na współpracę pomiędzy programistami a ludźmi związanymi z biznesem
- - tymi którzy zamawiają system jak również z tymi którzy będą go używać,
- jest to zgodne z filozofią agile.
- Dana Northa
+BDD jest techniką organizacji produkcji oprogramowania, która kładzie duży
+ nacisk na współpracę, pomiędzy programistami, a ludźmi związanymi z biznesem
+ - tymi, którzy zamawiają system, jak również z tymi, którzy będą go używać.
+ Jest to zgodne z filozofią agile.
+ Dan North
 \begin_inset Foot
 status collapsed
 
@@ -1185,7 +1191,7 @@ http://dannorth.net/ - oficjalny blog
 
 \end_inset
 
- zaprezentował po raz pierwszy tą koncepcje w 2003 roku
+ zaprezentował po raz pierwszy tą koncepcję, w 2003 roku
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BDD.Author.Introduction"
@@ -1203,29 +1209,31 @@ http://www.flickr.com/photos/obie/421149993/
 \end_inset
 
 .
- Jak sama nazwa wskazuje zachowanie systemu jest najważniejszą kwestią w
- trakcie produkcji.
- Autor zwrócił szczególną uwagę na kwestię, wartości biznesowej którą wniesie
+ Jak sama nazwa wskazuje, zachowanie systemu jest najważniejszą kwestią
+ w trakcie produkcji.
+ Autor zwrócił szczególną uwagę na kwestię wartości biznesowej, którą wniesie
  implementacja konkretnego zachowanie w systemie - gdyż to jest najważniejsze
  z punktu widzenie użytkowników systemu.
- Ciekawe jest też jego podejście jak determinować którą rzecz powinniśmy
- implementować, sugeruje że powinniśmy sobie zadać pytanie 'Jaka jest kolejną
- najważniejsza cecha której system nie posiada?', wydaje się banalne aczkolwiek
- daje najlepsze rezultaty dla inwestorów, a zwłaszcza końcowych użytkowników.
- W przypadku korzystania ze scrum'a jest to dobra reguła dla ustawiania
+ Ciekawe jest też jego podejście jak determinować, którą rzecz powinniśmy
+ implementować.
+ Sugeruje, że powinniśmy sobie zadać pytanie 'Jaka jest kolejna najważniejsza
+ cecha, której system nie posiada?'.
+ Wydaje się to banalne, aczkolwiek przynosi najlepsze rezultaty dla inwestorów,
+ a zwłaszcza końcowych użytkowników.
+ W przypadku korzystania ze Scrum'a jest to dobra reguła dla ustawiania
  priorytetów w backlog'u.
 \end_layout
 
 \begin_layout Standard
-Zgodnie z tym Dan North przestawił
+Zgodnie z tym, Dan North przed stawił
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BDD.info"
 
 \end_inset
 
- trzy główne założenia BDD którym przyjrzymy się teraz każdej z osobna i
- dokładniej.
+ trzy główne założenia BDD, którym przyjrzymy się teraz dokładniej.
+ 
 \end_layout
 
 \begin_layout Subparagraph
@@ -1240,17 +1248,18 @@ key "BDD.AllAboutBehaviour"
 \end_layout
 
 \begin_layout Standard
-Ta reguła zwraca uwagę że najważniejsze jest aby wiedzieć jak system ma
- się zachować, jakie funkcjonalności ma udostępniać dla użytkownika.
- Zapis funkcjonalności w ten sposób - opis zachowanie - jest uwarunkowany
+Ta reguła zwraca uwagę, iż najważniejsze jest to, aby wiedzieć jak system
+ ma się zachować i jakie funkcjonalności ma udostępniać dla użytkownika.
+ Zapis funkcjonalności w ten sposób - opis, zachowanie - jest uwarunkowany
  potrzebą jednoznacznego rozumienia słów - efektu jaki mają mieć na system
- - tak aby programiści jak i ludzi związani z biznesem wzajemnie się rozumieli.
- Wykorzystuje się do tego celu historyjki użytkownika, które są narracją
- interakcji użytkownika z systemem, dokładniej zostaną omówione później.
+ - tak, aby programiści, oraz ludzie związani z biznesem wzajemnie się rozumieli.
+ Wykorzystuje się do tego celu opowieści użytkownika, które są narracją
+ interakcji użytkownika z systemem, a które dokładniej zostaną omówione
+ później.
 \end_layout
 
 \begin_layout Subparagraph
-System udostępnia pewne zachowanie ponieważ wnosi ono wartość dla biznesu
+System udostępnia pewne zachowanie, ponieważ wnosi ono wartość dla biznesu
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BDD.BusinessValue"
@@ -1261,12 +1270,13 @@ key "BDD.BusinessValue"
 \end_layout
 
 \begin_layout Standard
-Jest dosyć częstym błędem gdy w systemie pojawiają się nowe funkcjonalności
- bądź zostają użyte technologie, tylko dlatego że sprawiają wrażenie interesując
-ych, jest to pewnego rodzaju patologia występująca w produkcji oprogramowania.
- Zwrócenie uwagi na wartość biznesową ma ogromny wpływ na efektywność oraz
- koszt związany z systemem, choć zazwyczaj nie jest to sprawa oczywista
- ani nie jest to postrzegane jako rzecz niezbędna, na co zwraca uwagę North.
+Dosyć częstym błędem jest występowanie w systemie nowych funkcjonalności,
+ bądź użycie nowych technologii, tylko dlatego, że sprawiają wrażenie interesują
+cych.
+ Jest to pewnego rodzaju patologia, występująca w produkcji oprogramowania.
+ Zwrócenie uwagi na wartość biznesową, ma ogromny wpływ na efektywność,
+ oraz koszt związany z systemem, choć zazwyczaj nie jest to sprawa oczywista
+ ani, na co zwraca uwagę North, nie jest to postrzegane jako rzecz niezbędna.
 \end_layout
 
 \begin_layout Subparagraph
@@ -1281,22 +1291,23 @@ key "BDD.EnoughIsEnough"
 \end_layout
 
 \begin_layout Standard
-Domena metodologi BDUF zakłada że jesteśmy wstanie zapisać wszystkie informacje
- na temat systemu przed rozpoczęciem jego realizacji, innymi słowy jesteśmy
- wstanie przewidzieć wszystko na temat systemu - jednak bardzo często tak
- nie jest.
- Warto zwrócić uwagę na fakt im dłuższy okres chcemy przewidzieć oraz im
- bardziej złożony jest problem tym większe prawdopodobieństwo że nasze założenia
- będą błędne.
+Domena metodologi BDUF zakłada, że jesteśmy w stanie zapisać wszystkie informacj
+e na temat systemu, przed rozpoczęciem jego realizacji.
+ Innymi słowy, jesteśmy w stanie przewidzieć wszystko, na temat systemu
+ - jednak bardzo często tak nie jest.
+ Warto zwrócić uwagę na fakt, że im dłuższy okres chcemy przewidzieć, oraz
+ im bardziej złożony jest problem, tym większe prawdopodobieństwo, iż nasze
+ założenia będą błędne.
  Taka postawa - posiadania wiedzy na początku - wynika również z obawy przed
- potencjalnym kosztem zmiany, menadżerowie są w tym najlepszym przykładem.
- BDUF się nie sprawdziło gdyż zmiany zawsze się pojawiają.
- BDD z założenie zabrania modelowania systemu przez zgadywania, a minimalizacja
+ potencjalnym kosztem zmiany, a menadżerowie są w tym wypadku najlepszym
+ przykładem.
+ BDUF się nie sprawdziło, gdyż zmiany zawsze się pojawiają.
+ BDD z założenia zabrania modelowania systemu przez zgadywania, a minimalizacja
  kosztu zmian jest uzyskiwana poprzez utrzymanie technicznie systemu w taki
- sposób aby łatwo można było w nim zmiany wprowadzać.
- W sekcji Filozofia Agile zwrócono uwagę na metodologie która to umożliwiają,
- takie jak iteracyjny proces produkcji, najprostsza rzecz która działa oraz
- nie implementowanie funkcjonalności które nie są wymagane.
+ sposób, aby łatwo można było w nim zmiany wprowadzać.
+ W sekcji Filozofia Agile zwrócono uwagę na metodologie, które to umożliwiają,
+ takie jak iteracyjny proces produkcji - najprostsza rzecz, która działa,
+ oraz nie implementowanie funkcjonalności, które nie są wymagane.
 \end_layout
 
 \begin_layout Subparagraph
@@ -1304,7 +1315,7 @@ Opowieści użytkownika
 \end_layout
 
 \begin_layout Standard
-North zwraca uwagę na trzy części które występują w opowieści
+North zwraca uwagę na trzy części, które występują w opowieści
 \end_layout
 
 \begin_layout Itemize
@@ -1313,7 +1324,7 @@ tytuł, który jednoznacznie determinuje zakres serwowanych funkcjonalności
 \end_layout
 
 \begin_layout Itemize
-krótki opis co jest celem danej funkcjonalności i dlaczego ją wprowadzamy
+krótki opis tego, co jest celem danej funkcjonalności i dlaczego ją wprowadzamy
 \end_layout
 
 \begin_layout Itemize
@@ -1330,11 +1341,11 @@ Automatyczne testowanie zachowania systemu
 \end_layout
 
 \begin_layout Standard
-Celem BDD jest wymuszenie współpracy z klientem oraz polepszenie z nim komunikac
-ji poprzez stosowanie języka które obie strony rozumieją.
+Celem BDD jest wymuszenie współpracy z klientem, oraz polepszenie z nim
+ komunikacj, poprzez stosowanie języka, które obie strony rozumieją.
  Efektem takiej pracy jest specyfikacja w postaci historyjek użytkownika,
  które to umożliwiają pisanie automatycznych testów akceptacji, dzięki czemu
- jest możliwa lepsza weryfikacja poprawności zachowania systemu..
+ jest możliwa lepsza weryfikacja poprawności zachowania systemu.
  Dużym błędem
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1342,7 +1353,7 @@ key "BDD.BehaviourDrivenPrograming"
 
 \end_inset
 
- które popełniano podczas TDD
+, który popełniano podczas TDD
 \begin_inset Foot
 status collapsed
 
@@ -1352,7 +1363,7 @@ Test-Driven-Development
 
 \end_inset
 
- było zbyt dokładne testowanie kodu a nie zachowania systemu, które utrudniały
+ było zbyt dokładne testowanie kodu, a nie zachowania systemu, co utrudniało
  zmiany, zamiast je stymulować
 \begin_inset Foot
 status collapsed
@@ -1365,13 +1376,15 @@ Ludzie z kręgu BDD, nie zalecają pisania testów dla metod prywatnych, i
 \end_inset
 
 .
- Dlatego tak ważne jest aby pisać testy które weryfikują zachowanie systemu,
+ Dlatego tak ważne jest, aby pisać testy, które weryfikują zachowanie systemu,
  bądź poszczególnych komponentów.
- Tak też narodził się pomysł aby przygotować narzędzia wspierające ten proces.
- W 2003 roku Dan postanowił zastąpić JUnit własną biblioteką które ułatwiała
- by pisanie testów zachowania, nazwał ją JBahave.
- Na przełomie ostatnich pięciu lat powstało wiele odpowiednich, bądź też
- rozszerzeń dla poszczególnych języków, poniżej lista.
+ Tak też narodził się pomysł, aby przygotować narzędzia wspierające ten
+ proces.
+ W 2003 roku Dan postanowił zastąpić JUnit, własną biblioteką, która ułatwiała
+ by pisanie testów zachowania i nazwał ją JBahave.
+ Na przełomie ostatnich pięciu lat powstało wiele odpowiedników, bądź też
+ rozszerzeń dla poszczególnych języków.
+ Poniżej lista.
 \end_layout
 
 \begin_layout Description
@@ -1483,11 +1496,12 @@ key "Rspec.homepage"
 \end_layout
 
 \begin_layout Standard
-W kolejnej sekcji zostanie omówiona biblioteka RSpec ze względu na użycie
- języka Ruby w projekcie oraz biblioteka Cucumber która daje możliwość uruchamia
-nia historyjek użytkownika jako wykonywalny kod, przez co jest niezwykle
- użyteczna - narzędzie które jest opisane w sekcji piątej, wspiera eksport
- do tego formatu.
+W kolejnej sekcji zostanie omówiona biblioteka RSpec, ze względu na użycie
+ języka Ruby w projekcie, oraz biblioteka Cucumber, która daje możliwość
+ uruchamiania opowieści użytkownika jako wykonywalnego kodu, przez co jest
+ niezwykle użyteczna.
+ Narzędzie które jest opisane w sekcji piątej, wspiera prezentację informacji
+ w tym formacie.
 \end_layout
 
 \begin_layout Subsection
@@ -1503,9 +1517,9 @@ key "WaterfallDoesntWork"
 \end_inset
 
 , a jednak popularność ich zaczęła wzrastać w połowie lat dziewięćdziesiątych.
- Co więcej model kaskadowy jest ciągle w użyciu.
- Powodem takiej sytuacji jest zapewne zatwierdzenie modelu kaskadowego jako
- standardu dla projektów informatycznych przez DoD
+ Co więcej, model kaskadowy jest ciągle w użyciu.
+ Powodem takiej sytuacji, jest zapewne zatwierdzenie modelu kaskadowego,
+ jako standardu dla projektów informatycznych przez DoD
 \begin_inset Foot
 status collapsed
 
@@ -1515,11 +1529,11 @@ Departament Obrony Narodowej Stanów Zjednoczonych
 
 \end_inset
 
-, następnie przyłączyło się do tego NATO.
- Royce - jako jeden z pierwszych dokonał analizy tej metodologi - który
- opisał dokładnie ten proces w latach siedemdziesiątych, w artykule 'Zarządzanie
- produkcją dużych systemów informatycznych', podał go jako przykład negatywny.
- Zwrócił uwagę na jego niską skuteczność oraz ogromne koszty.
+, a następnie przyłączyło się do tego NATO.
+ Royce - który jako jeden z pierwszych dokonał analizy tej metodologi -
+ opisał dokładnie ten proces w latach siedemdziesiątych - w artykule 'Zarządzani
+e produkcją dużych systemów informatycznych', i podał go jako przykład negatywny.
+ Zwrócił uwagę na jego niską skuteczność, oraz ogromne koszty.
 \end_layout
 
 \begin_layout Standard
@@ -1530,17 +1544,16 @@ key "SCRUM.what.i.learned"
 
 \end_inset
 
-.
- Zapisał w nim cztery spostrzeżenia na temat metodologi kaskadowych względem
- Scrum'a.
+, zapisał cztery spostrzeżenia na temat metodologi kaskadowych względem
+ Scrum'a:
 \end_layout
 
 \begin_layout Itemize
-nie jest wstanie przewidzieć wszystkiego na początku
+nie jest w stanie przewidzieć wszystkiego na początku
 \end_layout
 
 \begin_layout Itemize
-nie jest wstanie dostarczyć projektu na czas
+nie jest w stanie dostarczyć projektu na czas
 \end_layout
 
 \begin_layout Itemize
@@ -1549,21 +1562,21 @@ jest mniej efektywna - mniejsza ilość funkcjonalności na jednostkę czasu
 \end_layout
 
 \begin_layout Itemize
-wrażenie użytkownika jest tragiczne
+wrażenie użytkownika jest niezadowalające
 \end_layout
 
 \begin_layout Standard
-Metodologie Agile zamiast walczyć z problem uzyskania całkowitej wiedzy
+Metodologia Agile zamiast walczyć z problem uzyskania całkowitej wiedzy
  na początku, stara się radzić z tą niewiedzą - bo jest to naturalne, że
  nie da się na początku wszystkiego ustalić.
- To samo tyczy się zmian które wynikają w okresie produkcji, są one nawet
- traktowane jako coś pożądanego.
- A skoro użytkownicy potrafią sprecyzować czego oczekują od systemu gdy
- zobaczą jego początkową wersje, warto ją pokazać jak najwcześniej, i często.
- Zwinne zarządzanie projektem stara się wkomponować w proces który daje
- klientowi duża kontrolę nad kształtem sytemu, i to na każdym etapie prac,
+ To samo tyczy się zmian, które wynikają w okresie produkcji - są one nawet
+ traktowane, jako coś pożądanego.
+ A skoro użytkownicy potrafią sprecyzować czego oczekują od systemu, gdy
+ zobaczą jego początkową wersję, warto ją pokazać jak najwcześniej, i często.
+ Zwinne zarządzanie projektem stara się wkomponować w proces, który daje
+ klientowi dużą kontrolę nad kształtem systemu, i to na każdym etapie prac,
  a nie tylko na etapie wstępnej specjalizacji.
- Jest to ważnym element przyczyniającym się do zadowolenia z wyprodukowanego
+ Jest to ważny elemen, który przyczynia się do zadowolenia z wyprodukowanego
  oprogramowania - co potwierdza skuteczność tej metody.
 \end_layout
 
@@ -1581,20 +1594,22 @@ Technologie i wzorce projektowe
 \begin_layout Standard
 Choć metodologia agile nie jest związana z konkretnymi technologiami, to
  jednak języki, oraz środowiska dające się łatwo re-faktorować są korzystniejsze.
- Stosowanie się do odpowiednich wzorców stymuluje pisanie dobrego kodu dzięki
- czemu zmiany w takim systemie są efektywniejsze, i łatwiej taki system
- sprężyć z innym.
- Jest to efekt filozofii jaką agile ma do zmian, musimy być na nie ciągle
+ Stosowanie się do odpowiednich wzorców, stymuluje pisanie dobrego kodu,
+ dzięki czemu zmiany w takim systemie są efektywniejsze, i łatwiej taki
+ system sprzężyć z innym.
+ Jest to efekt filozofii jaką agile ma do zmian, i musimy być na nie ciągle
  otwarci.
  Zmiany ze strony klienta są nieuniknione, a mówiąc bardziej precyzyjnie
  są niezbędne aby produkt był wartościowy.
- Wpływ na to ma również użytkownik końcowego którego uwagi mogą podnieść
- znacznie używalność systemu, a informacje takie docierają późno.
+ Wpływ na to ma również użytkownik końcowego produktu, którego uwagi mogą
+ podnieść znacznie używalność systemu, niestety informacje takie docierają
+ późno.
  Czasem sami developerzy zauważają pewne nieprawidłowości i decydują się
  na zmiany.
- Wymaga to aby kod był dobrze utrzymany, bez redundantności, przejrzysty
+ Wymaga to, aby kod był dobrze utrzymany, bez redundantności, przejrzysty
  i jednoznaczny.
- Poniżej zwrócę uwagę na sprawdzone wzorce które pomagają osiągnąć ten cel.
+ Poniżej zwrócę uwagę na sprawdzone wzorce, które pomagają osiągnąć ten
+ cel.
 \end_layout
 
 \begin_layout Subsection
@@ -1612,12 +1627,12 @@ Model-View-Controller
 
 \end_inset
 
- ma już za sobą prawie 30 lat, został opracowany przez norwega Trygve Renskauga
- na Uniwersytecie w Oslo na przełomie lat 1978-79.
+ ma już za sobą prawie 30 lat, a został opracowany przez norwega Trygve
+ Renskauga na Uniwersytecie w Oslo na przełomie lat 1978-79.
  Pierwotna nazwa brzmiała THING-MODEL-VIEW-EDITOR, końcową nazwę zawdzięczamy
- dyskusji autora z Adele Goldberg, dzięki której 10 grudnia 1979 przyjęto
+ dyskusji autora z Adele Goldberg, dzięki której 10 grudnia 1979, przyjęto
  ostateczną nazwę.
- O samej przyczynie zaistnienia tego wzorca sam autor mówi 'MVC powstało
+ O samej przyczynie zaistnienia tego wzorca, sam autor mówi: 'MVC powstało
  jako naturalne rozwiązanie dla powszechnego problemu dostarczenia użytkownikom
  kontroli nad ich własnymi danymi z wielu perspektyw'
 \begin_inset CommandInset citation
@@ -1639,21 +1654,24 @@ Model
 \end_layout
 
 \begin_layout Standard
-Model jako abstrakcyjna forma reprezentacja encji jest ważnym aspektem izolacji.
- Cześć systemu kwalifikowana jako model można przedstawić jako zestaw atrybutów
- które przechowuje oraz logikę biznesową która jednoznacznie określa zachowanie.
- Zgodnie z definicja wzorca model nie ma bezpośredniego dostępu do kontrolera
+Model jako abstrakcyjna forma, reprezentacja encji, jest ważnym aspektem
+ izolacji.
+ Cześć systemu kwalifikowaną jako model, można przedstawić jako zestaw atrybutów
+, które ona przechowuje, oraz logikę biznesową, która jednoznacznie określa
+ zachowanie.
+ Zgodnie z definicją wzorca, model nie ma bezpośredniego dostępu do kontrolera
  czy widoku.
  Jeśli próby przechowywanie atrybutów poza modelem wydają się dziwne i rzadko
- spotykane, to umieszczanie logiki w kontrolerach czy też widokach jest
- dosyć powszechną patologią która powoduje duże problemy w momencie prób
- optymalizacji czy też pielęgnacji kodu.
- Doświadczenie pokazuje że trzymanie się ściśle tych prostych dwóch reguł
+ spotykane, to umieszczanie logiki w kontrolerach, czy też widokach jest
+ dosyć powszechną patologią, która powoduje duże problemy w momencie prób
+ optymalizacji, czy też pielęgnacji kodu.
+ Doświadczenie pokazuje, że trzymanie się ściśle tych prostych dwóch reguł,
  wymusza większy porządek w implementacji systemu.
- Łatwiej jest uniknąć redundancji kodu, oraz optymalizacja kodu jest mniej
- ryzykowna.
- Ma to duże znaczenie zwłaszcza w aplikacjach webowych gdzie mnogość form
- prezentacji danych wymaga jednoznacznie określonej logiki na poziomie modelu.
+ Łatwiej wtedy jest uniknąć redundancji kodu, oraz optymalizacja kodu jest
+ mniej ryzykowna.
+ Ma to duże znaczenie zwłaszcza w aplikacjach webowych, gdzie mnogość form
+ prezentacji danych, wymaga jednoznacznie określonej logiki na poziomie
+ modelu.
 \end_layout
 
 \begin_layout Paragraph
@@ -1661,7 +1679,7 @@ Widok
 \end_layout
 
 \begin_layout Standard
-Widok jest odpowiedzialny za reprezentacje wizualna danych, oraz interfejsów
+Widok jest odpowiedzialny za reprezentację wizualną danych, oraz interfejsów
  edycyjnych.
  Pierwotna definicja
 \begin_inset CommandInset citation
@@ -1670,14 +1688,14 @@ key "MVC.Author.Report"
 
 \end_inset
 
- zakładała że widok jest bezpośrednio powiązany z modelem.
- The Passive View Pattern zakłada że widok ma dostęp do modelu tylko za
+ zakładała, że widok jest bezpośrednio powiązany z modelem.
+ The Passive View Pattern zakłada, że widok ma dostęp do modelu, tylko za
  pomocą kontrolera - nie występuje bezpośrednie odwołanie do modelu.
- Widok który operuje tylko na danych przygotowanych przez kontroler jest
- dużo prostszy, a ponieważ wszelkie dane przechodzą przez kontroler jest
- programista ma nad nimi większą kontrole - ta odmiana wzorca, jest promowana
- w aplikacjach webowych.
- Jedyna logika jaka może występować w widoku to ta związana z kontrolkami
+ Widok, który operuje tylko na danych przygotowanych przez kontroler jest
+ dużo prostszy, a ponieważ wszelkie dane przechodzą przez kontroler, programista
+ ma nad nimi większą kontrolę.
+ Ta odmiana wzorca, jest promowana w aplikacjach webowych.
+ Jedyna logika jaka może występować w widoku, to ta związana z kontrolkami,
  których zachowanie nie jest bezpośrednio związane z logiką biznesową.
 \end_layout
 
@@ -1688,17 +1706,17 @@ Kontroler
 \begin_layout Standard
 Kontroler ma spełniać dwa proste zadania, przyjąć komunikat od użytkownika
  i przygotować dane zwrotne.
- W kwestii pierwszej funkcjonalności rolą kontrolera jest aby przyjąć informacje
- od użytkownika, przekazać komunikat razem z danymi do odpowiedniego modelu
- przyjąć wynik który model zwrócił, przygotowane dane przesłać do odpowiedniego
- widoku.
- Dodatkowo dochodzą kwestie jak uwierzytelnienie użytkownika, oraz kwestie
- własności do obiektów.
+ W kwestii pierwszej funkcjonalności, rolą kontrolera jest, aby przyjąć
+ informacje od użytkownika, przekazać komunikat razem z danymi do odpowiedniego
+ modelu, przyjąć wynik który model zwrócił, a przygotowane dane przesłać
+ do odpowiedniego widoku.
+ Dodatkowo dochodzą kwestie takie jak uwierzytelnienie użytkownika, oraz
+ kwestie własności do obiektów.
 \end_layout
 
 \begin_layout Standard
-Pilnowanie aby nie wychodzić poza kompetencje owocuje duża niezależności
- poszczególnych komponentów, oraz możliwość rozwoju aplikacji bez naruszania
+Pilnowanie, aby nie wychodzić poza kompetencje, owocuje dużą niezależnością
+ poszczególnych komponentów, oraz możliwością rozwoju aplikacji bez naruszania
  wcześniejszych elementów.
 \end_layout
 
@@ -1717,7 +1735,8 @@ key "REST.roy.t.fielding.homepage"
 
 \end_inset
 
-, warto wspomnieć że jest on jednocześnie jednym z głównych autorów protokołu
+.
+ Warto wspomnieć, że jest on jednocześnie jednym z głównych autorów protokołu
  HTTP, oraz współtwórcą Apacha
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1729,8 +1748,8 @@ key "ApacheFoundation"
 \end_layout
 
 \begin_layout Standard
-Najważniejszą regułą jest projektowanie systemu ze zewnątrz (publicznych
- interfejsów) jako zasoby
+Najważniejszą regułą jest projektowanie systemu z zewnątrz, (z publicznych
+ interfejsów), poprzez wydzielenie zasobów
 \begin_inset Foot
 status collapsed
 
@@ -1764,9 +1783,9 @@ towych czy też RSS, ATOM dla czytników wiadomości.
 \end_layout
 
 \begin_layout Standard
-Kolejną istotną sprawą jest kwestia minimalizacja metod w zasobie, czyli
- tak naprawdę ilości komunikatów na które odpowiadają.
- Z założenie należy się ograniczyć do maksymalnie siedmiu metod.
+Kolejną istotną sprawą jest kwestia minimalizacji metod w zasobie, czyli
+ tak naprawdę ilości komunikatów, na które odpowiadają.
+ Z założenia należy się ograniczyć do maksymalnie siedmiu metod.
  Cztery z nich są związane z operacjami na pamięci stałej
 \begin_inset Foot
 status collapsed
@@ -1801,7 +1820,7 @@ Kolejne dwie metody związane są z ułatwieniem operacji edycyjnych:
 \end_layout
 
 \begin_layout Itemize
-Nowy - wspiera tworzenie interfejsu tworzenia nowe instancji zasobu
+Nowy - wspiera tworzenie interfejsu, oraz tworzenie nowych instancji zasobu
 \end_layout
 
 \begin_layout Itemize
@@ -1810,23 +1829,23 @@ Edycja - przygotowuje interfejs z wczytanymi danymi istniejącej instancji
 \end_layout
 
 \begin_layout Standard
-Siódma metoda służy do pobierania z zasobu kolekcji instancji, często określana
- słowem indeks lub lista.
+Siódma metoda służy do pobierania z zasobu kolekcji instancji, często jest
+ określana mianem indeks lub lista.
 \end_layout
 
 \begin_layout Standard
 Wyjście ponad siedem akcji jest dopuszczalne tylko w szczególnych przypadkach.
  Jeśli w systemie występuje średnio więcej niż półtora akcji na zasób, sugeruje
- to możliwy błąd związany ze sposobem zaprojektowania zasobów.
+ to możliwy błąd związany ze sposobem ich zaprojektowaniem.
 \end_layout
 
 \begin_layout Standard
-Wielką zaletą projektowania systemu zgodnie z tymi zasadami jest przejrzysta
+Wielką zaletą projektowania systemu zgodnie z tymi zasadami, jest przejrzysta
  możliwość interakcji między różnymi aplikacjami.
- Platforma taka jak Rails moją osobny moduł - ActiveResource - wspierający
+ Platforma taka jak Rails posiada osobny moduł - ActiveResource - wspierający
  podpięcie zewnętrznych zasób jako wewnętrzne w systemie, ale i bez tego
  komunikacja z innymi systemami jest przejrzysta.
- Ponad to przybliża to marzenie Suna o globalnej sieci jako jednym wielkim
+ Ponadto przybliża to marzenie Suna o globalnej sieci, jako jednym wielkim
  komputerze.
 \end_layout
 
@@ -1835,12 +1854,12 @@ Narzędzia wykorzystane w pracy
 \end_layout
 
 \begin_layout Standard
-Poniżej zmieszczona jest krótki opis poszczególnych technologi użytych w
- części praktycznej, czyli języka Ruby, oraz środowiska rozwoju aplikacji
+Poniżej zamieszczony jest krótki opis poszczególnych technologii, użytych
+ w części praktycznej, czyli języka Ruby, oraz środowiska rozwoju aplikacji
  Ruby on Rails.
- Następnie dokładnie zostanie zwrócona uwagę na środowisko wspierające przygotow
-anie testów - RSpec i biblioteka to uruchamia opowieści użytkownika w formacie
- tekstowym Cucumbers.
+ Następnie dokładnie zostanie omówiona kwestia środowiska wspierającego
+ przygotowanie testów - RSpec i biblioteka uruchamiają opowieści użytkownika
+ w formacie tekstowym Cucumber.
 \end_layout
 
 \begin_layout Subsubsection
@@ -1848,7 +1867,8 @@ Ruby
 \end_layout
 
 \begin_layout Standard
-Jest język opracowany w połowie lat dziewięćdziesiątych przez Yukihiro Matsumoto
+Jest to język opracowany w połowie lat dziewięćdziesiątych, przez Yukihiro
+ Matsumoto
 \begin_inset Foot
 status collapsed
 
@@ -1860,14 +1880,15 @@ Yukihro Matsumoto jest często nazywany wśród ludzi związanych z rubym jako
 \end_inset
 
 .
- Chciał aby powstał język w którym znalazłoby się miejsce dla wybranych
- cech a takich języków jak Perl, Smalltalk, Eiffel, Ada i Lisp.
- Miał to być balans pomiędzy programowaniem funkcyjnymi a programowaniem
+ Chciał stworzyć język w którym znalazłoby się miejsce dla wybranych cech
+ takich języków jak Perl, Smalltalk, Eiffel, Ada i Lisp.
+ Miał to być balans, pomiędzy programowaniem funkcyjnymi, a programowaniem
  imperatywnym.
- Pierwszy publiczne wydanie nastąpiło 1995 roku.
- Ogromny wzrost popularności w ostatnich latach zawdzięcza środowisku rozwoju
- aplikacji Ruby on Rails, co znów zaowocowało w dużo społeczność która zaczęła
- używać język Ruby w różnych innych zastosowaniach.
+ Pierwszy publiczne wydanie nastąpiło w 1995 roku.
+ Ogromny wzrost popularności w ostatnich latach, zawdzięcza on, rozwojowi
+ aplikacji Ruby on Rails.
+ To zaś zaowocowało dużą społecznością, która znalazła jeszcze inne zastosowania
+ tego języka.
 \begin_inset Foot
 status collapsed
 
@@ -1927,10 +1948,10 @@ Ruby on Rails
 \end_layout
 
 \begin_layout Standard
-Jest to środowisko do szybkiego rozwoju aplikacji webowych opartych o bazy
- danych.
- Jest bardzo szybko rozwijające się środowisko, dzięki dużej społeczności
- zaangażowanej w projekt.
+Jest to środowisko, które umożliwia szybki rozwoj aplikacji webowych opartych
+ na bazach danych.
+ Środowisko to, bardzo szybko się rozwija, dzięki dużej społeczności zaangażowan
+ej w projekt.
  Ruby on Rails
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1938,10 +1959,10 @@ key "RoR.homepage"
 
 \end_inset
 
- powstał poprzez wyciągniecie z projektu BaseCamp w 2004 roku przez Davida
+ powstał poprzez wyciągniecie go z projektu BaseCamp w 2004 roku przez Davida
  Heinemeiera Hanssona.
- Od tego czasu rozwija się bardzo prężnie, zwłaszcza na przełomie ostatniego
- roku.
+ Od tego czasu rozwija się bardzo prężnie, zwłaszcza na przełomie ostatnich
+ dwóch lat.
 \end_layout
 
 \begin_layout Paragraph
@@ -1957,11 +1978,11 @@ bardzo dobre wsparcie dla REST'a
 \end_layout
 
 \begin_layout Itemize
-abstrakcyjna mapper bazy danych ActiveRecord
+abstrakcyjny mapper bazy danych ActiveRecord
 \end_layout
 
 \begin_layout Itemize
-rozbudowany wsparcie dla testów (TestUnit, RSpec-on-rails, Cucumber)
+rozbudowane wsparcie dla testów (TestUnit, RSpec-on-rails, Cucumber)
 \end_layout
 
 \begin_layout Itemize
@@ -1972,7 +1993,7 @@ key "RoR.plugins"
 
 \end_inset
 
-, wraz ze wsparcie do wydzielania części systemu
+, wraz ze wsparciem do wydzielania części systemu
 \end_layout
 
 \begin_layout Subsubsection
@@ -1981,7 +2002,7 @@ RSpec
 
 \begin_layout Standard
 Jedno z założeń BDD wiąże się z automatyzacją testów w aplikacji.
- Aby osiągnąć to w efektywny sposób potrzebny jest dedykowany język
+ Aby osiągnąć to w efektywny sposób, potrzebny jest dedykowany język
 \begin_inset Foot
 status collapsed
 
@@ -1991,8 +2012,9 @@ Domain specific language (DSL)
 
 \end_inset
 
- dla tego konkretnego zadania.
- Pierwsze myśli aby powstał dla języka Ruby taki DSL, przedstawił Dave Astel
+, dla tego konkretnego zadania.
+ Pierwsze wzmianki na temat powstania języka Ruby taki DSL, przedstawił
+ Dave Astel
 \begin_inset CommandInset citation
 LatexCommand cite
 key "DaveAstel.Blog"
@@ -2007,12 +2029,12 @@ key "BDD.RSPEC.FirstIntroduction"
 \end_inset
 
 z 2005 roku.
- Zwrócił on uwagę na zbudowanie takiego DSL'a który będzie wspierał opis
+ Zwrócił on uwagę na zbudowanie takiego DSL'a, który będzie wspierał opis
  zachowania wraz z weryfikacją tego zachowania.
  Zaproponował kilka zmian związanych z nazewnictwem, zamiast zaczynać nazwy
  metod od słowa 'test', zacząć od słowa 'should', używać słowa 'Context'
  zamiast 'TestCase' oraz 'shouldBe' w zamian 'assert'.
- Celem takich zabiegów było położenie nacisku na testowanie zachowania.
+ Celem takich zabiegów, było położenie nacisku na testowanie zachowania.
  Poniżej jest umieszczony przykład zaczerpnięty z artykuły 'Wstęp do BDD'
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2034,7 +2056,7 @@ key "RSPEC.BDD.DaveAstel.Intro"
 \end_layout
 
 \begin_layout Standard
-Przez okres ostatnich 3 lat framework przeszedł wiele modyfikacji i usprawnień.
+Przez okres ostatnich 3 lat, framework przeszedł wiele modyfikacji i usprawnień.
  Dzięki pracy wielu osób
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2042,9 +2064,9 @@ key "RSPEC.community,RSPEC.commit.history"
 
 \end_inset
 
- formalny zapis testów jest jeszcze bardziej przejrzysty i intuicyjny.
+, formalny zapis testów jest jeszcze bardziej przejrzysty i intuicyjny.
  Gdyby uaktualnić przykład zamieszczony powyżej, biorąc pod uwagę aktualną
- specyfikacje frameworka, będzie on miał postać zbliżoną do zamieszczonej
+ specyfikację frameworka, będzie on miał postać zbliżoną do zamieszczonej
  poniżej.
 \end_layout
 
@@ -2069,8 +2091,8 @@ Zamiast używać słowa test, Astel zaczął nazywać taką weryfikację 'spec',
 
 \end_inset
 
- ma dużo większy wpływ na postrzeganie zachowania systemu który chcemy weryfikow
-ać.
+ ma dużo większy wpływ na postrzeganie zachowania systemu, który chcemy
+ weryfikować.
  Jest to również wielce pomocne przy generowanie raportów, które notabene
  są pewną formą dokumentacji systemu - opisują jego pożądane zachowanie.
 \end_layout
@@ -2093,7 +2115,8 @@ key "DavidChelimsky.Blog"
 
 \end_inset
 
-, Astel ciągle jest aktywny w projekcie, zwłaszcza w promowaniu metodologi
+.
+ Ah Astel ciągle jest aktywny w projekcie, zwłaszcza w promowaniu metodologi
  BDD.
  Sam Rspec nie doczekał się jeszcze żadnej książki, która zebrała by informacje
  na temat BDD, RSpec i Cucumber.
@@ -2119,7 +2142,7 @@ key "Aslak.Hellesoy.Blog"
 
 \end_inset
 
-, Helmkampa
+ i Helmkampa
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Bryan.Helmkapm.Blog"
@@ -2127,7 +2150,7 @@ key "Bryan.Helmkapm.Blog"
 \end_inset
 
 .
- Zwracając uwagę na autorów będzie to z pewnością pozycja z którą warto
+ Biorąc pod uwagę autorów, będzie to z pewnością pozycja, z którą warto
  się zapoznać.
 \end_layout
 
@@ -2136,13 +2159,13 @@ Cucumber
 \end_layout
 
 \begin_layout Standard
-Idealnym rozwiązaniem była by możliwość pisania testów integracyjnych -
- przez osoby które nie są programistami - która mogłyby powtarzalnie weryfikować
+Idealnym rozwiązaniem byłaby możliwość pisania testów integracyjnych przez
+ osoby, które nie są programistami, a które mogłyby powtarzalnie weryfikować
  system.
- Niestety nie jest to w pełni osiągalne, pewnym postępem w tym kierunku
- jest tworzenie tekstowy opowieści użytkownika, z wydzielonymi scenariuszami,
- które są zrozumiałe dla ludzi biznesu, jedna z najciekawszych implementacji
- jest Cucumber.
+ Niestety nie jest to w pełni osiągalne.
+ Pewnym postępem w tym kierunku, jest tworzenie tekstowych opowieści użytkownika
+, z wydzielonymi scenariuszami, które są zrozumiałe dla ludzi biznesu.
+ Jedną z najciekawszych implementacji jest Cucumber.
 \end_layout
 
 \begin_layout Standard
@@ -2153,8 +2176,8 @@ key "RSPEC.rbehave.introduction"
 
 \end_inset
 
- napisany przez Northa w 2006 roku.
- Niestety nie był to jeszcze czymś akceptowalnym przez klienta biznesowego.
+, napisany przez Northa w 2006 roku.
+ Niestety nie było to jeszcze czymś akceptowalnym dla klienta biznesowego.
  Kolejnym krokiem był Story Runner
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2162,24 +2185,25 @@ key "Cucumber.StoryRunnerInPlainText"
 
 \end_inset
 
- nad którym pracowali Astel we współpracy z Northem - pierwsze wersja były
- dostępne w drugie połowie 2007 roku.
- Projekt bazował na wcześniejszym RBehave, jednak jego największym sukcesem
- było możliwość uruchamiania opowieści użytkownika napisanych po angielsku
- z pliku tekstowego.
- Początkiem kwietnia 2008 roku Aslak Hellesoy rozpoczął prace nad nowym
- środowiskiem do uruchamiania opowieści użytkownika z czystego pliku, projekt
- został ostatecznie nazwany Cucumber (pierwotnie nazywał się Stories).
- Po zaledwie pięciu miesiącach prac został on zamiennikiem dla Story Runner
+, nad którym pracował Astel, we współpracy z Northem - pierwsza wersja była
+ dostępna w drugiej połowie 2007 roku.
+ Projekt bazował na wcześniejszym RBehave, jednak jego największym sukcesem,
+ była możliwość uruchamiania, z pliku tekstowego, opowieści użytkownika
+ napisanych po angielsku.
+ Początkiem kwietnia 2008 roku, Aslak Hellesoy rozpoczął prace nad nowym
+ środowiskiem do uruchamiania opowieści użytkownika z czystego pliku, a
+ projekt został ostatecznie nazwany Cucumber (pierwotnie nazywał się Stories).
+ Po zaledwie pięciu miesiącach prac, został on zamiennikiem dla Story Runner
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cucumber.replacement.of.story.runner"
 
 \end_inset
 
-, Chelimsky zmianę te uargumentował, że Cucumber posiada większą ilość funkcjona
-lności, i jest prostszy w konfiguracji.
- Poniżej wymienione jego cechy.
+.
+ Chelimsky zmianę tę uargumentował tym, że Cucumber posiada większą ilość
+ funkcjonalności, i jest prostszy w konfiguracji.
+ Poniżej wymienione są jego cechy.
 \end_layout
 
 \begin_layout Itemize
@@ -2203,8 +2227,8 @@ warunkowa kontynuacja kroku
 \end_layout
 
 \begin_layout Standard
-Historyjki są pisane w języku dedykowanym którego struktura umożliwia jednoznacz
-ne zrozumienie w świecie biznesu - język ten nazywa się Gherkin
+Historyjki są pisane w języku dedykowanym, którego struktura umożliwia jednoznac
+zne zrozumienie w świecie biznesu - język ten nazywa się Gherkin
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cucumber.Gherkin"
@@ -2229,8 +2253,9 @@ key "Cucumber.Gherkin.spokenlanguege"
 
 \end_inset
 
-, możliwe jest również dodawania nowych lub adaptacji dla własnych potrzeb
- już istniejących.
+.
+ Możliwe jest również dodawanie nowych modułów, lub adaptacji dla własnych
+ potrzeb, już istniejących.
  Sam język posiada niewielką gamę słów kluczowych
 \begin_inset Foot
 status collapsed
@@ -2295,16 +2320,16 @@ Wspomaganie procesu produkcji oprogramowania
 
 \begin_layout Standard
 Jak zostało wspomniane na początku, metodologie agile nie są związane z
- konkretną technologią czy też narzędziem, jednakże bardzo proste narzędzia
+ konkretną technologią, czy też narzędziem, jednakże bardzo proste narzędzia
  potrafią usprawnić ten proces.
- Taki też cel jest postawiony przed tym narzędziem, ma wspomagać proces
- agregowania wymagań od klienta, ułatwiać pisania dokumentacji dla projektów,
- oraz analizy wykonanej pracy względem tej wyznaczonej.
+ Taki też cel jest postawiony przed tym narzędziem - ma wspomagać proces
+ agregowania wymagań od klienta, ułatwiać pisanie dokumentacji dla projektów,
+ oraz analizy wykonanej pracy, względem tej wyznaczonej.
  Od strony developerów ma ponadto ułatwiać pisanie automatycznych testów.
 \end_layout
 
 \begin_layout Standard
-Potrzeba powstania takiego narzędzie była efektem współpracy z klientami
+Potrzeba powstania takiego narzędzia, była efektem współpracy z klientami,
  którzy często zmieniali wymagania dotyczące projektów, czy też dokładali
  mnóstwo pracy w trakcie realizacji zadań.
  Było to powodem wielu problemów i komplikacji względem rozliczania pracy
@@ -2313,23 +2338,23 @@ Potrzeba powstania takiego narzędzie była efektem współpracy z klientami
 \end_layout
 
 \begin_layout Standard
-Kwestią drugą był problem związanym z brakiem automatycznych testów.
- Powodowało to często problemy które pojawiały się najczęściej tuż po przekazani
-u kodu do produkcji.
- To uzmysłowiło jak ważne jest posiadania testów integracyjnych.
+Kwestią drugą, był problem związanym z brakiem automatycznych testów.
+ Powodowało to częste problemy, które pojawiały się najczęściej tuż po przekazan
+iu kodu do produkcji.
+ To uzmysłowiło jak ważne jest posiadanie testów integracyjnych.
  
 \end_layout
 
 \begin_layout Standard
-Środowisko Cucumber do uruchamiania historyjek tekstowych, na podstawie
- których weryfikowane jest zachowanie systemu jest w tym przypadku idealnym
- rozwiązaniem.
+Środowisko Cucumber do uruchamiania opowieści tekstowych, na podstawie których
+ weryfikowane jest zachowanie systemu, jest w tym przypadku idealnym rozwiązanie
+m.
  Dodając do tego intuicyjny interfejs tworzenia takich opowieści, dzięki
- czemu klienci sami by mogli wprowadzać te informacje, to zaczyna to nabierać
- coraz lepszej formy.
- Uzupełnieniem powyższych możliwości jest śledzeniem zmian.
- Gdy weźmiemy trzy na pozór proste właściwości, otrzymamy wartościowe narzędzie
- dla developerów.
+ któremu klienci sami by mogli wprowadzać te informacje, zaczyna to wyglądać
+ coraz bardziej interesująco.
+ Uzupełnieniem powyższych zalet jest możliwość śledzenia zmian.
+ Gdy weźmiemy te trzy na pozór proste właściwości, otrzymamy wartościowe
+ narzędzie dla developerów.
 \end_layout
 
 \begin_layout Subsection
@@ -2337,7 +2362,7 @@ Specyfikacja funkcjonalna
 \end_layout
 
 \begin_layout Standard
-Poniżej zostanie zwrócona uwaga na główne właściwości projektu oraz cele
+Poniżej zostanie zwrócona uwaga na główne właściwości projektu, oraz cele,
  które są ważne dla realizacji tego projektu
 \end_layout
 
@@ -2349,10 +2374,10 @@ Opowieści użytkownika
 Jest to w zasadzie trzon całej aplikacji.
  O samej wartości opowieści użytkownika dużo powiedziano w sekcjach poświęconych
  BDD i Cucumber.
- Zalety opowieści w postaci czystego tekstu są ogromne, jednakoż czasem
- potrzeba jest manipulacji na tych danych, jak na przykład eksportu do dokumenta
-cji ładnie sformatowanych opowieści.
- Kolejną istotną kwestią jest wygoda wprowadzania tych historyjek.
+ Zalety opowieści w postaci czystego tekstu są ogromne, jednakże czasem
+ potrzeba jest manipulacja prowadzona na tych danych, jak na przykład eksport
+ do dokumentacji ładnie sformatowanych opowieści.
+ Kolejną istotną kwestią jest wygoda wprowadzania tych opowieści.
  Developerzy lubią specyficzne
 \begin_inset Foot
 status collapsed
@@ -2363,8 +2388,8 @@ Przykładem może być vi(m) czy też emacs.
 
 \end_inset
 
- edytory tekstowe, jednakże pozostali ludzie preferują dostosowane interfejsy
- i właśnie dla nich to narzędzia będzie użyteczne.
+ edytory tekstowe, jednakże inni preferują dostosowane interfejsy, i właśnie
+ dla nich to narzędzie będzie użyteczne.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2372,21 +2397,21 @@ Przykładem może być vi(m) czy też emacs.
 \end_layout
 
 \begin_layout Standard
-Wielokrotnie była zwrócona uwaga na sposób traktowania zmiany w metodologiach
- zwinnych - są one mile widziane na każdym etapie prac.
+Wielokrotnie była już zwrócona uwaga na sposób traktowania zmiany w metodologiac
+h zwinnych, które są mile widziane na każdym etapie prac.
  Chociaż klienci bardzo chętnie te zmiany wprowadzają, to już trudniej im
- wszystkie modyfikacja spamiętać.
+ wszystkie modyfikacje spamiętać.
  Nie zawsze są świadomi jak bardzo ich pierwotna wizja różni się od wersji
  końcowej.
- Możliwość wykazania tych zmian w przejrzysty sposób daje dwie korzyści.
- Po pierwsze klient może zobaczyć jak proces w którym bierze aktywny udział
+ Możliwość wykazania tych zmian w przejrzysty sposób, daje dwie korzyści.
+ Po pierwsze, klient może zobaczyć jak proces, w którym bierze aktywny udział
  wpływa na poprawę jakości produktu.
- Drugą sprawą są kwestia finansowe, dzięki takiemu raportowi negocjatorzy
- otrzymają solidne argumenty.
+ Drugą sprawą są kwestie finansowe: taki raport, to solidny argument dla
+ negocjatorów.
 \end_layout
 
 \begin_layout Standard
-Ważne jest tutaj śledzenie zmian ze względu na konkretną właściwość systemu,
+Ważne jest tutaj śledzenie zmian, ze względu na konkretną właściwość systemu,
  oraz ze względu na wydzielony okres czasu.
 \end_layout
 
@@ -2404,10 +2429,10 @@ Cucumber
 \end_layout
 
 \begin_layout Standard
-Ten format jest sztandarowy dla tego projektu, dzięki eksportowaniu do tego
- formatu zautomatyzowany jest proces tworzenie plików dla poszczególnych
- właściwości.
- Dzięki temu zmiany w specyfikacji, można szybko aktualizować dla systemu
+Ten format jest sztandarowy dla tego projektu.
+ Dzięki eksportowaniu do niego danych, zautomatyzowany zostaje proces tworzenia
+ plików dla poszczególnych właściwości.
+ Dzięki temu, zmiany w specyfikacji, można szybko aktualizować dla systemu
  automatycznych testów.
 \end_layout
 
@@ -2417,9 +2442,10 @@ PDF
 
 \begin_layout Standard
 Potrzeba tworzenia dokumentacji technicznej systemu implementowanego jest
- ważne, gdy weźmiemy pod uwagę fakt że opowieści użytkownika to świetna
- dokumentacja, to automatyczne utworzenie dokumentu pdf ze wszystkimi właściwośc
-iami docenią wszyscy - nawet ci którzy lubią pisać dokumentacje.
+ bardzo ważna.
+ Gdy weźmiemy pod uwagę fakt, że opowieści użytkownika to świetna dokumentacja,
+ to automatyczne utworzenie dokumentu pdf ze wszystkimi właściwościami,
+ docenią wszyscy - nawet ci, którzy lubią pisać dokumentacje.
 \end_layout
 
 \begin_layout Paragraph
@@ -2428,7 +2454,7 @@ WIKI
 
 \begin_layout Standard
 Dobrym narzędziem współpracy - czy to wewnątrz firmy, czy też pomiędzy -
- jest proste a zarazem elastyczne narzędzie jakim jest wiki.
+ jest proste, a zarazem elastyczne narzędzie jakim jest wiki.
  Dlatego eksport dla tego formatu z pewnością będzie użyteczny.
 \end_layout
 
