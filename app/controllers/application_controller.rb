@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   
   include Clearance::App::Controllers::ApplicationController
 
+  before_filter :set_current_user_to_thread_variable
+
   helper :all # include all helpers, all the time
   layout 'default'
   # See ActionController::RequestForgeryProtection for details
@@ -15,5 +17,10 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+
+  private
+  def set_current_user_to_thread_variable
+    Thread.current['current_user'] = current_user
+  end
   
 end

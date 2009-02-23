@@ -32,13 +32,13 @@ class Scenario < ActiveRecord::Base
 
   def audit_changes
     changed.each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym, :committed_by => committed_by) unless ['feature_id'].include?(attribute)
+      small_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym) unless ['feature_id'].include?(attribute)
     end
   end
 
   def audit_deletion
     [:title].each do |attribute|
-      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute, :committed_by => committed_by).save
+      small_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute).save
     end
   end
 end

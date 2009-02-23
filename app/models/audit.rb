@@ -84,7 +84,7 @@ class Audit < ActiveRecord::Base
   end
 
   def set_author
-    self.by = committed_by.email
-    self.by_id = committed_by.id
+    self.by = Thread.current['current_user'].email
+    self.by_id = Thread.current['current_user'].id
   end
 end

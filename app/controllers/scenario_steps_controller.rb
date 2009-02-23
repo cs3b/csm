@@ -10,7 +10,7 @@ class ScenarioStepsController < ApplicationController
   end
 
   def update
-    @step.update_attributes(params[:scenario_step].merge({:committed_by => current_user}))
+    @step.update_attributes(params[:scenario_step])
     render :nothing => true, :status => :ok
   end
 

@@ -74,14 +74,14 @@ class ScenarioStep < ActiveRecord::Base
     changed.each do |attribute|
       before = "#{"#{I18n.t(KEYWORDS.invert[keyword_id])} " unless new_record?}"+send("#{attribute}_was").to_s
       after = "#{I18n.t(KEYWORDS.invert[keyword_id])} "+send(attribute).to_s
-      small_changes.build(:before => before, :after => after, :attribute => attribute.to_sym, :committed_by => committed_by) if attribute == 'instruction'
+      small_changes.build(:before => before, :after => after, :attribute => attribute.to_sym) if attribute == 'instruction'
     end
   end
 
   def audit_deletion
     [:instruction].each do |attribute|
       before = "#{I18n.t(KEYWORDS.invert[keyword_id])} "+send("#{attribute}_was").to_s
-      small_changes.build(:before => before, :after => nil, :attribute => attribute, :committed_by => committed_by).save
+      small_changes.build(:before => before, :after => nil, :attribute => attribute).save
     end
   end
 

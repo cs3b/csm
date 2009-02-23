@@ -28,8 +28,7 @@ class ScenariosController < ApplicationController
   end
 
   def create
-#    throw params[:scenario].to_yaml
-    @scenario = @feature.scenarios.build(params[:scenario].merge({:committed_by => current_user}))
+    @scenario = @feature.scenarios.build(params[:scenario])
     respond_to do |format|
       if @scenario.save
         flash[:notice] = 'Scenario was successfully created.'
