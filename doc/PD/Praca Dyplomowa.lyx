@@ -2448,42 +2448,76 @@ Potrzeba tworzenia dokumentacji technicznej systemu implementowanego jest
  docenią wszyscy - nawet ci, którzy lubią pisać dokumentacje.
 \end_layout
 
-\begin_layout Paragraph
-WIKI
-\end_layout
-
-\begin_layout Standard
-Dobrym narzędziem współpracy - czy to wewnątrz firmy, czy też pomiędzy -
- jest proste, a zarazem elastyczne narzędzie jakim jest wiki.
- Dlatego eksport dla tego formatu z pewnością będzie użyteczny.
-\end_layout
-
-\begin_layout Subsubsection
-Import z formatu tekstowego <# jeśli termin pracy zostanie przesunięty>
-\end_layout
-
-\begin_layout Subsubsection
-Używalność systemu <# jeśli termin pracy zostanie przesunięty>
-\end_layout
-
-\begin_layout Paragraph
-łatwe wprowadzanie opowieści
-\end_layout
-
-\begin_layout Paragraph
-szybka modyfikacja
-\end_layout
-
-\begin_layout Paragraph
-raporty prezentujące zmiany
-\end_layout
-
 \begin_layout Subsection
 Implementacja narzędzia
 \end_layout
 
 \begin_layout Standard
-<# Interesujące fragmety kodu z objaśnieniami>
+Opowieści użytkownika zostały zapisana za pomoca trzech modeli: 'Feature',
+ 'Scenario', 'ScenarioStep'.
+ Pokrótce zotaną teraz opisane.
+ Ponadto poniżej znajduje się również diagram modeli, oraz digram klas.
+ 
+\end_layout
+
+\begin_layout Standard
+Feature - właściwość przechowuje tytuł opowieści, powód wprowadzenia, kto
+ będzie z niego korzystał, oraz krótkie sformułowanie co dana funkcjonalność
+ wnosi do systemu (co użytkownik może).
+ Agreguje on również scenariusze.
+ 
+\end_layout
+
+\begin_layout Standard
+Scenario - scenariusz przechowuje tylko tytuł, oraz agreguje główne typy
+ kroków - są kroki takie jak 'Dane', 'Jeżeli', 'Wtedy'.
+ 
+\end_layout
+
+\begin_layout Standard
+ScenarioStep - krok scenariusza, posiada typ, oraz instrukcje.
+ Typy główne zostały wymienione wcześniej, mozliwe podtypy które sa agregowane
+ przez krok główny to 'ale', 'oraz'.
+\end_layout
+
+\begin_layout Standard
+Ważnym elementem systemu jest funkcjonalność dzięki której możliwy jest
+ monitoring zmian które są dokonywane na obiektach typu 'Feature', 'Scenario'
+ oraz 'ScenarioStep'.
+ Dzieki czemu nie jest problemem określenie kto danej zmiany dokonał, a
+ jest to ważne jak zostało to już wcześniej wyjaśnione.
+ 
+\end_layout
+
+\begin_layout Standard
+Wprowadzenie zmiany polega, tak jak zawsze na nadpisaniu atrybutów, jednak
+ zanim nastąpi zapis na medium trwałe - w tym przypadku bazę danych - następuje
+ kopiowanie atrybutów, które uległy zmianie, jest to możliwe dzięki pobraniu
+ aktualnych wartości z bazy.
+ Dla każdego zmienionego atrybutu tworzony jest obiekt typu Audit.
+ Zapisywane jest w nim wartość atrybut przed zmianą i po, wraz z informacją
+ o użytkowniku który tej zmiany dokonał.
+ Przechowywana jest również informacja o obiekcie oraz atrybucie dla którego
+ audyt jest wykonywany.
+ Powiązanie między audytem a różnymi modelami jest możliwe dzieki polimorficznem
+u powiązaniu.
+ Wszystkie klucze które są reprezentowane przez ciąg znaków - nazwa modelu,
+ atrybutu - są mapowane na wartości liczbowe całkowite, dzięki czemu osiągany
+ jest zysk na ładowaniu danych z bazy i przesyłaniu tych danych za pośrednictwem
+ sieci, dodatkowym atutem jest mniejsza ilośc wykorzystywanej pamięci operacyjne
+j która jest niezbędna przy operacjach na dużych zbiorach danych.
+ Przykładowe fragment kodu który trigeruje, zapis zmian dla czterech atrybutów
+ klasy Feature, jest ukazany poniżej.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/code/Audit.Methods.png
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -2493,6 +2527,7 @@ Diagram Modeli
 \begin_layout Standard
 \begin_inset Graphics
 	filename images/diagrams/models.png
+	width 75page%
 
 \end_inset
 
@@ -2518,16 +2553,7 @@ Diagram Bazy Danych
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename images/diagrams/db.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-Testy Wydajnościowe
+TODO
 \end_layout
 
 \begin_layout Standard
@@ -2541,8 +2567,48 @@ Testy Wydajnościowe
 Prezentacja aplikacji
 \end_layout
 
-\begin_layout Standard
+\begin_layout Subsection
+ekran powitalny
+\end_layout
 
+\begin_layout Subsubsection
+logowania
+\end_layout
+
+\begin_layout Subsubsection
+tworzenie nowego konta
+\end_layout
+
+\begin_layout Subsubsection
+odzyskiwanie hasła
+\end_layout
+
+\begin_layout Subsection
+lista właściwości
+\end_layout
+
+\begin_layout Subsubsection
+tworzenie właściwości
+\end_layout
+
+\begin_layout Subsection
+widok właściwości
+\end_layout
+
+\begin_layout Subsubsection
+dodawanie scenariusza
+\end_layout
+
+\begin_layout Subsubsection
+dodawanie/usuwanie podkroków
+\end_layout
+
+\begin_layout Subsubsection
+edycja
+\end_layout
+
+\begin_layout Subsubsection
+eksport
 \end_layout
 
 \begin_layout Standard
