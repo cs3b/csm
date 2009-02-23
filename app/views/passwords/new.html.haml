@@ -1,0 +1,15 @@
+.prefix_2.grid_14
+  %h2= t(:change_your_password, :scope => [:password_reset])
+.clear &nbsp;
+- form_for :password, :url => passwords_path do |form|
+  = form.error_messages
+  .text_field
+    .grid_2.prefix_2= form.label :email
+    .grid_4= form.text_field :email
+    .clear nbsp;
+  .submit_field.top_spacer
+  .grid_1.prefix_5= form.submit t(:reset_password, :scope => [:password_reset]), :disable_with => t(:please_wait_dots)
+  .clear &nbsp;
+.prefix_2.grid_6.top_spacer.center
+  = t(:we_will_email, :scope => [:password_reset])
+.clear &nbsp;

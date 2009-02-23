@@ -29,13 +29,13 @@ class Feature < ActiveRecord::Base
 
   def audit_changes
     changed.each do |attribute|
-      feature_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym, :committed_by => committed_by)
+      feature_changes.build(:before => send("#{attribute}_was"), :after => send(attribute), :attribute => attribute.to_sym)
     end
   end
 
   def audit_deletion
     [:title, :who, :what, :why].each do |attribute|
-      feature_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute, :committed_by => committed_by).save
+      feature_changes.build(:before => send("#{attribute}_was"), :after => nil, :attribute => attribute).save
       end
     end
   end
