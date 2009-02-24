@@ -1332,8 +1332,17 @@ warunki akceptacji, które definiuje kiedy funkcjonalność w systemie jest
  w pełni zaimplementowana, są one w formie scenariuszy
 \end_layout
 
+\begin_layout Subparagraph
+Przykład:
+\end_layout
+
 \begin_layout Standard
-<#TODO przykład (potrzebny szablon)>
+\begin_inset Graphics
+	filename images/code/Cucumber.example.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subparagraph
@@ -2567,6 +2576,11 @@ TODO
 Prezentacja aplikacji
 \end_layout
 
+\begin_layout Standard
+Celem przy tworzeniu tej aplikacji jest aby użytkowanie jej było intuicyjne
+ i proste, co w pewnej mierze sie udało.
+\end_layout
+
 \begin_layout Subsection
 ekran powitalny
 \end_layout
@@ -2575,40 +2589,162 @@ ekran powitalny
 logowania
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/001_logowanie.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 tworzenie nowego konta
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/002_tworzenie_konta.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 odzyskiwanie hasła
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/003_odzyskanie_hasla.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 lista właściwości
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/008_lista_wlasciwosci.png
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 tworzenie właściwości
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/004_tworzenie_wlasciwosci.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 widok właściwości
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/005_strona_wlasciwosci.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 dodawanie scenariusza
 \end_layout
 
-\begin_layout Subsubsection
-dodawanie/usuwanie podkroków
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/004_tworzenie_scenariusza.png
+	width 95text%
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/screenshots/004_tworzenie_scenariusza_01.png
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
 edycja
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/009_edition_1.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/screenshots/009_edition_2.png
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/screenshots/009_edition_3.png
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 eksport
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename images/screenshots/006_export_cucumber.png
+	width 95text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
