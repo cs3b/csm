@@ -312,6 +312,19 @@ LatexCommand tableofcontents
 
 \begin_layout Section
 Wstęp
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{prze-ło-mie}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -502,6 +515,19 @@ Dzięki tym trzem funkcjonalnościom, jest możliwe jasne zarządzaniem wymagani
 
 \begin_layout Section
 Streszczenie
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{wy-bie-rać}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -957,6 +983,19 @@ Reguły usprawniające proces
 
 \begin_layout Standard
 Reguły wymienione poniżej są bardzo proste, ale tylko gdy dobrze je zrozumiemy
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{po-trze-ba}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Paragraph
@@ -1332,10 +1371,6 @@ warunki akceptacji, które definiuje kiedy funkcjonalność w systemie jest
  w pełni zaimplementowana, są one w formie scenariuszy
 \end_layout
 
-\begin_layout Subparagraph
-Przykład:
-\end_layout
-
 \begin_layout Standard
 \begin_inset Graphics
 	filename images/code/Cucumber.example.png
@@ -1576,8 +1611,21 @@ wrażenie użytkownika jest niezadowalające
 
 \begin_layout Standard
 Metodologia Agile zamiast walczyć z problem uzyskania całkowitej wiedzy
- na początku, stara się radzić z tą niewiedzą - bo jest to naturalne, że
- nie da się na początku wszystkiego ustalić.
+ na 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{po-czą-tku}
+\end_layout
+
+\end_inset
+
+początku, stara się radzić z tą niewiedzą - bo jest to naturalne, że nie
+ da się na początku wszystkiego ustalić.
  To samo tyczy się zmian, które wynikają w okresie produkcji - są one nawet
  traktowane, jako coś pożądanego.
  A skoro użytkownicy potrafią sprecyzować czego oczekują od systemu, gdy
@@ -1716,9 +1764,22 @@ Kontroler
 Kontroler ma spełniać dwa proste zadania, przyjąć komunikat od użytkownika
  i przygotować dane zwrotne.
  W kwestii pierwszej funkcjonalności, rolą kontrolera jest, aby przyjąć
- informacje od użytkownika, przekazać komunikat razem z danymi do odpowiedniego
- modelu, przyjąć wynik który model zwrócił, a przygotowane dane przesłać
- do odpowiedniego widoku.
+ informacje od 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{uży-tko-wni-ka}
+\end_layout
+
+\end_inset
+
+użytkownika, przekazać komunikat razem z danymi do odpowiedniego modelu,
+ przyjąć wynik który model zwrócił, a przygotowane dane przesłać do odpowiednieg
+o widoku.
  Dodatkowo dochodzą kwestie takie jak uwierzytelnienie użytkownika, oraz
  kwestie własności do obiektów.
 \end_layout
@@ -1794,7 +1855,20 @@ towych czy też RSS, ATOM dla czytników wiadomości.
 \begin_layout Standard
 Kolejną istotną sprawą jest kwestia minimalizacji metod w zasobie, czyli
  tak naprawdę ilości komunikatów, na które odpowiadają.
- Z założenia należy się ograniczyć do maksymalnie siedmiu metod.
+ Z założenia należy się 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{ogra-ni-czyć}
+\end_layout
+
+\end_inset
+
+ograniczyć do maksymalnie siedmiu metod.
  Cztery z nich są związane z operacjami na pamięci stałej
 \begin_inset Foot
 status collapsed
@@ -2348,8 +2422,21 @@ Potrzeba powstania takiego narzędzia, była efektem współpracy z klientami,
 
 \begin_layout Standard
 Kwestią drugą, był problem związanym z brakiem automatycznych testów.
- Powodowało to częste problemy, które pojawiały się najczęściej tuż po przekazan
-iu kodu do produkcji.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{Po-wo-do-wa-ło} 
+\end_layout
+
+\end_inset
+
+Powodowało to częste problemy, które pojawiały się najczęściej tuż po przekazani
+u kodu do produkcji.
  To uzmysłowiło jak ważne jest posiadanie testów integracyjnych.
  
 \end_layout
@@ -2470,21 +2557,33 @@ Opowieści użytkownika zostały zapisana za pomoca trzech modeli: 'Feature',
 \end_layout
 
 \begin_layout Standard
-Feature - właściwość przechowuje tytuł opowieści, powód wprowadzenia, kto
- będzie z niego korzystał, oraz krótkie sformułowanie co dana funkcjonalność
- wnosi do systemu (co użytkownik może).
+
+\series bold
+Feature
+\series default
+ - właściwość przechowuje tytuł opowieści, powód wprowadzenia, kto będzie
+ z niego korzystał, oraz krótkie sformułowanie co dana funkcjonalność wnosi
+ do systemu (co użytkownik może).
  Agreguje on również scenariusze.
  
 \end_layout
 
 \begin_layout Standard
-Scenario - scenariusz przechowuje tylko tytuł, oraz agreguje główne typy
- kroków - są kroki takie jak 'Dane', 'Jeżeli', 'Wtedy'.
+
+\series bold
+Scenario
+\series default
+ - scenariusz przechowuje tylko tytuł, oraz agreguje główne typy kroków
+ - są kroki takie jak 'Dane', 'Jeżeli', 'Wtedy'.
  
 \end_layout
 
 \begin_layout Standard
-ScenarioStep - krok scenariusza, posiada typ, oraz instrukcje.
+
+\series bold
+ScenarioStep
+\series default
+ - krok scenariusza, posiada typ, oraz instrukcje.
  Typy główne zostały wymienione wcześniej, mozliwe podtypy które sa agregowane
  przez krok główny to 'ale', 'oraz'.
 \end_layout
@@ -2536,7 +2635,7 @@ Diagram Modeli
 \begin_layout Standard
 \begin_inset Graphics
 	filename images/diagrams/models.png
-	width 75page%
+	width 80text%
 
 \end_inset
 
@@ -2550,7 +2649,7 @@ Diagram Kontrolerów
 \begin_layout Standard
 \begin_inset Graphics
 	filename images/diagrams/controllers.png
-	width 75page%
+	width 80text%
 
 \end_inset
 
@@ -2562,7 +2661,13 @@ Diagram Bazy Danych
 \end_layout
 
 \begin_layout Standard
-TODO
+\begin_inset Graphics
+	filename images/diagrams/db.png
+	width 80text%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2577,16 +2682,17 @@ Prezentacja aplikacji
 \end_layout
 
 \begin_layout Standard
-Celem przy tworzeniu tej aplikacji jest aby użytkowanie jej było intuicyjne
- i proste, co w pewnej mierze sie udało.
+W tej sekcji zostanie zaprezentowane zrzuty ekranu wraz z krótkim opisem
 \end_layout
 
-\begin_layout Subsection
-ekran powitalny
+\begin_layout Subparagraph
+Ekran powitalny oraz logowanie
 \end_layout
 
-\begin_layout Subsubsection
-logowania
+\begin_layout Standard
+Jako login używany jest adres email, w prawym rogu widać menu pozwalające
+ przejść na stronę tworzenia nowego konta i odzyskiwania konta, wraz z możliwośc
+ią powrotu na stronę logowania.
 \end_layout
 
 \begin_layout Standard
@@ -2600,8 +2706,18 @@ logowania
 
 \end_layout
 
-\begin_layout Subsubsection
-tworzenie nowego konta
+\begin_layout Subparagraph
+Tworzenie nowego konta 
+\end_layout
+
+\begin_layout Standard
+Utworzenie nowego konta wymaga podania adresu emailowego oraz zdefiniowania
+ hasła.
+ Następnie użytkownik otrzymuje wiadomość na swoją skrzynke pocztową wraz
+ z linkiem dzięki któremu może aktywować konto, przed aktywacją nie może
+ się zalogować do systemu.
+ W ten sposób następuje weryfikacja prawdziwość adresu email podanego w
+ formularzu.
 \end_layout
 
 \begin_layout Standard
@@ -2614,8 +2730,21 @@ tworzenie nowego konta
 
 \end_layout
 
-\begin_layout Subsubsection
-odzyskiwanie hasła
+\begin_layout Subparagraph
+Odzyskiwanie hasła
+\end_layout
+
+\begin_layout Standard
+Jest to wartościowa funkcjonalność, dzięki której użytkownik który zapomni
+ jakie hasło ustawił, a który ma dostęp do swoje skrzynki pocztowej, ma
+ możliwość zmiany hasło.
+ Gdy wpisze w formularzu swoj adres email, oraz ten adres email znajduje
+ sie w systemie - w bazie użytkowników - wtedy zostanie wysłany na skrzynke
+ pocztową email z linkiem do strony na której jest możliwa zmiana hasła
+ za pomocą formularzu.
+ Dzięki takiemu rozwiązaniu hasła nie muszą być przechowywanę w systemie
+ jako tekst, aby możliwe było przypomnienie hasła, nigdy nie są wysyłane
+ pocztą email - co ma wpływ na bezpieczeństwo systemu.
 \end_layout
 
 \begin_layout Standard
@@ -2628,8 +2757,16 @@ odzyskiwanie hasła
 
 \end_layout
 
-\begin_layout Subsection
-lista właściwości
+\begin_layout Paragraph
+Lista właściwości
+\end_layout
+
+\begin_layout Standard
+Jest to centralny punk systemu, w tym widoku jest możliwe przeglądanie wszystkic
+h właściwośći które już zostały wprowadzane oraz przejście do szczegółowego
+ widoku.
+ Ponadto możliwe jest usunięcie włąściwości czy też przejście do formularza
+ tworzenia właściwości.
 \end_layout
 
 \begin_layout Standard
@@ -2643,8 +2780,18 @@ lista właściwości
 
 \end_layout
 
-\begin_layout Subsubsection
-tworzenie właściwości
+\begin_layout Subparagraph
+Tworzenie właściwości
+\end_layout
+
+\begin_layout Standard
+Formularz 'Nowa właściwość' jest pierwszym krokiem do utworzenia opowieści
+ użytkownika.
+ Na początku jest definiowana cześć zwiazana z dokumentacją - nie podlega
+ ona testom.
+ Przy ustawieniu focusu - ustawienie kursora w polu edycyjnym - pojawia
+ się chmurka z podpowiedzią i przykładem aby użytkownik mógł lepiej zrozumieć
+ jaką formę powinniem przyjąć tekst w danym polu edycyjnym.
 \end_layout
 
 \begin_layout Standard
@@ -2658,8 +2805,15 @@ tworzenie właściwości
 
 \end_layout
 
-\begin_layout Subsection
-widok właściwości
+\begin_layout Subparagraph
+Widok właściwości
+\end_layout
+
+\begin_layout Standard
+Ten widok daje najlpełniejsze informacje na tema danej właściowści.
+ Widać część która dokumentuje oraz scenariusze.
+ Z tego widoku można przejść do tworzenia nowego scenariusza, widoku histori
+ zmian, oraz wyeksportować opowieść.
 \end_layout
 
 \begin_layout Standard
@@ -2672,8 +2826,16 @@ widok właściwości
 
 \end_layout
 
-\begin_layout Subsubsection
-dodawanie scenariusza
+\begin_layout Subparagraph
+Dodanie scenariusza
+\end_layout
+
+\begin_layout Standard
+Formularz ten został zbudowany na zakładkach aby zmobilizowac użytkownika
+ do wprowadzania w pierwszej kolejności informacji efekcie końcowym danego
+ scenariusza, a w kolejnych stan wejściowy systemu, oraz sekwencje kroków.
+ Podobnie jak w formularzu tworzenia właściwości, jestzaimplementowana pomoc
+ w postaci chmurek.
 \end_layout
 
 \begin_layout Standard
@@ -2698,8 +2860,20 @@ dodawanie scenariusza
 
 \end_layout
 
-\begin_layout Subsubsection
-edycja
+\begin_layout Subparagraph
+Edycja
+\end_layout
+
+\begin_layout Standard
+Aby maksymalnie ułatwić edycja danych wprowadzonych, zostosowany został
+ edytor w miejscu wyswietlania.
+ W momencie kliknięcia na wpis następuje podmiana zawartości na pole edytora,
+ w momencie kliknięcia klawisza enter następuje zbudowania formularza i
+ wysłanie go do serwera, w odpowiedzi dostaje spowrotem obiekt który edytował,
+ i wyswietla jego zawartość na podstawie danych otrzymanych od serwera.
+ Dzięki czemu nie ma problemu z wyswietlaniem niepoprawnych danych.
+ Sekwencja całego procesu jest przedstawiona na trzech poniższych zrzutach
+ ekranu.
 \end_layout
 
 \begin_layout Standard
@@ -2732,14 +2906,48 @@ edycja
 
 \end_layout
 
-\begin_layout Subsubsection
-eksport
+\begin_layout Subparagraph
+Eksport
+\end_layout
+
+\begin_layout Standard
+Jednym z założeń systemu było wspomaganie pisania testów integracyjnych,
+ cel ten jest osiągniety dzięki eksportu danych do formatu języka Gherkin,
+ czyli do formatu czystego tekstu z wciąciami.
+ Wystarczy go zapisać do odpowiedniego katologu, a zaraz po tym możemy zacząć
+ definiować kroki które wcześniej zapisaliśmy w scenariuszach.
 \end_layout
 
 \begin_layout Standard
 \align center
 \begin_inset Graphics
 	filename images/screenshots/006_export_cucumber.png
+	width 95text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph
+Historia zmian
+\end_layout
+
+\begin_layout Standard
+Jest to lista ułożona w porządku chronologicznym odwrotnym.
+ Czerwone tło i przekreślenie jest ustawiana ne wyrazach które zostły uzunięte,
+ natomiast na jasnozielonym z białą czcionkę wyrazy które zostały dodane.
+ Wyświetlana jest również informacja kto tej zmiany dokonał oraz do jakiego
+ obiektu należy to pole - właściwość składa się z trzech różnych modeli.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/screenshots/007_historia_zmian.png
 	width 95text%
 
 \end_inset
