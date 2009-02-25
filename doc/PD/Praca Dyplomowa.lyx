@@ -2585,7 +2585,7 @@ ScenarioStep
 \series default
  - krok scenariusza, posiada typ, oraz instrukcje.
  Typy główne zostały wymienione wcześniej, mozliwe podtypy które sa agregowane
- przez krok główny to 'ale', 'oraz'.
+ przez krok główny to: 'ale', 'oraz'.
 \end_layout
 
 \begin_layout Standard
@@ -2633,6 +2633,14 @@ Diagram Modeli
 \end_layout
 
 \begin_layout Standard
+Poniższy diagram przedstawia modele użyte w aplikacji, oraz relacje jakimi
+ są połączone.
+ U góry każdego prostokąta znajduje sie nazwa klasy, poniżej wymienione
+ są wszystkie zmienne instancyjne które są przechowywane w bazie wraz z
+ typem.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename images/diagrams/models.png
 	width 80text%
@@ -2647,6 +2655,19 @@ Diagram Kontrolerów
 \end_layout
 
 \begin_layout Standard
+Struktura kontrolerów jest przedstawiona na poniższym rysunku.
+ Wszystkie kontrolery dziedziczą z głównego kontrolera ApplicationController.
+ Każdy prostokąt reprezentujący jeden kontroler jest jednoczesnie zasobem
+ - poza kontrolerem głównym.
+ Wszystkie są zaprojektowane zgodnie z idea REST, ilość metod publicznych
+ jest minimalna, wychodzą poza standardowe cztery metody CRUD, o dwie metody
+ pomocnicze new - przygotowanie formularza tworzenia, index - prezentacja
+ kolekcji obiektów.
+ U góry każdej reprezentacji kontrolera jest jego nazwa, nastepna jest lista
+ metod publicznych, a na samym dole metody prywatne.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
 	filename images/diagrams/controllers.png
 	width 80text%
@@ -2658,6 +2679,13 @@ Diagram Kontrolerów
 
 \begin_layout Subsubsection
 Diagram Bazy Danych
+\end_layout
+
+\begin_layout Standard
+Schemat bazy danych jest narysowany za pomocą aplikacji MySQL Workbench
+ dzięki możliwości wstecznej inżynierii.
+ Zaprezentowana jest struktura poszczególnych tabel, ralacji kluczy, oraz
+ indeksy które przyśpieszają działanie bazy
 \end_layout
 
 \begin_layout Standard
@@ -2757,7 +2785,7 @@ Jest to wartościowa funkcjonalność, dzięki której użytkownik który zapomn
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Paragraph*
 Lista właściwości
 \end_layout
 
@@ -2942,10 +2970,6 @@ Jest to lista ułożona w porządku chronologicznym odwrotnym.
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Graphics
 	filename images/screenshots/007_historia_zmian.png
 	width 95text%
@@ -2964,6 +2988,34 @@ Jest to lista ułożona w porządku chronologicznym odwrotnym.
 
 \begin_layout Section
 Podsumowanie
+\end_layout
+
+\begin_layout Standard
+Pierwszy cel pracy - przybliżenie metodologi zwinnych - został osiągnięty
+ poprzez zaprezentowanie manifestu, oraz dwunastu zasad agile.
+ Została również zwrócona uwaga na stosowaną od ponad dwudziestu lat metodologie
+ organizacji pracy jakim jest SCRUM.
+ Wsparciem dla samego procesu budowania systemu jest BDD.
+ Ja już zostało wspomniane to co różni metodologie zwinne to nacisk na współprac
+ę, nie na narzędzia.
+ 
+\end_layout
+
+\begin_layout Standard
+Kolejnym etapem pracy było zbudowanie aplikacji która wspierała by pisanie
+ testów.
+ Cel został osiągnięty, dzięki właściwemu układu formularzy, oraz użyciu
+ podpowiedzi tworzenie opowieści użytkownika jest łatwiejsze.
+ Dzięki temu osoby nie muszą znać dokładnie składni języka Gherkin, potrafią
+ dobrze napisać testy akceptacyjne do swojego systemu, które po drobnych
+ korektach dają wstęp do pisania automatyzacji testowania.
+ 
+\end_layout
+
+\begin_layout Standard
+Testowanie aplikacji ma ogromne znaczenie w systemach informatycznych, jego
+ automatyzacja ma ogromny wpływ na szybkość, oraz jakość tworzonego systemu.
+ Dzięki temu narzędziu będzie to znacznie ułatwione zadanie.
 \end_layout
 
 \begin_layout Standard
