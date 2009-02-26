@@ -440,7 +440,7 @@ lat siedemdziesiątych wiele się zmieniło, deweloperzy zrozumieli że narzędz
 
 rozwiążą tego problemu, potrzebna jest natomiast zmiana w podejściu do klienta,
  która wymusza, aby był on członkiem zespołu projektowego.
- Dzięki czemu oprogramowanie będzie efektem silnej współpracy, której celem
+ Dzięki temu oprogramowanie będzie efektem silnej współpracy, której celem
  jest jak najlepszy produkt.
  Jednak aby to było możliwe, potrzeba wskazówek, którymi należy się kierować.
  Trzeba umieć uargumentować klientowi, że taki model współpracy da najlepsze
@@ -500,7 +500,7 @@ key "AgileManifesto"
 \begin_inset space ~
 \end_inset
 
-których należy pamiętać w trakcie produkcji oprogramowania, a brzmi one
+których należy pamiętać w trakcie produkcji oprogramowania, a brzmią one
  następująco:
 \end_layout
 
@@ -929,7 +929,7 @@ Filozofia Agile
 \end_layout
 
 \begin_layout Standard
-Jak wykazano we wstępnie filozofia agile jest inna.
+Jak wykazano na wstępie filozofia agile jest inna.
  Jako pierwsza, kieruje uwagę na dostosowywanie się do konkretnego projektu
  klienta, i bycie elastycznym.
  Bardzo klarowny jest przekaz manifestu agile ( wartości które są najistotniejsz
@@ -1035,7 +1035,7 @@ pracować razem, przez cały okres trwania projektu.
 
 \begin_layout Quote
 \align center
-Prace na projektem należy połączyć z motywacją jednostek.
+Prace nad projektem należy połączyć z motywacją jednostek.
  
 \begin_inset Newline newline
 \end_inset
@@ -1120,10 +1120,6 @@ sposób mógłby stać się bardziej efektywny, a następnie dostosowuje się do
 \begin_layout Standard
 Powyższe zasady i wartości warto mieć zawsze w pamięci, jeśli chcemy pozostać
  w
-\begin_inset space ~
-\end_inset
-
-z
 \begin_inset space ~
 \end_inset
 
@@ -1284,7 +1280,7 @@ Scrum
 \end_layout
 
 \begin_layout Standard
-W 1986 roku Hirotaka Takeuchi wraz Ikujiro Nonaka, opisali całkowicie nową,
+W 1986 roku Hirotaka Takeuchi oraz Ikujiro Nonaka, opisali całkowicie nową
  koncepcję zarządzania projektami informatycznymi.
  Położyli w nim nacisk, na postęp całej drużyny, współdziałającej razem
  nad wspólnymi celami.
@@ -1334,7 +1330,7 @@ wa.
 
 \begin_layout Standard
 Najpóźniej - jeśli to możliwe, można wcześniej - na koniec sprintu, wszystkie
- właściwości z u, muszą być gotowe do użycia.
+ właściwości muszą być gotowe do użycia.
  Dzięki temu możliwe jest
 \begin_inset space ~
 \end_inset
@@ -1442,7 +1438,7 @@ http://www.flickr.com/photos/obie/421149993/
  w trakcie produkcji.
  Autor zwrócił szczególną uwagę na kwestię wartości biznesowej, którą wniesie
  implementacja konkretnego zachowanie w systemie - gdyż to jest najważniejsze
- z punktu widzenie użytkowników systemu.
+ z punktu widzenia użytkowników systemu.
  Ciekawe jest też jego podejście jak determinować, którą rzecz powinniśmy
  implementować.
  Sugeruje, że powinniśmy sobie zadać pytanie 
@@ -1469,7 +1465,7 @@ banalne, aczkolwiek przynosi najlepsze rezultaty dla inwestorów, a zwłaszcza
 \end_layout
 
 \begin_layout Standard
-Zgodnie z tym, Dan North przed stawił
+Zgodnie z tym, Dan North przedstawił
 \begin_inset CommandInset citation
 LatexCommand cite
 key "BDD.info"
@@ -1546,7 +1542,7 @@ e na temat systemu, przed rozpoczęciem jego realizacji.
  potencjalnym kosztem zmiany, a menadżerowie są w tym wypadku najlepszym
  przykładem.
  BDUF się nie sprawdziło, gdyż zmiany zawsze się pojawiają.
- BDD z założenia zabrania modelowania systemu przez zgadywania, a minimalizacja
+ BDD z założenia zabrania modelowania systemu przez zgadywanie, a minimalizacja
  kosztu zmian jest uzyskiwana poprzez utrzymanie technicznie systemu w taki
  sposób, aby łatwo można było w nim zmiany wprowadzać.
  W sekcji Filozofia Agile zwrócono uwagę na metodologie, które to umożliwiają,
@@ -1580,12 +1576,12 @@ krótki opis tego, co jest celem danej funkcjonalności i dlaczego ją wprowadza
 \end_layout
 
 \begin_layout Itemize
-warunki akceptacji, które definiuje kiedy funkcjonalność w systemie jest
+warunki akceptacji, które definiują kiedy funkcjonalność w systemie jest
  w
 \begin_inset space ~
 \end_inset
 
-pełni zaimplementowana, są one w formie scenariuszy
+pełni zaimplementowana są w formie scenariuszy
 \end_layout
 
 \begin_layout Standard
@@ -1604,7 +1600,7 @@ Automatyczne testowanie zachowania systemu
 \begin_layout Standard
 Celem BDD jest wymuszenie współpracy z klientem, oraz polepszenie z nim
  komunikacji, poprzez stosowanie języka, które obie strony rozumieją.
- Efektem takiej pracy jest specyfikacja w postaci historyjek użytkownika,
+ Efektem takiej pracy jest specyfikacja w postaci opowieści użytkownika,
  które to umożliwiają pisanie automatycznych testów akceptacji, dzięki czemu
  jest możliwa lepsza weryfikacja poprawności zachowania systemu.
  Dużym błędem
@@ -1877,7 +1873,7 @@ początku, stara się radzić z tą niewiedzą - bo jest to naturalne, że nie
 \begin_inset space ~
 \end_inset
 
-pokazać jak najwcześniej, i często.
+pokazać jak najwcześniej, i jak najczęściej.
  Zwinne zarządzanie projektem stara się wkomponować w proces, który daje
  klientowi dużą kontrolę nad kształtem systemu, i
 \begin_inset space ~
@@ -1989,7 +1985,7 @@ Model
 \begin_layout Standard
 Model jako abstrakcyjna forma, reprezentacja encji, jest ważnym aspektem
  izolacji.
- Cześć systemu kwalifikowaną jako model, można przedstawić jako zestaw atrybutów
+ Część systemu kwalifikowaną jako model, można przedstawić jako zestaw atrybutów
 , które ona przechowuje, oraz logikę biznesową, która jednoznacznie określa
  zachowanie.
  Zgodnie z definicją wzorca, model nie ma bezpośredniego dostępu do kontrolera
@@ -2000,7 +1996,7 @@ Model jako abstrakcyjna forma, reprezentacja encji, jest ważnym aspektem
  optymalizacji, czy też pielęgnacji kodu.
  Doświadczenie pokazuje, że trzymanie się ściśle tych prostych dwóch reguł,
  wymusza większy porządek w implementacji systemu.
- Łatwiej wtedy jest uniknąć redundancji kodu, oraz optymalizacja kodu jest
+ Łatwiej wtedy jest uniknąć redundancji kodu, a optymalizacja kodu jest
  mniej ryzykowna.
  Ma to duże znaczenie zwłaszcza w aplikacjach webowych, gdzie mnogość form
  prezentacji danych, wymaga jednoznacznie określonej logiki na poziomie
@@ -2225,10 +2221,58 @@ możliwy błąd związany ze sposobem ich zaprojektowaniem.
 Wielką zaletą projektowania systemu zgodnie z tymi zasadami, jest przejrzysta
  możliwość interakcji między różnymi aplikacjami.
  Platforma taka jak Rails posiada osobny moduł - ActiveResource - wspierający
- podpięcie zewnętrznych zasób jako wewnętrzne w systemie, ale i bez tego
+ podpięcie zewnętrznych zasobów jako wewnętrzne w systemie, ale i bez tego
  komunikacja z innymi systemami jest przejrzysta.
  Ponadto przybliża to marzenie Suna o globalnej sieci, jako jednym wielkim
  komputerze.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{uży-tko-wnik}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenation{pra-wym}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+hyphenation{opo-wie-ści}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+hyphenation{do-sto-so-wa-ne}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -2274,7 +2318,7 @@ matz
  takich języków jak Perl, Smalltalk, Eiffel, Ada i Lisp.
  Miał to być balans, pomiędzy programowaniem funkcyjnymi, a programowaniem
  imperatywnym.
- Pierwszy publiczne wydanie nastąpiło w 1995 roku.
+ Pierwsze publiczne wydanie nastąpiło w 1995 roku.
  Ogromny wzrost popularności w ostatnich latach, zawdzięcza on, rozwojowi
  aplikacji Ruby on Rails.
  To zaś zaowocowało dużą społecznością, która znalazła jeszcze inne zastosowania
@@ -2283,7 +2327,7 @@ matz
 status collapsed
 
 \begin_layout Plain Layout
-Jako przykład może posłużyć powłoka systemowa - które może być użyte jako
+Jako przykład może posłużyć powłoka systemowa - która może być użyta jako
  zamiennik dla basha - w której posługujemy się językiem Ruby, nazywa się
  rush(http://rush.heroku.com).
  Warto nadmienić że wiele skryptów dla systemów *nix, również jest już pisane
@@ -2590,7 +2634,7 @@ spec
 
  ma dużo większy wpływ na postrzeganie zachowania systemu, który chcemy
  weryfikować.
- Jest to również wielce pomocne przy generowanie raportów, które notabene
+ Jest to również wielce pomocne przy generowaniu raportów, które notabene
  są pewną formą dokumentacji systemu - opisują jego pożądane zachowanie.
 \end_layout
 
@@ -2613,13 +2657,13 @@ key "DavidChelimsky.Blog"
 \end_inset
 
 .
- Astel w dalszym ciągu jest aktywnym uczestniekiem w projekcie, zwłaszcza
+ Astel w dalszym ciągu jest aktywnym uczestnikiem w projekcie, zwłaszcza
  w promowaniu metodologi BDD.
  Sam Rspec nie
 \begin_inset space ~
 \end_inset
 
-doczekał się jeszcze żadnej książki, która zebrała by informacje na temat
+doczekał się jeszcze żadnej książki, która zebrałaby informacje na temat
  BDD, Rspec i Cucumber.
  W planach jest wydanie takiej książki
 \begin_inset CommandInset citation
@@ -2757,8 +2801,8 @@ warunkowa kontynuacja kroku
 \end_layout
 
 \begin_layout Standard
-Historyjki są pisane w języku dedykowanym, którego struktura umożliwia jednoznac
-zne zrozumienie w świecie biznesu - język ten nazywa się Gherkin
+Opowieści są pisane w języku dedykowanym, którego struktura umożliwia jednoznacz
+ne zrozumienie w świecie biznesu - język ten nazywa się Gherkin
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cucumber.Gherkin"
@@ -3000,7 +3044,7 @@ Eksport opowieści użytkownika
 
 \begin_layout Standard
 Przechowując dane o odpowiedniej strukturze, mamy możliwość zautomatyzowania
- procesów monotonnych, poprzez prezentacje danych w innych formatach.
+ procesów monotonnych, poprzez prezentację danych w innych formatach.
 \end_layout
 
 \begin_layout Paragraph
@@ -3035,7 +3079,7 @@ Implementacja narzędzia
 \end_layout
 
 \begin_layout Standard
-Opowieści użytkownika zostały zapisana za pomocą trzech modeli: 
+Opowieści użytkownika zostały zapisane za pomocą trzech modeli: 
 \begin_inset Quotes pld
 \end_inset
 
@@ -3173,12 +3217,12 @@ ScenarioStep
 \end_layout
 
 \begin_layout Standard
-Wprowadzenie zmiany polega, tak jak zawsze na nadpisaniu atrybutów, jednak
+Wprowadzenie zmiany polega, tak jak zawsze, na nadpisaniu atrybutów, jednak
  zanim nastąpi zapis na medium trwałe - w tym przypadku bazę danych - następuje
- kopiowanie atrybutów, które uległy zmianie, jest to możliwe dzięki pobraniu
- aktualnych wartości z bazy.
+ kopiowanie atrybutów, które uległy zmianie.
+ Jest to możliwe dzięki pobraniu aktualnych wartości z bazy.
  Dla każdego zmienionego atrybutu tworzony jest obiekt typu Audit.
- Zapisywane jest w nim wartość atrybut przed zmianą oraz nowa wartość, wraz
+ Zapisywana jest w nim wartość atrybut przed zmianą oraz nowa wartość, wraz
 \begin_inset space ~
 \end_inset
 
@@ -3202,9 +3246,10 @@ u powiązaniu.
 \end_inset
 
 zysk na ładowaniu danych z bazy i przesyłaniu tych danych za pośrednictwem
- sieci, dodatkowym atutem jest mniejsza ilość wykorzystywanej pamięci operacyjne
-j która jest niezbędna przy operacjach na dużych zbiorach danych.
- Przykładowe fragment kodu który trigeruje, zapis zmian dla czterech atrybutów
+ sieci.
+ Dodatkowym atutem jest mniejsza ilość wykorzystywanej pamięci operacyjnej
+ która jest niezbędna przy operacjach na dużych zbiorach danych.
+ Przykładowy fragment kodu który trigeruje, zapis zmian dla czterech atrybutów
  klasy Feature, jest ukazany poniżej.
 \end_layout
 
@@ -3252,7 +3297,7 @@ Struktura kontrolerów jest przedstawiona na poniższym rysunku.
  Wszystkie kontrolery dziedziczą z głównego kontrolera ApplicationController.
  Każdy prostokąt reprezentujący jeden kontroler jest jednocześnie zasobem
  - poza kontrolerem głównym.
- Wszystkie są zaprojektowane zgodnie z idea REST, ilość metod publicznych
+ Wszystkie są zaprojektowane zgodnie z ideą REST, ilość metod publicznych
  jest
 \begin_inset space ~
 \end_inset
@@ -3307,7 +3352,7 @@ Prezentacja aplikacji
 \end_layout
 
 \begin_layout Standard
-W tej sekcji zostanie zaprezentowane zrzuty ekranu wraz z krótkim opisem
+W tej sekcji zostaną zaprezentowane zrzuty ekranu wraz z krótkimi opisemami.
 \end_layout
 
 \begin_layout Subparagraph
@@ -3319,8 +3364,8 @@ Jako login używany jest adres email, w
 \begin_inset space ~
 \end_inset
 
-prawym rogu widać menu pozwalające przejść na stronę tworzenia nowego konta
- i
+prawym górnym rogu widać menu pozwalające przejść na stronę tworzenia nowego
+ konta i
 \begin_inset space ~
 \end_inset
 
@@ -3347,7 +3392,7 @@ Utworzenie nowego konta wymaga podania adresu email oraz zdefiniowania hasła.
  Następnie użytkownik otrzymuje wiadomość na swoją skrzynkę pocztową wraz
  z linkiem dzięki któremu może aktywować konto, przed aktywacją nie może
  się zalogować do systemu.
- W ten sposób następuje weryfikacja prawdziwość adresu email podanego w
+ W ten sposób następuje weryfikacja prawdziwości adresu email podanego w
  formularzu.
 \end_layout
 
@@ -3368,7 +3413,7 @@ Odzyskiwanie hasła
 \begin_layout Standard
 Jest to wartościowa funkcjonalność, dzięki której użytkownik który zapomni
  jakie hasło ustawił, a który ma dostęp do swoje skrzynki pocztowej, ma
- możliwość zmiany hasło.
+ możliwość zmiany hasła.
  Gdy wpisze w formularzu swój adres email, oraz
 \begin_inset space ~
 \end_inset
@@ -3466,7 +3511,7 @@ Widok właściwości
 \end_layout
 
 \begin_layout Standard
-Ten widok daje najpełniejsze informacje na tema danej właściwości.
+Ten widok daje najpełniejsze informacje na temat danej właściwości.
  Widać część która dokumentuje oraz scenariusze.
  Z tego widoku można przejść do tworzenia nowego scenariusza, widoku historia
  zmian, oraz wyeksportować opowieść.
@@ -3595,7 +3640,7 @@ Historia zmian
 
 \begin_layout Standard
 Jest to lista ułożona w porządku chronologicznym odwrotnym.
- Czerwone tło i przekreślenie jest ustawiana na wyrazach które zostały usunięte,
+ Czerwone tło i przekreślenie jest ustawiane na wyrazach które zostały usunięte,
  natomiast na jasnozielonym z białą czcionkę wyrazy które zostały dodane.
  Wyświetlana jest również informacja kto tej zmiany dokonał oraz do jakiego
  obiektu należy to pole - właściwość składa się z trzech różnych modeli.
@@ -3625,7 +3670,7 @@ Podsumowanie
 \begin_layout Standard
 Pierwszy cel pracy - przybliżenie metodologi zwinnych - został osiągnięty
  poprzez zaprezentowanie manifestu, oraz dwunastu zasad agile.
- Została również zwrócona uwaga na stosowaną od ponad dwudziestu lat metodologie
+ Została również zwrócona uwaga na stosowaną od ponad dwudziestu lat metodologię
  organizacji pracy jakim jest Scrum.
  Wsparciem dla samego procesu budowania systemu jest BDD.
  Jak
