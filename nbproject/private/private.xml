@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/mczyz/NetBeansProjects/csm/vendor/gems/thoughtbot-clearance-0.4.9/lib/clearance/app/controllers/application_controller.rb</file>
+        <file>file:/home/mczyz/NetBeansProjects/csm/vendor/gems/thoughtbot-clearance-0.4.9/lib/clearance/app/controllers/confirmations_controller.rb</file>
+        <file>file:/home/mczyz/NetBeansProjects/csm/vendor/gems/thoughtbot-clearance-0.4.9/lib/clearance/app/controllers/passwords_controller.rb</file>
+        <file>file:/home/mczyz/NetBeansProjects/csm/vendor/gems/thoughtbot-clearance-0.4.9/lib/clearance/app/controllers/sessions_controller.rb</file>
+        <file>file:/home/mczyz/NetBeansProjects/csm/vendor/gems/thoughtbot-clearance-0.4.9/lib/clearance/app/controllers/users_controller.rb</file>
+    </open-files>
 </project-private>
