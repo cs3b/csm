@@ -1,6 +1,6 @@
 class AddPrimaryKeyToAudit < ActiveRecord::Migration
   def self.up
-    add_column :audits, :id, :primary => true
+    add_column :audits, :id, :primarykey
   end
 
   def self.down
