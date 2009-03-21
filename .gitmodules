@@ -25,3 +25,6 @@
 [submodule "vendor/plugins/acts_as_paranoid"]
 	path = vendor/plugins/acts_as_paranoid
 	url = git://github.com/technoweenie/acts_as_paranoid.git
+[submodule "vendor/plugins/princely"]
+	path = vendor/plugins/princely
+	url = git://github.com/mbleigh/princely.git
