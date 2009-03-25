@@ -50,14 +50,14 @@ class Audit < ActiveRecord::Base
     when :feature
       %{
         (object_type = #{Audit::KEYS[:feature]} and object_id = #{object_id}) or
-        (object_type = #{Audit::KEYS[:scenario]} and object_id IN (SELECT id FROM `scenarios` WHERE (`scenarios`.`feature_id` = #{object_id} ))) or
+        (object_type = #{Audit::KEYS[:scenario]} and object_id IN (SELECT id FROM scenarios WHERE (scenarios.feature_id = #{object_id} ))) or
         (
           object_type = #{Audit::KEYS[:scenario_step]} and object_id IN
           (
-            SELECT id FROM `scenario_steps` WHERE
+            SELECT id FROM scenario_steps WHERE
             (
-              (`scenario_steps`.`scenario_id` IN ( SELECT id FROM `scenarios` WHERE (`scenarios`.`feature_id` = #{object_id})) ) or
-              (`scenario_steps`.`parent_id` IN (SELECT id FROM `scenario_steps` WHERE (`scenario_steps`.`scenario_id` IN ( SELECT id FROM `scenarios` WHERE (`scenarios`.`feature_id` = #{object_id})))))
+              (scenario_steps.scenario_id IN ( SELECT id FROM scenarios WHERE (scenarios.feature_id = #{object_id})) ) or
+              (scenario_steps.parent_id IN (SELECT id FROM scenario_steps WHERE (scenario_steps.scenario_id IN ( SELECT id FROM scenarios WHERE (scenarios.feature_id = #{object_id})))))
             )
           )
         )
@@ -65,7 +65,7 @@ class Audit < ActiveRecord::Base
     when :scenario
       %{
         (object_type = #{Audit::KEYS[:scenario]} and object_id = #{object_id})s or
-        (object_type = #{Audit::KEYS[:scenario_step]} and object_id IN (SELECT id FROM `scenario_steps` WHERE (`scenario_steps`.`scenario_id` = #{object_id} )))
+        (object_type = #{Audit::KEYS[:scenario_step]} and object_id IN (SELECT id FROM scenario_steps WHERE (scenario_steps.scenario_id = #{object_id} )))
       }
     when :scenario_step
       %{
